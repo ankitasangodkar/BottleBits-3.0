@@ -1,0 +1,59 @@
+header{
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
+	.header-wrapper{
+		min-height: 80px;
+		margin: 0 30px;
+		.hamburger-wrap{
+			&__block{
+				position: relative;
+				cursor: pointer;
+				width: 30px;
+				height: 30px;
+				.bar{
+					position: absolute;
+					&.line1{
+						width: 17px;
+						height: 1.5px;
+						background:  #E1B96B;
+						top: 9px;
+					}
+					&.line2{
+						width: 12px;
+						height: 1.5px;
+						background:  #E1B96B;
+						top: 15px;
+					}
+					&.line3{
+						width: 17px;
+						height: 1.5px;
+						background:  #E1B96B;
+						top: 21px;
+					}
+				}
+			}
+		}
+		.link{
+			font-family: 'AbhayaLibre-Bold';
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 21px;
+			text-align: center;
+			letter-spacing: -0.01em;
+			color: #E1B96B;
+			cursor: pointer;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		.account{
+			cursor: pointer;
+			.logo{
+
+			}
+		}
+	}
+}

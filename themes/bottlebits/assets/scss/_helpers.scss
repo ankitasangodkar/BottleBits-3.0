@@ -1,0 +1,32 @@
+
+@font-face {
+	font-family: 'AbhayaLibre-Regular';
+	src: url('../fonts/AbhayaLibre-Regular.eot');
+	src: local('☺'), url('../fonts/AbhayaLibre-Regular.woff') format('woff'), url('../fonts/AbhayaLibre-Regular.ttf') format('truetype'), url('../fonts/AbhayaLibre-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+@font-face {
+	font-family: 'AbhayaLibre-SemiBold';
+	src: url('../fonts/AbhayaLibre-SemiBold.eot');
+	src: local('☺'), url('../fonts/AbhayaLibre-SemiBold.woff') format('woff'), url('../fonts/AbhayaLibre-SemiBold.ttf') format('truetype'), url('../fonts/AbhayaLibre-SemiBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+@font-face {
+	font-family: 'AbhayaLibre-Bold';
+	src: url('../fonts/AbhayaLibre-Bold.eot');
+	src: local('☺'), url('../fonts/AbhayaLibre-Bold.woff') format('woff'), url('../fonts/AbhayaLibre-Bold.ttf') format('truetype'), url('../fonts/AbhayaLibre-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+
+body{
+	margin: 0;
+	position: relative;
+	font-family: 'AbhayaLibre-Regular';
+}

@@ -1,0 +1,94 @@
+{{ define "main" }}
+<div class="product-detailed">
+	<div class="shelf">
+		<div class="shelf-block">
+			<h3 class="shelf-block--title">Dalmore 12 Year</h3>
+			<p class="shelf-block--info">1965, Islay (Scotland)</p>
+			<img src="{{"images/dalmore.png" | relURL }}" alt="dalmore" class="wine-bottle shelf-block--picture">
+		</div>
+		<div class="shelf-block">
+			<h3 class="shelf-block--title">Hibiki</h3>
+			<p class="shelf-block--info">1965, Islay (Scotland)</p>
+			<img src="{{"images/hibiki.png" | relURL }}" alt="hibiki" class="wine-bottle shelf-block--picture">
+		</div>
+		<div class="shelf-block">
+			<h3 class="shelf-block--title">Rich & Rare</h3>
+			<p class="shelf-block--info">1965, Islay (Scotland)</p>
+			<img src="{{"images/rich-rare.png" | relURL }}" alt="rich-&-rare" class="wine-bottle shelf-block--picture">
+		</div>
+		<div class="shelf-block">
+			<h3 class="shelf-block--title">Macallan</h3>
+			<p class="shelf-block--info">1965, Islay (Scotland)</p>
+			<img src="{{"images/macallan.png" | relURL }}" alt="macallan" class="wine-bottle shelf-block--picture">
+		</div>
+	</div>
+	<!--slider -->
+	<div class="slider">
+		<div class="product-slider swiper-container">
+			<div class="shelf-block shelf-block--details swiper-wrapper">
+				<div class="shelf-block--wrap">
+					<div class="shelf-block--label swiper-slide">
+						<span class="tags">Whisky</span>
+						<span class="tags">Single malt</span>
+					</div>
+					<h3 class="shelf-block--title">Dalmore 12 Year</h3>
+					<p class="shelf-block--info">1965, Islay (Scotland)</p>
+					<div class="description">
+						<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+						<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+					</div>
+					<img src="{{"images/dalmore.png" | relURL }}" alt="dalmore" class="wine-bottle shelf-block--picture">
+				</div>
+				<div class="shelf-block--wrap swiper-slide">
+					<div class="shelf-block--label">
+						<span class="tags">Whisky</span>
+						<span class="tags">Single malt</span>
+					</div>
+					<h3 class="shelf-block--title">Hibiki</h3>
+					<p class="shelf-block--info">1965, Islay (Scotland)</p>
+					<div class="description">
+						<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+						<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+					</div>
+					<img src="{{"images/hibiki.png" | relURL }}" alt="hibiki" class="wine-bottle shelf-block--picture">
+				</div>
+				<div class="shelf-block--wrap swiper-slide">
+					<div class="shelf-block--label">
+						<span class="tags">Whisky</span>
+						<span class="tags">Single malt</span>
+					</div>
+					<h3 class="shelf-block--title">Rich & Rare</h3>
+					<p class="shelf-block--info">1965, Islay (Scotland)</p>
+					<div class="description">
+						<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+						<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+					</div>
+					<img src="{{"images/rich-rare.png" | relURL }}" alt="rich-&-rare" class="wine-bottle shelf-block--picture">
+				</div>
+				<div class="shelf-block--wrap swiper-slide">
+					<div class="shelf-block--label">
+						<span class="tags">Whisky</span>
+						<span class="tags">Single malt</span>
+					</div>
+					<h3 class="shelf-block--title">Macallan</h3>
+					<p class="shelf-block--info">1965, Islay (Scotland)</p>
+					<div class="description">
+						<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+						<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+					</div>
+					<img src="{{"images/macallan.png" | relURL }}" alt="macallan" class="wine-bottle shelf-block--picture">
+				</div>
+			</div>
+			<div class="podium">
+				<div class="price">
+					<h5>Buy Drams<span>£ 500.5 / unit</span></h5>
+				</div>
+				<div class="share">
+					<img src="{{"images/share.svg" | relURL }}" alt="share" class="share">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ end }}

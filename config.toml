@@ -1,5 +1,5 @@
-baseURL = "https://github.com/ankitasangodkar/BottleBits-3.0"
+baseURL = "https://ajency.github.io/BottleBits-3.0/"
 languageCode = "en-us"
-title = "Bottlebits"
-theme = "Bottlebits"
+title = "bottlebits"
+theme = "bottlebits"
 publishDir = "docs"
