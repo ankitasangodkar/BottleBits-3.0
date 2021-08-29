@@ -96,13 +96,19 @@
     			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
     			-webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
 		    }
-		    &.expand, &.swiper-slide-active{
+	     	&.swiper-slide-active{
 		    	opacity: 1;
 		    	transition: opacity 1s $ease-out;
 		        -webkit-opacity: opacity 1s $ease-out;
-		        &.swiper-slide-prev, swiper-slide-next{
-		        	opacity: 0;
-		        }
+	        }
+		    &.swiper-slide-prev, .swiper-slide-next{
+	        	opacity: 0;
+	        }
+		    &.expand{
+		    	opacity: 1;
+		    	transition: opacity 1s $ease-out;
+		        -webkit-opacity: opacity 1s $ease-out;
+
 				.shelf-block--label, .shelf-block--title, .shelf-block--info, .description{
 					opacity: 1;
 					transition: opacity 1s $ease-out;

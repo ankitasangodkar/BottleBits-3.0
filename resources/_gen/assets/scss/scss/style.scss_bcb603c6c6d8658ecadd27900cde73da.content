@@ -7240,17 +7240,21 @@ body {
         left: auto;
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
-      .slider .shelf-block .shelf-block--wrap.expand, .slider .shelf-block .shelf-block--wrap.swiper-slide-active {
+      .slider .shelf-block .shelf-block--wrap.swiper-slide-active {
         opacity: 1;
         transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-opacity: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .slider .shelf-block .shelf-block--wrap.expand.swiper-slide-prev, .slider .shelf-block .shelf-block--wrap.expand swiper-slide-next, .slider .shelf-block .shelf-block--wrap.swiper-slide-active.swiper-slide-prev, .slider .shelf-block .shelf-block--wrap.swiper-slide-active swiper-slide-next {
-          opacity: 0; }
-        .slider .shelf-block .shelf-block--wrap.expand .shelf-block--label, .slider .shelf-block .shelf-block--wrap.expand .shelf-block--title, .slider .shelf-block .shelf-block--wrap.expand .shelf-block--info, .slider .shelf-block .shelf-block--wrap.expand .description, .slider .shelf-block .shelf-block--wrap.swiper-slide-active .shelf-block--label, .slider .shelf-block .shelf-block--wrap.swiper-slide-active .shelf-block--title, .slider .shelf-block .shelf-block--wrap.swiper-slide-active .shelf-block--info, .slider .shelf-block .shelf-block--wrap.swiper-slide-active .description {
+      .slider .shelf-block .shelf-block--wrap.swiper-slide-prev, .slider .shelf-block .shelf-block--wrap .swiper-slide-next {
+        opacity: 0; }
+      .slider .shelf-block .shelf-block--wrap.expand {
+        opacity: 1;
+        transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-opacity: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .slider .shelf-block .shelf-block--wrap.expand .shelf-block--label, .slider .shelf-block .shelf-block--wrap.expand .shelf-block--title, .slider .shelf-block .shelf-block--wrap.expand .shelf-block--info, .slider .shelf-block .shelf-block--wrap.expand .description {
           opacity: 1;
           transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
           -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .slider .shelf-block .shelf-block--wrap.expand .shelf-block--picture, .slider .shelf-block .shelf-block--wrap.swiper-slide-active .shelf-block--picture {
+        .slider .shelf-block .shelf-block--wrap.expand .shelf-block--picture {
           bottom: 35px;
           right: 0;
           left: 0;
