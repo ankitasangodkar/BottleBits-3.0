@@ -7256,9 +7256,6 @@ body {
           left: 0;
           width: auto; }
 
-.flickity-slider {
-  transform: none !important; }
-
 .slider .podium {
   display: none;
   position: absolute;
