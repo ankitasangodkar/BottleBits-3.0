@@ -7284,7 +7284,7 @@ body {
         z-index: -2;
         opacity: 0; }
       .carousel .shelf-block .shelf-block--wrap.prev .shelf-block--picture {
-        height: 345px;
+        height: 420px;
         transform: translateX(-140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
       .carousel .shelf-block .shelf-block--wrap.active .shelf-block--title {
@@ -7296,7 +7296,7 @@ body {
         opacity: 1;
         bottom: 35px;
         right: 0;
-        height: 345px;
+        height: 420px;
         transform: translateX(0%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
       .carousel .shelf-block .shelf-block--wrap.active.scrollUp .description {
@@ -7330,7 +7330,7 @@ body {
       .carousel .shelf-block .shelf-block--wrap.active:not(.shelf-block--slider) .shelf-block--label, .carousel .shelf-block .shelf-block--wrap.active:not(.shelf-block--slider) .shelf-block--info {
         opacity: 0; }
       .carousel .shelf-block .shelf-block--wrap.next .shelf-block--picture {
-        height: 345px;
+        height: 420px;
         transform: translateX(140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
       .carousel .shelf-block .shelf-block--wrap.scrollUp {

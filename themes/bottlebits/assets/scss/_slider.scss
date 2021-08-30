@@ -148,7 +148,7 @@
 		    }
 	    	&.prev{
 	    		.shelf-block--picture {
-	    			height: 345px;
+	    			height: 420px;
 					transform: translateX(-140%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
 				}
@@ -164,7 +164,7 @@
 					opacity: 1;
 					bottom: 35px;
 					right: 0;
-					height: 345px;
+					height: 420px;
 					transform: translateX(0%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out;
 				}
@@ -215,7 +215,7 @@
 	    	}
     		&.next{
 	    		.shelf-block--picture {
-	    			height: 345px;
+	    			height: 420px;
 					transform: translateX(140%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
 				}
