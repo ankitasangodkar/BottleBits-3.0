@@ -14,14 +14,13 @@
 		z-index: 0;
 		-webkit-transition: opacity 1s $ease-out;
 		&.show_bg{
-			height: 90.8%;
+			height: 100%;
 			width: 100% !important;
 			opacity: 1;
 			position: absolute;
 			z-index: 3;
 			bottom: 80px;
 			padding-top: 110px;
-			overflow: hidden;
 			transform: none !important;
 			transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
 		   -webkit-transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
