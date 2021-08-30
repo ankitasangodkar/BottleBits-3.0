@@ -7184,28 +7184,7 @@ body {
       bottom: 0;
       padding-top: 108px;
       width: auto !important;
-      margin-right: 0 !important;
-      /* &.expand{
-		    	opacity: 1;
-		    	visibility: visible;
-		    	transition: opacity 1s $ease-out;
-		        -webkit-transition: opacity 1s $ease-out;
-		        .shelf-block--title {
-			    	opacity: 1;
-			    	visibility: visible;
-			    	transition: opacity 1s $ease-out;
-			        -webkit-transition: opacity 1s $ease-out;
-		        }
-		        .shelf-block--picture {
-					opacity: 1;
-					bottom: 35px;
-					right: 0;
-					height: 440px;
-			    	visibility: visible;
-			    	transition: opacity 1s $ease-out, height 1s $ease-out;
-			        -webkit-transition: opacity 1s $ease-out, height 1s $ease-out;
-				}
-	    	}*/ }
+      margin-right: 0 !important; }
       .carousel .shelf-block .shelf-block--wrap .shelf-block--label {
         margin-bottom: 15px; }
         .carousel .shelf-block .shelf-block--wrap .shelf-block--label .tags {
@@ -7249,7 +7228,6 @@ body {
       .carousel .shelf-block .shelf-block--wrap .shelf-block--picture {
         opacity: 0;
         object-fit: contain;
-        height: 440px;
         right: 0;
         left: 0;
         bottom: 80px;
@@ -7257,6 +7235,7 @@ body {
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
       .carousel .shelf-block .shelf-block--wrap.prev .shelf-block--picture {
+        height: 440px;
         transform: translateX(-140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
       .carousel .shelf-block .shelf-block--wrap.active .shelf-block--title {
@@ -7270,8 +7249,9 @@ body {
         right: 0;
         height: 440px;
         transform: translateX(0%);
-        transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+        transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
       .carousel .shelf-block .shelf-block--wrap.next .shelf-block--picture {
+        height: 440px;
         transform: translateX(140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
 
