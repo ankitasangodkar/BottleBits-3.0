@@ -7240,8 +7240,12 @@ body {
         width: auto;
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
-      .carousel .shelf-block .shelf-block--wrap .shelf-block--region {
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--region .tabs {
         opacity: 0; }
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--region .region_details {
+        opacity: 0;
+        transform: translateY(40px);
+        -webkit-transform: translateY(40px); }
       .carousel .shelf-block .shelf-block--wrap.prev .shelf-block--picture {
         height: 440px;
         transform: translateX(-140%);
@@ -7266,28 +7270,39 @@ body {
         .carousel .shelf-block .shelf-block--wrap.active.scrollUp .description {
           opacity: 0; }
         .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--picture {
-          right: 45%; }
-        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region {
+          right: 45%;
+          transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .tabs {
+          top: 80px;
           opacity: 1;
-          transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-          .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details {
-            position: absolute;
-            right: 80px;
-            top: 50%;
-            width: 120px;
-            font-family: 'AbhayaLibre-SemiBold';
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 20px;
-            letter-spacing: 0.01em;
-            color: #000000;
-            text-align: left; }
-            .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details p {
-              opacity: 1; }
+          transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details {
+          position: absolute;
+          right: 80px;
+          top: 50%;
+          width: 120px;
+          font-family: 'AbhayaLibre-SemiBold';
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.01em;
+          color: #000000;
+          text-align: left;
+          opacity: 1;
+          transform: translateY(0px);
+          -webkit-transform: translateY(0px);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details p {
+            opacity: 1; }
       .carousel .shelf-block .shelf-block--wrap.next .shelf-block--picture {
         height: 440px;
         transform: translateX(140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .carousel .shelf-block .shelf-block--wrap.scrollUp.prev .description {
+        opacity: 0; }
 
 .carousel .podium {
   display: none;
@@ -7345,7 +7360,7 @@ body {
 
 .tabs {
   position: absolute;
-  top: 80px;
+  top: 30px;
   left: 0;
   right: 0;
   width: 100%;
