@@ -7331,7 +7331,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -120px;
+  bottom: 0px;
   width: 100%;
   z-index: 4;
   visibility: hidden;
@@ -7375,7 +7375,7 @@ body {
   .carousel .podium-animate {
     display: flex;
     opacity: 1;
-    bottom: -80px;
+    bottom: 0px;
     visibility: visible;
     transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), visibility 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), display 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), visibility 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), display 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
