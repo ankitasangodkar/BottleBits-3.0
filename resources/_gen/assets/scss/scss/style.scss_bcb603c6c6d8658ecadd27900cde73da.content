@@ -7172,7 +7172,7 @@ body {
     z-index: 0;
     -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .carousel .shelf-block.show_bg {
-      height: 90.8%;
+      height: 100%;
       width: 100% !important;
       opacity: 1;
       position: absolute;
