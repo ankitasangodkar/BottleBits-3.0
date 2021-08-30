@@ -15,7 +15,7 @@
 		z-index: 0;
 		-webkit-transition: opacity 1s $ease-out;
 		&.show_bg{
-			height: 720px;
+			height: 100%;
 			width: 100% !important;
 			opacity: 1;
 			position: absolute;
@@ -148,7 +148,7 @@
 		    }
 	    	&.prev{
 	    		.shelf-block--picture {
-	    			height: 440px;
+	    			height: 345px;
 					transform: translateX(-140%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
 				}
@@ -164,7 +164,7 @@
 					opacity: 1;
 					bottom: 35px;
 					right: 0;
-					height: 415px;
+					height: 345px;
 					transform: translateX(0%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out;
 				}
@@ -215,7 +215,7 @@
 	    	}
     		&.next{
 	    		.shelf-block--picture {
-	    			height: 440px;
+	    			height: 345px;
 					transform: translateX(140%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
 				}

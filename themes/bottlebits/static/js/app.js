@@ -62,13 +62,3 @@ var $carousel = $('.carousel'),
 	}
 	$active.prev().addClass('prev');
 });
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll <= 100) {
-    	$(".shelf-block--slider.active").addClass("scrollUp");
-		$(".carousel-inner").addClass("scrollTopContainer");
-	} else{
-    	$(".shelf-block--slider.active").addClass("scrolldown");
-    }
-});
