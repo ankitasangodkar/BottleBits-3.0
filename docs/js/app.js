@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 	$('.shelf .shelf-block').on('click', function(){
 		$(".carousel .shelf-block").addClass('show_bg');
+		$(".shelf").addClass('hidden');
 		$(".carousel .shelf-block .shelf-block--wrap").addClass('shelf-block--slider');
 
 		if($(this).hasClass('block1')){
@@ -65,16 +66,9 @@ var $carousel = $('.carousel'),
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
     if (scroll <= 100) {
-        $(".shelf-block--slider.active").addClass("scrollUp");
-        if($(".shelf-block--slider").hasClass("active")){
-    	$(".carousel-inner").addClass("scrollTopContainer");
-    	}
-    	$carousel.removeClass('slide');
-    } else{
-    	 $(".shelf-block--slider.active").addClass("");
+    	$(".shelf-block--slider.active").addClass("scrollUp");
+		$(".carousel-inner").addClass("scrollTopContainer");
+	} else{
+    	$(".shelf-block--slider.active").addClass("scrolldown");
     }
 });
-$('.active .shelf-block--picture').bind('swipeup', handler);
-function handler(event) { 
- $('.active .shelf-block--picture') .addClass("scrollUp");
-}  
