@@ -27,12 +27,13 @@ $(document).ready(function(){
 		$('.podium').addClass('podium-animate');
    	});
 
- 	var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 'auto',
-        paginationClickable: false,
-        spaceBetween: 0
-    });
 
 });
-
+$(".carousel").swipe({
+                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                    if (direction == 'left') $(this).carousel('next');
+                    if (direction == 'right') $(this).carousel('prev');
+                },
+                allowPageScroll: "vertical" 
+            });
 
