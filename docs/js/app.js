@@ -67,10 +67,14 @@ $(window).scroll(function() {
     if (scroll <= 100) {
         $(".shelf-block--slider.active").addClass("scrollUp");
         if($(".shelf-block--slider").hasClass("active")){
-        	$(".carousel-inner").addClass("scrollTopContainer");
+    	$(".carousel-inner").addClass("scrollTopContainer");
     	}
     	$carousel.removeClass('slide');
     } else{
     	 $(".shelf-block--slider.active").addClass("");
     }
 });
+$('.active .shelf-block--picture').bind('swipeup', handler);
+function handler(event) { 
+ $('.active .shelf-block--picture') .addClass("scrollUp");
+}  
