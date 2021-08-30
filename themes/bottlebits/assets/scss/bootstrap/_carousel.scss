@@ -30,7 +30,6 @@
   position: relative;
   float: left;
   width: 100%;
-  margin-right: -100%;
   backface-visibility: hidden;
   @include transition($carousel-transition);
 }
@@ -43,12 +42,12 @@
 
 .carousel-item-next:not(.carousel-item-left),
 .active.carousel-item-right {
-  transform: translateX(100%);
+  /*transform: translateX(100%);*/
 }
 
 .carousel-item-prev:not(.carousel-item-right),
 .active.carousel-item-left {
-  transform: translateX(-100%);
+  /*transform: translateX(-100%);*/
 }
 
 

@@ -4368,7 +4368,6 @@ a.close.disabled {
   position: relative;
   float: left;
   width: 100%;
-  margin-right: -100%;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
@@ -4382,11 +4381,11 @@ a.close.disabled {
 
 .carousel-item-next:not(.carousel-item-left),
 .active.carousel-item-right {
-  transform: translateX(100%); }
+  /*transform: translateX(100%);*/ }
 
 .carousel-item-prev:not(.carousel-item-right),
 .active.carousel-item-left {
-  transform: translateX(-100%); }
+  /*transform: translateX(-100%);*/ }
 
 .carousel-fade .carousel-item {
   opacity: 0;
@@ -7161,7 +7160,6 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    opacity: 0;
     padding-top: 30px;
     transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     width: 100%;
@@ -7179,7 +7177,6 @@ body {
       transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .carousel .shelf-block .shelf-block--wrap {
-      opacity: 0;
       position: absolute;
       top: 0;
       left: 0;
@@ -7203,7 +7200,8 @@ body {
       .carousel .shelf-block .shelf-block--wrap .shelf-block--title {
         font-size: 30px;
         line-height: 35px;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        opacity: 0; }
       .carousel .shelf-block .shelf-block--wrap .shelf-block--info {
         font-size: 14px;
         line-height: 17px;
@@ -7228,6 +7226,7 @@ body {
             line-height: 24px;
             letter-spacing: -0.01em; }
       .carousel .shelf-block .shelf-block--wrap .shelf-block--picture {
+        opacity: 0;
         height: 440px;
         object-fit: contain;
         right: 0;
@@ -7235,14 +7234,18 @@ body {
         width: auto;
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
-      .carousel .shelf-block .shelf-block--wrap.active {
+      .carousel .shelf-block .shelf-block--wrap.active .shelf-block--title {
         opacity: 1;
         visibility: visible;
         transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .carousel .shelf-block .shelf-block--wrap.active .shelf-block--picture {
-          bottom: 35px;
-          right: 0; }
+      .carousel .shelf-block .shelf-block--wrap.active .shelf-block--picture {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        bottom: 35px;
+        right: 0; }
 
 .carousel .podium {
   display: none;
