@@ -7238,28 +7238,14 @@ body {
         width: auto;
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
-      .slider .shelf-block .shelf-block--wrap.expand {
+      .slider .shelf-block .shelf-block--wrap.swiper-slide-next {
         opacity: 1;
         visibility: visible;
         transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .slider .shelf-block .shelf-block--wrap.expand .shelf-block--picture {
+        .slider .shelf-block .shelf-block--wrap.swiper-slide-next .shelf-block--picture {
           bottom: 35px;
           right: 0; }
-
-.ss-slider {
-  height: 100%;
-  overflow: hidden; }
-  .ss-slider .ss-slides {
-    height: 100%;
-    overflow: hidden;
-    user-select: none;
-    width: 100% !important; }
-    .ss-slider .ss-slides .ss-slide {
-      width: 100% !important;
-      height: 100%; }
-      .ss-slider .ss-slides .ss-slide.slider-active {
-        opacity: 1; }
 
 .slider .podium {
   display: none;

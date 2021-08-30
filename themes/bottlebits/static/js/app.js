@@ -1,4 +1,7 @@
-$(document).ready(function(){
+// $(".ss-slider").click(function(event){
+//    event.preventDefault();
+// });
+$(document).ready(function(){	
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 
 	$('.shelf .shelf-block').on('click', function(){
@@ -24,22 +27,12 @@ $(document).ready(function(){
 		$('.podium').addClass('podium-animate');
    	});
 
-   
-	var slider = $('#slider').swipeSlider({
+ 	var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        paginationClickable: false,
+        spaceBetween: 0
+    });
 
-		animationDuration: 300,
-		autoReverse: true,
-		autoTransitionDuration: false, // in ms
-		bounce: true,
-		drag: true,
-		infinite: true,
-		onSlideStartCallback: function() {},
-		onSlideCompleteCallback: function() {},
-		onMoveCallback: function() {},
-		onStartCallback: function() {},
-		startIndex: 0,
-		allowTouchMove: false
-	});
 });
 
 
