@@ -52,8 +52,10 @@ var $carousel = $('.carousel'),
     if(($active).hasClass('wrap4')){
     	$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('next');
     }else{
-    //Add corresponding classes to next and prev elements
     	$active.next().addClass('next');
 	}
-    $active.prev().addClass('prev');
+	if(($active).hasClass('wrap1')){
+		$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('prev');
+	}
+	$active.prev().addClass('prev');
 });
