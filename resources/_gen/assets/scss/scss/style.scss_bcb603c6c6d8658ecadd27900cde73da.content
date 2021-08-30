@@ -7093,7 +7093,13 @@ header {
 body {
   margin: 0;
   position: relative;
-  font-family: 'AbhayaLibre-Regular'; }
+  font-family: 'AbhayaLibre-Regular';
+  background: #E1B96B; }
+  body .content {
+    opacity: 0; }
+    body .content.loading {
+      opacity: 1;
+      transition: opacity 1s cubic-bezier(0.75, 0.09, 0.61, 0.98); }
 
 .product-detailed .shelf {
   display: flex;
@@ -7254,6 +7260,28 @@ body {
         height: 440px;
         transform: translateX(140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .carousel .shelf-block .shelf-block--wrap.activeSlide {
+        background-image: url("../images/scotland.png");
+        background-repeat: no-repeat;
+        background-size: contain; }
+        .carousel .shelf-block .shelf-block--wrap.activeSlide .description {
+          opacity: 0; }
+        .carousel .shelf-block .shelf-block--wrap.activeSlide .shelf-block--picture {
+          right: 45%; }
+        .carousel .shelf-block .shelf-block--wrap.activeSlide .region_details {
+          position: absolute;
+          right: 80px;
+          top: 50%;
+          width: 120px;
+          font-family: 'AbhayaLibre-SemiBold';
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.01em;
+          color: #000000;
+          text-align: left; }
+          .carousel .shelf-block .shelf-block--wrap.activeSlide .region_details p {
+            opacity: 1; }
 
 .carousel .podium {
   display: none;

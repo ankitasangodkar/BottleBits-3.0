@@ -121,6 +121,33 @@
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
 				}
 	    	}
+	    	&.activeSlide{
+	    		background-image: url('../images/scotland.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+	    		.description{
+	    			opacity: 0;
+	    		}
+	    		.shelf-block--picture{
+	    			right: 45%;
+	    		}
+	    		.region_details{
+				    position: absolute;
+				    right: 80px;
+				    top: 50%;
+				    width: 120px;
+				    font-family: 'AbhayaLibre-SemiBold';
+				    font-weight: 600;
+				    font-size: 12px;
+				    line-height: 20px;
+				    letter-spacing: 0.01em;
+				    color: #000000;
+				    text-align: left;
+	    			p{
+	    				opacity: 1;
+    				}
+	    		}
+	    	}
 	    }
 	}
 }
