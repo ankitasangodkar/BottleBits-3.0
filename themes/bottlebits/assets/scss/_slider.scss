@@ -94,7 +94,7 @@
     			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
     			-webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
 		    }
-		    &.swiper-slide-next{
+		    &.swiper-slide-active{
 		    	opacity: 1;
 		    	visibility: visible;
 		    	transition: opacity 1s $ease-out;

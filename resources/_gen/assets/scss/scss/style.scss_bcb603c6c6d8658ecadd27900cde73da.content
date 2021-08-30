@@ -7238,12 +7238,12 @@ body {
         width: auto;
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
-      .slider .shelf-block .shelf-block--wrap.swiper-slide-next {
+      .slider .shelf-block .shelf-block--wrap.swiper-slide-active {
         opacity: 1;
         visibility: visible;
         transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .slider .shelf-block .shelf-block--wrap.swiper-slide-next .shelf-block--picture {
+        .slider .shelf-block .shelf-block--wrap.swiper-slide-active .shelf-block--picture {
           bottom: 35px;
           right: 0; }
 
