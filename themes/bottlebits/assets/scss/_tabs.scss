@@ -1,0 +1,43 @@
+.tabs{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #E1B96B;
+    height: 50px;
+    ul{
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		width: 90%;
+		margin: auto;
+		height: 50px;
+	    li{
+	    	list-style: none;
+	    	padding: 15px 20px 18px;
+	    	font-family: "AbhayaLibre-Regular";
+		    font-size: 14px;
+		    line-height: 17px;
+		    text-align: center;
+		    color: #000000;
+		    &.active{
+	    		font-family: "AbhayaLibre-Bold";
+		    	font-weight: 800;
+		    	position: relative;
+		    	&:after{
+		    		content: '';
+		    		background: #000000;
+				    width: 5px;
+				    height: 5px;
+				    border-radius: 5px;
+				    position: absolute;
+				    left: 0;
+				    right: 0;
+				    margin: auto;
+				    bottom: 12px;
+		    	}
+		    }
+	    }
+    }
+}

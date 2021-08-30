@@ -11,25 +11,21 @@ $(document).ready(function(){
 		if($(this).hasClass('block1')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('active');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('activeSlide');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').next().addClass('next');
 		}
 		if($(this).hasClass('block2')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('active');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('activeSlide');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').next().addClass('next');
 		}
 		if($(this).hasClass('block3')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('active');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('activeSlide');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').next().addClass('next');
 		}
 		if($(this).hasClass('block4')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('active');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('activeSlide');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('next');
 		}
 		$('.podium').addClass('podium-animate');
@@ -64,4 +60,13 @@ var $carousel = $('.carousel'),
 		$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('prev');
 	}
 	$active.prev().addClass('prev');
+});
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll <= 100) {
+        $(".shelf-block--slider.active").addClass("scrollUp");
+    } else{
+    	 $(".shelf-block--slider.active").addClass("");
+    }
 });

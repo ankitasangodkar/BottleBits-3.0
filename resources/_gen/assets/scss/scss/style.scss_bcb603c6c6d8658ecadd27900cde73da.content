@@ -7240,6 +7240,8 @@ body {
         width: auto;
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--region {
+        opacity: 0; }
       .carousel .shelf-block .shelf-block--wrap.prev .shelf-block--picture {
         height: 440px;
         transform: translateX(-140%);
@@ -7256,32 +7258,36 @@ body {
         height: 440px;
         transform: translateX(0%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .carousel .shelf-block .shelf-block--wrap.active.scrollUp {
+        background-image: url("../images/scotland.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: center; }
+        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .description {
+          opacity: 0; }
+        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--picture {
+          right: 45%; }
+        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region {
+          opacity: 1;
+          transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            width: 120px;
+            font-family: 'AbhayaLibre-SemiBold';
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            color: #000000;
+            text-align: left; }
+            .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details p {
+              opacity: 1; }
       .carousel .shelf-block .shelf-block--wrap.next .shelf-block--picture {
         height: 440px;
         transform: translateX(140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
-      .carousel .shelf-block .shelf-block--wrap.activeSlide {
-        background-image: url("../images/scotland.png");
-        background-repeat: no-repeat;
-        background-size: contain; }
-        .carousel .shelf-block .shelf-block--wrap.activeSlide .description {
-          opacity: 0; }
-        .carousel .shelf-block .shelf-block--wrap.activeSlide .shelf-block--picture {
-          right: 45%; }
-        .carousel .shelf-block .shelf-block--wrap.activeSlide .region_details {
-          position: absolute;
-          right: 80px;
-          top: 50%;
-          width: 120px;
-          font-family: 'AbhayaLibre-SemiBold';
-          font-weight: 600;
-          font-size: 12px;
-          line-height: 20px;
-          letter-spacing: 0.01em;
-          color: #000000;
-          text-align: left; }
-          .carousel .shelf-block .shelf-block--wrap.activeSlide .region_details p {
-            opacity: 1; }
 
 .carousel .podium {
   display: none;
@@ -7336,5 +7342,44 @@ body {
     visibility: visible;
     transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), visibility 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), display 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), visibility 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), display 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+
+.tabs {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #E1B96B;
+  height: 50px; }
+  .tabs ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 90%;
+    margin: auto;
+    height: 50px; }
+    .tabs ul li {
+      list-style: none;
+      padding: 15px 20px 18px;
+      font-family: "AbhayaLibre-Regular";
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #000000; }
+      .tabs ul li.active {
+        font-family: "AbhayaLibre-Bold";
+        font-weight: 800;
+        position: relative; }
+        .tabs ul li.active:after {
+          content: '';
+          background: #000000;
+          width: 5px;
+          height: 5px;
+          border-radius: 5px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          bottom: 12px; }
 
 /*# sourceMappingURL=style.css.map */
