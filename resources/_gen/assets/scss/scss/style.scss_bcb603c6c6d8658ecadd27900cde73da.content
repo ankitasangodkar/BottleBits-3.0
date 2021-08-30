@@ -7110,7 +7110,7 @@ body {
     width: 50%; }
   .product-detailed .shelf-block {
     width: 50%;
-    height: 400px;
+    height: 425px;
     padding-top: 5px;
     margin-left: auto;
     margin-right: auto;
