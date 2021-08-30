@@ -29,12 +29,12 @@ body{
 	margin: 0;
 	position: relative;
 	font-family: 'AbhayaLibre-Regular';
-	background: #E1B96B;
-	.content{
+	background-color: #E1B96B !important;
+	.product-detailed{
 		opacity: 0;
 		&.loading{
 			opacity: 1;
-			transition: opacity 1s $ease-in;
+			transition: opacity 600ms $ease-in;
 		}
 	}
 }

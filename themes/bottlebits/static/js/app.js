@@ -1,7 +1,7 @@
 
 $(document).ready(function(){	
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
-	$(".content").addClass('loading');
+	$(".product-detailed").addClass('loading');
 
 
 	$('.shelf .shelf-block').on('click', function(){
