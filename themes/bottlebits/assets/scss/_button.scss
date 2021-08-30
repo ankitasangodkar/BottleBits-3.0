@@ -4,7 +4,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: -80px;
+		bottom: -120px;
 		width: 100%;
 		z-index: 4;
 		visibility: hidden;
@@ -52,7 +52,7 @@
 		&-animate{
 			display: flex;
 			opacity: 1;
-			bottom: 0;
+		    bottom: -80px;
 			visibility: visible;
 			transition: opacity 1s $ease-out, bottom 1s $ease-out, visibility 1s $ease-out, display 2s $ease-out;
 			-webkit-transition:opacity 1s $ease-out, bottom 1s $ease-out, visibility 1s $ease-out, display 2s $ease-out;
