@@ -15,12 +15,13 @@
 		height: 50px;
 	    li{
 	    	list-style: none;
-	    	padding: 15px 20px 18px;
+	    	padding: 15px 14px 18px;
 	    	font-family: "AbhayaLibre-Regular";
 		    font-size: 14px;
 		    line-height: 17px;
 		    text-align: center;
 		    color: #000000;
+	        white-space: nowrap;
 		    &.active{
 	    		font-family: "AbhayaLibre-Bold";
 		    	font-weight: 800;

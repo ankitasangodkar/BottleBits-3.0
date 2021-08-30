@@ -24,6 +24,13 @@
 			transform: none !important;
 			transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
 		   -webkit-transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
+	       	&.scrollTopContainer{
+				.description{
+	    			opacity: 0;
+	    			transition: opacity 1s 400ms $ease-out;
+		    		-webkit-transition: opacity 1s 400ms $ease-out;
+	    		}
+			}
 		}
 		.shelf-block--wrap{
 			position: absolute;
@@ -95,7 +102,30 @@
 		    	.tabs{
 		    		opacity: 0;
 	    		}
+	    		.map{
+					background-image: url('../images/scotland.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+				    background-position-y: center;
+				    width: 100%;
+				    height: 500px;
+				    position: absolute;
+				    top: 16%;
+				    z-index: -2;
+		    		opacity: 0;
+	    		}
 	    		.region_details{
+				    position: absolute;
+				    right: 60px;
+				    top: 50%;
+				    width: 120px;
+				    font-family: 'AbhayaLibre-SemiBold';
+				    font-weight: 600;
+				    font-size: 12px;
+				    line-height: 20px;
+				    letter-spacing: 0.01em;
+				    color: #000000;
+				    text-align: left;
 	    			opacity: 0;
     			    transform: translateY(40px);
     			    -webkit-transform: translateY(40px);
@@ -124,13 +154,11 @@
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out;
 				}
 		    	&.scrollUp{
-		    		background-image: url('../images/scotland.png');
-					background-repeat: no-repeat;
-					background-size: contain;
-				    background-position-y: center;
-
 		    		.description{
 		    			opacity: 0;
+		    		}
+		    		.shelf-block--label, .shelf-block--info{
+		    			opacity: 1;
 		    		}
 		    		.shelf-block--picture{
 		    			right: 45%;
@@ -144,23 +172,18 @@
 		    				transition: opacity 1s $ease-out, top 1s $ease-out;
 		    				-webkit-transition: opacity 1s $ease-out, top 1s $ease-out;
 		    			}
+		    			.map{
+		    				top: 10%;
+	    	    			opacity: 1;
+		    			    transition: top 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
+		    			    -webkit-transition: top 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
+		    			}
 			    		.region_details{
-						    position: absolute;
-						    right: 80px;
-						    top: 50%;
-						    width: 120px;
-						    font-family: 'AbhayaLibre-SemiBold';
-						    font-weight: 600;
-						    font-size: 12px;
-						    line-height: 20px;
-						    letter-spacing: 0.01em;
-						    color: #000000;
-						    text-align: left;
 	    	    			opacity: 1;
 		    			    transform: translateY(0px);
 		    			    -webkit-transform: translateY(0px);
-		    			    transition: transform 2s $ease-out;
-		    			    -webkit-transition: transform 2s $ease-out;
+		    			    transition: transform 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
+		    			    -webkit-transition: transform 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
 			    			p{
 			    				opacity: 1;
 		    				}
@@ -176,11 +199,8 @@
 				}
 	    	}
 	    	&.scrollUp{
-	    		&.prev{
-	    			.description{
-		    			opacity: 0;
-		    		}
-	    		}
+    		    padding-top: 150px;
+    		    transition: padding-top 1s 400ms $ease-in-out;
 	    	}
 	    }
 	}

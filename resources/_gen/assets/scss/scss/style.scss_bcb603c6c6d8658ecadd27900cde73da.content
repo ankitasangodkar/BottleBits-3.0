@@ -7182,6 +7182,10 @@ body {
       transform: none !important;
       transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      .carousel .shelf-block.show_bg.scrollTopContainer .description {
+        opacity: 0;
+        transition: opacity 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: opacity 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .carousel .shelf-block .shelf-block--wrap {
       position: absolute;
       top: 0;
@@ -7242,7 +7246,29 @@ body {
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
       .carousel .shelf-block .shelf-block--wrap .shelf-block--region .tabs {
         opacity: 0; }
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--region .map {
+        background-image: url("../images/scotland.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: center;
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 16%;
+        z-index: -2;
+        opacity: 0; }
       .carousel .shelf-block .shelf-block--wrap .shelf-block--region .region_details {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        width: 120px;
+        font-family: 'AbhayaLibre-SemiBold';
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: #000000;
+        text-align: left;
         opacity: 0;
         transform: translateY(40px);
         -webkit-transform: translateY(40px); }
@@ -7262,47 +7288,39 @@ body {
         height: 440px;
         transform: translateX(0%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
-      .carousel .shelf-block .shelf-block--wrap.active.scrollUp {
-        background-image: url("../images/scotland.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-y: center; }
-        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .description {
-          opacity: 0; }
-        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--picture {
-          right: 45%;
-          transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-          -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .tabs {
-          top: 80px;
-          opacity: 1;
-          transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-          -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details {
-          position: absolute;
-          right: 80px;
-          top: 50%;
-          width: 120px;
-          font-family: 'AbhayaLibre-SemiBold';
-          font-weight: 600;
-          font-size: 12px;
-          line-height: 20px;
-          letter-spacing: 0.01em;
-          color: #000000;
-          text-align: left;
-          opacity: 1;
-          transform: translateY(0px);
-          -webkit-transform: translateY(0px);
-          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-          .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details p {
-            opacity: 1; }
+      .carousel .shelf-block .shelf-block--wrap.active.scrollUp .description {
+        opacity: 0; }
+      .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--label, .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--info {
+        opacity: 1; }
+      .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--picture {
+        right: 45%;
+        transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .tabs {
+        top: 80px;
+        opacity: 1;
+        transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .map {
+        top: 10%;
+        opacity: 1;
+        transition: top 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: top 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        transition: transform 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: transform 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details p {
+          opacity: 1; }
       .carousel .shelf-block .shelf-block--wrap.next .shelf-block--picture {
         height: 440px;
         transform: translateX(140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
-      .carousel .shelf-block .shelf-block--wrap.scrollUp.prev .description {
-        opacity: 0; }
+      .carousel .shelf-block .shelf-block--wrap.scrollUp {
+        padding-top: 150px;
+        transition: padding-top 1s 400ms cubic-bezier(0.48, 0.04, 0.25, 1); }
 
 .carousel .podium {
   display: none;
@@ -7375,12 +7393,13 @@ body {
     height: 50px; }
     .tabs ul li {
       list-style: none;
-      padding: 15px 20px 18px;
+      padding: 15px 14px 18px;
       font-family: "AbhayaLibre-Regular";
       font-size: 14px;
       line-height: 17px;
       text-align: center;
-      color: #000000; }
+      color: #000000;
+      white-space: nowrap; }
       .tabs ul li.active {
         font-family: "AbhayaLibre-Bold";
         font-weight: 800;
