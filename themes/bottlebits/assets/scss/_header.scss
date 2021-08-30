@@ -35,6 +35,9 @@ header{
 					}
 				}
 			}
+			@media(min-width: 768px){
+				display: none;
+			}
 		}
 		.link{
 			font-family: 'AbhayaLibre-Bold';

@@ -34,6 +34,12 @@ body{
 		&.loading{
 			opacity: 1;
 			transition: opacity 600ms $ease-in;
+			@media(min-width: 768px){
+				max-width: 550px;
+			}
 		}
 	}
+}
+.pointer-events-none{
+	pointer-events: none;
 }

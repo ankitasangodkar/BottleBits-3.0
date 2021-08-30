@@ -7052,6 +7052,9 @@ header {
           height: 1.5px;
           background: #E1B96B;
           top: 21px; }
+    @media (min-width: 768px) {
+      header .header-wrapper .hamburger-wrap {
+        display: none; } }
     header .header-wrapper .link {
       font-family: 'AbhayaLibre-Bold';
       font-weight: bold;
@@ -7099,6 +7102,12 @@ body {
     body .product-detailed.loading {
       opacity: 1;
       transition: opacity 600ms cubic-bezier(0.75, 0.09, 0.61, 0.98); }
+      @media (min-width: 768px) {
+        body .product-detailed.loading {
+          max-width: 550px; } }
+
+.pointer-events-none {
+  pointer-events: none; }
 
 .product-detailed .shelf {
   display: flex;
@@ -7186,6 +7195,9 @@ body {
         opacity: 0;
         transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      @media (min-width: 768px) {
+        .carousel .shelf-block.show_bg {
+          height: 100vh; } }
     .carousel .shelf-block .shelf-block--wrap {
       position: absolute;
       top: 0;
@@ -7287,6 +7299,9 @@ body {
         height: 420px;
         transform: translateX(-140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+        @media (min-width: 768px) {
+          .carousel .shelf-block .shelf-block--wrap.prev .shelf-block--picture {
+            height: 350px; } }
       .carousel .shelf-block .shelf-block--wrap.active .shelf-block--title {
         opacity: 1;
         visibility: visible;
@@ -7299,6 +7314,9 @@ body {
         height: 420px;
         transform: translateX(0%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+        @media (min-width: 768px) {
+          .carousel .shelf-block .shelf-block--wrap.active .shelf-block--picture {
+            height: 350px; } }
       .carousel .shelf-block .shelf-block--wrap.active.scrollUp .description {
         opacity: 0; }
       .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--label, .carousel .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--info {
@@ -7333,9 +7351,15 @@ body {
         height: 420px;
         transform: translateX(140%);
         transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+        @media (min-width: 768px) {
+          .carousel .shelf-block .shelf-block--wrap.next .shelf-block--picture {
+            height: 350px; } }
       .carousel .shelf-block .shelf-block--wrap.scrollUp {
         padding-top: 150px;
         transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
+    @media (min-width: 768px) {
+      .carousel .shelf-block {
+        max-width: 550px; } }
 
 .carousel .podium {
   display: none;
@@ -7390,6 +7414,9 @@ body {
     visibility: visible;
     transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), visibility 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), display 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), visibility 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), display 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+  @media (min-width: 768px) {
+    .carousel .podium {
+      max-width: 550px; } }
 
 .tabs {
   position: absolute;
