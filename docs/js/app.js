@@ -1,28 +1,22 @@
-// $(".ss-slider").click(function(event){
-//    event.preventDefault();
-// });
+
 $(document).ready(function(){	
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 
 	$('.shelf .shelf-block').on('click', function(){
-		$(".slider .shelf-block").addClass('show_bg');
-		$(".slider .shelf-block .shelf-block--wrap").addClass('shelf-block--slider');
+		$(".carousel .shelf-block").addClass('show_bg');
+		$(".carousel .shelf-block .shelf-block--wrap").addClass('shelf-block--slider');
 
 		if($(this).hasClass('block1')){
-			$('.slider .shelf-block--details .shelf-block--wrap').removeClass('expand');
-			$('.slider').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('expand');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('active');
 		}
 		if($(this).hasClass('block2')){
-			$('.slider .shelf-block--details .shelf-block--wrap').removeClass('expand');
-			$('.slider').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('expand');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('active');
 		}
 		if($(this).hasClass('block3')){
-			$('.slider .shelf-block--details .shelf-block--wrap').removeClass('expand');
-			$('.slider').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('expand');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('active');
 		}
 		if($(this).hasClass('block4')){
-			$('.slider .shelf-block--details .shelf-block--wrap').removeClass('expand');
-			$('.slider').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('expand');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('active');
 		}
 		$('.podium').addClass('podium-animate');
    	});
@@ -30,10 +24,10 @@ $(document).ready(function(){
 
 });
 $(".carousel").swipe({
-                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                    if (direction == 'left') $(this).carousel('next');
-                    if (direction == 'right') $(this).carousel('prev');
-                },
-                allowPageScroll: "vertical" 
-            });
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        if (direction == 'left') $(this).carousel('next');
+        if (direction == 'right') $(this).carousel('prev');
+    },
+    allowPageScroll: "vertical"
+});
 

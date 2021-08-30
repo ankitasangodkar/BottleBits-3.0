@@ -1,12 +1,9 @@
-.slider{
-	position: absolute;
+.carousel{
+	position: absolute !important;
 	left: 0;
 	right: 0;
 	top: 0;
 	height: 100%;
-	.product-slider{
-	    position: revert;
-	}
 	.shelf-block{
 	    position: absolute;
 	    left: 0;
@@ -94,7 +91,7 @@
     			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
     			-webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
 		    }
-		    &.swiper-slide-active{
+		    &.active{
 		    	opacity: 1;
 		    	visibility: visible;
 		    	transition: opacity 1s $ease-out;

@@ -4366,7 +4366,6 @@ a.close.disabled {
 
 .carousel-item {
   position: relative;
-  display: none;
   float: left;
   width: 100%;
   margin-right: -100%;
@@ -7152,15 +7151,13 @@ body {
     .product-detailed .shelf-block:nth-child(4) .shelf-block--picture {
       height: 260px; }
 
-.slider {
-  position: absolute;
+.carousel {
+  position: absolute !important;
   left: 0;
   right: 0;
   top: 0;
   height: 100%; }
-  .slider .product-slider {
-    position: revert; }
-  .slider .shelf-block {
+  .carousel .shelf-block {
     position: absolute;
     left: 0;
     top: 0;
@@ -7170,7 +7167,7 @@ body {
     width: 100%;
     z-index: 0;
     -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .slider .shelf-block.show_bg {
+    .carousel .shelf-block.show_bg {
       height: 90.8%;
       width: 100% !important;
       opacity: 1;
@@ -7181,7 +7178,7 @@ body {
       transform: none !important;
       transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .slider .shelf-block .shelf-block--wrap {
+    .carousel .shelf-block .shelf-block--wrap {
       opacity: 0;
       position: absolute;
       top: 0;
@@ -7191,9 +7188,9 @@ body {
       padding-top: 108px;
       width: auto !important;
       margin-right: 0 !important; }
-      .slider .shelf-block .shelf-block--wrap .shelf-block--label {
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--label {
         margin-bottom: 15px; }
-        .slider .shelf-block .shelf-block--wrap .shelf-block--label .tags {
+        .carousel .shelf-block .shelf-block--wrap .shelf-block--label .tags {
           font-family: 'Nunito Sans', sans-serif;
           font-weight: 400;
           font-size: 10px;
@@ -7203,20 +7200,20 @@ body {
           border-radius: 10px;
           color: #FFFFFF;
           padding: 4px 12px; }
-      .slider .shelf-block .shelf-block--wrap .shelf-block--title {
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--title {
         font-size: 30px;
         line-height: 35px;
         margin-bottom: 0; }
-      .slider .shelf-block .shelf-block--wrap .shelf-block--info {
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--info {
         font-size: 14px;
         line-height: 17px;
         opacity: 1; }
-      .slider .shelf-block .shelf-block--wrap .description {
+      .carousel .shelf-block .shelf-block--wrap .description {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center; }
-        .slider .shelf-block .shelf-block--wrap .description .price {
+        .carousel .shelf-block .shelf-block--wrap .description .price {
           font-family: 'AbhayaLibre-Regular';
           font-weight: 400;
           font-size: 14px;
@@ -7225,12 +7222,12 @@ body {
           letter-spacing: -0.011em;
           color: #000000;
           width: 108px; }
-          .slider .shelf-block .shelf-block--wrap .description .price span {
+          .carousel .shelf-block .shelf-block--wrap .description .price span {
             font-weight: 700;
             font-size: 20px;
             line-height: 24px;
             letter-spacing: -0.01em; }
-      .slider .shelf-block .shelf-block--wrap .shelf-block--picture {
+      .carousel .shelf-block .shelf-block--wrap .shelf-block--picture {
         height: 440px;
         object-fit: contain;
         right: 0;
@@ -7238,16 +7235,16 @@ body {
         width: auto;
         filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
         -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
-      .slider .shelf-block .shelf-block--wrap.swiper-slide-active {
+      .carousel .shelf-block .shelf-block--wrap.active {
         opacity: 1;
         visibility: visible;
         transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .slider .shelf-block .shelf-block--wrap.swiper-slide-active .shelf-block--picture {
+        .carousel .shelf-block .shelf-block--wrap.active .shelf-block--picture {
           bottom: 35px;
           right: 0; }
 
-.slider .podium {
+.carousel .podium {
   display: none;
   position: absolute;
   left: 0;
@@ -7259,12 +7256,12 @@ body {
   opacity: 0;
   transition: visibility 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
   -webkit-transition: visibility 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-  .slider .podium .price {
+  .carousel .podium .price {
     height: 80px;
     width: 80%;
     position: relative;
     background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%); }
-    .slider .podium .price h5 {
+    .carousel .podium .price h5 {
       position: absolute;
       top: 30px;
       left: 0;
@@ -7277,14 +7274,14 @@ body {
       letter-spacing: -0.01em;
       color: #FFFFFF;
       margin-bottom: 0; }
-      .slider .podium .price h5 span {
+      .carousel .podium .price h5 span {
         margin-left: 10px; }
-  .slider .podium .share {
+  .carousel .podium .share {
     width: 20%;
     height: 80px;
     position: relative;
     background: #353B47; }
-    .slider .podium .share img {
+    .carousel .podium .share img {
       width: 100%;
       height: 14px;
       object-fit: contain;
@@ -7292,7 +7289,7 @@ body {
       top: 50%;
       right: 50%;
       transform: translate(50%, -50%); }
-  .slider .podium-animate {
+  .carousel .podium-animate {
     display: flex;
     opacity: 1;
     bottom: 0;
