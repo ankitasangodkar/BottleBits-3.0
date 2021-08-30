@@ -21,14 +21,15 @@
 			z-index: 3;
 			bottom: 80px;
 			padding-top: 110px;
+			overflow: hidden;
 			transform: none !important;
 			transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
 		   -webkit-transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
 	       	&.scrollTopContainer{
-				.description{
+				.description, .shelf-block--label, .shelf-block--info{
 	    			opacity: 0;
-	    			transition: opacity 1s 400ms $ease-out;
-		    		-webkit-transition: opacity 1s 400ms $ease-out;
+	    			transition: opacity 300ms $ease-out;
+		    		-webkit-transition: opacity 300ms  $ease-out;
 	    		}
 			}
 		}
@@ -149,7 +150,7 @@
 					opacity: 1;
 					bottom: 35px;
 					right: 0;
-					height: 440px;
+					height: 415px;
 					transform: translateX(0%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out;
 				}
@@ -159,6 +160,8 @@
 		    		}
 		    		.shelf-block--label, .shelf-block--info{
 		    			opacity: 1;
+		    			transition: right 1s $ease-out;
+			            -webkit-transition: right 1s $ease-out;
 		    		}
 		    		.shelf-block--picture{
 		    			right: 45%;
@@ -175,19 +178,24 @@
 		    			.map{
 		    				top: 10%;
 	    	    			opacity: 1;
-		    			    transition: top 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
-		    			    -webkit-transition: top 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
+		    			    transition: top 1s $ease-out, opacity 1s $ease-out;
+		    			    -webkit-transition: top 1s $ease-out, opacity 1s $ease-out;
 		    			}
 			    		.region_details{
 	    	    			opacity: 1;
 		    			    transform: translateY(0px);
 		    			    -webkit-transform: translateY(0px);
-		    			    transition: transform 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
-		    			    -webkit-transition: transform 1s 400ms $ease-out, opacity 1s 400ms $ease-out;
+		    			    transition: transform 1s $ease-out, opacity 1s $ease-out;
+		    			    -webkit-transition: transform 1s $ease-out, opacity 1s $ease-out;
 			    			p{
 			    				opacity: 1;
 		    				}
 			    		}
+		    		}
+		    	}
+		    	&:not(.shelf-block--slider){
+		    		.shelf-block--label, .shelf-block--info{
+		    			opacity: 0;
 		    		}
 		    	}
 	    	}
@@ -200,7 +208,7 @@
 	    	}
 	    	&.scrollUp{
     		    padding-top: 150px;
-    		    transition: padding-top 1s 400ms $ease-in-out;
+    		    transition: padding-top 1s $ease-in-out;
 	    	}
 	    }
 	}
