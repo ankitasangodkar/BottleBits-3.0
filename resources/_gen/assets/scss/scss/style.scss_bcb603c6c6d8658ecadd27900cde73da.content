@@ -7161,7 +7161,7 @@ body {
   right: 0;
   top: 0;
   display: block;
-  height: calc(100vh + 75px); }
+  height: 100vh; }
   .carousel .shelf-block {
     position: absolute;
     left: 0;
