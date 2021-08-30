@@ -69,6 +69,9 @@ $(window).scroll(function() {
         if($(".shelf-block--slider").hasClass("active")){
         	$(".carousel-inner").addClass("scrollTopContainer");
     	}
+    	$carousel.on('slid.bs.carousel', function (event) {
+		    event.stopPropagation();
+		});
     } else{
     	 $(".shelf-block--slider.active").addClass("");
     }
