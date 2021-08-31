@@ -38,6 +38,7 @@ $(".carousel").swipe({
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
         if (direction == 'left') $(this).carousel('next');
         if (direction == 'right') $(this).carousel('prev');
+        if (direction == 'up') $(this).carousel('off');
     },
     allowPageScroll: "vertical"
 });
@@ -63,6 +64,7 @@ var $carousel = $('.carousel'),
 	$active.prev().addClass('prev');
 });
 
+$(".pointer-events-none").off('slid.bs.carousel');
 
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();    
