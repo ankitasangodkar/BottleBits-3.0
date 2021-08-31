@@ -286,7 +286,9 @@
 			            -webkit-transition: right 1s $ease-out;
 		    		}
 		    		.shelf-block--picture{
-		    			right: 45%;
+						right: 40%;
+						width: 160px;
+						bottom: -13px;
 		    			transition: right 1s $ease-out;
 			            -webkit-transition: right 1s $ease-out;
 		    		}
@@ -306,6 +308,15 @@
 			    			p{
 			    				opacity: 1;
 		    				}
+			    		}
+		    		}
+		    		&.wrap4{
+		    			.shelf-block--picture{
+							right: 42%;
+							width: 100px;
+							bottom: 15px;
+			    			transition: right 1s $ease-out;
+				            -webkit-transition: right 1s $ease-out;
 			    		}
 		    		}
 		    	}

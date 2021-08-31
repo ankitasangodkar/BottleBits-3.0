@@ -7404,7 +7404,9 @@ body {
         transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--picture {
-        right: 45%;
+        right: 40%;
+        width: 160px;
+        bottom: -13px;
         transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .map {
@@ -7420,6 +7422,12 @@ body {
         -webkit-transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
         .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details p {
           opacity: 1; }
+      .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp.wrap4 .shelf-block--picture {
+        right: 42%;
+        width: 100px;
+        bottom: 15px;
+        transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active:not(.shelf-block--slider) .shelf-block--label, .shelf-block-bg .shelf-block .shelf-block--wrap.active:not(.shelf-block--slider) .shelf-block--info {
         opacity: 0; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.next .shelf-block--picture {
