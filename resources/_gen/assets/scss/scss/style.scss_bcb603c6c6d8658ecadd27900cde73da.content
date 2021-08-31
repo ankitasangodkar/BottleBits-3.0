@@ -7187,7 +7187,7 @@ body {
         height: 100vh; } }
   .shelf-block-bg .shelf-block {
     position: absolute;
-    height: calc(100vh - 60px);
+    height: 100vh;
     left: 0;
     top: 0;
     padding-top: 30px;
@@ -7412,7 +7412,8 @@ body {
         transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
     @media (min-width: 768px) {
       .shelf-block-bg .shelf-block {
-        max-width: 550px; } }
+        max-width: 550px;
+        height: calc(100vh - 60px); } }
 
 .bottle-details {
   position: absolute;
