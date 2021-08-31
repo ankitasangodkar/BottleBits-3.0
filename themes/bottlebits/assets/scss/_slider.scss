@@ -17,7 +17,7 @@
 	   -webkit-transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
 		&.small_block{
 			position: relative !important;
-			height: 100vh;
+		    height: 560px;
 			.shelf-block{
 				height: 442px;
 				transition: height 1s $ease-out;
