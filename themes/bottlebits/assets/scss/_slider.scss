@@ -40,8 +40,9 @@
 				}
 				.shelf-block--picture {
 					height: 250px !important;
-					bottom: 20px;
 					padding-right: 40px;
+					width: 140px !important;
+					bottom: -4px !important;
 					transition: height 1s $ease-out;
 					@media(min-width: 768px){
 						right: 0 !important;
@@ -58,6 +59,9 @@
 							text-align: left;
 						}
 					}
+				}
+				&.wrap4{
+			    	bottom: 24px !important;
 				}
 			}
 			@media(min-width: 768px){
@@ -210,7 +214,7 @@
 				    position: absolute;
 				    right: 60px;
 				    top: 88%;
-				    width: 120px;
+				    width: 132px;
 				    font-family: 'AbhayaLibre-SemiBold';
 				    font-weight: 600;
 				    font-size: 12px;
@@ -223,7 +227,7 @@
     			    -webkit-transform: translateY(40px);
 	    		}
 		    	&.showDetails{
-	    			transform: translateY(-170%);
+	    			transform: translateY(-160%);
 	    			transition: transform 2s $ease-out;
 	    			.map-disterllery{
 	    				opacity: 1;
