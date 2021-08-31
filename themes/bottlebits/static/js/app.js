@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
 	$('.shelf .shelf-block').on('click', function(){
-		$(".carousel .shelf-block").addClass('show_bg');
+		$(".shelf-block-bg").addClass('show_bg');
 		$(".shelf").addClass('hidden');
 		$(".carousel .shelf-block .shelf-block--wrap").addClass('shelf-block--slider');
 
