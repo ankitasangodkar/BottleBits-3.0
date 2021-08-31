@@ -7314,7 +7314,7 @@ body {
           transform: translateY(40px);
           -webkit-transform: translateY(40px); }
       .carousel .shelf-block .shelf-block--wrap .disterllery {
-        transform: translateY(-70%);
+        transform: translateY(-34%);
         height: 400px; }
         .carousel .shelf-block .shelf-block--wrap .disterllery .map-disterllery {
           background-image: url("../images/disterllery.png");
