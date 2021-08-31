@@ -74,13 +74,14 @@
     justify-content: center;
     .price{
     	border: 1px solid #181A1E;
-	    padding: 10px 20px;
+	    padding: 10px 15px;
         display: flex;
     	flex-direction: column;
     	align-items: center;
     	width: 167px;
     	margin: 0 10px;
     	cursor: pointer;
+    	text-align: center;
     	span{
     		font-family: 'AbhayaLibre-Regular';
 			font-size: 14px;
