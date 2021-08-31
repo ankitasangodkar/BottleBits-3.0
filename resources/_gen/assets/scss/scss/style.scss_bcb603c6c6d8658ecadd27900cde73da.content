@@ -7172,7 +7172,6 @@ body {
   display: block;
   height: 100vh; }
   .shelf-block-bg.show_bg {
-    height: 800px;
     width: 100% !important;
     opacity: 1;
     position: absolute;
@@ -7182,6 +7181,38 @@ body {
     transform: none !important;
     transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), z-index 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+    .shelf-block-bg.show_bg.small_block {
+      position: relative !important;
+      height: 100vh; }
+      .shelf-block-bg.show_bg.small_block .shelf-block {
+        height: 442px;
+        transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      .shelf-block-bg.show_bg.small_block .shelf-block--wrap .shelf-block--title {
+        font-size: 36px;
+        line-height: 42px; }
+      .shelf-block-bg.show_bg.small_block .shelf-block--wrap .shelf-block--info {
+        padding-top: 15px;
+        padding-left: 35%;
+        text-align: left; }
+      .shelf-block-bg.show_bg.small_block .shelf-block--wrap .shelf-block--picture {
+        height: 250px !important;
+        bottom: 20px;
+        padding-right: 40px;
+        transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        @media (min-width: 768px) {
+          .shelf-block-bg.show_bg.small_block .shelf-block--wrap .shelf-block--picture {
+            right: 0 !important;
+            height: 60%;
+            bottom: 40px; } }
+      .shelf-block-bg.show_bg.small_block .shelf-block--wrap.active .description {
+        opacity: 1 !important;
+        padding-left: 19%;
+        margin-top: 20px; }
+        .shelf-block-bg.show_bg.small_block .shelf-block--wrap.active .description .price {
+          text-align: left; }
+      @media (min-width: 768px) {
+        .shelf-block-bg.show_bg.small_block {
+          height: 90%; } }
     @media (min-width: 768px) {
       .shelf-block-bg.show_bg {
         height: 100vh; } }
@@ -7195,29 +7226,6 @@ body {
     width: 100%;
     z-index: 0;
     -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg .shelf-block.show_bg.scrollTopContainer .description, .shelf-block-bg .shelf-block.show_bg.scrollTopContainer .shelf-block--label, .shelf-block-bg .shelf-block.show_bg.scrollTopContainer .shelf-block--info {
-      opacity: 0;
-      transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      -webkit-transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg .shelf-block.show_bg.small_block {
-      height: 62%;
-      transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .shelf-block.show_bg.small_block .shelf-block--wrap .shelf-block--title {
-        font-size: 36px;
-        line-height: 42px; }
-      .shelf-block-bg .shelf-block.show_bg.small_block .shelf-block--wrap .shelf-block--picture {
-        height: 225px;
-        bottom: 20px;
-        padding-right: 40px;
-        transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        @media (min-width: 768px) {
-          .shelf-block-bg .shelf-block.show_bg.small_block .shelf-block--wrap .shelf-block--picture {
-            right: 0 !important;
-            height: 60%;
-            bottom: 40px; } }
-      @media (min-width: 768px) {
-        .shelf-block-bg .shelf-block.show_bg.small_block {
-          height: 90%; } }
     .shelf-block-bg .shelf-block .shelf-block--wrap {
       position: absolute;
       top: 0;
@@ -7239,7 +7247,8 @@ body {
           background: rgba(0, 0, 0, 0.2);
           border-radius: 10px;
           color: #FFFFFF;
-          padding: 4px 12px; }
+          padding: 4px 12px;
+          opacity: 0; }
       .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--title {
         font-size: 30px;
         line-height: 35px;
@@ -7248,12 +7257,13 @@ body {
       .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--info {
         font-size: 14px;
         line-height: 17px;
-        opacity: 1; }
+        opacity: 0; }
       .shelf-block-bg .shelf-block .shelf-block--wrap .description {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        opacity: 0; }
         .shelf-block-bg .shelf-block .shelf-block--wrap .description .price {
           font-family: 'AbhayaLibre-Regular';
           font-weight: 400;
@@ -7347,7 +7357,7 @@ body {
           -webkit-transform: translateY(40px); }
         .shelf-block-bg .shelf-block .shelf-block--wrap .disterllery.showDetails {
           transform: translateY(-170%);
-          transition: transform 3s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
           .shelf-block-bg .shelf-block .shelf-block--wrap .disterllery.showDetails .map-disterllery {
             opacity: 1; }
           .shelf-block-bg .shelf-block .shelf-block--wrap .disterllery.showDetails .disterllery_details {
@@ -7359,6 +7369,12 @@ body {
         @media (min-width: 768px) {
           .shelf-block-bg .shelf-block .shelf-block--wrap.prev .shelf-block--picture {
             height: 350px; } }
+      .shelf-block-bg .shelf-block .shelf-block--wrap.active .shelf-block--label .tags {
+        opacity: 1; }
+      .shelf-block-bg .shelf-block .shelf-block--wrap.active .shelf-block--info {
+        opacity: 1; }
+      .shelf-block-bg .shelf-block .shelf-block--wrap.active .description {
+        opacity: 1; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active .shelf-block--title {
         opacity: 1;
         visibility: visible;
@@ -7377,6 +7393,8 @@ body {
             height: 350px; } }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .pointer-events-none {
         opacity: 1; }
+      .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .description {
+        opacity: 0; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--label, .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--info {
         opacity: 1;
         transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
@@ -7417,8 +7435,10 @@ body {
 
 .bottle-details {
   position: absolute;
-  top: 62%;
-  padding: 30px; }
+  top: 50%;
+  padding: 30px;
+  height: auto;
+  z-index: 2; }
   .bottle-details .title {
     font-family: "AbhayaLibre-Bold";
     font-weight: 800;

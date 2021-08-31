@@ -69,7 +69,6 @@ $(window).scroll(function() {
     if (scroll <= 500) {
         $(".shelf-block--slider.active").addClass("scrollUp");
          if($(".shelf-block--slider").hasClass("active")){
-        	$(".shelf-block--details").addClass("scrollTopContainer");
         	$(".tabs").addClass("showTab");
     	}
     }
@@ -90,7 +89,7 @@ $('.tabs ul li').on('click',function(){
 	}
 	if($('.tabs ul li:nth-child(4)').hasClass('active')){
 		$('.podium').hide();
-		$('.carousel-inner.show_bg').addClass('small_block');
+		$('.shelf-block-bg.show_bg').addClass('small_block');
 		$('.disterllery').hide();
 		$('.shelf-block--region > .region').hide();
 		$('.bottle-details').removeClass('hide').fadeIn();
