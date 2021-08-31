@@ -7439,9 +7439,9 @@ body {
 
 .bottle-details {
   position: absolute;
-  top: 50%;
+  top: 78%;
   padding: 30px;
-  height: auto;
+  height: 500px;
   z-index: 2; }
   .bottle-details .title {
     font-family: "AbhayaLibre-Bold";
