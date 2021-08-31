@@ -41,4 +41,15 @@
 		    }
 	    }
     }
+	&.showTab{
+		z-index: 3;
+		cursor: pointer;
+		top: 80px;
+		opacity: 1;
+		transition: opacity 1s $ease-out, top 1s $ease-out;
+		-webkit-transition: opacity 1s $ease-out, top 1s $ease-out;
+	}
+	@media(min-width: 768px){
+		display: none;
+	}
 }

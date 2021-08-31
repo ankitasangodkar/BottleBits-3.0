@@ -35,6 +35,30 @@
 			@media(min-width: 768px){
 			    height: 100vh;
 			}
+			&.small_block{
+				height: 62%;
+				transition: height 1s $ease-out;
+				.shelf-block--wrap{
+					.shelf-block--title{
+						font-size: 36px;
+						line-height: 42px;
+					}
+					.shelf-block--picture {
+						height: 225px;
+						bottom: 20px;
+						padding-right: 40px;
+						transition: height 1s $ease-out;
+						@media(min-width: 768px){
+							right: 0 !important;
+							height: 60%;
+							bottom: 40px;
+						}
+					}
+				}
+				@media(min-width: 768px){
+					height: 90%;
+				}
+			}
 		}
 		.shelf-block--wrap{
 			position: absolute;
@@ -45,9 +69,7 @@
 			padding-top: 108px;
 		    width: auto !important;
 			margin-right: 0 !important;
-			.carousel-item{
-				pointer-events: none;
-			}
+			pointer-events: none;
 		   	.shelf-block--label{
 				margin-bottom: 15px;
 				.tags{
@@ -100,15 +122,24 @@
 			    object-fit: contain;
 			    right: 0;
 				left: 0;
+			    z-index: 1;
 				bottom: 80px;
 				width: auto;
     			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
     			-webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
 		    }
 		    .shelf-block--region{
-		    	.tabs{
-		    		opacity: 0;
-	    		}
+		    	height: 400px;
+		    	.region{
+					height: 400px;
+					transform: translateY(-70%);
+					position: relative;
+					z-index: -1;
+		    		&.slide_up{
+		    			transform: translateY(-190%);
+		    			transition: transform 2s $ease-out;
+		    		}
+		    	}
 	    		.map{
 					background-image: url('../images/scotland.png');
 					background-repeat: no-repeat;
@@ -124,7 +155,7 @@
 	    		.region_details{
 				    position: absolute;
 				    right: 60px;
-				    top: 50%;
+				    top: 70%;
 				    width: 120px;
 				    font-family: 'AbhayaLibre-SemiBold';
 				    font-weight: 600;
@@ -139,18 +170,47 @@
 	    		}
 		    }
 		    .disterllery{
+		    	transform: translateY(-70%);
+		    	height: 400px;
 		    	.map-disterllery{
 		    		background-image: url('../images/disterllery.png');
 					background-repeat: no-repeat;
 					background-size: contain;
 				    background-position-y: center;
 				    width: 100%;
-				    height: 500px;
+				    left: 85px;
+				    height: 315px;
 				    position: absolute;
-				    top: 16%;
+				    top: 25%;
 				    z-index: -2;
-		    		opacity: 0;
+				    opacity: 0;
 		    	}
+		    	.disterllery_details{
+				    position: absolute;
+				    right: 60px;
+				    top: 70%;
+				    width: 120px;
+				    font-family: 'AbhayaLibre-SemiBold';
+				    font-weight: 600;
+				    font-size: 12px;
+				    line-height: 20px;
+				    letter-spacing: 0.01em;
+				    color: #000000;
+				    text-align: left;
+	    			opacity: 0;
+    			    transform: translateY(40px);
+    			    -webkit-transform: translateY(40px);
+	    		}
+		    	&.showDetails{
+	    			transform: translateY(-170%);
+	    			transition: transform 3s $ease-out;
+	    			.map-disterllery{
+	    				opacity: 1;
+	    			}
+	    			.disterllery_details{
+	    				opacity: 1;
+	    			}
+	    		}
 		    }
 	    	&.prev{
 	    		.shelf-block--picture {
@@ -183,9 +243,9 @@
 					}
 				}
 		    	&.scrollUp{
-		    		.description{
-		    			opacity: 0;
-		    		}
+		    		.pointer-events-none{
+						opacity: 1;
+					}
 		    		.shelf-block--label, .shelf-block--info{
 		    			opacity: 1;
 		    			transition: right 1s $ease-out;
@@ -197,12 +257,6 @@
 			            -webkit-transition: right 1s $ease-out;
 		    		}
 		    		.shelf-block--region{
-		    			.tabs{
-		    				top: 80px;
-		    				opacity: 1;
-		    				transition: opacity 1s $ease-out, top 1s $ease-out;
-		    				-webkit-transition: opacity 1s $ease-out, top 1s $ease-out;
-		    			}
 		    			.map{
 		    				top: 10%;
 	    	    			opacity: 1;
@@ -246,4 +300,128 @@
 			max-width: 550px;
 		}
 	}
+}
+.bottle-details{
+	position: absolute;
+    top: 62%;
+    padding: 30px;
+    .title{
+    	font-family: "AbhayaLibre-Bold";
+	    font-weight: 800;
+	    font-size: 24px;
+	    line-height: 103.97%;
+	    color: #000000;
+	    margin-bottom: 20px;
+	    margin-top: 0;
+    }
+    .info{
+    	font-family: 'Nunito Sans', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.01em;
+		color: #000000;
+		opacity: 0.7;
+    }
+    .tags{
+    	display: flex;
+    	flex-wrap: wrap;
+    	.tag{
+    		flex-basis: 33.33%;
+    		.name{
+    			font-family: 'Nunito Sans', sans-serif;
+				font-size: 12px;
+				line-height: 20px;
+				letter-spacing: 0.01em;
+				color: #000000;
+				opacity: 0.7;
+				margin-bottom: 0;
+    		}
+    		.type{
+    			font-family: "AbhayaLibre-Bold";
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: -0.01em;
+				color: #000000;
+    		}
+    		@media(min-width: 768px){
+    			flex-basis: 200px;
+    		}
+    	}
+    }
+    .wrap{
+    	display: none;
+    }
+    @media(min-width: 768px){
+		margin-left: 550px;
+	    top: 160px;
+	    .wrap{
+    		display: block;
+    	}
+	    .shelf-block{
+	    	&--label{
+				margin-bottom: 15px;
+				display: flex;
+				.tags{
+					font-family: 'Nunito Sans', sans-serif;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 19px;
+					text-align: center;
+					background: #FFFFFF;;
+					border-radius: 10px;
+					color: #000000;
+				    padding: 4px 12px;
+				    margin-right: 10px;
+				}
+			}
+	    	&--title{
+				font-family: "AbhayaLibre-Regular";
+				font-style: normal;
+				font-weight: bold;
+				font-size: 72px;
+				line-height: 64px;
+				letter-spacing: -0.01em;
+				color: #000000;
+				text-align: left;
+			}
+			&--info{
+				font-family: "AbhayaLibre-Bold";
+				font-style: normal;
+				font-weight: bold;
+				font-size: 36px;
+				line-height: 42px;
+				color: #000000;
+				opacity: 0.5;
+				text-align: left;
+				margin-bottom: 32px;
+			}
+	    }
+		.description{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			margin-bottom: 30px;
+			.price{
+				font-family: 'AbhayaLibre-Regular';
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21px;
+				text-align: left;
+				letter-spacing: -0.011em;
+				color: #000000;
+				width: 108px;
+				margin-right: 20px;
+				span{
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 24px;
+					letter-spacing: -0.01em;
+				}
+			}
+		}
+    }
 }

@@ -62,31 +62,37 @@ var $carousel = $('.carousel'),
 	}
 	$active.prev().addClass('prev');
 });
-$(function(){
-  var curDown = false,
-      curYPos = 0,
-      curXPos = 0;
-  
-  $(window).mousemove(function(m){
-    if(curDown){
-      window.scrollBy(curXPos - m.pageX, curYPos - m.pageY)
-    }
-  });
-  
-  $(window).mousedown(function(m){
-    curYPos = m.pageY;
-    curXPos = m.pageX;
-    curDown = true;
-  });
-  
-  $(window).mouseup(function(){
-    curDown = false;
-  });
-})
+
 
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();    
     if (scroll <= 500) {
         $(".shelf-block--slider.active").addClass("scrollUp");
+         if($(".shelf-block--slider").hasClass("active")){
+        	$(".shelf-block--details").addClass("scrollTopContainer");
+        	$(".tabs").addClass("showTab");
+    	}
     }
+});
+var container = $('.shelf-block--region'),
+    scrollTo = $('.disterllery');
+
+	container.animate({
+    scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+});
+
+$('.tabs ul li').on('click',function(){
+	$('.tabs ul li').removeClass('active');
+	$(this).addClass('active');
+	if($('.tabs ul li:nth-child(2)').hasClass('active')){
+		$('.shelf-block--region > .region').addClass('slide_up');
+		$('.disterllery').addClass('showDetails');
+	}
+	if($('.tabs ul li:nth-child(4)').hasClass('active')){
+		$('.podium').hide();
+		$('.carousel-inner.show_bg').addClass('small_block');
+		$('.disterllery').hide();
+		$('.shelf-block--region > .region').hide();
+		$('.bottle-details').removeClass('hide').fadeIn();
+	}
 });

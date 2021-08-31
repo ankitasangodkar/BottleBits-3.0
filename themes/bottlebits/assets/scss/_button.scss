@@ -62,3 +62,41 @@
 		}
 	}
 }
+.floating-btn{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FCF8F0;
+    box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    .price{
+    	border: 1px solid #181A1E;
+	    padding: 10px 20px;
+        display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	width: 167px;
+    	margin: 0 10px;
+    	cursor: pointer;
+    	span{
+    		font-family: 'AbhayaLibre-Regular';
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: -0.01em;
+			color: #000000;
+    	}
+    	&-dark{
+			background: linear-gradient(104.53deg, #181A1E 12.83%, #35373D 98.04%);
+			border-radius: 1px;
+			span{
+				color: white;
+			}
+    	}
+    }
+    @media(min-width: 768px){
+    	justify-content: flex-end;
+    }
+}
