@@ -39,7 +39,7 @@ $(".carousel").swipe({
         if (direction == 'left') $(this).carousel('next');
         if (direction == 'right') $(this).carousel('prev');
     },
-    allowPageScroll: "horizontal"
+    allowPageScroll: "vertical"
 });
 
 
