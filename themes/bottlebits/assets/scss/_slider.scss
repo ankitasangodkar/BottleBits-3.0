@@ -23,13 +23,19 @@
 				transition: height 1s $ease-out;
 			}
 			.shelf-block--wrap{
+				.pointer-events-none{
+				    padding-left: 156px;
+				}
+				.shelf-block--label{
+					text-align: left;
+				}
 				.shelf-block--title{
 					font-size: 36px;
 					line-height: 42px;
+					text-align: left;
 				}
 				.shelf-block--info{
 					padding-top: 15px;
-					padding-left: 35%;
 					text-align: left;
 				}
 				.shelf-block--picture {
@@ -46,8 +52,8 @@
 				&.active{
 					.description{
 						opacity: 1 !important;
-						padding-left: 19%;
 						margin-top: 20px;
+						justify-content: flex-start;
 						.price{
 							text-align: left;
 						}
