@@ -24,7 +24,8 @@
 			}
 			.shelf-block--wrap{
 				.pointer-events-none{
-				    padding-left: 156px;
+				    padding-left: 148px;
+				    padding-right: 10px;
 				}
 				.shelf-block--label{
 					text-align: left;
@@ -68,6 +69,19 @@
 				height: 90%;
 			}
 		}
+		&.scrollUpContainer{
+			.carousel-inner{
+			    pointer-events: none;
+			}
+			.shelf-block--picture{
+				pointer-events: none;
+			    cursor: not-allowed;
+			}
+			.shelf-block--region{
+			    cursor: not-allowed;
+    			pointer-events: none;
+			}
+		}
 	   	@media(min-width: 768px){
 		    height: 100vh;
 		}
@@ -78,10 +92,10 @@
 	    left: 0;
 	    top: 0;
 	    padding-top: 30px;
-		transition: opacity 1s $ease-out;
+		transition: opacity 1s $ease-out, height 1s $ease-out;
 		width: 100%;
 		z-index: 0;
-		-webkit-transition: opacity 1s $ease-out;
+		-webkit-transition: opacity 1s $ease-out, height 1s $ease-out;
 		.shelf-block--wrap{
 			position: absolute;
 			top: 0;
@@ -203,7 +217,7 @@
 					background-size: contain;
 				    background-position-y: center;
 				    width: 100%;
-				    left: 85px;
+				    left: 50px;
 				    height: 315px;
 				    position: absolute;
 				    top: 25%;
@@ -213,7 +227,7 @@
 		    	.disterllery_details{
 				    position: absolute;
 				    right: 60px;
-				    top: 88%;
+				    top: 92%;
 				    width: 132px;
 				    font-family: 'AbhayaLibre-SemiBold';
 				    font-weight: 600;
@@ -272,7 +286,7 @@
 					height: 420px;
 					transform: translateX(0%);
 				    pointer-events: auto;
-					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out;
+					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out, right2s $ease-in-out;
 					@media(min-width: 768px){
 			    		height: 350px;
 					}
@@ -295,6 +309,12 @@
 						bottom: -13px;
 		    			transition: right 1s $ease-out;
 			            -webkit-transition: right 1s $ease-out;
+		                pointer-events: none;
+		    		}
+		    		.description{
+		    			.price{
+	    				    width: 90px;
+		    			}
 		    		}
 		    		.shelf-block--region{
 		    			.map{
@@ -313,6 +333,11 @@
 			    				opacity: 1;
 		    				}
 			    		}
+		    		}
+		    		&.wrap3{
+		    			.shelf-block--picture{
+		    			    bottom: 4px;
+	    			    }
 		    		}
 		    		&.wrap4{
 		    			.shelf-block--picture{

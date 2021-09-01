@@ -7188,7 +7188,8 @@ body {
         height: 442px;
         transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg.show_bg.small_block .shelf-block--wrap .pointer-events-none {
-        padding-left: 156px; }
+        padding-left: 148px;
+        padding-right: 10px; }
       .shelf-block-bg.show_bg.small_block .shelf-block--wrap .shelf-block--label {
         text-align: left; }
       .shelf-block-bg.show_bg.small_block .shelf-block--wrap .shelf-block--title {
@@ -7220,6 +7221,14 @@ body {
       @media (min-width: 768px) {
         .shelf-block-bg.show_bg.small_block {
           height: 90%; } }
+    .shelf-block-bg.show_bg.scrollUpContainer .carousel-inner {
+      pointer-events: none; }
+    .shelf-block-bg.show_bg.scrollUpContainer .shelf-block--picture {
+      pointer-events: none;
+      cursor: not-allowed; }
+    .shelf-block-bg.show_bg.scrollUpContainer .shelf-block--region {
+      cursor: not-allowed;
+      pointer-events: none; }
     @media (min-width: 768px) {
       .shelf-block-bg.show_bg {
         height: 100vh; } }
@@ -7229,10 +7238,10 @@ body {
     left: 0;
     top: 0;
     padding-top: 30px;
-    transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+    transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     width: 100%;
     z-index: 0;
-    -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+    -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .shelf-block-bg .shelf-block .shelf-block--wrap {
       position: absolute;
       top: 0;
@@ -7341,7 +7350,7 @@ body {
           background-size: contain;
           background-position-y: center;
           width: 100%;
-          left: 85px;
+          left: 50px;
           height: 315px;
           position: absolute;
           top: 25%;
@@ -7350,7 +7359,7 @@ body {
         .shelf-block-bg .shelf-block .shelf-block--wrap .disterllery .disterllery_details {
           position: absolute;
           right: 60px;
-          top: 88%;
+          top: 92%;
           width: 132px;
           font-family: 'AbhayaLibre-SemiBold';
           font-weight: 600;
@@ -7394,7 +7403,7 @@ body {
         height: 420px;
         transform: translateX(0%);
         pointer-events: auto;
-        transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1); }
+        transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1), right2s cubic-bezier(0.48, 0.04, 0.25, 1); }
         @media (min-width: 768px) {
           .shelf-block-bg .shelf-block .shelf-block--wrap.active .shelf-block--picture {
             height: 350px; } }
@@ -7411,7 +7420,10 @@ body {
         width: 160px;
         bottom: -13px;
         transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        pointer-events: none; }
+      .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .description .price {
+        width: 90px; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .map {
         top: 10%;
         opacity: 1;
@@ -7425,6 +7437,8 @@ body {
         -webkit-transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
         .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp .shelf-block--region .region_details p {
           opacity: 1; }
+      .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp.wrap3 .shelf-block--picture {
+        bottom: 4px; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.scrollUp.wrap4 .shelf-block--picture {
         right: 42%;
         width: 100px;
@@ -7688,6 +7702,8 @@ body {
           right: 0;
           margin: auto;
           bottom: 12px; }
+      .tabs ul li.disable {
+        pointer-events: none; }
   .tabs.showTab {
     z-index: 3;
     cursor: pointer;
