@@ -7393,6 +7393,37 @@ body {
             text-align: left;
             transform: translateY(40px);
             -webkit-transform: translateY(40px); }
+        .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--region .bottle_story {
+          transform: translateY(-34%);
+          height: 360px;
+          opacity: 0; }
+          .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--region .bottle_story .map {
+            background-image: url("../images/scotland.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-y: center;
+            width: 100%;
+            height: 380px;
+            left: 25px;
+            position: absolute;
+            top: 16%;
+            z-index: -2;
+            opacity: 0; }
+          .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--region .bottle_story .bottle_story_details {
+            position: absolute;
+            right: 60px;
+            top: 80%;
+            width: 120px;
+            font-family: 'AbhayaLibre-SemiBold';
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            color: #000000;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(40px);
+            -webkit-transform: translateY(40px); }
       .shelf-block-bg .shelf-block .shelf-block--wrap .tabs {
         position: absolute;
         top: 30px;
@@ -7487,7 +7518,7 @@ body {
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.SWIPE_UP .shelf-block--region {
         opacity: 1; }
         .shelf-block-bg .shelf-block .shelf-block--wrap.active.SWIPE_UP .shelf-block--region .map {
-          top: 10%;
+          top: -9%;
           opacity: 1;
           transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
           -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
@@ -7505,6 +7536,19 @@ body {
           -webkit-transform: translateY(-160%);
           transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
           -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .shelf-block .shelf-block--wrap.active.SWIPE_UP .shelf-block--region .disterllery.hideDisterlleryDetails {
+          transform: translateY(-350%);
+          -webkit-transform: translateY(-350%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .shelf-block .shelf-block--wrap.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails {
+          opacity: 1;
+          transform: translateY(-280%);
+          -webkit-transform: translateY(-280%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .shelf-block-bg .shelf-block .shelf-block--wrap.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails .bottle_story_details {
+            opacity: 1; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.SWIPE_UP.wrap3 .shelf-block--picture {
         bottom: 4px; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.active.SWIPE_UP.wrap4 .shelf-block--picture {

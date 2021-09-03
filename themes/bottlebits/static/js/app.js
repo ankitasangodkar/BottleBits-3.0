@@ -72,22 +72,11 @@ var $carousel = $('.carousel'),
 	$active.prev().addClass('prev');
 });
 
-
-
-
 $(".SWIPE_UP .shelf-block--picture").on('slid.bs.carousel', function (e) {
  	if (event.cancelable) e.stopPropagation();
  	if (event.cancelable) event.preventDefault();
 
 });
-
-$(".SWIPE_UP .carousel").swipe({
-	    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-	 	if (event.cancelable) e.stopPropagation();
-	 	if (event.cancelable) event.preventDefault();
- 	}
-});
-
 
 $(document).ready(function (e) {
     jquerySwipeHandler.handleSwipe(".carousel-item", [
@@ -95,6 +84,8 @@ $(document).ready(function (e) {
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
 		$(".active").addClass(direction);
+		$(".shelf-block-bg").addClass("scrollUpContainer");
+
 	});
 
     jquerySwipeHandler.handleSwipe(".region", [
@@ -111,9 +102,20 @@ $(document).ready(function (e) {
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
-		$(".disterllery").removeClass("showDisterlleryDetails");
-		$(".show_bg").addClass("small_block");
+	  	$(".disterllery").removeClass("showDisterlleryDetails").addClass("hideDisterlleryDetails");
+		$(".bottle_story").addClass("showBottleStoryDetails");
 		$(".tabs .dest1").removeClass("selected");
+		$(".tabs .bottleStory").addClass("selected");
+	});
+
+
+    jquerySwipeHandler.handleSwipe(".bottle_story", [
+     jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
+    ], function (direction) {
+	  	//console.log("swipe: ", direction);
+		$(".bottle_story").removeClass("showBottleStoryDetails");
+		$(".show_bg").addClass("small_block");
+		$(".tabs .bottleStory").removeClass("selected");
 		$(".tabs .details").addClass("selected");
 		$(".podium").removeClass("podium-animate");
 		$(".bottle-details").removeClass("hide");
