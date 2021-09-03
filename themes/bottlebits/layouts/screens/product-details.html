@@ -1,22 +1,22 @@
 {{ define "main" }}
 <div class="product-detailed">
 	<div class="shelf">
-		<div class="shelf-block">
+		<div class="shelf-block" rel="keep-params" data-title="Dalmore 12 Year">
 			<h3 class="shelf-block--title">Dalmore 12 Year</h3>
 			<p class="shelf-block--info">1965, Islay (Scotland)</p>
 			<img src="{{"images/dalmore.png" | relURL }}" alt="dalmore" class="wine-bottle shelf-block--picture">
 		</div>
-		<div class="shelf-block">
+		<div class="shelf-block" rel="keep-params" data-title="Hibiki">
 			<h3 class="shelf-block--title">Hibiki</h3>
 			<p class="shelf-block--info">1965, Islay (Scotland)</p>
 			<img src="{{"images/hibiki.png" | relURL }}" alt="hibiki" class="wine-bottle shelf-block--picture">
 		</div>
-		<div class="shelf-block">
+		<div class="shelf-block" rel="keep-params" data-title="Rich & Rare">
 			<h3 class="shelf-block--title">Rich & Rare</h3>
 			<p class="shelf-block--info">1965, Islay (Scotland)</p>
 			<img src="{{"images/rich-rare.png" | relURL }}" alt="rich-&-rare" class="wine-bottle shelf-block--picture">
 		</div>
-		<div class="shelf-block">
+		<div class="shelf-block" rel="keep-params" data-title="Macallan">
 			<h3 class="shelf-block--title">Macallan</h3>
 			<p class="shelf-block--info">1965, Islay (Scotland)</p>
 			<img src="{{"images/macallan.png" | relURL }}" alt="macallan" class="wine-bottle shelf-block--picture">
@@ -40,6 +40,7 @@
 						</div>
 					</div>
 					<img src="{{"images/dalmore.png" | relURL }}" alt="dalmore" class="wine-bottle shelf-block--picture">
+
 					<div class="shelf-block--region">
 						<div class="region">
 							<div class="map"></div>
@@ -47,7 +48,12 @@
 								<p>There are currently nine working distilleries on Islay. The first recorded distillery was Bowmore, founded in 1779. Islay’s distilleries are spread across the island- Ardbeg, Lagavulin and Laphroaig are collectively known as the Kildalton Distilleries.</p>
 							</div>
 						</div>
-					
+						<div class="disterllery">
+							<div class="map-disterllery"></div>
+							<div class="disterllery_details">
+								<p>There are currently nine working distilleries on Islay. The first recorded distillery was Bowmore, founded in 1779. Islay’s distilleries are spread across the island- Ardbeg, Lagavulin and Laphroaig are collectively known as the Kildalton Distilleries.</p>
+							</div>
+						</div>
 			        </div>
 		        </div>
 
@@ -72,7 +78,12 @@
 								<p>There are currently nine working distilleries on Islay. The first recorded distillery was Bowmore, founded in 1779. Islay’s distilleries are spread across the island- Ardbeg, Lagavulin and Laphroaig are collectively known as the Kildalton Distilleries.</p>
 							</div>
 						</div>
-						
+						<div class="disterllery">
+							<div class="map-disterllery"></div>
+							<div class="disterllery_details">
+								<p>There are currently nine working distilleries on Islay. The first recorded distillery was Bowmore, founded in 1779. Islay’s distilleries are spread across the island- Ardbeg, Lagavulin and Laphroaig are collectively known as the Kildalton Distilleries.</p>
+							</div>
+						</div>
 			        </div>
 		        </div>
 
@@ -97,7 +108,12 @@
 								<p>There are currently nine working distilleries on Islay. The first recorded distillery was Bowmore, founded in 1779. Islay’s distilleries are spread across the island- Ardbeg, Lagavulin and Laphroaig are collectively known as the Kildalton Distilleries.</p>
 							</div>
 						</div>
-						
+						<div class="disterllery">
+							<div class="map-disterllery"></div>
+							<div class="disterllery_details">
+								<p>There are currently nine working distilleries on Islay. The first recorded distillery was Bowmore, founded in 1779. Islay’s distilleries are spread across the island- Ardbeg, Lagavulin and Laphroaig are collectively known as the Kildalton Distilleries.</p>
+							</div>
+						</div>
 			        </div>
 		        </div>
 
@@ -115,6 +131,17 @@
 						</div>
 					</div>
 					<img src="{{"images/macallan.png" | relURL }}" alt="macallan" class="wine-bottle shelf-block--picture">
+					<div class="tabs">
+						<div class="tab--name">
+							<span class="region selected">Region</span>
+							<span class="dest1">Distellery</span>
+							<span class="dist2">Distellery</span>
+							<span class="bottleStory">Bottle Story</span>
+							<span class="details">Details</span>
+						</div>
+						<div class="button"><a href=""><img src="{{"images/back-arrow.png" | relURL }}" ></a></div>
+					</div>
+
 					<div class="shelf-block--region">
 						<div class="region">
 							<div class="map"></div>
@@ -132,13 +159,139 @@
 		        </div>
 		    </div>
 		</div>
-		<div class="tabs">
-			<ul>
-				<li class="active">Region</li>
-				<li>Distellery</li>
-				<li>Bottle story</li>
-				<li>Details</li>
-			</ul>
+		<div class="bottle-details hide">
+			<div class="wrap wrap4">
+				<div class="shelf-block--label">
+					<span class="tags">Whisky</span>
+					<span class="tags">Single malt</span>
+				</div>
+				<h3 class="shelf-block--title">Macallan</h3>
+				<p class="shelf-block--info">1965, Islay (Scotland)</p>
+				<div class="description">
+					<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+					<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+				</div>
+			</div>
+			<h3 class="title">Bottle details</h3>
+			<div class="info">Semi dumpy green bottle, gold wax seal with gold tear-string. In original glass Museum case on black plinth with lid. Also with 5cl miniature bottle.</div>
+			<div class="tags">
+				<div class="tag">
+					<h5 class="name">Spirit</h5>
+					<p class="type">Whisky</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Vintage</h5>
+					<p class="type">1965</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Type</h5>
+					<p class="type">Single Malt</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Age</h5>
+					<p class="type">39 Years</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Country</h5>
+					<p class="type">Scotland</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">No if Bottles</h5>
+					<p class="type">1 out of 261</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Region</h5>
+					<p class="type">Region</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Volume</h5>
+					<p class="type">700 ml</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Distiller</h5>
+					<p class="type">Ardbeg</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">Bottler</h5>
+					<p class="type">Own Bottling</p>
+				</div>
+				<div class="tag">
+					<h5 class="name">ABV</h5>
+					<p class="type">42.1%</p>
+				</div>
+					<div class="tag">
+					<h5 class="name">Cask</h5>
+					<p class="type">3678 & 3679</p>
+				</div>			
+			</div>
+			<div class="info">Colouring The palate is intensely oaky, with rich wood spices, orange zest, root ginger and hints of something peaty</div>
+			<div class="info">Why Invest?  The palate is intensely oaky, with rich wood spices, orange zest, root ginger and hints of something peaty</div>
+			<div class="pricing tags">
+				<div class="price tag">
+					<h5 class="name">Price Per DRAM (5ml)</h5>
+					<p class="type">140 GBP</p>
+				</div>
+				<div class="price tag">
+					<h5 class="name">No of DRAMS</h5>
+					<p class="type">140</p>
+				</div>
+				<div class="price tag">
+					<h5 class="name">Bottle Price</h5>
+					<p class="type">19320 GBP</p>
+				</div>
+				<div class="price tag">
+					<h5 class="name">Retail Price</h5>
+					<p class="type">24500 GBP</p>
+				</div>
+			</div>
+			<h4 class="section-title">Comments</h4>
+			<form class="comment-box">
+				<textarea class="msg" placeholder="Write a comment">
+				</textarea>
+				<button class="submit">Post</button>
+			</form>
+			<div class="comments">
+				<div class="comments-block">
+					<div class="name">B</div>
+					<div class="message">
+						<h5>Bruce Christensen</h5>
+						<p>Saturated. Canned peaches, cocoa, nuts, motor oil, a little minerality, and a light trail of burnt wiring.</p>
+						<span class="time">2 hours ago</span>
+						<div class="dots">...</div>
+					</div>
+				</div>
+				<div class="comments-block">
+					<div class="name">S</div>
+					<div class="message">
+						<h5>Samantha Mills</h5>
+						<p>Rounded, despite the high degree. Dried fruits, cherry jam, honey, light technical tones.</p>
+						<span class="time">6 days ago</span>
+						<div class="dots">...</div>
+					</div>
+				</div>
+				<div class="comments-block">
+					<div class="name">W</div>
+					<div class="message">
+						<h5>William Edwards</h5>
+						<p>Long. Bitter chocolate, nuts, honey, cherries.</p>
+						<span class="time">3 months ago</span>
+						<div class="dots">...</div>
+					</div>
+				</div>
+				<div class="mt-3">
+					<a href="javascript:void(0)" class="link">View all comments</a>
+				</div>
+			</div>
+			<div class="floating-btn">
+				<div class="price">
+					<span>Buy Maximum Units</span>
+					<span>£ 4950.95</span>
+				</div>
+				<div class="price price-dark">
+					<span>Buy Drams</span>
+					<span>£ 500.5 / unit</span>
+				</div>
+			</div>
 		</div>
 		<div class="podium">
 			<div class="price">
@@ -146,70 +299,6 @@
 			</div>
 			<div class="share">
 				<img src="{{"images/share.svg" | relURL }}" alt="share" class="share">
-			</div>
-		</div>
-	</div>
-	<div class="bottle-details hide">
-		<div class="wrap wrap4">
-			<div class="shelf-block--label">
-				<span class="tags">Whisky</span>
-				<span class="tags">Single malt</span>
-			</div>
-			<h3 class="shelf-block--title">Macallan</h3>
-			<p class="shelf-block--info">1965, Islay (Scotland)</p>
-			<div class="description">
-				<div class="price dram-price">Price per dram <span>140 GBP</span></div>
-				<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
-			</div>
-		</div>
-		<h3 class="title">Bottle details</h3>
-		<div class="info">Semi dumpy green bottle, gold wax seal with gold tear-string. In original glass Museum case on black plinth with lid. Also with 5cl miniature bottle.</div>
-		<div class="tags">
-			<div class="tag">
-				<h5 class="name">Spirit</h5>
-				<p class="type">Whisky</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">Vintage</h5>
-				<p class="type">1965</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">Type</h5>
-				<p class="type">Single Malt</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">Age</h5>
-				<p class="type">39 Years</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">Country</h5>
-				<p class="type">Scotland</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">No if Bottles</h5>
-				<p class="type">1 out of 261</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">Region</h5>
-				<p class="type">Region</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">Volume</h5>
-				<p class="type">700 ml</p>
-			</div>
-			<div class="tag">
-				<h5 class="name">Distiller</h5>
-				<p class="type">Ardbeg</p>
-			</div>
-		</div>
-		<div class="floating-btn">
-			<div class="price">
-				<span>Buy Maximum Units</span>
-				<span>£ 4950.95</span>
-			</div>
-			<div class="price price-dark">
-				<span>Buy Drams</span>
-				<span>£ 500.5 / unit</span>
 			</div>
 		</div>
 	</div>

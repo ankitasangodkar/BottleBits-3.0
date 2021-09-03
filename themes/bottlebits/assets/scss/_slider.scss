@@ -17,10 +17,13 @@
 	   -webkit-transition: opacity 1s $ease-out, z-index 1s $ease-out, bottom 1s $ease-out;
 		&.small_block{
 			position: relative !important;
-		    height: 560px;
+		    height: 515px;
+
 			.shelf-block{
-				height: 442px;
+				height: 395px;
 				transition: height 1s $ease-out;
+				position: fixed;
+				z-index: 3;
 			}
 			.shelf-block--wrap{
 				.pointer-events-none{
@@ -40,7 +43,7 @@
 					text-align: left;
 				}
 				.shelf-block--picture {
-					height: 250px !important;
+					height: 225px !important;
 					padding-right: 40px;
 					width: 140px !important;
 					bottom: -4px !important;
@@ -96,6 +99,7 @@
 		width: 100%;
 		z-index: 0;
 		-webkit-transition: opacity 1s $ease-out, height 1s $ease-out;
+		pointer-events: none;
 		.shelf-block--wrap{
 			position: absolute;
 			top: 0;
@@ -168,11 +172,16 @@
 		    }
 		    .shelf-block--region{
 		    	height: 400px;
+		    	pointer-events: auto; 
+		    	opacity: 0;
 		    	.region{
-					height: 400px;
-					transform: translateY(-45%);
+				    height: 464px;
+				    transform: translateY(-25%);
 					position: relative;
 					z-index: -1;
+					.tabs{
+						opacity: 0;
+					}
 		    		&.slide_up{
 		    			transform: translateY(-190%);
 		    			transition: transform 2s $ease-out;
@@ -194,7 +203,7 @@
 	    		.region_details{
 				    position: absolute;
 				    right: 60px;
-				    top: 70%;
+				    top: 45%;
 				    width: 120px;
 				    font-family: 'AbhayaLibre-SemiBold';
 				    font-weight: 600;
@@ -207,49 +216,77 @@
     			    transform: translateY(40px);
     			    -webkit-transform: translateY(40px);
 	    		}
+			    .disterllery{
+			    	transform: translateY(-34%);
+			    	height: 360px;
+			    	opacity: 0;
+			    	.map-disterllery{
+			    		background-image: url('../images/disterllery.png');
+						background-repeat: no-repeat;
+						background-size: contain;
+					    background-position-y: center;
+					    width: 100%;
+					    left: 50px;
+					    height: 315px;
+					    position: absolute;
+					    top: 9%;
+					    z-index: -2;
+			    	}
+			    	.disterllery_details{
+					    position: absolute;
+					    right: 60px;
+					    top: 65%;
+					    width: 132px;
+					    font-family: 'AbhayaLibre-SemiBold';
+					    font-weight: 600;
+					    font-size: 12px;
+					    line-height: 20px;
+					    letter-spacing: 0.01em;
+					    color: #000000;
+					    text-align: left;
+	    			    transform: translateY(40px);
+	    			    -webkit-transform: translateY(40px);
+		    		}
+			    }
 		    }
-		    .disterllery{
-		    	transform: translateY(-34%);
-		    	height: 400px;
-		    	.map-disterllery{
-		    		background-image: url('../images/disterllery.png');
-					background-repeat: no-repeat;
-					background-size: contain;
-				    background-position-y: center;
-				    width: 100%;
-				    left: 50px;
-				    height: 315px;
-				    position: absolute;
-				    top: 25%;
-				    z-index: -2;
-				    opacity: 0;
-		    	}
-		    	.disterllery_details{
-				    position: absolute;
-				    right: 60px;
-				    top: 92%;
-				    width: 132px;
-				    font-family: 'AbhayaLibre-SemiBold';
-				    font-weight: 600;
-				    font-size: 12px;
-				    line-height: 20px;
-				    letter-spacing: 0.01em;
-				    color: #000000;
-				    text-align: left;
-	    			opacity: 0;
-    			    transform: translateY(40px);
-    			    -webkit-transform: translateY(40px);
-	    		}
-		    	&.showDetails{
-	    			transform: translateY(-160%);
-	    			transition: transform 2s $ease-out;
-	    			.map-disterllery{
-	    				opacity: 1;
-	    			}
-	    			.disterllery_details{
-	    				opacity: 1;
-	    			}
-	    		}
+    		.tabs{
+				position: absolute;
+			    top: 30px;
+			    left: 0;
+			    right: 0;
+			    width: 100%;
+			    background: #E1B96B;
+			    height: 50px;
+			    font-family: "AbhayaLibre-ExtraBold";
+				font-style: normal;
+				font-weight: 800;
+				font-size: 16px;
+				line-height: 19px;
+				color: #000000;
+				text-align: left;
+				padding: 15px 24px;
+				opacity: 0;
+				pointer-events: auto;
+				span{
+				    transform: translateY(-10px);
+				    -webkit-transform: translateY(-10px);
+					opacity: 0;
+					position: absolute;
+    				left: 24px;
+				}
+				.button{
+					position: relative;
+					a{
+						position: absolute;
+						top: -5px;
+						right: 0;
+						img{
+							width: 30px;
+							height: 30px;
+							object-fit: contain;
+						}
+					}
+				}
 		    }
 	    	&.prev{
 	    		.shelf-block--picture {
@@ -291,7 +328,7 @@
 			    		height: 350px;
 					}
 				}
-		    	&.scrollUp{
+		    	&.SWIPE_UP{
 		    		.pointer-events-none{
 						opacity: 1;
 					}
@@ -316,7 +353,23 @@
 	    				    width: 90px;
 		    			}
 		    		}
+		    		.tabs{
+		    			z-index: 1;
+		    			opacity: 1;
+		    			top: 80px;
+		    			transition: top 1s $ease-out;
+		    			-webkit-transition: top 1s $ease-out;
+		    			span{
+		    				&.selected{
+	    					    transform: translateY(3px);
+	    					    -webkit-transform: translateY(3px);
+		    					opacity: 1;
+		    					transition: all 450ms $ease-in-out;
+		    				}
+		    			}
+		    		}
 		    		.shelf-block--region{
+		    			opacity: 1;
 		    			.map{
 		    				top: 10%;
 	    	    			opacity: 1;
@@ -332,6 +385,15 @@
 			    			p{
 			    				opacity: 1;
 		    				}
+			    		}
+			    		.disterllery{
+			    			&.showDisterlleryDetails{
+				    			opacity: 1;
+			    			  	transform: translateY(-160%);
+			    			    -webkit-transform:translateY(-160%);
+			    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+			    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    		}
 			    		}
 		    		}
 		    		&.wrap3{
@@ -365,7 +427,7 @@
 					}
 				}
 	    	}
-	    	&.scrollUp{
+	    	&.SWIPE_UP{
     		    padding-top: 150px;
     		    transition: padding-top 1s $ease-in-out;
 	    	}
@@ -376,11 +438,13 @@
 		}
 	}
 }
+
+
 .bottle-details{
     position: absolute;
     top: 78%;
     padding: 30px;
-    height: 470px;
+    height: 100%;
     z-index: 2;
     .title{
     	font-family: "AbhayaLibre-Bold";
@@ -404,6 +468,7 @@
     .tags{
     	display: flex;
     	flex-wrap: wrap;
+	    margin-bottom: 30px;
     	.tag{
     		flex-basis: 33.33%;
     		.name{
@@ -502,3 +567,22 @@
 		}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
