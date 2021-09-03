@@ -1,0 +1,194 @@
+	.cart-wrapper{
+	    margin-top: 390px;
+		.drams-details{
+			padding: 30px 30px 44px;
+			.price{
+				margin: 30px 0 24px;
+			}
+			.quantity{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&--count{
+					display: flex;
+    				align-items: center;
+					.minus{
+						border: 1px solid #181A1E;
+						padding: 9px 17px;
+						border-radius: 1px;
+						cursor: pointer;
+					    background: white;
+						&.inactive{
+							border-color: #9E9E9E;
+							color: #9E9E9E;
+							pointer-events: none;
+						}
+						&:focus{
+							outline: 0;
+						}
+					}
+					.number{
+						font-family: 'AbhayaLibre-Regular';
+						font-weight: 400;
+						font-size: 18px;
+						line-height: 20px;
+						letter-spacing: -0.011em;
+						color: #000000;
+					    padding: 0 10px;
+						border: 0;
+						text-align: center;
+						width: 40px;
+					}
+					.plus{
+						border: 1px solid #181A1E;
+						padding: 9px 15px;
+						cursor: pointer;
+						border-radius: 1px;
+					    background: white;
+						&:focus{
+							outline: 0;
+						}
+						&.inactive{
+							border-color: #9E9E9E;
+							color: #9E9E9E;
+							pointer-events: none;
+						}
+					}
+				}
+				.glasses{
+					display: flex;
+					flex-direction: row;
+					.glass-wrap{
+						display: flex;
+						flex-direction: column;
+						position: relative;
+						margin-right: 5px;
+						.glass{
+							position: relative;
+							&-filled{
+								position: absolute;
+								opacity: 0;
+								transition: opacity 1s $ease-in-out;
+								-webkit-transition: opacity 1s $ease-in-out;
+								&.active{
+									opacity: 1;
+									bottom: 0;
+									transition: all 600ms $ease-in-out;
+									-webkit-transition: all 600ms $ease-in-out;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.cart--buttons{
+		    padding: 0px 20px 20px;
+		    .primary-button{
+	    	    margin: 0 10px 20px;
+	    	    padding: 20px 15px;
+	    	    a{
+	    	    	&:hover{
+	    	    		color: #000000;
+	    	    	}
+	    	    }
+	    	    &--dark{
+		    	    a{
+		    	    	color: white;
+		    	    	&:hover{
+		    	    		color: white;
+		    	    	}
+		    	    }
+	    	    }
+		    }
+		}
+
+	}
+	.congratulations{
+	    height: 100%;
+	    width: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    opacity: 0;
+	    z-index: -1;
+		.congratulate_bg{
+			position: relative;
+		    padding-top: 80px;
+		    padding-bottom: 20px;
+		    .success-check{
+				margin: 15px auto 10px;
+				margin: 15px auto 10px;
+				text-align: center;
+				border: 1px dashed rgba(249, 213, 144, 0.2);
+				box-sizing: border-box;	
+				padding: 10px;
+				border-radius: 100%;
+				width: 60px;
+				height: auto;	    
+			}
+			.congatulate-text{
+				text-align: center;
+				.drams{
+					font-family: "AbhayaLibre-Regular";
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 18px;
+					text-align: center;
+					color: #E1B96B;
+				    white-space: pre-line; 
+				    margin: 10px 0;
+					&--count{
+						font-family: "AbhayaLibre-ExtraBold";
+						font-weight: 800;
+						font-size: 18px;
+						line-height: 22px;
+					}
+				}
+			}
+			.name{
+				font-family: "AbhayaLibre-ExtraBold";
+				font-weight: 800;
+				font-size: 48px;
+				line-height: 57px;
+				text-align: center;
+				letter-spacing: -0.01em;
+				color: #E1B96B;
+				margin-bottom: 12px;
+			}
+			.shelf-block--picture{
+				height: 383px;
+				margin: auto;
+				width: auto;
+				display: block;
+				opacity: 0;
+				position: relative;
+				bottom: 38px;
+				&.animatePicture{
+					opacity: 1;
+					bottom: -5px;
+					transition: all 1s $ease-out;
+				}
+			}
+			&:after{
+				content: '';
+			    background-image: url(../images/congratulation.jpg);
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			    background-position: bottom;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    z-index: -1;
+			}
+		}
+		&.animateBg{
+			opacity: 1;
+			z-index: 0;
+			transition: all 800ms $ease-out;
+		}
+	}

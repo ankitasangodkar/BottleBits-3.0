@@ -1,5 +1,7 @@
 
+
 $(document).ready(function(){	
+
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 	$(".product-detailed").addClass('loading');
 
@@ -31,18 +33,35 @@ $(document).ready(function(){
 		}
 		if (event.cancelable) event.preventDefault();
 
-		var params = window.location.search;
-	    dest = '?title=' + $(this).attr('data-title').replace(/ /g,"_")  + params;
+	    dest = '?title=' + $(this).attr('data-title').replace(/ /g,"_");
 	    window.history.pushState({ path: dest }, '', dest);
 
 	    var title = $(this).attr('data-title');  
 	    $('#title').text(title);
 
 		$('.podium').addClass('podium-animate');
-   	});
 
+		$(window).on('popstate', function(event) {
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('prev');
+	 		$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('active');
+	 		$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('next');
+	 		$(".shelf-block-bg").removeClass('show_bg');
+			$(".shelf").removeClass('hidden');
+			$('.podium').removeClass('podium-animate');
+		});
+
+   	});
+	
+	$(window).on("load", function(e) {
+ 	  var loc_address = window.location.href;
+		console.log(loc_address);
+		if(loc_address.includes("?title=")){
+			e.stopPropagation();
+		}
+	});
 
 });
+
 
 $(".carousel").swipe({
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
@@ -123,3 +142,87 @@ $(document).ready(function (e) {
 	});
 });
 
+$(".hamburger-wrap").on("click", function(){
+	$(".mobile-menu--overlay").addClass("open");
+});
+$(".cross").on("click", function(){
+	$(".mobile-menu--overlay").removeClass("open");
+});
+
+$('.menu_list--items li').on('click', function(){
+    $('.menu_list--items li.active').removeClass('active');
+    $(this).addClass('active');
+});
+
+var incrementPlus;
+var incrementMinus;
+
+var buttonPlus  = $(".plus");
+var buttonMinus = $(".minus");
+
+var incrementPlus = buttonPlus.click(function(e) {
+	var $n = $(this)
+		.parent(".quantity--count")
+		.parent(".quantity-container")
+		.find(".qty");
+	$n.val(Number($n.val())+1 );
+	var amount = Number($n.val());
+	buttonMinus.removeClass('inactive');
+	if(amount == 2){
+		$(".glass2 .glass-filled").addClass("active");
+	}
+	if(amount == 3){
+		$(".glass3 .glass-filled").addClass("active");
+	}
+	if(amount == 4){
+		$(".glass4 .glass-filled").addClass("active");
+	}
+	if(amount == 5){
+		buttonPlus.addClass('inactive');
+		$(".glass5 .glass-filled").addClass("active");
+	}
+});
+
+var incrementMinus = buttonMinus.click(function() {
+		var $n = $(this)
+		.parent(".quantity--count")
+		.parent(".quantity-container")
+		.find(".qty");
+	var amount = Number($n.val());
+	console.log(amount);
+	if (amount > 1) {
+		$n.val(amount-1);
+	}
+	if(amount == 2){
+		buttonMinus.addClass('inactive');
+		$(".glass2 .glass-filled").removeClass("active");
+	}
+	if(amount == 3){
+		$(".glass3 .glass-filled").removeClass("active");
+	}
+	if(amount == 4){
+		$(".glass4 .glass-filled").removeClass("active");
+	}
+	if(amount == 5){
+		buttonPlus.removeClass('inactive');
+		$(".glass5 .glass-filled").removeClass("active");
+	}
+});
+
+$(".cart--buttons .primary-button--dark").on('click', function(){
+	$(".cart").addClass("hide");
+	$(".cart-wrapper").fadeOut();
+	$(".congratulations").removeClass("hide").addClass("animateBg");
+	$(".shelf-block--picture").addClass("animatePicture");
+	$(".outline-button").fadeIn();
+});
+
+$(".floating-btn .primary-button--dark").on('click', function(){
+	$(".tab--name").fadeOut();
+	$(".button").fadeOut();
+	$(".arrow").removeClass("hide");
+	$(".shelf-block--info").fadeIn();
+	$(".shelf-block.content").addClass("cart");
+	$(".wrap4 .bottle-details").fadeOut();
+	$(".cart-wrapper").removeClass("hide");
+});
