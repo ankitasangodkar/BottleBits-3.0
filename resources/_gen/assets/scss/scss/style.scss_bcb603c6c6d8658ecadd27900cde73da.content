@@ -7724,6 +7724,18 @@ body {
           width: 140px !important;
           bottom: 34px !important;
           transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+  .shelf-block-bg.cart .shelf-block {
+    margin-bottom: 20px;
+    position: fixed;
+    height: 375px;
+    transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+    -webkit-transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+    background-color: #000; }
+    .shelf-block-bg.cart .shelf-block .shelf-block--picture {
+      height: 200px !important;
+      padding-right: 40px;
+      width: 140px !important;
+      bottom: -7px !important; }
   .shelf-block-bg .bottle-details {
     padding: 96% 30px 0;
     height: 100vh;
@@ -8100,7 +8112,9 @@ body {
   background: white;
   height: auto; }
   .cart-wrapper .drams-details {
-    padding: 96% 30px 44px; }
+    padding: 100% 30px 44px; }
+    .cart-wrapper .drams-details .section-title {
+      margin-top: 30px; }
     .cart-wrapper .drams-details .price {
       margin: 30px 0 24px; }
     .cart-wrapper .drams-details .quantity {
@@ -8185,9 +8199,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0;
-  z-index: -1; }
+  z-index: 0; }
   .congratulations .congratulate_bg {
+    opacity: 0;
     position: relative;
     padding-top: 80px;
     padding-bottom: 20px; }
@@ -8234,10 +8248,6 @@ body {
       opacity: 0;
       position: relative;
       bottom: 38px; }
-      .congratulations .congratulate_bg .shelf-block--picture.animatePicture {
-        opacity: 1;
-        bottom: -5px;
-        transition: all 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .congratulations .congratulate_bg:after {
       content: '';
       background-image: url(../images/congratulation.jpg);
@@ -8250,14 +8260,15 @@ body {
       left: 0;
       right: 0;
       z-index: -1; }
-  .congratulations.animateBg {
-    opacity: 1;
-    z-index: 0;
-    transition: all 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .congratulations.animateBg .congratulate_bg .shelf-block--picture.animatePicture {
+    .congratulations .congratulate_bg.animateBg {
       opacity: 1;
-      bottom: -5px;
-      transition: all 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1);
+      -webkit-transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .congratulations .congratulate_bg.animateBg .shelf-block--picture.animatePicture {
+        opacity: 1;
+        bottom: -5px;
+        transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
 
 footer {
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%); }

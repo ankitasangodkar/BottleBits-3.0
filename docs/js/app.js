@@ -106,7 +106,7 @@ $(document).ready(function (e) {
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
-	  	$(".vertical-slider").removeClass("hide");
+	  	$(".vertical-slider").removeClass("hide").fadeIn(1000);
 		$(".slide-item.active").addClass(direction);
 		$(".shelf-block-bg").addClass("scrollUpContainer");
 
@@ -215,14 +215,7 @@ var incrementMinus = buttonMinus.click(function() {
 	}
 });
 
-$(".cart--buttons .primary-button--dark").on('click', function(){
-	$(".cart").addClass("hide");
-	$(".cart-wrapper").fadeOut();
-	$(".shelf-block-bg").addClass("animateBlock");
-	$(".congratulations").removeClass("hide").addClass("animateBg");
-	$(".shelf-block--picture").addClass("animatePicture");
-	$(".outline-button").fadeIn();
-});
+
 
 $(".floating-btn .primary-button--dark").on('click', function(){
 	$(".bottle-details").addClass("hide");
@@ -230,7 +223,17 @@ $(".floating-btn .primary-button--dark").on('click', function(){
 	$(".button").fadeOut();
 	$(".arrow").removeClass("hide");
 	$(".shelf-block--info").fadeIn();
-	$(".shelf-block.content").addClass("cart");
+	$(".shelf-block-bg").addClass("cart");
 	$(".wrap4 .bottle-details").fadeOut();
 	$(".cart-wrapper").removeClass("hide");
+});
+
+$(".cart--buttons .primary-button--dark").on('click', function(){
+	$(".cart").addClass("hide");
+	$(".cart-wrapper").addClass("hide");
+	$(".shelf-block-bg").addClass("animateBlock");
+	$(".congratulations").removeClass("hide").fadeIn(1500);
+	$(".congratulate_bg").addClass("animateBg");
+	$(".shelf-block--picture").addClass("animatePicture");
+	$(".outline-button").fadeIn();
 });
