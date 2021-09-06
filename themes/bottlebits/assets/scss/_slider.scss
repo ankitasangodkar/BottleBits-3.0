@@ -418,6 +418,7 @@
 		position: relative !important;
 	    height: 340px;
     	.shelf-block{
+    		position: fixed;
 			height: 340px;
 			transition: height 600ms $ease-out;
 			-webkit-transition: height 600ms $ease-out;
