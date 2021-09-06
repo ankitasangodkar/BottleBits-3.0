@@ -8059,7 +8059,28 @@ body {
   .comment-box textarea {
     border: 1px solid #181A1E;
     resize: none;
-    height: 80px; }
+    height: 80px;
+    background-color: #FEF8EC;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 15px;
+    font-family: "AbhayaLibre-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    color: #000000; }
+    .comment-box textarea:placeholder {
+      font-family: "AbhayaLibre-Regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.01em;
+      color: #000000; }
+    .comment-box textarea:focus {
+      outline: 0; }
   .comment-box button {
     width: 100px;
     margin-top: 20px; }
