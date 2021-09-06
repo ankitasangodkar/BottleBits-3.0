@@ -1,6 +1,6 @@
 .cart-wrapper{
 	background: white;
-    height: 100vh;
+    height: auto;
 	.drams-details{
 		padding: 100% 30px 44px;
 		.price{
@@ -116,7 +116,6 @@
     bottom: 0;
     opacity: 0;
     z-index: -1;
-    overflow: hidden;
 	.congratulate_bg{
 		position: relative;
 	    padding-top: 80px;

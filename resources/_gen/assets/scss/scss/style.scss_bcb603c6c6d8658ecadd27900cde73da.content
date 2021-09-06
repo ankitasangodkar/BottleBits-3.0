@@ -8095,7 +8095,7 @@ body {
 
 .cart-wrapper {
   background: white;
-  height: 100vh; }
+  height: auto; }
   .cart-wrapper .drams-details {
     padding: 100% 30px 44px; }
     .cart-wrapper .drams-details .price {
@@ -8183,8 +8183,7 @@ body {
   right: 0;
   bottom: 0;
   opacity: 0;
-  z-index: -1;
-  overflow: hidden; }
+  z-index: -1; }
   .congratulations .congratulate_bg {
     position: relative;
     padding-top: 80px;
