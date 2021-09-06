@@ -8183,7 +8183,8 @@ body {
   right: 0;
   bottom: 0;
   opacity: 0;
-  z-index: -1; }
+  z-index: -1;
+  overflow: hidden; }
   .congratulations .congratulate_bg {
     position: relative;
     padding-top: 80px;
