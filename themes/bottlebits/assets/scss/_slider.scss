@@ -210,7 +210,7 @@
 						    left: 50px;
 						    height: 315px;
 						    position: absolute;
-						    top: 9%;
+						    top: -8%;
 						    z-index: -2;
 				    	}
 				    	.disterllery_details{
@@ -229,6 +229,108 @@
 		    			    -webkit-transform: translateY(40px);
 			    		}
 				    }
+				    .disterllery2{
+				    	transform: translateY(-34%);
+				    	height: 360px;
+				    	opacity: 0;
+				    	.map-disterllery{
+				    		background-image: url('../images/disterllery.png');
+							background-repeat: no-repeat;
+							background-size: contain;
+						    background-position-y: center;
+						    width: 100%;
+					        left: 75px;
+    						height: 295px;
+						    position: absolute;
+						    top: -111%;
+						    z-index: -2;
+				    	}
+				    	.disterllery_details{
+						    right: 60px;
+						    width: 132px;
+						    font-family: 'AbhayaLibre-SemiBold';
+						    font-weight: 600;
+						    font-size: 12px;
+						    line-height: 20px;
+						    letter-spacing: 0.01em;
+						    color: #000000;
+						    text-align: left;
+		    			    transform: translateY(-166px);
+		    			    -webkit-transform: translateY(-166px);
+						    .rightbox {
+								padding: 0;
+								height: 100%;
+							}
+							.rb-container {
+								width: 50%;
+								margin: auto;
+								display: block;
+								position: relative;
+								ul.rb {
+									margin: 0em 0;
+									padding: 0;
+									display: inline-block;
+									li {
+										list-style: none;
+										margin: auto;
+										margin-left: 12.5em;
+										min-height: 50px;
+										border-left: 1px dashed #000;
+										padding: 0 15px 10px 20px;
+										position: relative;
+										width: 150px;
+										&:last-child {
+											border-left: 0;
+										}
+										&::before {
+											position: absolute;
+											left: -6px;
+											top: 0px;
+											content: " ";
+											border-radius: 500%;
+											background: linear-gradient(335.52deg, #E1B96B 31.29%, #AA8641 69.03%);
+											height: 10px;
+											width: 10px;
+											transition: all 500ms ease-in-out;
+										}
+										&::after {
+											position: absolute;
+											left: -3px;
+											top: 3px;
+											content: " ";
+											border-radius: 500%;
+											background: #634B1C;
+											height: 5px;
+											width: 5px;
+											transition: all 500ms ease-in-out;
+										}
+									}
+								}
+							}
+							ul.rb {
+								li {
+									.timestamp {
+										font-family: "AbhayaLibre-Bold";
+										font-weight: bold;
+										font-size: 18px;
+										line-height: 21px;
+										letter-spacing: -0.01em;
+										color: #000000;
+									}
+								}
+							}
+							.item-title {
+								font-family: 'Nunito Sans', sans-serif;
+								font-style: normal;
+								font-weight: normal;
+								font-size: 12px;
+								line-height: 20px;
+								color: #000000;
+								opacity: 0.7;
+							}
+
+			    		}
+				    }
 				    .bottle_story{
 				    	transform: translateY(-34%);
 				    	height: 360px;
@@ -242,14 +344,14 @@
 							height: 380px;
 							left: 25px;
 						    position: absolute;
-						    top: 16%;
+						    top: -94% !important;
 						    z-index: -2;
 				    		opacity: 0;
 			    		}
 			    		.bottle_story_details{
 						    position: absolute;
 						    right: 60px;
-						    top: 66%;
+						    top: -34%;
 						    width: 120px;
 						    font-family: 'AbhayaLibre-SemiBold';
 						    font-weight: 600;
@@ -376,6 +478,21 @@
 				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 					    		}
 					    		&.hideDisterlleryDetails{
+					    			transform: translateY(-350%);
+				    			    -webkit-transform:translateY(-350%);
+				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
+					    		}
+				    		}
+				    		.disterllery2{
+				    			&.showDisterlleryDetails1{
+					    			opacity: 1;
+				    			  	transform: translateY(-160%);
+				    			    -webkit-transform:translateY(-160%);
+				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
+					    		}
+					    		&.hideDisterlleryDetails1{
 					    			transform: translateY(-350%);
 				    			    -webkit-transform:translateY(-350%);
 				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;

@@ -127,11 +127,20 @@ $(document).ready(function (e) {
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
 	  	$(".disterllery").removeClass("showDisterlleryDetails").addClass("hideDisterlleryDetails");
-		$(".bottle_story").addClass("showBottleStoryDetails");
+		$(".disterllery2").addClass("showDisterlleryDetails1");
 		$(".tabs .dest1").removeClass("selected");
-		$(".tabs .bottleStory").addClass("selected");
+		$(".tabs .dist2").addClass("selected");
 	});
 
+    jquerySwipeHandler.handleSwipe(".disterllery2", [
+     jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
+    ], function (direction) {
+	  	//console.log("swipe: ", direction);
+	  	$(".disterllery2").removeClass("showDisterlleryDetails1").addClass("hideDisterlleryDetails1");
+		$(".bottle_story").addClass("showBottleStoryDetails");
+		$(".tabs .dist2").removeClass("selected");
+		$(".tabs .bottleStory").addClass("selected");
+	});
 
     jquerySwipeHandler.handleSwipe(".bottle_story", [
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
