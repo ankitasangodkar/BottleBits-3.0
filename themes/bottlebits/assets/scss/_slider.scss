@@ -422,6 +422,7 @@
 			height: 340px;
 			transition: height 600ms $ease-out;
 			-webkit-transition: height 600ms $ease-out;
+			background-color: #000;
 	    }
 	    .vertical-slider{
 	    	.slide-item{
@@ -517,7 +518,7 @@
 	    }
 	}
 	.bottle-details{
-	    padding: 100% 30px 0;
+	    padding: 96% 30px 0;
 		height: 100vh;
 		z-index: -1;
 		background: #FEF8EC;

@@ -59,7 +59,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #d6b165; }
+  /* background-color: $body-bg;*/ }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -7240,10 +7240,10 @@ header {
 body {
   margin: 0;
   position: relative;
-  font-family: 'AbhayaLibre-Regular';
-  background-color: #d6b165 !important; }
+  font-family: 'AbhayaLibre-Regular'; }
   body .product-detailed {
-    opacity: 0; }
+    opacity: 0;
+    background-color: #d6b165; }
     body .product-detailed.loading {
       opacity: 1;
       transition: opacity 600ms cubic-bezier(0.75, 0.09, 0.61, 0.98); }
@@ -7657,7 +7657,8 @@ body {
       position: fixed;
       height: 340px;
       transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      -webkit-transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      -webkit-transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+      background-color: #000; }
     .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content {
       position: fixed;
       left: 0;
@@ -7724,7 +7725,7 @@ body {
           bottom: 34px !important;
           transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .shelf-block-bg .bottle-details {
-    padding: 100% 30px 0;
+    padding: 96% 30px 0;
     height: 100vh;
     z-index: -1;
     background: #FEF8EC;
@@ -8080,6 +8081,8 @@ body {
       line-height: 17px;
       letter-spacing: -0.01em;
       color: #000000; }
+    .comment-box textarea::-webkit-input-placeholder {
+      display: block !important; }
     .comment-box textarea:focus {
       outline: 0; }
   .comment-box button {
