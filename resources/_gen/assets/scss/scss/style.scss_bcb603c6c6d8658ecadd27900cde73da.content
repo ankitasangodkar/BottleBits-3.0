@@ -7240,7 +7240,8 @@ header {
 body {
   margin: 0;
   position: relative;
-  font-family: 'AbhayaLibre-Regular'; }
+  font-family: 'AbhayaLibre-Regular';
+  background-color: #d6b165 !important; }
   body .product-detailed {
     opacity: 0; }
     body .product-detailed.loading {
