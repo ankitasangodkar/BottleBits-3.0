@@ -143,7 +143,8 @@ $(document).ready(function (e) {
 		$(".tabs .details").addClass("selected");
 		$(".podium").removeClass("podium-animate");
 		$(".bottle-details").removeClass("hide");
-		$("header").css({position: "fixed"})
+		$("header").css({position: "fixed"});
+		$(".slide-item.active .content").css({position: "fixed"})
 	});
 });
 

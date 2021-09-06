@@ -7651,7 +7651,7 @@ body {
       -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .shelf-block-bg.small_block {
     position: relative !important;
-    height: 515px; }
+    height: 340px; }
     .shelf-block-bg.small_block .shelf-block {
       height: 340px;
       transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
