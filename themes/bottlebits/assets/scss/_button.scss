@@ -111,6 +111,13 @@
 		text-align: center;
 		letter-spacing: -0.011em;
 		color: #E1B96B;
+		&:hover{
+			color: #E1B96B;
+			text-decoration: none;
+		}
+		&:focus{
+			outline: 0;
+		}
 	}
 }
 .floating-btn{

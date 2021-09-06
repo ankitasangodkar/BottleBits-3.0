@@ -7950,6 +7950,11 @@ body {
     text-align: center;
     letter-spacing: -0.011em;
     color: #E1B96B; }
+    .outline-button a:hover {
+      color: #E1B96B;
+      text-decoration: none; }
+    .outline-button a:focus {
+      outline: 0; }
 
 .floating-btn {
   position: fixed;
@@ -8145,7 +8150,7 @@ body {
         color: white; }
 
 .congratulations {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
