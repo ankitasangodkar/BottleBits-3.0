@@ -107,7 +107,7 @@ $(document).ready(function (e) {
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
 	  	$(".vertical-slider").removeClass("hide");
-		$(".active").addClass(direction);
+		$(".slide-item.active").addClass(direction);
 		$(".shelf-block-bg").addClass("scrollUpContainer");
 
 	});
