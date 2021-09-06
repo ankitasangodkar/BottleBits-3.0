@@ -8100,7 +8100,7 @@ body {
   background: white;
   height: auto; }
   .cart-wrapper .drams-details {
-    padding: 100% 30px 44px; }
+    padding: 96% 30px 44px; }
     .cart-wrapper .drams-details .price {
       margin: 30px 0 24px; }
     .cart-wrapper .drams-details .quantity {
