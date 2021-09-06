@@ -229,7 +229,6 @@ $(".floating-btn .primary-button--dark").on('click', function(){
 });
 
 $(".cart--buttons .primary-button--dark").on('click', function(){
-	$(".cart").addClass("hide");
 	$(".cart-wrapper").addClass("hide");
 	$(".shelf-block-bg").addClass("animateBlock");
 	$(".congratulations").removeClass("hide").fadeIn(1500);
