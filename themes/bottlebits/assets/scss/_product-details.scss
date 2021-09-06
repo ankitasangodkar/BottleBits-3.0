@@ -63,15 +63,29 @@
 					height: 260px;
 				}
 			}
-			&:after{
-			    content: '';
-			    position: absolute;
-			    right: -10px;
-			    top: 0;
-			    bottom: 0;
-			    background-color: #E1B96B;
-			    width: 19px;
-			    height: 100%;
+			&:nth-child(odd){
+				&:after{
+				    content: '';
+				    position: absolute;
+				    right: -10px;
+				    top: 0;
+				    bottom: 0;
+				    background-color: #E1B96B;
+				    width: 18px;
+				    height: 100%;
+				}
+			}
+			&:nth-child(even){
+				&:after{
+				    content: '';
+				    position: absolute;
+				    left: -10px;
+				    top: 0;
+				    bottom: 0;
+				    background-color: #E1B96B;
+				    width: 18px;
+				    height: 100%;
+				}
 			}
 		}
 	}

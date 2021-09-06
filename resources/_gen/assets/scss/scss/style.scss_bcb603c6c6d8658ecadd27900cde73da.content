@@ -7313,14 +7313,23 @@ body {
       padding-top: 80px; }
     .product-detailed .shelf-block:nth-child(4) .shelf-block--picture {
       height: 260px; }
-    .product-detailed .shelf-block:after {
+    .product-detailed .shelf-block:nth-child(odd):after {
       content: '';
       position: absolute;
       right: -10px;
       top: 0;
       bottom: 0;
       background-color: #E1B96B;
-      width: 19px;
+      width: 18px;
+      height: 100%; }
+    .product-detailed .shelf-block:nth-child(even):after {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 0;
+      bottom: 0;
+      background-color: #E1B96B;
+      width: 18px;
       height: 100%; }
 
 @media (min-width: 768px) {
