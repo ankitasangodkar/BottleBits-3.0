@@ -217,12 +217,14 @@ var incrementMinus = buttonMinus.click(function() {
 $(".cart--buttons .primary-button--dark").on('click', function(){
 	$(".cart").addClass("hide");
 	$(".cart-wrapper").fadeOut();
+	$(".shelf-block-bg").addClass("animateBlock");
 	$(".congratulations").removeClass("hide").addClass("animateBg");
 	$(".shelf-block--picture").addClass("animatePicture");
 	$(".outline-button").fadeIn();
 });
 
 $(".floating-btn .primary-button--dark").on('click', function(){
+	$(".bottle-details").addClass("hide");
 	$(".tab--name").fadeOut();
 	$(".button").fadeOut();
 	$(".arrow").removeClass("hide");
