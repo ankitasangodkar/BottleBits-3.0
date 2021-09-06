@@ -13,22 +13,22 @@ $(document).ready(function(){
 
 		if($(this).hasClass('block1')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('expand');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').next().addClass('next');
 		}
 		if($(this).hasClass('block2')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('expand');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').next().addClass('next');
 		}
 		if($(this).hasClass('block3')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('expand');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').next().addClass('next');
 		}
 		if($(this).hasClass('block4')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('expand');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('next');
 		}
 		if (event.cancelable) event.preventDefault();
@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 		$(window).on('popstate', function(event) {
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('prev');
-	 		$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('active');
+	 		$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('expand');
 	 		$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('next');
 	 		$(".shelf-block-bg").removeClass('show_bg');
 			$(".shelf").removeClass('hidden');
@@ -102,7 +102,7 @@ $(document).ready(function (e) {
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
-		$(".active").addClass(direction);
+		$(".expand").addClass(direction);
 		$(".shelf-block-bg").addClass("scrollUpContainer");
 
 	});

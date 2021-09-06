@@ -7325,6 +7325,21 @@ body {
   height: 100vh; }
   .shelf-block-bg .carousel-inner {
     height: 100vh; }
+    .shelf-block-bg .carousel-inner.shelf-block {
+      width: 100%;
+      height: calc(100vh);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      opacity: 0;
+      cursor: pointer;
+      position: relative;
+      background-image: url(../images/shelf_bg.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      background-color: #e0b96a; }
   .shelf-block-bg .carousel-item {
     height: 100vh;
     position: absolute;
@@ -7333,123 +7348,167 @@ body {
     right: 0;
     bottom: 0;
     width: 100%; }
-    .shelf-block-bg .carousel-item .shelf-block {
-      width: 100%;
-      height: calc(100% - 80px);
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      opacity: 0;
-      cursor: pointer;
-      position: relative;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: bottom;
-      background-color: #e0b96a;
-      transition: opacity 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      -webkit-transition: opacity 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .carousel-item .shelf-block.content .shelf-block--label {
-        margin-bottom: 15px; }
-        .shelf-block-bg .carousel-item .shelf-block.content .shelf-block--label .tags {
-          font-family: 'Nunito Sans', sans-serif;
-          font-weight: 400;
-          font-size: 10px;
-          line-height: 14px;
-          text-align: center;
-          background: rgba(0, 0, 0, 0.2);
-          border-radius: 10px;
-          color: #FFFFFF;
-          padding: 4px 12px;
-          opacity: 0; }
-      .shelf-block-bg .carousel-item .shelf-block.content .shelf-block--title {
-        font-size: 30px;
-        line-height: 35px;
-        margin-bottom: 0;
+    .shelf-block-bg .carousel-item .content .shelf-block--label {
+      margin-bottom: 15px; }
+      .shelf-block-bg .carousel-item .content .shelf-block--label .tags {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        color: #FFFFFF;
+        padding: 4px 12px;
         opacity: 0; }
-      .shelf-block-bg .carousel-item .shelf-block.content .shelf-block--info {
+    .shelf-block-bg .carousel-item .content .shelf-block--title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 0;
+      opacity: 0; }
+    .shelf-block-bg .carousel-item .content .shelf-block--info {
+      font-size: 14px;
+      line-height: 17px;
+      opacity: 0; }
+    .shelf-block-bg .carousel-item .content .description {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; }
+      .shelf-block-bg .carousel-item .content .description .price {
+        font-family: 'AbhayaLibre-Regular';
+        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
-        opacity: 0; }
-      .shelf-block-bg .carousel-item .shelf-block.content .description {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        opacity: 0; }
-        .shelf-block-bg .carousel-item .shelf-block.content .description .price {
-          font-family: 'AbhayaLibre-Regular';
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 17px;
-          text-align: center;
-          letter-spacing: -0.011em;
-          color: #000000;
-          width: 108px; }
-          .shelf-block-bg .carousel-item .shelf-block.content .description .price span {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: -0.01em; }
-      .shelf-block-bg .carousel-item .shelf-block.content .shelf-block--picture {
+        text-align: center;
+        letter-spacing: -0.011em;
+        color: #000000;
+        width: 108px; }
+        .shelf-block-bg .carousel-item .content .description .price span {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: -0.01em; }
+    .shelf-block-bg .carousel-item .content .shelf-block--picture {
+      opacity: 0;
+      object-fit: contain;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      bottom: 101px;
+      width: auto;
+      filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
+      -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
+    .shelf-block-bg .carousel-item .content .tabs {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: #E1B96B;
+      height: 50px;
+      font-family: "AbhayaLibre-ExtraBold";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      text-align: left;
+      padding: 15px 24px;
+      opacity: 0;
+      pointer-events: auto; }
+      .shelf-block-bg .carousel-item .content .tabs span {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
         opacity: 0;
-        object-fit: contain;
-        right: 0;
-        left: 0;
-        z-index: 1;
-        bottom: 80px;
-        width: auto;
-        filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
-        -webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4)); }
-      .shelf-block-bg .carousel-item .shelf-block.content .tabs {
         position: absolute;
-        top: 30px;
-        left: 0;
-        right: 0;
+        left: 24px; }
+      .shelf-block-bg .carousel-item .content .tabs .button {
+        position: relative; }
+        .shelf-block-bg .carousel-item .content .tabs .button a {
+          position: absolute;
+          top: -5px;
+          right: 0; }
+          .shelf-block-bg .carousel-item .content .tabs .button a img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain; }
+    .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region {
+      height: 400px;
+      pointer-events: auto;
+      opacity: 0; }
+      .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .region {
+        height: 464px;
+        transform: translateY(-25%);
+        position: relative;
+        z-index: 0; }
+        .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .region .tabs {
+          opacity: 0; }
+        .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .region.slide_up {
+          transform: translateY(-190%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .map {
+        background-image: url("../images/scotland.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: center;
         width: 100%;
-        background: #E1B96B;
-        height: 50px;
-        font-family: "AbhayaLibre-ExtraBold";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 16px;
-        line-height: 19px;
+        height: 380px;
+        left: 25px;
+        position: absolute;
+        top: 16%;
+        z-index: -2;
+        opacity: 0; }
+      .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .region_details {
+        position: absolute;
+        right: 60px;
+        top: 45%;
+        width: 120px;
+        font-family: 'AbhayaLibre-SemiBold';
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
         color: #000000;
         text-align: left;
-        padding: 15px 24px;
         opacity: 0;
-        pointer-events: auto; }
-        .shelf-block-bg .carousel-item .shelf-block.content .tabs span {
-          transform: translateY(-10px);
-          -webkit-transform: translateY(-10px);
-          opacity: 0;
-          position: absolute;
-          left: 24px; }
-        .shelf-block-bg .carousel-item .shelf-block.content .tabs .button {
-          position: relative; }
-          .shelf-block-bg .carousel-item .shelf-block.content .tabs .button a {
-            position: absolute;
-            top: -5px;
-            right: 0; }
-            .shelf-block-bg .carousel-item .shelf-block.content .tabs .button a img {
-              width: 30px;
-              height: 30px;
-              object-fit: contain; }
-      .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region {
-        height: 400px;
-        pointer-events: auto;
+        transform: translateY(40px);
+        -webkit-transform: translateY(40px); }
+      .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .disterllery {
+        transform: translateY(-34%);
+        height: 360px;
         opacity: 0; }
-        .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .region {
-          height: 464px;
-          transform: translateY(-25%);
-          position: relative;
-          z-index: 0; }
-          .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .region .tabs {
-            opacity: 0; }
-          .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .region.slide_up {
-            transform: translateY(-190%);
-            transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .map {
+        .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .disterllery .map-disterllery {
+          background-image: url("../images/disterllery.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position-y: center;
+          width: 100%;
+          left: 50px;
+          height: 315px;
+          position: absolute;
+          top: -12%;
+          z-index: -2; }
+        .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .disterllery .disterllery_details {
+          position: absolute;
+          right: 60px;
+          top: 50%;
+          width: 132px;
+          font-family: 'AbhayaLibre-SemiBold';
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.01em;
+          color: #000000;
+          text-align: left;
+          transform: translateY(40px);
+          -webkit-transform: translateY(40px); }
+      .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .bottle_story {
+        transform: translateY(-34%);
+        height: 360px;
+        opacity: 0; }
+        .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .bottle_story .map {
           background-image: url("../images/scotland.png");
           background-repeat: no-repeat;
           background-size: contain;
@@ -7458,13 +7517,13 @@ body {
           height: 380px;
           left: 25px;
           position: absolute;
-          top: 16%;
+          top: 2% !important;
           z-index: -2;
           opacity: 0; }
-        .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .region_details {
+        .shelf-block-bg .carousel-item .content .vertical-slider .shelf-block--region .bottle_story .bottle_story_details {
           position: absolute;
           right: 60px;
-          top: 45%;
+          top: 62%;
           width: 120px;
           font-family: 'AbhayaLibre-SemiBold';
           font-weight: 600;
@@ -7476,254 +7535,203 @@ body {
           opacity: 0;
           transform: translateY(40px);
           -webkit-transform: translateY(40px); }
-        .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .disterllery {
-          transform: translateY(-34%);
-          height: 360px;
-          opacity: 0; }
-          .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .disterllery .map-disterllery {
-            background-image: url("../images/disterllery.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position-y: center;
-            width: 100%;
-            left: 50px;
-            height: 315px;
-            position: absolute;
-            top: -12%;
-            z-index: -2; }
-          .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .disterllery .disterllery_details {
-            position: absolute;
-            right: 60px;
-            top: 50%;
-            width: 132px;
-            font-family: 'AbhayaLibre-SemiBold';
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 20px;
-            letter-spacing: 0.01em;
-            color: #000000;
-            text-align: left;
-            transform: translateY(40px);
-            -webkit-transform: translateY(40px); }
-        .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .bottle_story {
-          transform: translateY(-34%);
-          height: 360px;
-          opacity: 0; }
-          .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .bottle_story .map {
-            background-image: url("../images/scotland.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position-y: center;
-            width: 100%;
-            height: 380px;
-            left: 25px;
-            position: absolute;
-            top: 2% !important;
-            z-index: -2;
-            opacity: 0; }
-          .shelf-block-bg .carousel-item .shelf-block.content .vertical-slider .shelf-block--region .bottle_story .bottle_story_details {
-            position: absolute;
-            right: 60px;
-            top: 62%;
-            width: 120px;
-            font-family: 'AbhayaLibre-SemiBold';
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 20px;
-            letter-spacing: 0.01em;
-            color: #000000;
-            text-align: left;
-            opacity: 0;
-            transform: translateY(40px);
-            -webkit-transform: translateY(40px); }
-  .shelf-block-bg.show_bg .carousel-item.active .shelf-block {
+  .shelf-block-bg.show_bg .carousel-inner.shelf-block {
+    opacity: 1;
+    transition: opacity 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+    -webkit-transition: opacity 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+  .shelf-block-bg.show_bg .carousel-item.expand .content {
     padding-top: 120px;
     opacity: 1;
     transition: opacity 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: opacity 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active .shelf-block.content .shelf-block--label .tags {
+    .shelf-block-bg.show_bg .carousel-item.expand .content .shelf-block--label .tags {
       opacity: 1; }
-    .shelf-block-bg.show_bg .carousel-item.active .shelf-block.content .shelf-block--info {
+    .shelf-block-bg.show_bg .carousel-item.expand .content .shelf-block--info {
       opacity: 1; }
-    .shelf-block-bg.show_bg .carousel-item.active .shelf-block.content .description {
+    .shelf-block-bg.show_bg .carousel-item.expand .content .description {
       opacity: 1; }
-    .shelf-block-bg.show_bg .carousel-item.active .shelf-block.content .shelf-block--title {
+    .shelf-block-bg.show_bg .carousel-item.expand .content .shelf-block--title {
       opacity: 1;
       visibility: visible;
       transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active .shelf-block.content .shelf-block--picture {
+    .shelf-block-bg.show_bg .carousel-item.expand .content .shelf-block--picture {
       opacity: 1;
-      bottom: 35px;
+      bottom: 101px;
       right: 0;
       height: 420px;
       transform: translateX(0%);
       pointer-events: auto;
       transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1), right2s cubic-bezier(0.48, 0.04, 0.25, 1); }
       @media (min-width: 768px) {
-        .shelf-block-bg.show_bg .carousel-item.active .shelf-block.content .shelf-block--picture {
+        .shelf-block-bg.show_bg .carousel-item.expand .content .shelf-block--picture {
           height: 350px; } }
-  .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .shelf-block {
+  .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .content {
     padding-top: 160px;
     transition: padding-top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: padding-top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .shelf-block .shelf-block--content-wrapper {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .content .shelf-block--content-wrapper {
       opacity: 1; }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .shelf-block .description {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .content .description {
       opacity: 0; }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .shelf-block .shelf-block--label, .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .shelf-block .shelf-block--info {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .content .shelf-block--label, .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .content .shelf-block--info {
       opacity: 1;
       transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .shelf-block .shelf-block--picture {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .content .shelf-block--picture {
       right: 40%;
       width: 160px;
       bottom: -13px;
       transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       pointer-events: none; }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .shelf-block .description .price {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .content .description .price {
       width: 90px; }
-  .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .tabs {
+  .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .tabs {
     z-index: 1;
     opacity: 1;
     top: 80px;
     transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .tabs span.selected {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .tabs span.selected {
       transform: translateY(3px);
       -webkit-transform: translateY(3px);
       opacity: 1;
       transition: all 450ms cubic-bezier(0.48, 0.04, 0.25, 1); }
-  .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region {
+  .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region {
     opacity: 1; }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region .map {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region .map {
       top: -15%;
       opacity: 1;
       transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region .region_details {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region .region_details {
       opacity: 1;
       transform: translateY(0px);
       -webkit-transform: translateY(0px);
       transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region .region_details p {
+      .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region .region_details p {
         opacity: 1; }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region .disterllery.showDisterlleryDetails {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region .disterllery.showDisterlleryDetails {
       opacity: 1;
       transform: translateY(-160%);
       -webkit-transform: translateY(-160%);
       transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region .disterllery.hideDisterlleryDetails {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region .disterllery.hideDisterlleryDetails {
       transform: translateY(-350%);
       -webkit-transform: translateY(-350%);
       transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region .bottle_story.showBottleStoryDetails {
+    .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region .bottle_story.showBottleStoryDetails {
       opacity: 1;
       transform: translateY(-280%);
       -webkit-transform: translateY(-280%);
       transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP .vertical-slider .shelf-block--region .bottle_story.showBottleStoryDetails .bottle_story_details {
+      .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP .vertical-slider .shelf-block--region .bottle_story.showBottleStoryDetails .bottle_story_details {
         opacity: 1; }
-  .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP.wrap3 .shelf-block--picture {
+  .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP.wrap3 .shelf-block--picture {
     bottom: 4px; }
-  .shelf-block-bg.show_bg .carousel-item.active.SWIPE_UP.wrap4 .shelf-block--picture {
+  .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP.wrap4 .shelf-block--picture {
     right: 42%;
     width: 100px;
-    bottom: 15px;
+    bottom: 83px;
     transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .shelf-block-bg.show_bg.small_block {
     position: relative !important;
     height: 515px; }
-    .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block {
+    .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content {
       position: fixed;
+      left: 0;
+      right: 0;
       z-index: 3;
       height: 365px;
       transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .shelf-block--content-wrapper {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .shelf-block--content-wrapper {
         padding-left: 140px;
         padding-right: 30px; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .shelf-block--label {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .shelf-block--label {
         text-align: left; }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .shelf-block--label .tags {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .shelf-block--label .tags {
           background-color: rgba(0, 0, 0, 0.5); }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .shelf-block--title {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .shelf-block--title {
         font-size: 36px;
         line-height: 42px;
         text-align: left; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .shelf-block--info {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .shelf-block--info {
         padding-top: 15px;
         text-align: left;
         display: none; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .description {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .description {
         opacity: 1;
         justify-content: flex-start;
         margin-top: 10px; }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .description .price {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .description .price {
           text-align: left; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .shelf-block--picture {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .shelf-block--picture {
         height: 185px !important;
         padding-right: 40px;
         width: 140px !important;
         bottom: 34px !important;
         transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
         @media (min-width: 768px) {
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content .shelf-block--picture {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content .shelf-block--picture {
             right: 0 !important;
             height: 60%;
             bottom: 40px; } }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.active .description {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.active .description {
         opacity: 1 !important;
         margin-top: 20px;
         justify-content: flex-start; }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.active .description .price {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.active .description .price {
           text-align: left; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.wrap4 {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.wrap4 {
         bottom: 24px !important; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.cart {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.cart {
         background-color: black;
         height: 400px;
         transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.cart .shelf-block--label {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.cart .shelf-block--label {
           text-align: left; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.cart .shelf-block--label .tags {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.cart .shelf-block--label .tags {
             background-color: rgba(0, 0, 0, 0.2);
             transition: background-color 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.cart .shelf-block--info {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.cart .shelf-block--info {
           display: block; }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .shelf-block.content.cart .shelf-block--picture {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .content.cart .shelf-block--picture {
           height: 220px !important;
           padding-right: 40px;
           width: 140px !important;
           bottom: 34px !important;
           transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details {
+    .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details {
       margin-top: 365px;
       padding: 30px;
       height: 470px;
       z-index: 2;
       background: #FEF8EC;
-      overflow: auto; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .header {
+      overflow: auto;
+      text-align: left;
+      position: relative;
+      z-index: 9; }
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px; }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .header .title {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .header .title {
           font-family: "AbhayaLibre-ExtraBold";
           font-weight: 800;
           font-size: 24px;
           line-height: 103.97%;
           color: #000000;
           margin: 0; }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .header a {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .header a {
           font-family: "AbhayaLibre-SemiBold";
           font-style: normal;
           font-weight: 600;
@@ -7731,7 +7739,7 @@ body {
           line-height: 17px;
           letter-spacing: -0.01em;
           color: #AA8641; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .info {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .info {
         font-family: 'Nunito Sans', sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -7741,15 +7749,15 @@ body {
         color: #000000;
         opacity: 0.7;
         margin-bottom: 20px; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .price-title {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .price-title {
         margin-top: 50px; }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .tags {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .tags {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px; }
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .tags .tag {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .tags .tag {
           flex-basis: 33.33%; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .tags .tag .name {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .tags .tag .name {
             font-family: 'Nunito Sans', sans-serif;
             font-size: 12px;
             line-height: 20px;
@@ -7757,7 +7765,7 @@ body {
             color: #000000;
             opacity: 0.7;
             margin-bottom: 0; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .tags .tag .type {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .tags .tag .type {
             font-family: "AbhayaLibre-Bold";
             font-weight: bold;
             font-size: 16px;
@@ -7765,20 +7773,20 @@ body {
             letter-spacing: -0.01em;
             color: #000000; }
           @media (min-width: 768px) {
-            .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .tags .tag {
+            .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .tags .tag {
               flex-basis: 200px; } }
-      .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .wrap {
+      .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .wrap {
         display: none; }
       @media (min-width: 768px) {
-        .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details {
+        .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details {
           margin-left: 550px;
           top: 160px; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .wrap {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .wrap {
             display: block; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .shelf-block--label {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .shelf-block--label {
             margin-bottom: 15px;
             display: flex; }
-            .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .shelf-block--label .tags {
+            .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .shelf-block--label .tags {
               font-family: 'Nunito Sans', sans-serif;
               font-weight: 400;
               font-size: 14px;
@@ -7789,7 +7797,7 @@ body {
               color: #000000;
               padding: 4px 12px;
               margin-right: 10px; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .shelf-block--title {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .shelf-block--title {
             font-family: "AbhayaLibre-Regular";
             font-style: normal;
             font-weight: bold;
@@ -7798,7 +7806,7 @@ body {
             letter-spacing: -0.01em;
             color: #000000;
             text-align: left; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .shelf-block--info {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .shelf-block--info {
             font-family: "AbhayaLibre-Bold";
             font-style: normal;
             font-weight: bold;
@@ -7808,13 +7816,13 @@ body {
             opacity: 0.5;
             text-align: left;
             margin-bottom: 32px; }
-          .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .description {
+          .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .description {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 30px; }
-            .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .description .price {
+            .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .description .price {
               font-family: 'AbhayaLibre-Regular';
               font-weight: 400;
               font-size: 18px;
@@ -7824,7 +7832,7 @@ body {
               color: #000000;
               width: 108px;
               margin-right: 20px; }
-              .shelf-block-bg.show_bg.small_block .carousel-item.active.SWIPE_UP .bottle-details .description .price span {
+              .shelf-block-bg.show_bg.small_block .carousel-item.expand.SWIPE_UP .bottle-details .description .price span {
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 24px;
