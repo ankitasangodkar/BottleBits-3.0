@@ -7650,7 +7650,7 @@ body {
   .shelf-block-bg.show_bg .carousel-item.expand.SWIPE_UP.wrap4 .shelf-block--picture {
     right: 42%;
     width: 100px;
-    bottom: 83px;
+    bottom: 95px;
     transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
     -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .shelf-block-bg.show_bg.small_block {
