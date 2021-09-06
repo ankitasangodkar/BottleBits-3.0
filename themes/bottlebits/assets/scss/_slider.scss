@@ -5,34 +5,18 @@
 	top: 0;
     display: block;
     height: 100vh;
-	.carousel{
-		&-inner{
-		    height: 100vh;
-		    &.shelf-block{			
-	    		position: relative;
-	    		background-image: none;
-	    		width: 100%;
-	    		&:before{
-	    			content: '';
-	    			width: 100%;
-				    height: calc(100% - 80px);
-					display: block;
-					margin-left: auto;
-					margin-right: auto;
-					text-align: center;
-					opacity: 0;
-					cursor: pointer;
-					position: relative;
-					background-image: url(../images/shelf.jpg);
-					background-repeat: no-repeat;
-					background-size: cover;
-					background-position: bottom;
-				    background-color: #e0b96a;
-	    		}
-			}
-		}
-		&-item{
-			height: 100%;
+	.shelf-block{
+	    position: absolute;
+        height: calc(100vh - 80px);
+	    left: 0;
+	    top: 0;
+	    padding-top: 30px;
+		transition: opacity 1s $ease-out, height 1s $ease-out;
+		width: 100%;
+		z-index: 0;
+		-webkit-transition: opacity 1s $ease-out, height 1s $ease-out;
+		pointer-events: none;
+		.shelf-block--wrap{
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -89,18 +73,190 @@
 						}
 					}
 				}
-				.shelf-block--picture {
-					opacity: 0;
-				    object-fit: contain;
-				    right: 0;
-					left: 0;
-				    z-index: 1;
-					bottom: 115px;
-					width: auto;
-	    			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
-	    			-webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
+			}
+			.shelf-block--picture {
+				opacity: 0;
+			    object-fit: contain;
+			    right: 0;
+				left: 0;
+			    z-index: 1;
+				bottom: 80px;
+				width: auto;
+    			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
+    			-webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
+		    }
+	    	&.prev{
+	    		.shelf-block--picture {
+	    			height: 420px;
+					transform: translateX(-140%);
+					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
+					@media(min-width: 768px){
+			    		height: 350px;
+					}
+    			}
+    			.shelf-block--info {
+    				opacity: 1;
+    			}
+    			.description{
+    				opacity: 1;
+    			}
+    		 	.shelf-block--title {
+			    	opacity: 1;
+			    	visibility: visible;
+			    	transition: opacity 1s $ease-out;
+			        -webkit-transition: opacity 1s $ease-out;
+		        }
+		        .shelf-block--picture {
+					opacity: 1;
+					bottom: 35px;
+					right: 0;
+					height: 420px;
+					transform: translateX(0%);
+				    pointer-events: auto;
+					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out, right2s $ease-in-out;
+					@media(min-width: 768px){
+			    		height: 350px;
+					}
+				}
+		    	&:not(.shelf-block--slider){
+		    		.shelf-block--label, .shelf-block--info{
+		    			opacity: 0;
+		    		}
+		    	}
+	    	}
+    		&.next{
+	    		.shelf-block--picture {
+	    			height: 420px;
+					transform: translateX(140%);
+					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
+					@media(min-width: 768px){
+			    		height: 350px;
+					}
+				}
+	    	}
+	    }	
+		@media(min-width: 768px){
+			max-width: 550px;
+			height: calc(100vh - 60px);
+		}
+	}
+	.vertical-slider{
+		.shelf-block{
+			.slide-item{
+			    .shelf-block--region{
+			    	height: 400px;
+			    	pointer-events: auto; 
+			    	opacity: 0;
+			    	.region{
+					    height: 464px;
+					    transform: translateY(-25%);
+						position: relative;
+						z-index: -1;
+						.tabs{
+							opacity: 0;
+						}
+			    		&.slide_up{
+			    			transform: translateY(-190%);
+			    			transition: transform 2s $ease-out;
+			    		}
+			    	}
+		    		.map{
+						background-image: url('../images/scotland.png');
+						background-repeat: no-repeat;
+						background-size: contain;
+					    background-position-y: center;
+					    width: 100%;
+						height: 380px;
+						left: 25px;
+					    position: absolute;
+					    top: 16%;
+					    z-index: -2;
+			    		opacity: 0;
+		    		}
+		    		.region_details{
+					    position: absolute;
+					    right: 60px;
+					    top: 45%;
+					    width: 120px;
+					    font-family: 'AbhayaLibre-SemiBold';
+					    font-weight: 600;
+					    font-size: 12px;
+					    line-height: 20px;
+					    letter-spacing: 0.01em;
+					    color: #000000;
+					    text-align: left;
+		    			opacity: 0;
+	    			    transform: translateY(40px);
+	    			    -webkit-transform: translateY(40px);
+		    		}
+				    .disterllery{
+				    	transform: translateY(-34%);
+				    	height: 360px;
+				    	opacity: 0;
+				    	.map-disterllery{
+				    		background-image: url('../images/disterllery.png');
+							background-repeat: no-repeat;
+							background-size: contain;
+						    background-position-y: center;
+						    width: 100%;
+						    left: 50px;
+						    height: 315px;
+						    position: absolute;
+						    top: 9%;
+						    z-index: -2;
+				    	}
+				    	.disterllery_details{
+						    position: absolute;
+						    right: 60px;
+						    top: 65%;
+						    width: 132px;
+						    font-family: 'AbhayaLibre-SemiBold';
+						    font-weight: 600;
+						    font-size: 12px;
+						    line-height: 20px;
+						    letter-spacing: 0.01em;
+						    color: #000000;
+						    text-align: left;
+		    			    transform: translateY(40px);
+		    			    -webkit-transform: translateY(40px);
+			    		}
+				    }
+				    .bottle_story{
+				    	transform: translateY(-34%);
+				    	height: 360px;
+				    	opacity: 0;
+			    		.map{
+							background-image: url('../images/scotland.png');
+							background-repeat: no-repeat;
+							background-size: contain;
+						    background-position-y: center;
+						    width: 100%;
+							height: 380px;
+							left: 25px;
+						    position: absolute;
+						    top: 16%;
+						    z-index: -2;
+				    		opacity: 0;
+			    		}
+			    		.bottle_story_details{
+						    position: absolute;
+						    right: 60px;
+						    top: 66%;
+						    width: 120px;
+						    font-family: 'AbhayaLibre-SemiBold';
+						    font-weight: 600;
+						    font-size: 12px;
+						    line-height: 20px;
+						    letter-spacing: 0.01em;
+						    color: #000000;
+						    text-align: left;
+			    			opacity: 0;
+		    			    transform: translateY(40px);
+		    			    -webkit-transform: translateY(40px);
+			    		}
+				    }
 			    }
-        		.tabs{
+	    		.tabs{
 					position: absolute;
 				    top: 30px;
 				    left: 0;
@@ -139,204 +295,34 @@
 						}
 					}
 			    }
-			    .vertical-slider{
-			    	.shelf-block--region{
-				    	height: 400px;
-				    	pointer-events: auto; 
-				    	opacity: 0;
-				    	.region{
-						    height: 464px;
-						    transform: translateY(-25%);
-							position: relative;
-							z-index: 0;
-							.tabs{
-								opacity: 0;
-							}
-				    		&.slide_up{
-				    			transform: translateY(-190%);
-				    			transition: transform 2s $ease-out;
-				    		}
-				    	}
-			    		.map{
-							background-image: url('../images/scotland.png');
-							background-repeat: no-repeat;
-							background-size: contain;
-						    background-position-y: center;
-						    width: 100%;
-							height: 380px;
-							left: 25px;
-						    position: absolute;
-						    top: 16%;
-						    z-index: -2;
-				    		opacity: 0;
-			    		}
-			    		.region_details{
-						    position: absolute;
-						    right: 60px;
-						    top: 45%;
-						    width: 120px;
-						    font-family: 'AbhayaLibre-SemiBold';
-						    font-weight: 600;
-						    font-size: 12px;
-						    line-height: 20px;
-						    letter-spacing: 0.01em;
-						    color: #000000;
-						    text-align: left;
-			    			opacity: 0;
-		    			    transform: translateY(40px);
-		    			    -webkit-transform: translateY(40px);
-			    		}
-					    .disterllery{
-					    	transform: translateY(-34%);
-					    	height: 360px;
-					    	opacity: 0;
-					    	.map-disterllery{
-					    		background-image: url('../images/disterllery.png');
-								background-repeat: no-repeat;
-								background-size: contain;
-							    background-position-y: center;
-							    width: 100%;
-							    left: 50px;
-							    height: 315px;
-							    position: absolute;
-							    top: -12%;
-							    z-index: -2;
-					    	}
-					    	.disterllery_details{
-							    position: absolute;
-							    right: 60px;
-							    top: 50%;
-							    width: 132px;
-							    font-family: 'AbhayaLibre-SemiBold';
-							    font-weight: 600;
-							    font-size: 12px;
-							    line-height: 20px;
-							    letter-spacing: 0.01em;
-							    color: #000000;
-							    text-align: left;
-			    			    transform: translateY(40px);
-			    			    -webkit-transform: translateY(40px);
-				    		}
-					    }
-					    .bottle_story{
-					    	transform: translateY(-34%);
-					    	height: 360px;
-					    	opacity: 0;
-				    		.map{
-								background-image: url('../images/scotland.png');
-								background-repeat: no-repeat;
-								background-size: contain;
-							    background-position-y: center;
-							    width: 100%;
-								height: 380px;
-								left: 25px;
-							    position: absolute;
-							    top: 2% !important;
-							    z-index: -2;
-					    		opacity: 0;
-				    		}
-				    		.bottle_story_details{
-							    position: absolute;
-							    right: 60px;
-							    top: 62%;
-							    width: 120px;
-							    font-family: 'AbhayaLibre-SemiBold';
-							    font-weight: 600;
-							    font-size: 12px;
-							    line-height: 20px;
-							    letter-spacing: 0.01em;
-							    color: #000000;
-							    text-align: left;
-				    			opacity: 0;
-			    			    transform: translateY(40px);
-			    			    -webkit-transform: translateY(40px);
-				    		}
-					    }
-				    }
-			    }
-			}
-		}
-	}
-    &.show_bg{
-    	.carousel{
-    		&-inner{
-    			&.shelf-block{	
-		    		position: relative;
-		    		background-image: none;
-		    		width: 100%;
-		    		&:before{
-	    				opacity: 1;
-						transition: opacity 800ms $ease-out;
-						-webkit-transition: opacity 800ms $ease-out;
-					}
-    			}
-    		}
-    		&-item{
-    			&.expand{
-					.content{
-						padding-top: 120px;
-						opacity: 1;
-						transition: opacity 800ms $ease-out;
-						-webkit-transition: opacity 800ms $ease-out;
-						.shelf-block--label{
-		    		 		.tags{ 
-			    				opacity: 1;
-		    				}
-		    			}
-		    			.shelf-block--info {
-		    				opacity: 1;
-		    			}
-		    			.description{
-		    				opacity: 1;
-		    			}
-		    		 	.shelf-block--title {
-					    	opacity: 1;
-					    	visibility: visible;
-					    	transition: opacity 1s $ease-out;
-					        -webkit-transition: opacity 1s $ease-out;
-				        }
-				        .shelf-block--picture {
+    			&.active{
+					&.SWIPE_UP{
+						padding-top: 150px;
+    		    		transition: padding-top 1s $ease-in-out;
+    		    		-webkit-transition: padding-top 1s $ease-in-out;
+			    		.shelf-block--content-wrapper{
 							opacity: 1;
-							bottom: 115px;
-							right: 0;
-							height: 420px;
-							transform: translateX(0%);
-						    pointer-events: auto;
-							transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out, right2s $ease-in-out;
-							@media(min-width: 768px){
-					    		height: 350px;
-							}
 						}
-					}
-			    	&.SWIPE_UP{
-			    		.content{
-			    			padding-top: 160px;
-			    			transition: padding-top 1s $ease-out;
-					        -webkit-transition: padding-top 1s $ease-out;
-				    		.shelf-block--content-wrapper{
-								opacity: 1;
-							}
-							.description{
-								opacity: 0;
-							}
-				    		.shelf-block--label, .shelf-block--info{
-				    			opacity: 1;
-				    			transition: right 1s $ease-out;
-					            -webkit-transition: right 1s $ease-out;
-				    		}
-				    		.shelf-block--picture{
-								right: 40%;
-								width: 160px;
-								bottom: -13px;
-				    			transition: right 1s $ease-out;
-					            -webkit-transition: right 1s $ease-out;
-				                pointer-events: none;
-				    		}
-				    		.description{
-				    			.price{
-			    				    width: 90px;
-				    			}
-				    		}
+						.description{
+							opacity: 0;
+						}
+			    		.shelf-block--label, .shelf-block--info{
+			    			opacity: 1;
+			    			transition: right 1s $ease-out;
+				            -webkit-transition: right 1s $ease-out;
+			    		}
+			    		.shelf-block--picture{
+							right: 40%;
+							width: 160px;
+							bottom: -13px;
+			    			transition: right 1s $ease-out;
+				            -webkit-transition: right 1s $ease-out;
+			                pointer-events: none;
+			    		}
+			    		.description{
+			    			.price{
+		    				    width: 90px;
+			    			}
 			    		}
 			    		.tabs{
 			    			z-index: 1;
@@ -353,51 +339,51 @@
 			    				}
 			    			}
 			    		}
-			    		.vertical-slider{
-				    		.shelf-block--region{
-				    			opacity: 1;
-				    			.map{
-				    				top: -15%;
-			    	    			opacity: 1;
-				    			    transition: top 1s $ease-out, opacity 1s $ease-out;
-				    			    -webkit-transition: top 1s $ease-out, opacity 1s $ease-out;
-				    			}
-					    		.region_details{
-			    	    			opacity: 1;
-				    			    transform: translateY(0px);
-				    			    -webkit-transform: translateY(0px);
-				    			    transition: transform 1s $ease-out, opacity 1s $ease-out;
-				    			    -webkit-transition: transform 1s $ease-out, opacity 1s $ease-out;
-					    			p{
-					    				opacity: 1;
-				    				}
+			    		.shelf-block--region{
+			    			opacity: 1;
+			    			transition: opacity 1s $ease-out;
+				            -webkit-transition: opacity 1s $ease-out;
+			    			.map{
+			    				top: -9%;
+		    	    			opacity: 1;
+			    			    transition: top 1s $ease-out, opacity 1s $ease-out;
+			    			    -webkit-transition: top 1s $ease-out, opacity 1s $ease-out;
+			    			}
+				    		.region_details{
+		    	    			opacity: 1;
+			    			    transform: translateY(0px);
+			    			    -webkit-transform: translateY(0px);
+			    			    transition: transform 1s $ease-out, opacity 1s $ease-out;
+			    			    -webkit-transition: transform 1s $ease-out, opacity 1s $ease-out;
+				    			p{
+				    				opacity: 1;
+			    				}
+				    		}
+				    		.disterllery{
+				    			&.showDisterlleryDetails{
+					    			opacity: 1;
+				    			  	transform: translateY(-160%);
+				    			    -webkit-transform:translateY(-160%);
+				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 					    		}
-					    		.disterllery{
-					    			&.showDisterlleryDetails{
-						    			opacity: 1;
-					    			  	transform: translateY(-160%);
-					    			    -webkit-transform:translateY(-160%);
-					    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
-					    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
-						    		}
-						    		&.hideDisterlleryDetails{
-						    			transform: translateY(-350%);
-					    			    -webkit-transform:translateY(-350%);
-					    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
-					    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
-						    		}
+					    		&.hideDisterlleryDetails{
+					    			transform: translateY(-350%);
+				    			    -webkit-transform:translateY(-350%);
+				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 					    		}
-					    		.bottle_story{
-					    			&.showBottleStoryDetails{
-						    			opacity: 1;
-					    			  	transform: translateY(-280%);
-					    			    -webkit-transform:translateY(-280%);
-					    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
-					    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
-					    			    .bottle_story_details{
-					    			    	opacity: 1;
-					    			    }
-						    		}
+				    		}
+				    		.bottle_story{
+				    			&.showBottleStoryDetails{
+					    			opacity: 1;
+				    			  	transform: translateY(-280%);
+				    			    -webkit-transform:translateY(-280%);
+				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    .bottle_story_details{
+				    			    	opacity: 1;
+				    			    }
 					    		}
 				    		}
 			    		}
@@ -410,27 +396,34 @@
 			    			.shelf-block--picture{
 								right: 42%;
 								width: 100px;
-								bottom: 95px;
+								bottom: 18px;
 				    			transition: right 1s $ease-out;
 					            -webkit-transition: right 1s $ease-out;
 				    		}
 			    		}
 			    	}
-    			}
-    		}
-    	}
-		&.small_block{
-			position: relative !important;
-		    height: 515px;
-		    .carousel-item{
-	    		&.expand {
+				}
+		    }
+		}
+	}
+	&.small_block{
+		position: relative !important;
+	    height: 515px;
+    	.shelf-block{
+			height: 340px;
+			transition: height 600ms $ease-out;
+			-webkit-transition: height 600ms $ease-out;
+	    }
+	    .vertical-slider{
+	    	.slide-item{
+	    		&.active {
 	    			&.SWIPE_UP{
 						.content{
 							position: fixed;
 							left: 0;
-    						right: 0;
+							right: 0;
 							z-index: 3;
-							height: 365px;
+							height: 200px;
 							transition: height 1s $ease-out;
 							-webkit-transition: height 1s $ease-out;
 							.shelf-block--content-wrapper{
@@ -462,11 +455,10 @@
 							    }
 							}
 							.shelf-block--picture {
-								height: 185px !important;
+								height: 175px !important;
 								padding-right: 40px;
 								width: 140px !important;
-								bottom: 34px !important;
-								transition: height 1s $ease-out;
+								bottom: 28px !important;
 								@media(min-width: 768px){
 									right: 0 !important;
 									height: 60%;
@@ -510,158 +502,174 @@
 								}
 							}
 						}
-			    		.bottle-details{
-						    margin-top: 365px;
-							padding: 30px;
-							height: 470px;
-							z-index: 2;
-							background: #FEF8EC;
-							overflow: auto;
-						    text-align: left;
-						    position: relative;
-    						z-index: 9;
-							.header{
-								display: flex;
-								justify-content: space-between;
-								align-items: center;
-								margin-bottom: 20px;
-							    .title{
-							    	font-family: "AbhayaLibre-ExtraBold";
-								    font-weight: 800;
-								    font-size: 24px;
-								    line-height: 103.97%;
-								    color: #000000;
-								    margin: 0;
-							    }
-							    a{
-									font-family: "AbhayaLibre-SemiBold";
-									font-style: normal;
-									font-weight: 600;
-									font-size: 14px;
-									line-height: 17px;
-									letter-spacing: -0.01em;
-									color: #AA8641;
-							    }
-						    }
-						    .info{
-						    	font-family: 'Nunito Sans', sans-serif;
-								font-style: normal;
-								font-weight: normal;
-								font-size: 14px;
-								line-height: 20px;
-								letter-spacing: 0.01em;
-								color: #000000;
-								opacity: 0.7;
-								margin-bottom: 20px;
-						    }
-						    .price-title{
-						    	margin-top: 50px;
-						    }
-						    .tags{
-						    	display: flex;
-						    	flex-wrap: wrap;
-							    margin-bottom: 30px;
-						    	.tag{
-						    		flex-basis: 33.33%;
-						    		.name{
-						    			font-family: 'Nunito Sans', sans-serif;
-										font-size: 12px;
-										line-height: 20px;
-										letter-spacing: 0.01em;
-										color: #000000;
-										opacity: 0.7;
-										margin-bottom: 0;
-						    		}
-						    		.type{
-						    			font-family: "AbhayaLibre-Bold";
-										font-weight: bold;
-										font-size: 16px;
-										line-height: 19px;
-										letter-spacing: -0.01em;
-										color: #000000;
-						    		}
-						    		@media(min-width: 768px){
-						    			flex-basis: 200px;
-						    		}
-						    	}
-						    }
-						    .wrap{
-						    	display: none;
-						    }
-						    @media(min-width: 768px){
-								margin-left: 550px;
-							    top: 160px;
-							    .wrap{
-						    		display: block;
-						    	}
-							    .shelf-block{
-							    	&--label{
-										margin-bottom: 15px;
-										display: flex;
-										.tags{
-											font-family: 'Nunito Sans', sans-serif;
-											font-weight: 400;
-											font-size: 14px;
-											line-height: 19px;
-											text-align: center;
-											background: #FFFFFF;;
-											border-radius: 10px;
-											color: #000000;
-										    padding: 4px 12px;
-										    margin-right: 10px;
-										}
-									}
-							    	&--title{
-										font-family: "AbhayaLibre-Regular";
-										font-style: normal;
-										font-weight: bold;
-										font-size: 72px;
-										line-height: 64px;
-										letter-spacing: -0.01em;
-										color: #000000;
-										text-align: left;
-									}
-									&--info{
-										font-family: "AbhayaLibre-Bold";
-										font-style: normal;
-										font-weight: bold;
-										font-size: 36px;
-										line-height: 42px;
-										color: #000000;
-										opacity: 0.5;
-										text-align: left;
-										margin-bottom: 32px;
-									}
-							    }
-								.description{
-									display: flex;
-									flex-direction: row;
-									justify-content: flex-start;
-									align-items: center;
-									margin-bottom: 30px;
-									.price{
-										font-family: 'AbhayaLibre-Regular';
-										font-weight: 400;
-										font-size: 18px;
-										line-height: 21px;
-										text-align: left;
-										letter-spacing: -0.011em;
-										color: #000000;
-										width: 108px;
-										margin-right: 20px;
-										span{
-											font-weight: 700;
-											font-size: 20px;
-											line-height: 24px;
-											letter-spacing: -0.01em;
-										}
-									}
-								}
-						    }
-						}
 	    			}
-    			}
+				}
+			}
+	    }
+	}
+	.bottle-details{
+	    padding: 100% 30px 0;
+		height: 100vh;
+		z-index: -1;
+		background: #FEF8EC;
+		overflow: auto;
+	    text-align: left;
+	    position: relative;
+		.header{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+		    .title{
+		    	font-family: "AbhayaLibre-ExtraBold";
+			    font-weight: 800;
+			    font-size: 24px;
+			    line-height: 103.97%;
+			    color: #000000;
+			    margin: 0;
 		    }
-		}
-    }
+		    a{
+				font-family: "AbhayaLibre-SemiBold";
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 17px;
+				letter-spacing: -0.01em;
+				color: #AA8641;
+		    }
+	    }
+	    .info{
+	    	font-family: 'Nunito Sans', sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0.01em;
+			color: #000000;
+			opacity: 0.7;
+			margin-bottom: 20px;
+	    }
+	    .price-title{
+	    	margin-top: 50px;
+	    }
+	    .tags{
+	    	display: flex;
+	    	flex-wrap: wrap;
+		    margin-bottom: 30px;
+	    	.tag{
+	    		flex-basis: 33.33%;
+	    		.name{
+	    			font-family: 'Nunito Sans', sans-serif;
+					font-size: 12px;
+					line-height: 20px;
+					letter-spacing: 0.01em;
+					color: #000000;
+					opacity: 0.7;
+					margin-bottom: 0;
+	    		}
+	    		.type{
+	    			font-family: "AbhayaLibre-Bold";
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 19px;
+					letter-spacing: -0.01em;
+					color: #000000;
+	    		}
+	    		@media(min-width: 768px){
+	    			flex-basis: 200px;
+	    		}
+	    	}
+	    }
+	    .wrap{
+	    	display: none;
+	    }
+	    @media(min-width: 768px){
+			margin-left: 550px;
+		    top: 160px;
+		    .wrap{
+	    		display: block;
+	    	}
+		    .shelf-block{
+		    	&--label{
+					margin-bottom: 15px;
+					display: flex;
+					.tags{
+						font-family: 'Nunito Sans', sans-serif;
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 19px;
+						text-align: center;
+						background: #FFFFFF;;
+						border-radius: 10px;
+						color: #000000;
+					    padding: 4px 12px;
+					    margin-right: 10px;
+					}
+				}
+		    	&--title{
+					font-family: "AbhayaLibre-Regular";
+					font-style: normal;
+					font-weight: bold;
+					font-size: 72px;
+					line-height: 64px;
+					letter-spacing: -0.01em;
+					color: #000000;
+					text-align: left;
+				}
+				&--info{
+					font-family: "AbhayaLibre-Bold";
+					font-style: normal;
+					font-weight: bold;
+					font-size: 36px;
+					line-height: 42px;
+					color: #000000;
+					opacity: 0.5;
+					text-align: left;
+					margin-bottom: 32px;
+				}
+		    }
+			.description{
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				margin-bottom: 30px;
+				.price{
+					font-family: 'AbhayaLibre-Regular';
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 21px;
+					text-align: left;
+					letter-spacing: -0.011em;
+					color: #000000;
+					width: 108px;
+					margin-right: 20px;
+					span{
+						font-weight: 700;
+						font-size: 20px;
+						line-height: 24px;
+						letter-spacing: -0.01em;
+					}
+				}
+			}
+	    }
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
