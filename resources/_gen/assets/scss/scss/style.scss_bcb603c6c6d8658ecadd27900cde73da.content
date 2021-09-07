@@ -7508,8 +7508,8 @@ body {
     pointer-events: auto;
     opacity: 0; }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region {
-      height: 464px;
-      transform: translateY(-25%);
+      height: 570px;
+      transform: translateY(-30%);
       position: relative;
       z-index: -1; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region .tabs {
@@ -7545,8 +7545,8 @@ body {
       transform: translateY(40px);
       -webkit-transform: translateY(40px); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery {
-      transform: translateY(-34%);
-      height: 360px;
+      transform: translateY(-7%);
+      height: 570px;
       opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .map-disterllery {
         background-image: url("../images/disterllery.png");
@@ -7557,12 +7557,12 @@ body {
         left: 50px;
         height: 315px;
         position: absolute;
-        top: -8%;
+        top: 1%;
         z-index: -2; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .disterllery_details {
         position: absolute;
         right: 60px;
-        top: 65%;
+        top: 38%;
         width: 132px;
         font-family: 'AbhayaLibre-SemiBold';
         font-weight: 600;
@@ -7574,8 +7574,8 @@ body {
         transform: translateY(40px);
         -webkit-transform: translateY(40px); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 {
-      transform: translateY(-34%);
-      height: 360px;
+      transform: translateY(-7%);
+      height: 570px;
       opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .map-disterllery {
         background-image: url("../images/disterllery.png");
@@ -7586,7 +7586,7 @@ body {
         left: 75px;
         height: 295px;
         position: absolute;
-        top: -111%;
+        top: 4%;
         z-index: -2; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .disterllery_details {
         right: 60px;
@@ -7598,8 +7598,8 @@ body {
         letter-spacing: 0.01em;
         color: #000000;
         text-align: left;
-        transform: translateY(-166px);
-        -webkit-transform: translateY(-166px); }
+        transform: translateY(232px);
+        -webkit-transform: translateY(232px); }
         .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .disterllery_details .rightbox {
           padding: 0;
           height: 100%; }
@@ -7625,7 +7625,7 @@ body {
                 border-left: 0; }
               .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .disterllery_details .rb-container ul.rb li::before {
                 position: absolute;
-                left: -6px;
+                left: -5px;
                 top: 0px;
                 content: " ";
                 border-radius: 500%;
@@ -7659,8 +7659,8 @@ body {
           color: #000000;
           opacity: 0.7; }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story {
-      transform: translateY(-34%);
-      height: 360px;
+      transform: translateY(-7%);
+      height: 570px;
       opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .map {
         background-image: url("../images/scotland.png");
@@ -7671,13 +7671,13 @@ body {
         height: 380px;
         left: 25px;
         position: absolute;
-        top: -94% !important;
+        top: -4% !important;
         z-index: -2;
         opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .bottle_story_details {
         position: absolute;
         right: 60px;
-        top: -34%;
+        top: 34%;
         width: 120px;
         font-family: 'AbhayaLibre-SemiBold';
         font-weight: 600;
@@ -7774,8 +7774,8 @@ body {
           opacity: 1; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery.showDisterlleryDetails {
         opacity: 1;
-        transform: translateY(-160%);
-        -webkit-transform: translateY(-160%);
+        transform: translateY(-126%);
+        -webkit-transform: translateY(-126%);
         transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery.hideDisterlleryDetails {
@@ -7785,8 +7785,8 @@ body {
         -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery2.showDisterlleryDetails1 {
         opacity: 1;
-        transform: translateY(-160%);
-        -webkit-transform: translateY(-160%);
+        transform: translateY(-228%);
+        -webkit-transform: translateY(-228%);
         transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery2.hideDisterlleryDetails1 {
@@ -7796,8 +7796,8 @@ body {
         -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails {
         opacity: 1;
-        transform: translateY(-280%);
-        -webkit-transform: translateY(-280%);
+        transform: translateY(-326%);
+        -webkit-transform: translateY(-326%);
         transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
         -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
         .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails .bottle_story_details {

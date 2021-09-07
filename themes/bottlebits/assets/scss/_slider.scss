@@ -155,8 +155,8 @@
 			    	pointer-events: auto; 
 			    	opacity: 0;
 			    	.region{
-					    height: 464px;
-					    transform: translateY(-25%);
+						height: 570px;
+						transform: translateY(-30%);
 						position: relative;
 						z-index: -1;
 						.tabs{
@@ -197,8 +197,8 @@
 	    			    -webkit-transform: translateY(40px);
 		    		}
 				    .disterllery{
-				    	transform: translateY(-34%);
-				    	height: 360px;
+				    	transform: translateY(-7%);
+				    	height: 570px;
 				    	opacity: 0;
 				    	.map-disterllery{
 				    		background-image: url('../images/disterllery.png');
@@ -209,13 +209,13 @@
 						    left: 50px;
 						    height: 315px;
 						    position: absolute;
-						    top: -8%;
+						    top: 1%;
 						    z-index: -2;
 				    	}
 				    	.disterllery_details{
 						    position: absolute;
 						    right: 60px;
-						    top: 65%;
+						    top: 38%;
 						    width: 132px;
 						    font-family: 'AbhayaLibre-SemiBold';
 						    font-weight: 600;
@@ -229,8 +229,8 @@
 			    		}
 				    }
 				    .disterllery2{
-				    	transform: translateY(-34%);
-				    	height: 360px;
+				    	transform: translateY(-7%);
+				    	height: 570px;
 				    	opacity: 0;
 				    	.map-disterllery{
 				    		background-image: url('../images/disterllery.png');
@@ -241,7 +241,7 @@
 					        left: 75px;
     						height: 295px;
 						    position: absolute;
-						    top: -111%;
+						    top: 4%;
 						    z-index: -2;
 				    	}
 				    	.disterllery_details{
@@ -254,8 +254,8 @@
 						    letter-spacing: 0.01em;
 						    color: #000000;
 						    text-align: left;
-		    			    transform: translateY(-166px);
-		    			    -webkit-transform: translateY(-166px);
+		    			    transform: translateY(232px);
+		    			    -webkit-transform: translateY(232px);
 						    .rightbox {
 								padding: 0;
 								height: 100%;
@@ -283,7 +283,7 @@
 										}
 										&::before {
 											position: absolute;
-											left: -6px;
+											left: -5px;
 											top: 0px;
 											content: " ";
 											border-radius: 500%;
@@ -331,8 +331,8 @@
 			    		}
 				    }
 				    .bottle_story{
-				    	transform: translateY(-34%);
-				    	height: 360px;
+				    	transform: translateY(-7%);
+				    	height: 570px;
 				    	opacity: 0;
 			    		.map{
 							background-image: url('../images/scotland.png');
@@ -343,14 +343,14 @@
 							height: 380px;
 							left: 25px;
 						    position: absolute;
-						    top: -94% !important;
+						    top: -4% !important;
 						    z-index: -2;
 				    		opacity: 0;
 			    		}
 			    		.bottle_story_details{
 						    position: absolute;
 						    right: 60px;
-						    top: -34%;
+						    top: 34%;
 						    width: 120px;
 						    font-family: 'AbhayaLibre-SemiBold';
 						    font-weight: 600;
@@ -471,8 +471,8 @@
 				    		.disterllery{
 				    			&.showDisterlleryDetails{
 					    			opacity: 1;
-				    			  	transform: translateY(-160%);
-				    			    -webkit-transform:translateY(-160%);
+				    			  	transform: translateY(-126%);
+				    			    -webkit-transform:translateY(-126%);
 				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
 				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 					    		}
@@ -486,8 +486,8 @@
 				    		.disterllery2{
 				    			&.showDisterlleryDetails1{
 					    			opacity: 1;
-				    			  	transform: translateY(-160%);
-				    			    -webkit-transform:translateY(-160%);
+				    			  	transform: translateY(-228%);
+				    			    -webkit-transform:translateY(-228%);
 				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
 				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 					    		}
@@ -501,8 +501,8 @@
 				    		.bottle_story{
 				    			&.showBottleStoryDetails{
 					    			opacity: 1;
-				    			  	transform: translateY(-280%);
-				    			    -webkit-transform:translateY(-280%);
+				    			  	transform: translateY(-326%);
+				    			    -webkit-transform:translateY(-326%);
 				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
 				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 				    			    .bottle_story_details{
