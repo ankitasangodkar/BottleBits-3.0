@@ -136,6 +136,7 @@ $(document).ready(function (e) {
 		$(".tabs .dest1").addClass("selected");
 		$('.slide-dots .dot:nth-child(2)').removeClass('dot-active');
 		$('.slide-dots .dot:nth-child(3)').addClass('dot-active');
+		$(".shadow").removeClass("hide").fadeIn(1000);
 	});
 
     jquerySwipeHandler.handleSwipe(".disterllery", [
