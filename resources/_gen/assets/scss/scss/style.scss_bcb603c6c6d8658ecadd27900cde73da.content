@@ -7612,7 +7612,7 @@ body {
             .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .disterllery_details .rb-container ul.rb li {
               list-style: none;
               margin: auto;
-              margin-left: 12.5em;
+              margin-left: 13em;
               min-height: 50px;
               border-left: 1px dashed #000;
               padding: 0 15px 10px 20px;
@@ -7801,7 +7801,7 @@ body {
         .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails .bottle_story_details {
           opacity: 1; }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap3 .shelf-block--picture {
-      bottom: 4px; }
+      bottom: -27px; }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap4 .shelf-block--picture {
       right: 42%;
       width: 100px;
@@ -7810,10 +7810,10 @@ body {
       -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .shelf-block-bg.small_block {
     position: relative !important;
-    height: 340px; }
+    height: 360px; }
     .shelf-block-bg.small_block .shelf-block {
       position: fixed;
-      height: 340px;
+      height: 360px;
       transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: height 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
       background-color: #000; }
@@ -7827,7 +7827,7 @@ body {
       -webkit-transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--content-wrapper {
         padding-left: 140px;
-        padding-right: 30px; }
+        padding-right: 40px; }
       .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--label {
         text-align: left; }
         .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--label .tags {
@@ -7848,9 +7848,9 @@ body {
           text-align: left; }
       .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--picture {
         height: 175px !important;
-        padding-right: 40px;
+        padding-right: 48px;
         width: 140px !important;
-        bottom: 28px !important; }
+        bottom: 7px !important; }
         @media (min-width: 768px) {
           .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--picture {
             right: 0 !important;
@@ -7891,13 +7891,15 @@ body {
     background-color: #000; }
     .shelf-block-bg.cart .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .content .shelf-block--picture {
       height: 200px !important;
-      padding-right: 40px;
+      padding-right: 50px;
       width: 140px !important;
-      bottom: -7px !important;
+      bottom: -16px !important;
       transition: bottom 1s cubic-bezier(0.48, 0.04, 0.25, 1), height 1s cubic-bezier(0.48, 0.04, 0.25, 1);
       -webkit-transition: bottom 1s cubic-bezier(0.48, 0.04, 0.25, 1), height 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
+    .shelf-block-bg.cart .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap3 .content .shelf-block--picture {
+      bottom: -8px !important; }
   .shelf-block-bg .bottle-details {
-    padding: 370px 30px 0;
+    padding: 380px 30px 0;
     height: 100vh;
     z-index: -1;
     background: #FEF8EC;
