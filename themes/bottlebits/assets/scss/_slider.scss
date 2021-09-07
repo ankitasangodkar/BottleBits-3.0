@@ -83,6 +83,8 @@
 			    z-index: 1;
 				bottom: 80px;
 				width: auto;
+				transition: right 1s $ease-out;
+				-webkit-transition: right 1s $ease-out;
     			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
     			-webkit-filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
 		    }
@@ -121,7 +123,7 @@
 					height: 420px;
 					transform: translateX(0%);
 				    pointer-events: auto;
-					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out, right2s $ease-in-out;
+					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out, right 2s $ease-in-out;
 					@media(min-width: 768px){
 			    		height: 350px;
 					}
@@ -158,7 +160,6 @@
 						height: 570px;
 						transform: translateY(-30%);
 						position: relative;
-						z-index: -1;
 						.tabs{
 							opacity: 0;
 						}
@@ -210,7 +211,6 @@
 						    height: 315px;
 						    position: absolute;
 						    top: 1%;
-						    z-index: -2;
 				    	}
 				    	.disterllery_details{
 						    position: absolute;
@@ -242,7 +242,6 @@
     						height: 295px;
 						    position: absolute;
 						    top: 4%;
-						    z-index: -2;
 				    	}
 				    	.disterllery_details{
 						    right: 60px;
@@ -344,7 +343,6 @@
 							left: 25px;
 						    position: absolute;
 						    top: -4% !important;
-						    z-index: -2;
 				    		opacity: 0;
 			    		}
 			    		.bottle_story_details{
@@ -425,8 +423,8 @@
 			    		}
 			    		.shelf-block--picture{
 							right: 40%;
-							width: 160px;
-							bottom: -13px;
+							width: 135px;
+							bottom: -40px;
 			    			transition: right 1s $ease-out;
 				            -webkit-transition: right 1s $ease-out;
 			                pointer-events: none;

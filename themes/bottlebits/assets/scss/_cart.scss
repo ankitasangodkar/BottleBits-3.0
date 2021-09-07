@@ -41,7 +41,10 @@
 				    padding: 0 10px;
 					border: 0;
 					text-align: center;
-					width: 40px;
+					width: 55px;
+					&:focus{
+						outline: 0;
+					}
 				}
 				.plus{
 					border: 1px solid #181A1E;
