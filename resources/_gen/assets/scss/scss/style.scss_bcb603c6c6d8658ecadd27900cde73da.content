@@ -7546,7 +7546,7 @@ body {
       transform: translateY(40px);
       -webkit-transform: translateY(40px); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery {
-      transform: translateY(-7%);
+      transform: translateY(-90%);
       height: 570px;
       opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .map-disterllery {
@@ -7574,7 +7574,7 @@ body {
         transform: translateY(40px);
         -webkit-transform: translateY(40px); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 {
-      transform: translateY(-7%);
+      transform: translateY(-190%);
       height: 570px;
       opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .map-disterllery {
@@ -7658,7 +7658,7 @@ body {
           color: #000000;
           opacity: 0.7; }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story {
-      transform: translateY(-7%);
+      transform: translateY(-290%);
       height: 570px;
       opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .map {
