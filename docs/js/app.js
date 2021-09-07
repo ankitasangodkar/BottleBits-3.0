@@ -5,37 +5,40 @@ $(document).ready(function(){
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 	$(".product-detailed").addClass('loading');
 
+	$(".carousel .shelf-block .shelf-block--wrap").fadeOut();
+	$(".vertical-slider .slide-item").fadeOut();
+
 
 	$('.shelf .shelf-block').on('click', function(e){
 		$(".shelf-block-bg").addClass('show_bg');
 		$(".shelf").addClass('hidden');
-		$(".carousel .shelf-block .shelf-block--wrap").addClass('shelf-block--slider');
+
 
 		if($(this).hasClass('block1')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('active');
-			$('.vertical-slider').find('.slide-item.wrap1').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').fadeIn().addClass('active');
+			$('.vertical-slider').find('.slide-item.wrap1').addClass('active').fadeIn();
 			$('.slide-dots').addClass('slide-dots-active');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').next().addClass('next');
 		}
 		if($(this).hasClass('block2')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('active');
-			$('.vertical-slider').find('.slide-item.wrap2').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('active').fadeIn();
+			$('.vertical-slider').find('.slide-item.wrap2').addClass('active').fadeIn();
 			$('.slide-dots').addClass('slide-dots-active');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').next().addClass('next');
 		}
 		if($(this).hasClass('block3')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('active');
-			$('.vertical-slider').find('.slide-item.wrap3').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('active').fadeIn();
+			$('.vertical-slider').find('.slide-item.wrap3').addClass('active').fadeIn();
 			$('.slide-dots').addClass('slide-dots-active');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').next().addClass('next');
 		}
 		if($(this).hasClass('block4')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').prev().addClass('prev');
-			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('active');
-			$('.vertical-slider').find('.slide-item.wrap4').addClass('active');
+			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('active').fadeIn();
+			$('.vertical-slider').find('.slide-item.wrap4').addClass('active').fadeIn();
 			$('.slide-dots').addClass('slide-dots-active').fadeIn(1000);
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('next');
 		}
@@ -132,7 +135,6 @@ $(document).ready(function (e) {
 	  	//console.log("swipe: ", direction);
 	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('prev');
 	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('next');
-	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('active');
 	  	$(".vertical-slider").removeClass("hide").fadeIn(1000);
 		$(".slide-item.active").addClass(direction);
 		$(".shelf-block-bg").addClass("scrollUpContainer");

@@ -7493,8 +7493,6 @@ body {
         @media (min-width: 768px) {
           .shelf-block-bg .shelf-block .shelf-block--wrap.active .shelf-block--picture {
             height: 350px; } }
-      .shelf-block-bg .shelf-block .shelf-block--wrap.active:not(.shelf-block--slider) .shelf-block--label, .shelf-block-bg .shelf-block .shelf-block--wrap.active:not(.shelf-block--slider) .shelf-block--info {
-        opacity: 0; }
       .shelf-block-bg .shelf-block .shelf-block--wrap.next .shelf-block--picture {
         height: 420px;
         transform: translateX(140%);
