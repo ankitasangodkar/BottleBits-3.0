@@ -62,6 +62,9 @@ var jquerySwipeHandler = (function (e) {
             n.d(t, "SWIPE_DOWN", function () {
                 return c;
             }),
+            n.d(t, "CLICK", function () {
+                return false;
+            }),
             n.d(t, "handleSwipe", function () {
                 return l;
             });
@@ -69,7 +72,7 @@ var jquerySwipeHandler = (function (e) {
             u = "SWIPE_RIGHT",
             r = "SWIPE_UP",
             c = "SWIPE_DOWN",
-            i = "",
+            i = "CLICK",
             f = 50,
             d = 700,
             a = 1;

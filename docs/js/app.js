@@ -102,6 +102,14 @@ $(".SWIPE_UP .shelf-block--picture").on('slid.bs.carousel', function (e) {
 });
 
 $(document).ready(function (e) {
+
+	jquerySwipeHandler.handleSwipe(".carousel-item", [
+     jquerySwipeHandler.CLICK
+    ], function (direction) {
+	  	e.preventDefault();
+	});
+
+
     jquerySwipeHandler.handleSwipe(".carousel-item", [
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
     ], function (direction) {
@@ -111,6 +119,7 @@ $(document).ready(function (e) {
 		$(".shelf-block-bg").addClass("scrollUpContainer");
 
 	});
+
 
     jquerySwipeHandler.handleSwipe(".region", [
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
@@ -226,7 +235,7 @@ var incrementMinus = buttonMinus.click(function() {
 
 
 
-$(".floating-btn .primary-button--dark").on('click', function(){
+$(".floating-btn .primary-button").on('click', function(){
 	$(".bottle-details").addClass("hide");
 	$(".tab--name").fadeOut();
 	$(".button").fadeOut();
@@ -237,7 +246,7 @@ $(".floating-btn .primary-button--dark").on('click', function(){
 	$(".cart-wrapper").removeClass("hide");
 });
 
-$(".cart--buttons .primary-button--dark").on('click', function(){
+$(".cart--buttons .primary-button").on('click', function(){
 	$(".cart-wrapper").addClass("hide");
 	$(".shelf-block-bg").addClass("animateBlock");
 	$(".congratulations").removeClass("hide").fadeIn(1500);
