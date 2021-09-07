@@ -272,8 +272,11 @@ $(".arrow").on('click', function(){
 	$(".shelf-block-bg").removeClass("cart");
 	$(".wrap4 .bottle-details").fadeIn();
 	$(".cart-wrapper").addClass("hide");
+
 	$('.slide-dots').addClass('slide-dots-active').fadeOut(1000);
-	var title = $(this).attr('data-title');  
+	const urlParams = new URLSearchParams(window.location.search);
+	const title = urlParams.get('title');
+
     $('#title').text(title);
 });
 
