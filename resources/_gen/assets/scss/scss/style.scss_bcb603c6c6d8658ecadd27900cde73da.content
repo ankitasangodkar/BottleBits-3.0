@@ -8355,11 +8355,9 @@ body {
       margin: 15px auto 10px;
       margin: 15px auto 10px;
       text-align: center;
-      border: 1px dashed rgba(249, 213, 144, 0.2);
       box-sizing: border-box;
       padding: 10px;
       border-radius: 100%;
-      width: 60px;
       height: auto; }
     .congratulations .congratulate_bg .congatulate-text {
       text-align: center; }
