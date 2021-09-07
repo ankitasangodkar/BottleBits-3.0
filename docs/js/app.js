@@ -269,10 +269,10 @@ $(".arrow").on('click', function(){
 	$(".button").fadeIn();
 	$(".arrow").addClass("hide");
 	$(".shelf-block--info").fadeOut();
-	$(".shelf-block-bg").addClass("cart");
-	$(".wrap4 .bottle-details").fadeOut();
-	$(".cart-wrapper").removeClass("hide");
-	$('.slide-dots').removeClass('slide-dots-active').fadeOut(1000);
+	$(".shelf-block-bg").removeClass("cart");
+	$(".wrap4 .bottle-details").fadeIn();
+	$(".cart-wrapper").addClass("hide");
+	$('.slide-dots').addClass('slide-dots-active').fadeOut(1000);
 	var title = $(this).attr('data-title');  
     $('#title').text(title);
 });
