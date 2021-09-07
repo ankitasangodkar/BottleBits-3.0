@@ -263,6 +263,20 @@ $(".floating-btn .primary-button").on('click', function(){
     $('#title').text(title);
 });
 
+$(".arrow").on('click', function(){
+	$(".bottle-details").removeClass("hide");
+	$(".tab--name").fadeIn();
+	$(".button").fadeIn();
+	$(".arrow").addClass("hide");
+	$(".shelf-block--info").fadeOut();
+	$(".shelf-block-bg").addClass("cart");
+	$(".wrap4 .bottle-details").fadeOut();
+	$(".cart-wrapper").removeClass("hide");
+	$('.slide-dots').removeClass('slide-dots-active').fadeOut(1000);
+	var title = $(this).attr('data-title');  
+    $('#title').text(title);
+});
+
 $(".cart--buttons .primary-button").on('click', function(){
 	$(".cart-wrapper").addClass("hide");
 	$(".shelf-block-bg").addClass("animateBlock");

@@ -403,6 +403,9 @@
 							}
 						}
 					}
+					.arrow{
+					    padding: 6px 4px;
+					}
 			    }
     			&.active{
 					&.SWIPE_UP{
@@ -662,7 +665,7 @@
 	    }
 	}
 	.bottle-details{
-	    padding: 96% 30px 0;
+	    padding: 370px 30px 0;
 		height: 100vh;
 		z-index: -1;
 		background: #FEF8EC;
