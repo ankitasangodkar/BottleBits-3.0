@@ -130,6 +130,9 @@ $(document).ready(function (e) {
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
+	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('prev');
+	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('next');
+	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('active');
 	  	$(".vertical-slider").removeClass("hide").fadeIn(1000);
 		$(".slide-item.active").addClass(direction);
 		$(".shelf-block-bg").addClass("scrollUpContainer");
@@ -307,8 +310,8 @@ $(".back-arrow").on('click', function(){
   	$(".vertical-slider").addClass("hide").fadeOut(1000);
 	$(".slide-item.active").removeClass("SWIPE_UP");
 	$(".shelf-block-bg").removeClass("scrollUpContainer");
-	$('.slide-dots .dot:nth-child(1)').addClass('dot-active');
 	$('.slide-dots .dot').removeClass('dot-active');
+	$('.slide-dots .dot:nth-child(1)').addClass('dot-active');
 
 	$(".region").removeClass("slide_up");
 	$(".disterllery").removeClass("showDisterlleryDetails");
@@ -347,4 +350,34 @@ $(".slide-dots-active .region1").on("click", function(){
 	$(".shelf-block-bg").addClass("scrollUpContainer");
 	$('.slide-dots .dot').removeClass('dot-active');
 	$(this).addClass('dot-active');
+});
+
+$(".slide-dots-active .dist2").on("click", function(){
+  	$(".vertical-slider").removeClass("hide").fadeIn(1000);
+	$(".vertical-slider .slide-item.active").addClass("SWIPE_UP");
+	$(".shelf-block-bg").addClass("scrollUpContainer");
+	$('.slide-dots .dot').removeClass('dot-active');
+	$(this).addClass('dot-active');
+});
+
+$(".slide-dots-active .bottleStory").on("click", function(){
+  	$(".disterllery2").removeClass("showDisterlleryDetails1").addClass("hideDisterlleryDetails1");
+	$(".bottle_story").addClass("showBottleStoryDetails");
+	$(".tabs .dist2").removeClass("selected");
+	$(".tabs .bottleStory").addClass("selected");
+	$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
+	$('.slide-dots .dot:nth-child(4)').addClass('dot-active');
+});
+
+$(".slide-dots-active .details").on("click", function(){
+	$(".bottle_story").removeClass("showBottleStoryDetails");
+	$(".show_bg").addClass("small_block");
+	$(".tabs .bottleStory").removeClass("selected");
+	$(".tabs .details").addClass("selected");
+	$(".podium").removeClass("podium-animate");
+	$(".bottle-details").removeClass("hide");
+	$("header").css({position: "fixed"});
+	$(".slide-item.active .content").css({position: "fixed"});
+	$('.slide-dots .dot:nth-child(4)').removeClass('dot-active');
+	$('.slide-dots .dot:nth-child(5)').addClass('dot-active');
 });
