@@ -7320,7 +7320,7 @@ body {
       top: 0;
       bottom: 0;
       background-color: #E1B96B;
-      width: 20px;
+      width: 22px;
       height: 100%; }
     .product-detailed .shelf-block:nth-child(even):after {
       content: '';
@@ -7329,7 +7329,7 @@ body {
       top: 0;
       bottom: 0;
       background-color: #E1B96B;
-      width: 18px;
+      width: 22px;
       height: 100%; }
 
 @media (min-width: 768px) {
