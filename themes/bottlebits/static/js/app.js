@@ -132,6 +132,7 @@ $(document).ready(function (e) {
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
+	  	$(".carousel .carousel-item").addClass("hide");
 	  	$(".vertical-slider").removeClass("hide").fadeIn(1000);
 		$(".slide-item.active").addClass(direction);
 		$(".shelf-block-bg").addClass("scrollUpContainer");
@@ -305,7 +306,8 @@ $(".cart--buttons .primary-button").on('click', function(){
 });
 
 $(".back-arrow").on('click', function(){
-  
+
+  	$(".carousel .carousel-item").removeClass("hide");
   	$(".vertical-slider").addClass("hide").fadeOut(1000);
 	$(".slide-item.active").removeClass("SWIPE_UP");
 	$(".shelf-block-bg").removeClass("scrollUpContainer");
