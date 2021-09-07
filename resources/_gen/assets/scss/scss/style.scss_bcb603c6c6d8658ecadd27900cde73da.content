@@ -8027,9 +8027,9 @@ body {
     .shelf-block-bg .bottle-details:after {
       content: '';
       width: 100%;
-      height: 30px;
+      height: 25px;
       background: linear-gradient(180deg, #000000 -25%, rgba(0, 0, 0, 0) 100%);
-      opacity: 0.5;
+      opacity: 0.3;
       position: absolute;
       top: 0;
       left: 0;
