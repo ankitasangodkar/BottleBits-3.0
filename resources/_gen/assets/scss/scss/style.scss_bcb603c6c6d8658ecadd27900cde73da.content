@@ -7803,7 +7803,7 @@ body {
     .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap3 .shelf-block--picture {
       bottom: -27px; }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap4 .shelf-block--picture {
-      right: 42%;
+      right: 44%;
       width: 100px;
       bottom: 18px;
       transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
@@ -7826,8 +7826,8 @@ body {
       transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: height 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--content-wrapper {
-        padding-left: 140px;
-        padding-right: 40px; }
+        padding-left: 145px;
+        padding-right: 35px; }
       .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--label {
         text-align: left; }
         .shelf-block-bg.small_block .vertical-slider .slide-item.active.SWIPE_UP .content .shelf-block--label .tags {
