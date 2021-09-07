@@ -7898,6 +7898,8 @@ body {
       -webkit-transition: bottom 1s cubic-bezier(0.48, 0.04, 0.25, 1), height 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
     .shelf-block-bg.cart .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap3 .content .shelf-block--picture {
       bottom: -8px !important; }
+    .shelf-block-bg.cart .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap4 .content .shelf-block--picture {
+      bottom: -5px !important; }
   .shelf-block-bg .bottle-details {
     padding: 380px 30px 0;
     height: 100vh;
