@@ -259,6 +259,8 @@ $(".floating-btn .primary-button").on('click', function(){
 	$(".wrap4 .bottle-details").fadeOut();
 	$(".cart-wrapper").removeClass("hide");
 	$('.slide-dots').removeClass('slide-dots-active').fadeOut(1000);
+	var title = "Home";
+    $('#title').text(title);
 });
 
 $(".cart--buttons .primary-button").on('click', function(){
