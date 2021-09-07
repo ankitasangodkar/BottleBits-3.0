@@ -393,3 +393,4 @@ $(".slide-dots .details").on("click", function(){
 	$('.slide-dots .dot:nth-child(5)').removeClass('dot-active');
 	$('.slide-dots .dot:nth-child(6)').addClass('dot-active');
 });
+
