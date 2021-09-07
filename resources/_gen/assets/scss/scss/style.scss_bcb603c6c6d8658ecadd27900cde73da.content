@@ -7612,7 +7612,7 @@ body {
             .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .disterllery_details .rb-container ul.rb li {
               list-style: none;
               margin: auto;
-              margin-left: 13em;
+              margin-left: 162px;
               min-height: 50px;
               border-left: 1px dashed #000;
               padding: 0 15px 10px 20px;
