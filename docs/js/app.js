@@ -5,7 +5,6 @@ $(document).ready(function(){
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 	$(".product-detailed").addClass('loading');
 
-	$(".carousel .shelf-block .shelf-block--wrap").fadeOut();
 	$(".vertical-slider .slide-item").fadeOut();
 
 
@@ -91,24 +90,24 @@ var $carousel = $('.carousel'),
     //Find current slide
     var $active = $(e.relatedTarget);
     if(($active).hasClass('wrap2')){
-    	$('.vertical-slider').find('.slide-item').removeClass('active');
-    	$('.vertical-slider').find('.slide-item.wrap2').addClass('active');
+    	$('.vertical-slider').find('.slide-item').removeClass('active').fadeOut();
+    	$('.vertical-slider').find('.slide-item.wrap2').addClass('active').fadeIn();
  	}
  	if(($active).hasClass('wrap3')){
-    	$('.vertical-slider').find('.slide-item').removeClass('active');
-    	$('.vertical-slider').find('.slide-item.wrap3').addClass('active');
+    	$('.vertical-slider').find('.slide-item').removeClass('active').fadeOut();
+    	$('.vertical-slider').find('.slide-item.wrap3').addClass('active').fadeIn();
  	}    
     if(($active).hasClass('wrap4')){
     	$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('next');
-    	$('.vertical-slider').find('.slide-item').removeClass('active');
-    	$('.vertical-slider').find('.slide-item.wrap4').addClass('active');
+    	$('.vertical-slider').find('.slide-item').removeClass('active').fadeOut();
+    	$('.vertical-slider').find('.slide-item.wrap4').addClass('active').fadeIn();
     }else{
     	$active.next().addClass('next');
 	}
 	if(($active).hasClass('wrap1')){
 		$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('prev');
-    	$('.vertical-slider').find('.slide-item').removeClass('active');
-    	$('.vertical-slider').find('.slide-item.wrap1').addClass('active');
+    	$('.vertical-slider').find('.slide-item').removeClass('active').fadeOut();
+    	$('.vertical-slider').find('.slide-item.wrap1').addClass('active').fadeIn();
 	}
 	$active.prev().addClass('prev');
 });
@@ -133,8 +132,6 @@ $(document).ready(function (e) {
      jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
     ], function (direction) {
 	  	//console.log("swipe: ", direction);
-	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('prev');
-	  	$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('next');
 	  	$(".vertical-slider").removeClass("hide").fadeIn(1000);
 		$(".slide-item.active").addClass(direction);
 		$(".shelf-block-bg").addClass("scrollUpContainer");
