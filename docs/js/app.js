@@ -146,8 +146,7 @@ $(document).ready(function (e) {
 		$(".disterllery2").addClass("showDisterlleryDetails1");
 		$(".tabs .dest1").removeClass("selected");
 		$(".tabs .dist2").addClass("selected");
-		$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
-		$('.slide-dots .dot:nth-child(4)').addClass('dot-active');
+		$('.slide-dots .dot:nth-child(3)').addClass('dot-active');
 	});
 
     jquerySwipeHandler.handleSwipe(".disterllery2", [
@@ -158,8 +157,8 @@ $(document).ready(function (e) {
 		$(".bottle_story").addClass("showBottleStoryDetails");
 		$(".tabs .dist2").removeClass("selected");
 		$(".tabs .bottleStory").addClass("selected");
-		$('.slide-dots .dot:nth-child(4)').removeClass('dot-active');
-		$('.slide-dots .dot:nth-child(5)').addClass('dot-active');
+		$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
+		$('.slide-dots .dot:nth-child(4)').addClass('dot-active');
 	});
 
     jquerySwipeHandler.handleSwipe(".bottle_story", [
@@ -174,8 +173,8 @@ $(document).ready(function (e) {
 		$(".bottle-details").removeClass("hide");
 		$("header").css({position: "fixed"});
 		$(".slide-item.active .content").css({position: "fixed"});
-		$('.slide-dots .dot:nth-child(5)').removeClass('dot-active');
-		$('.slide-dots .dot:nth-child(6)').addClass('dot-active');
+		$('.slide-dots .dot:nth-child(4)').removeClass('dot-active');
+		$('.slide-dots .dot:nth-child(5)').addClass('dot-active');
 
 	});
 });
