@@ -8443,7 +8443,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 0; }
+  z-index: 0;
+  background: #070705; }
   .congratulations .congratulate_bg {
     opacity: 0;
     position: relative;
