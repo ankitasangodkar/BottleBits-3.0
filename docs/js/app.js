@@ -15,24 +15,28 @@ $(document).ready(function(){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('active');
 			$('.vertical-slider').find('.slide-item.wrap1').addClass('active');
+			$('.slide-dots').addClass('slide-dots-active');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').next().addClass('next');
 		}
 		if($(this).hasClass('block2')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').addClass('active');
 			$('.vertical-slider').find('.slide-item.wrap2').addClass('active');
+			$('.slide-dots').addClass('slide-dots-active');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap2').next().addClass('next');
 		}
 		if($(this).hasClass('block3')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').addClass('active');
 			$('.vertical-slider').find('.slide-item.wrap3').addClass('active');
+			$('.slide-dots').addClass('slide-dots-active');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap3').next().addClass('next');
 		}
 		if($(this).hasClass('block4')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').prev().addClass('prev');
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('active');
 			$('.vertical-slider').find('.slide-item.wrap4').addClass('active');
+			$('.slide-dots').addClass('slide-dots-active').fadeIn(1000);
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('next');
 		}
 		if (event.cancelable) event.preventDefault();
@@ -244,6 +248,7 @@ $(".floating-btn .primary-button").on('click', function(){
 	$(".shelf-block-bg").addClass("cart");
 	$(".wrap4 .bottle-details").fadeOut();
 	$(".cart-wrapper").removeClass("hide");
+	$('.slide-dots').removeClass('slide-dots-active').fadeOut(400);
 });
 
 $(".cart--buttons .primary-button").on('click', function(){
