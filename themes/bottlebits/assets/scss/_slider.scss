@@ -5,6 +5,8 @@
 	top: 0;
     display: block;
     height: 100vh;
+    background: #E1B96B;
+
 	.shelf-block{
 	    position: absolute;
         height: calc(100vh - 80px);
@@ -724,165 +726,10 @@
 		    }
 	    }
 	}
-	.bottle-details{
-	    padding: 380px 30px 0;
-		height: 100vh;
-		z-index: -1;
-		background: #FEF8EC;
-		overflow: auto;
-	    text-align: left;
-	    position: relative;
-		.header{
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 20px;
-		    .title{
-		    	font-family: "AbhayaLibre-ExtraBold";
-			    font-weight: 800;
-			    font-size: 24px;
-			    line-height: 103.97%;
-			    color: #000000;
-			    margin: 0;
-		    }
-		    a{
-				font-family: "AbhayaLibre-SemiBold";
-				font-style: normal;
-				font-weight: 600;
-				font-size: 14px;
-				line-height: 17px;
-				letter-spacing: -0.01em;
-				color: #AA8641;
-			    padding-right: 15px;
-		    }
-	    }
-	    .info{
-	    	font-family: 'Nunito Sans', sans-serif;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 14px;
-			line-height: 20px;
-			letter-spacing: 0.01em;
-			color: #000000;
-			opacity: 0.7;
-			margin-bottom: 20px;
-	    }
-	    .price-title{
-	    	margin-top: 50px;
-	    }
-	    .tags{
-	    	display: flex;
-	    	flex-wrap: wrap;
-		    margin-bottom: 30px;
-	    	.tag{
-	    		flex-basis: 33.33%;
-	    		.name{
-	    			font-family: 'Nunito Sans', sans-serif;
-					font-size: 12px;
-					line-height: 20px;
-					letter-spacing: 0.01em;
-					color: #000000;
-					opacity: 0.7;
-					margin-bottom: 0;
-	    		}
-	    		.type{
-	    			font-family: "AbhayaLibre-Bold";
-					font-weight: bold;
-					font-size: 16px;
-					line-height: 19px;
-					letter-spacing: -0.01em;
-					color: #000000;
-	    		}
-	    	}
-	    }
-	    .wrap{
-	    	display: none;
-	    }
-	    @media(min-width: 768px){
-			margin-left: 550px;
-		    top: 160px;
-		    .wrap{
-	    		display: block;
-	    	}
-		    .shelf-block{
-		    	&--label{
-					margin-bottom: 15px;
-					display: flex;
-					.tags{
-						font-family: 'Nunito Sans', sans-serif;
-						font-weight: 400;
-						font-size: 14px;
-						line-height: 19px;
-						text-align: center;
-						background: #FFFFFF;;
-						border-radius: 10px;
-						color: #000000;
-					    padding: 4px 12px;
-					    margin-right: 10px;
-					}
-				}
-		    	&--title{
-					font-family: "AbhayaLibre-Regular";
-					font-style: normal;
-					font-weight: bold;
-					font-size: 72px;
-					line-height: 64px;
-					letter-spacing: -0.01em;
-					color: #000000;
-					text-align: left;
-				}
-				&--info{
-					font-family: "AbhayaLibre-Bold";
-					font-style: normal;
-					font-weight: bold;
-					font-size: 36px;
-					line-height: 42px;
-					color: #000000;
-					opacity: 0.5;
-					text-align: left;
-					margin-bottom: 32px;
-				}
-		    }
-			.description{
-				display: flex;
-				flex-direction: row;
-				justify-content: flex-start;
-				align-items: center;
-				margin-bottom: 30px;
-				.price{
-					font-family: 'AbhayaLibre-Regular';
-					font-weight: 400;
-					font-size: 18px;
-					line-height: 21px;
-					text-align: left;
-					letter-spacing: -0.011em;
-					color: #000000;
-					width: 108px;
-					margin-right: 20px;
-					span{
-						font-weight: 700;
-						font-size: 20px;
-						line-height: 24px;
-						letter-spacing: -0.01em;
-					}
-				}
-			}
-	    }
-	    &:after{
-		    content: '';
-		    width: 100%;
-		    height: 60px;
-		    background: linear-gradient(180deg, #000000 -25%, rgba(0, 0, 0, 0) 100%);
-		    opacity: 0.3;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    margin-top: 340px;
-	    }
-	}
 	@media(min-width: 768px){
 		&.show_bg{
 		    width: 500px;
+	        height: 960px;
 		    background: #E1B96B;
 			.shelf-block{
 		    	opacity: 1;
@@ -906,6 +753,131 @@
 			}
 		}
 	}
+}
+.bottle-details{
+    padding: 380px 30px 0;
+	height: 100vh;
+	z-index: -1;
+	background: #FEF8EC;
+	overflow: auto;
+    text-align: left;
+    position: relative;
+	.header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	    .title{
+	    	font-family: "AbhayaLibre-ExtraBold";
+		    font-weight: 800;
+		    font-size: 24px;
+		    line-height: 103.97%;
+		    color: #000000;
+		    margin: 0;
+	    }
+	    a{
+			font-family: "AbhayaLibre-SemiBold";
+			font-style: normal;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: -0.01em;
+			color: #AA8641;
+		    padding-right: 15px;
+		    &:hover{
+		    	text-decoration: none;
+		    }
+	    }
+    }
+    .info{
+    	font-family: 'Nunito Sans', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.01em;
+		color: #000000;
+		opacity: 0.7;
+		margin-bottom: 20px;
+    }
+    .price-title{
+    	margin-top: 50px;
+    }
+    .tags{
+    	display: flex;
+    	flex-wrap: wrap;
+	    margin-bottom: 30px;
+    	.tag{
+    		flex-basis: 33.33%;
+    		.name{
+    			font-family: 'Nunito Sans', sans-serif;
+				font-size: 12px;
+				line-height: 20px;
+				letter-spacing: 0.01em;
+				color: #000000;
+				opacity: 0.7;
+				margin-bottom: 0;
+    		}
+    		.type{
+    			font-family: "AbhayaLibre-Bold";
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: -0.01em;
+				color: #000000;
+    		}
+    	}
+    }
+    .wrap{
+    	display: none;
+    }
+    @media(min-width: 768px){
+    	padding: 0;
+	    .wrap{
+    		display: block;
+    	}
+    	.header{
+    		a{
+    			font-size: 16px;
+				line-height: 19px;
+			    &:hover{
+		    		text-decoration: none;
+		    	}
+    		}
+    	}
+    	.info{
+    		margin-top: 20px;
+    	}
+	    .tags{
+	    	margin-bottom: 50px;
+	    	.tag{
+    		    flex-basis: 25%;
+	    		.name{
+					font-size: 14px;
+					line-height: 20px;
+	    		}
+	    		.type{
+					font-size: 20px;
+					line-height: 19px;
+					margin-top: 5px;
+	    		}
+	    	}
+	    }
+    }
+    &:after{
+	    content: '';
+	    width: 100%;
+	    height: 60px;
+	    background: linear-gradient(180deg, #000000 -25%, rgba(0, 0, 0, 0) 100%);
+	    opacity: 0.3;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    margin-top: 340px;
+	    @media(min-width: 768px){
+	    	display: none;
+	    }
+    }
 }
 /** dots **/
 .slide-dots{
@@ -987,7 +959,123 @@
     }
 }	
 
+.vertical-slider-desktop{
+	display: block;
+	margin-left: 500px;
+	width: auto;
+  	height: 100%;
+	overflow: hidden;
+	.swiper-container{
+	    margin: 0 50px;
+        height: 960px;
+		.swiper-wrapper{
 
+			.swiper-slide{
+				position: absolute;
+				left: 0;
+				right: 0;
+
+				&.bottle-story{
+					opacity: 1;
+					transition: opacity 1s $ease-in-out;
+				}
+				&.disterllery{
+					opacity: 0;
+					transition: opacity 1s $ease-in-out;
+				}
+				&.region{
+					opacity: 0;
+					transition: opacity 1s $ease-in-out;
+				}
+				&.bottle-details-wrapper{
+					opacity: 0;
+					transition: opacity 1s $ease-in-out;
+					overflow: auto;
+					height: 500px;
+					z-index: 4;
+					user-select: none;
+				}
+				&--content{
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.section-title{
+						margin-bottom: 20px;						
+					}
+					.section-info{
+						font-family: 'Nunito Sans', sans-serif;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 14px;
+						line-height: 24px;
+						color: #000000;
+						opacity: 0.8;
+					}
+					.map{
+					    width: 30%;
+						.map-image{
+						    width: 100%;
+						}
+						@media(max-width: 1199px){
+							width: 38%;
+						}
+					}
+					.details{
+						width: 50%;
+					}
+				}
+			}
+		}
+		.tab_option{
+			&--block{
+				display: flex;
+				align-items: center;
+    		    padding: 120px 0 40px;
+	    		position: relative;
+	    		.item{
+					font-family: "AbhayaLibre-Regular";
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 24px;
+					text-align: center;
+					color: #000000;
+					margin: 0px 40px 0px 0px;
+					list-style: none;
+					cursor: pointer;
+					&.active{
+						font-family: "AbhayaLibre-ExtraBold";
+						font-weight: 800;
+						color: #AA8641;
+						position: relative;
+						&:after{
+							content: '';
+							background: #AA8641;
+							width: 5px;
+							height: 5px;
+							border-radius: 100%;
+							position: absolute;
+							left: 0;
+							right: 0;
+							bottom: -5px;
+							margin: auto;
+						}
+					}
+	    		}
+	    		&:after{
+	    			content: "";
+	    			background: #AA8641;
+	    			width: calc(100% - 450px);
+	    			height: 1px;
+	    			position: absolute;
+	    			right: 0;
+	    		}
+			}
+		}
+	}
+	@media(max-width: 767px){
+		display: none;
+	}
+}
 
 
 

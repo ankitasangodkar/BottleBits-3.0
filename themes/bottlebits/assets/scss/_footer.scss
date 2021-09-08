@@ -1,4 +1,5 @@
 footer{
+	display: none;
 	background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
 	.menu-items{
 	    display: flex;
@@ -25,5 +26,13 @@ footer{
 		img{
 			margin: 0 20px;
 		}
+	}
+	@media(min-width: 768px){
+		display: block;
+		margin-left: 500px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 }

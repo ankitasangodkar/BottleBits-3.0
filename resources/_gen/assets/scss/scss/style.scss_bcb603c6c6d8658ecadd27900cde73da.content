@@ -7247,6 +7247,15 @@ body {
     body .product-detailed.loading {
       opacity: 1;
       transition: opacity 600ms cubic-bezier(0.75, 0.09, 0.61, 0.98); }
+    @media (min-width: 768px) {
+      body .product-detailed {
+        background-color: #FEF8EC; } }
+  @media (min-width: 768px) {
+    body.pink_bg {
+      background-color: #E1B96B !important; } }
+  @media (min-width: 768px) {
+    body {
+      background-color: #E1B96B !important; } }
 
 .pointer-events-none {
   pointer-events: none; }
@@ -7370,6 +7379,9 @@ body {
         padding-top: 0px; }
       .product-detailed .shelf-block:nth-child(4) .shelf-block--picture {
         height: 260px; }
+    .product-detailed .shelf:before {
+      content: "";
+      background-color: #E1B96B; }
     .product-detailed .shelf:after {
       content: '';
       background-image: url(../images/desktop_bg.jpg);
@@ -7389,7 +7401,8 @@ body {
   right: 0;
   top: 0;
   display: block;
-  height: 100vh; }
+  height: 100vh;
+  background: #E1B96B; }
   .shelf-block-bg .shelf-block {
     position: absolute;
     height: calc(100vh - 80px);
@@ -7948,143 +7961,10 @@ body {
       bottom: -8px !important; }
     .shelf-block-bg.cart .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap4 .content .shelf-block--picture {
       bottom: -5px !important; }
-  .shelf-block-bg .bottle-details {
-    padding: 380px 30px 0;
-    height: 100vh;
-    z-index: -1;
-    background: #FEF8EC;
-    overflow: auto;
-    text-align: left;
-    position: relative; }
-    .shelf-block-bg .bottle-details .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px; }
-      .shelf-block-bg .bottle-details .header .title {
-        font-family: "AbhayaLibre-ExtraBold";
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 103.97%;
-        color: #000000;
-        margin: 0; }
-      .shelf-block-bg .bottle-details .header a {
-        font-family: "AbhayaLibre-SemiBold";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
-        letter-spacing: -0.01em;
-        color: #AA8641;
-        padding-right: 15px; }
-    .shelf-block-bg .bottle-details .info {
-      font-family: 'Nunito Sans', sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.01em;
-      color: #000000;
-      opacity: 0.7;
-      margin-bottom: 20px; }
-    .shelf-block-bg .bottle-details .price-title {
-      margin-top: 50px; }
-    .shelf-block-bg .bottle-details .tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 30px; }
-      .shelf-block-bg .bottle-details .tags .tag {
-        flex-basis: 33.33%; }
-        .shelf-block-bg .bottle-details .tags .tag .name {
-          font-family: 'Nunito Sans', sans-serif;
-          font-size: 12px;
-          line-height: 20px;
-          letter-spacing: 0.01em;
-          color: #000000;
-          opacity: 0.7;
-          margin-bottom: 0; }
-        .shelf-block-bg .bottle-details .tags .tag .type {
-          font-family: "AbhayaLibre-Bold";
-          font-weight: bold;
-          font-size: 16px;
-          line-height: 19px;
-          letter-spacing: -0.01em;
-          color: #000000; }
-    .shelf-block-bg .bottle-details .wrap {
-      display: none; }
-    @media (min-width: 768px) {
-      .shelf-block-bg .bottle-details {
-        margin-left: 550px;
-        top: 160px; }
-        .shelf-block-bg .bottle-details .wrap {
-          display: block; }
-        .shelf-block-bg .bottle-details .shelf-block--label {
-          margin-bottom: 15px;
-          display: flex; }
-          .shelf-block-bg .bottle-details .shelf-block--label .tags {
-            font-family: 'Nunito Sans', sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 19px;
-            text-align: center;
-            background: #FFFFFF;
-            border-radius: 10px;
-            color: #000000;
-            padding: 4px 12px;
-            margin-right: 10px; }
-        .shelf-block-bg .bottle-details .shelf-block--title {
-          font-family: "AbhayaLibre-Regular";
-          font-style: normal;
-          font-weight: bold;
-          font-size: 72px;
-          line-height: 64px;
-          letter-spacing: -0.01em;
-          color: #000000;
-          text-align: left; }
-        .shelf-block-bg .bottle-details .shelf-block--info {
-          font-family: "AbhayaLibre-Bold";
-          font-style: normal;
-          font-weight: bold;
-          font-size: 36px;
-          line-height: 42px;
-          color: #000000;
-          opacity: 0.5;
-          text-align: left;
-          margin-bottom: 32px; }
-        .shelf-block-bg .bottle-details .description {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          margin-bottom: 30px; }
-          .shelf-block-bg .bottle-details .description .price {
-            font-family: 'AbhayaLibre-Regular';
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 21px;
-            text-align: left;
-            letter-spacing: -0.011em;
-            color: #000000;
-            width: 108px;
-            margin-right: 20px; }
-            .shelf-block-bg .bottle-details .description .price span {
-              font-weight: 700;
-              font-size: 20px;
-              line-height: 24px;
-              letter-spacing: -0.01em; } }
-    .shelf-block-bg .bottle-details:after {
-      content: '';
-      width: 100%;
-      height: 60px;
-      background: linear-gradient(180deg, #000000 -25%, rgba(0, 0, 0, 0) 100%);
-      opacity: 0.3;
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin-top: 340px; }
   @media (min-width: 768px) {
     .shelf-block-bg.show_bg {
       width: 500px;
+      height: 960px;
       background: #E1B96B; }
       .shelf-block-bg.show_bg .shelf-block {
         opacity: 1;
@@ -8096,6 +7976,109 @@ body {
           margin-top: 30px; }
         .shelf-block-bg.show_bg .shelf-block--wrap.active .shelf-block--picture {
           height: 380px; } }
+
+.bottle-details {
+  padding: 380px 30px 0;
+  height: 100vh;
+  z-index: -1;
+  background: #FEF8EC;
+  overflow: auto;
+  text-align: left;
+  position: relative; }
+  .bottle-details .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; }
+    .bottle-details .header .title {
+      font-family: "AbhayaLibre-ExtraBold";
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 103.97%;
+      color: #000000;
+      margin: 0; }
+    .bottle-details .header a {
+      font-family: "AbhayaLibre-SemiBold";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.01em;
+      color: #AA8641;
+      padding-right: 15px; }
+      .bottle-details .header a:hover {
+        text-decoration: none; }
+  .bottle-details .info {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    opacity: 0.7;
+    margin-bottom: 20px; }
+  .bottle-details .price-title {
+    margin-top: 50px; }
+  .bottle-details .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px; }
+    .bottle-details .tags .tag {
+      flex-basis: 33.33%; }
+      .bottle-details .tags .tag .name {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: #000000;
+        opacity: 0.7;
+        margin-bottom: 0; }
+      .bottle-details .tags .tag .type {
+        font-family: "AbhayaLibre-Bold";
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.01em;
+        color: #000000; }
+  .bottle-details .wrap {
+    display: none; }
+  @media (min-width: 768px) {
+    .bottle-details {
+      padding: 0; }
+      .bottle-details .wrap {
+        display: block; }
+      .bottle-details .header a {
+        font-size: 16px;
+        line-height: 19px; }
+        .bottle-details .header a:hover {
+          text-decoration: none; }
+      .bottle-details .info {
+        margin-top: 20px; }
+      .bottle-details .tags {
+        margin-bottom: 50px; }
+        .bottle-details .tags .tag {
+          flex-basis: 25%; }
+          .bottle-details .tags .tag .name {
+            font-size: 14px;
+            line-height: 20px; }
+          .bottle-details .tags .tag .type {
+            font-size: 20px;
+            line-height: 19px;
+            margin-top: 5px; } }
+  .bottle-details:after {
+    content: '';
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(180deg, #000000 -25%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 340px; }
+    @media (min-width: 768px) {
+      .bottle-details:after {
+        display: none; } }
 
 /** dots **/
 .slide-dots {
@@ -8167,6 +8150,100 @@ body {
     -webkit-transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1), right 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
   @media (min-width: 768px) {
     .slide-dots {
+      display: none; } }
+
+.vertical-slider-desktop {
+  display: block;
+  margin-left: 500px;
+  width: auto;
+  height: 100%;
+  overflow: hidden; }
+  .vertical-slider-desktop .swiper-container {
+    margin: 0 50px;
+    height: 960px; }
+    .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide {
+      position: absolute;
+      left: 0;
+      right: 0; }
+      .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide.bottle-story {
+        opacity: 1;
+        transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide.disterllery {
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide.region {
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide.bottle-details-wrapper {
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1);
+        overflow: auto;
+        height: 500px;
+        z-index: 4;
+        user-select: none; }
+      .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide--content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide--content .section-title {
+          margin-bottom: 20px; }
+        .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide--content .section-info {
+          font-family: 'Nunito Sans', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #000000;
+          opacity: 0.8; }
+        .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide--content .map {
+          width: 30%; }
+          .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide--content .map .map-image {
+            width: 100%; }
+          @media (max-width: 1199px) {
+            .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide--content .map {
+              width: 38%; } }
+        .vertical-slider-desktop .swiper-container .swiper-wrapper .swiper-slide--content .details {
+          width: 50%; }
+    .vertical-slider-desktop .swiper-container .tab_option--block {
+      display: flex;
+      align-items: center;
+      padding: 120px 0 40px;
+      position: relative; }
+      .vertical-slider-desktop .swiper-container .tab_option--block .item {
+        font-family: "AbhayaLibre-Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #000000;
+        margin: 0px 40px 0px 0px;
+        list-style: none;
+        cursor: pointer; }
+        .vertical-slider-desktop .swiper-container .tab_option--block .item.active {
+          font-family: "AbhayaLibre-ExtraBold";
+          font-weight: 800;
+          color: #AA8641;
+          position: relative; }
+          .vertical-slider-desktop .swiper-container .tab_option--block .item.active:after {
+            content: '';
+            background: #AA8641;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            margin: auto; }
+      .vertical-slider-desktop .swiper-container .tab_option--block:after {
+        content: "";
+        background: #AA8641;
+        width: calc(100% - 450px);
+        height: 1px;
+        position: absolute;
+        right: 0; }
+  @media (max-width: 767px) {
+    .vertical-slider-desktop {
       display: none; } }
 
 .podium {
@@ -8340,6 +8417,10 @@ body {
         letter-spacing: -0.01em;
         color: #000000;
         margin-top: 0; }
+        @media (min-width: 768px) {
+          .comments-block .message h5 {
+            font-size: 20px;
+            line-height: 24px; } }
       .comments-block .message p {
         font-family: 'Nunito Sans', sans-serif;
         font-style: normal;
@@ -8348,6 +8429,10 @@ body {
         line-height: 20px;
         color: #000000;
         opacity: 0.7; }
+        @media (min-width: 768px) {
+          .comments-block .message p {
+            font-size: 14px;
+            line-height: 22px; } }
       .comments-block .message .time {
         font-family: 'Nunito Sans', sans-serif;
         font-style: normal;
@@ -8356,6 +8441,10 @@ body {
         line-height: 14px;
         color: #555555;
         opacity: 0.7; }
+        @media (min-width: 768px) {
+          .comments-block .message .time {
+            font-size: 12px;
+            line-height: 16px; } }
       .comments-block .message .dots {
         position: absolute;
         right: 0;
@@ -8424,6 +8513,14 @@ body {
       padding: 17px 38px;
       box-shadow: none;
       border: 0; }
+      @media (min-width: 768px) {
+        .comment-box button.submit {
+          font-family: "AbhayaLibre-Bold";
+          font-weight: 700;
+          padding: 17px 25px; } }
+    @media (min-width: 768px) {
+      .comment-box button {
+        width: 150px; } }
 
 .cart-wrapper {
   background: white;
@@ -8589,6 +8686,7 @@ body {
         -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
 
 footer {
+  display: none;
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%); }
   footer .menu-items {
     display: flex;
@@ -8612,5 +8710,13 @@ footer {
     justify-content: center; }
     footer .social-share img {
       margin: 0 20px; }
+  @media (min-width: 768px) {
+    footer {
+      display: block;
+      margin-left: 500px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; } }
 
 /*# sourceMappingURL=style.css.map */

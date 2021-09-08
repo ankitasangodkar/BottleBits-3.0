@@ -121,6 +121,10 @@
 					}
 				}
 			}
+			&:before{
+				content: "";
+				background-color: #E1B96B;
+			}
 			&:after{
 				content: '';
 			    background-image: url(../images/desktop_bg.jpg);

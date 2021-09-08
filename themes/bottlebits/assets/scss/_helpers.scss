@@ -36,7 +36,6 @@ body{
 	margin: 0;
 	position: relative;
 	font-family: 'AbhayaLibre-Regular';
-
 	.product-detailed{
 		opacity: 0;
 		background-color: #d6b165;
@@ -44,6 +43,17 @@ body{
 			opacity: 1;
 			transition: opacity 600ms $ease-in;
 		}
+		@media(min-width: 768px){
+			background-color: #FEF8EC;
+		}
+	}
+	&.pink_bg{
+		@media(min-width: 768px){
+			background-color: #E1B96B !important;
+		}
+	}
+	@media(min-width: 768px){
+		background-color: #E1B96B !important;
 	}
 }
 .pointer-events-none{
