@@ -7313,7 +7313,8 @@ body {
       text-align: center;
       letter-spacing: -0.01em;
       color: #000000;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      padding: 0 25px; }
     .product-detailed .shelf-block--info {
       font-family: 'AbhayaLibre-Bold';
       font-weight: bold;
