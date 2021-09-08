@@ -8686,7 +8686,7 @@ body {
         -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), bottom 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
 
 footer {
-  display: none;
+  display: none !important;
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%); }
   footer .menu-items {
     display: flex;
