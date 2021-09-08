@@ -526,6 +526,7 @@ $(document).ready(function(){
 		$('.slide-dots .dot').removeClass('dot-active');
 		$(this).addClass('dot-active');
 
+		$(".carousel .carousel-item").addClass("hide");
 		$(".shelf-block-bg").addClass("scrollUpContainer");
 		$(".vertical-slider").removeClass("hide").fadeIn(1000);
 		$(".vertical-slider .slide-item.active").addClass("SWIPE_UP");
