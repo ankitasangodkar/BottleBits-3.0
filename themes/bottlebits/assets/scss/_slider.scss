@@ -968,12 +968,14 @@
 	.swiper-container{
 	    margin: 0 50px;
         height: 960px;
+        z-index: 0;
 		.swiper-wrapper{
-
+			height: 500px;
 			.swiper-slide{
 				position: absolute;
 				left: 0;
 				right: 0;
+			    height: 500px;
 
 				&.bottle-story{
 					opacity: 1;
