@@ -7242,7 +7242,7 @@ body {
   position: relative;
   font-family: 'AbhayaLibre-Regular'; }
   body .product-detailed {
-    opacity: 0;
+    opacity: 1;
     background-color: #d6b165; }
     body .product-detailed.loading {
       opacity: 1;
