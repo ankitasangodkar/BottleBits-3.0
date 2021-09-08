@@ -9,85 +9,6 @@
 		.price{
 			margin: 30px 0 24px;
 		}
-		.quantity{
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			&--count{
-				display: flex;
-				align-items: center;
-				.minus{
-					border: 1px solid #181A1E;
-					padding: 9px 17px;
-					border-radius: 1px;
-					cursor: pointer;
-				    background: white;
-					&.inactive{
-						border-color: #9E9E9E;
-						color: #9E9E9E;
-						pointer-events: none;
-					}
-					&:focus{
-						outline: 0;
-					}
-				}
-				.number{
-					font-family: 'AbhayaLibre-Regular';
-					font-weight: 400;
-					font-size: 18px;
-					line-height: 20px;
-					letter-spacing: -0.011em;
-					color: #000000;
-				    padding: 0 10px;
-					border: 0;
-					text-align: center;
-					width: 55px;
-					&:focus{
-						outline: 0;
-					}
-				}
-				.plus{
-					border: 1px solid #181A1E;
-					padding: 9px 15px;
-					cursor: pointer;
-					border-radius: 1px;
-				    background: white;
-					&:focus{
-						outline: 0;
-					}
-					&.inactive{
-						border-color: #9E9E9E;
-						color: #9E9E9E;
-						pointer-events: none;
-					}
-				}
-			}
-			.glasses{
-				display: flex;
-				flex-direction: row;
-				.glass-wrap{
-					display: flex;
-					flex-direction: column;
-					position: relative;
-					margin-right: 5px;
-					.glass{
-						position: relative;
-						&-filled{
-							position: absolute;
-							opacity: 0;
-							transition: opacity 1s $ease-in-out;
-							-webkit-transition: opacity 1s $ease-in-out;
-							&.active{
-								opacity: 1;
-								bottom: 0;
-								transition: all 600ms $ease-in-out;
-								-webkit-transition: all 600ms $ease-in-out;
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 	.cart--buttons{
 	    padding: 0px 20px 20px;
@@ -109,9 +30,110 @@
     	    }
 	    }
 	}
-
 }
 
+.quantity{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&--count{
+		display: flex;
+		align-items: center;
+		.minus{
+			border: 1px solid #181A1E;
+			padding: 9px 17px;
+			border-radius: 1px;
+			cursor: pointer;
+		    background: white;
+			&.inactive{
+				border-color: #9E9E9E;
+				color: #9E9E9E;
+				pointer-events: none;
+				@media(min-width: 768px){
+					border-color: #7c7c7c;
+					color: #7c7c7c;
+				}
+			}
+			&:focus{
+				outline: 0;
+			}
+			@media(min-width: 768px){
+				background: transparent;
+			}
+		}
+		.number{
+			font-family: 'AbhayaLibre-Regular';
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 20px;
+			letter-spacing: -0.011em;
+			color: #000000;
+		    padding: 0 10px;
+			border: 0;
+			text-align: center;
+			width: 55px;
+			&:focus{
+				outline: 0;
+			}
+			@media(min-width: 768px){
+				background: transparent;
+			}
+		}
+		.plus{
+			border: 1px solid #181A1E;
+			padding: 9px 15px;
+			cursor: pointer;
+			border-radius: 1px;
+		    background: white;
+			&:focus{
+				outline: 0;
+			}
+			&.inactive{
+				border-color: #9E9E9E;
+				color: #9E9E9E;
+				pointer-events: none;
+				@media(min-width: 768px){
+					border-color: #7c7c7c;
+					color: #7c7c7c;
+				}
+			}
+			@media(min-width: 768px){
+				background: transparent;
+			}
+		}
+	}
+	.glasses{
+		display: flex;
+		flex-direction: row;
+		.glass-wrap{
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			margin-right: 5px;
+			.glass{
+				position: relative;
+				&-filled{
+					position: absolute;
+					opacity: 0;
+					transition: opacity 1s $ease-in-out;
+					-webkit-transition: opacity 1s $ease-in-out;
+					&.active{
+						opacity: 1;
+						bottom: 0;
+						transition: all 600ms $ease-in-out;
+						-webkit-transition: all 600ms $ease-in-out;
+						@media(min-width: 768px){
+						    filter: brightness(0.5);
+						}
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: 768px){
+		margin: 0 25px 30px; 
+	}
+}
 
 .congratulations{
     height: 100vh;

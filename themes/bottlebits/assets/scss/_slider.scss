@@ -726,6 +726,10 @@
 		    }
 	    }
 	}
+	.cartWrap{
+		position: absolute;
+		bottom: 160px;
+	}
 	@media(min-width: 768px){
 		&.show_bg{
 		    width: 500px;

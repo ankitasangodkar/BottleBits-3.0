@@ -13,7 +13,7 @@ $(document).ready(function(){
 		$(".shelf").addClass('hidden');
 		$("body").addClass("pink_bg");
 		$("footer").removeClass("hide");
-		$(".button-wrapper").removeClass("hide");
+		$(".cartWrap").removeClass("hide");
 
 		if($(this).hasClass('block1')){
 			$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').prev().addClass('prev');
