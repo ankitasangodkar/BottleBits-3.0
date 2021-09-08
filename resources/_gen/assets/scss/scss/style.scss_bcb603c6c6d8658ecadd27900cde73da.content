@@ -7527,12 +7527,15 @@ body {
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region {
       height: 570px;
       transform: translateY(-30%);
+      transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+      -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       position: relative; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region .tabs {
         opacity: 0; }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region.slide_up {
         transform: translateY(-190%);
-        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .map {
       background-image: url("../images/scotland.png");
       background-repeat: no-repeat;
@@ -7544,7 +7547,9 @@ body {
       position: absolute;
       top: 16%;
       z-index: -2;
-      opacity: 0; }
+      opacity: 0;
+      transition: opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+      -webkit-transition: opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region_details {
       position: absolute;
       right: 60px;
@@ -7559,11 +7564,15 @@ body {
       text-align: left;
       opacity: 0;
       transform: translateY(40px);
-      -webkit-transform: translateY(40px); }
+      -webkit-transform: translateY(40px);
+      transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+      -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery {
       transform: translateY(-7%);
       height: 570px;
-      opacity: 0; }
+      opacity: 0;
+      transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+      -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .map-disterllery {
         background-image: url("../images/disterllery.png");
         background-repeat: no-repeat;
@@ -7587,11 +7596,15 @@ body {
         color: #000000;
         text-align: left;
         transform: translateY(40px);
-        -webkit-transform: translateY(40px); }
+        -webkit-transform: translateY(40px);
+        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 {
       transform: translateY(-7%);
       height: 570px;
-      opacity: 0; }
+      opacity: 0;
+      transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+      -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .map-disterllery {
         background-image: url("../images/disterllery.png");
         background-repeat: no-repeat;
@@ -7675,7 +7688,9 @@ body {
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story {
       transform: translateY(-7%);
       height: 570px;
-      opacity: 0; }
+      opacity: 0;
+      transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+      -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
       .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .map {
         background-image: url("../images/scotland.png");
         background-repeat: no-repeat;
@@ -7738,93 +7753,109 @@ body {
           object-fit: contain; }
     .shelf-block-bg .vertical-slider .shelf-block .slide-item .tabs .arrow {
       padding: 6px 4px; }
-  .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP {
-    padding-top: 150px;
+  .shelf-block-bg .vertical-slider .shelf-block .slide-item.active {
+    padding-top: 120px;
     transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1);
     -webkit-transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--content-wrapper {
-      opacity: 1; }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .description {
-      opacity: 0; }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--label, .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--info {
-      opacity: 1;
+    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active .shelf-block--picture {
+      right: 0;
       transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
       -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--picture {
-      right: 40%;
-      width: 135px;
-      bottom: -40px;
-      transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      pointer-events: none; }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .description .price {
-      width: 90px; }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .tabs {
-      z-index: 1;
-      opacity: 1;
-      top: 80px;
-      transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .tabs span.selected {
-        transform: translateY(3px);
-        -webkit-transform: translateY(3px);
+    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP {
+      padding-top: 150px;
+      transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1);
+      -webkit-transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--content-wrapper {
+        opacity: 1; }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .description {
+        opacity: 0; }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--label, .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--info {
         opacity: 1;
-        transition: all 450ms cubic-bezier(0.48, 0.04, 0.25, 1); }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region {
-      opacity: 1;
-      transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .map {
-        top: -9%;
+        transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--picture {
+        right: 40%;
+        width: 135px;
+        bottom: -40px;
+        transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        pointer-events: none; }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .description .price {
+        width: 90px; }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .tabs {
+        z-index: 1;
         opacity: 1;
-        transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .region_details {
+        top: 80px;
+        transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .tabs span.selected {
+          transform: translateY(3px);
+          -webkit-transform: translateY(3px);
+          opacity: 1;
+          transition: all 450ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region {
         opacity: 1;
-        transform: translateY(0px);
-        -webkit-transform: translateY(0px);
-        transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .region_details p {
-          opacity: 1; }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery.showDisterlleryDetails {
-        opacity: 1;
-        transform: translateY(-126%);
-        -webkit-transform: translateY(-126%);
-        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery.hideDisterlleryDetails {
-        transform: translateY(-350%);
-        -webkit-transform: translateY(-350%);
-        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery2.showDisterlleryDetails1 {
-        opacity: 1;
-        transform: translateY(-228%);
-        -webkit-transform: translateY(-228%);
-        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery2.hideDisterlleryDetails1 {
-        transform: translateY(-350%);
-        -webkit-transform: translateY(-350%);
-        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails {
-        opacity: 1;
-        transform: translateY(-326%);
-        -webkit-transform: translateY(-326%);
-        transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-        -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails .bottle_story_details {
-          opacity: 1; }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap3 .shelf-block--picture {
-      bottom: -27px; }
-    .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap4 .shelf-block--picture {
-      right: 44%;
-      width: 100px;
-      bottom: 18px;
-      transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
-      -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .map {
+          top: -9%;
+          opacity: 1;
+          transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .region_details {
+          opacity: 1;
+          transform: translateY(0px);
+          -webkit-transform: translateY(0px);
+          transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .region_details p {
+            opacity: 1; }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery.showDisterlleryDetails {
+          opacity: 1;
+          transform: translateY(-126%);
+          -webkit-transform: translateY(-126%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery.hideDisterlleryDetails {
+          transform: translateY(-350%);
+          -webkit-transform: translateY(-350%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery2.showDisterlleryDetails1 {
+          opacity: 1;
+          transform: translateY(-228%);
+          -webkit-transform: translateY(-228%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .disterllery2.hideDisterlleryDetails1 {
+          transform: translateY(-350%);
+          -webkit-transform: translateY(-350%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails {
+          opacity: 1;
+          transform: translateY(-326%);
+          -webkit-transform: translateY(-326%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.showBottleStoryDetails .bottle_story_details {
+            opacity: 1; }
+        .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.hideBottleStory {
+          opacity: 0;
+          transform: translateY(-420%);
+          -webkit-transform: translateY(-450%);
+          transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+          -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .bottle_story.hideBottleStory .bottle_story_details {
+            opacity: 0; }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap3 .shelf-block--picture {
+        bottom: -27px; }
+      .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP.wrap4 .shelf-block--picture {
+        right: 44%;
+        width: 100px;
+        bottom: 18px;
+        transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
+        -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .shelf-block-bg.small_block {
     position: relative !important;
     height: 360px; }

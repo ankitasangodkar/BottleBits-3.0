@@ -174,6 +174,8 @@
 			    	.region{
 						height: 570px;
 						transform: translateY(-30%);
+						transition: transform 2s $ease-out;
+				    	-webkit-transition: transform 2s $ease-out;
 						position: relative;
 						.tabs{
 							opacity: 0;
@@ -181,6 +183,7 @@
 			    		&.slide_up{
 			    			transform: translateY(-190%);
 			    			transition: transform 2s $ease-out;
+				    	    -webkit-transition: transform 2s $ease-out;
 			    		}
 			    	}
 		    		.map{
@@ -195,6 +198,8 @@
 					    top: 16%;
 					    z-index: -2;
 			    		opacity: 0;
+			    		transition:  opacity 2s $ease-out;
+				    	-webkit-transition: opacity 2s $ease-out;
 		    		}
 		    		.region_details{
 					    position: absolute;
@@ -211,11 +216,15 @@
 		    			opacity: 0;
 	    			    transform: translateY(40px);
 	    			    -webkit-transform: translateY(40px);
+	    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    	-webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 		    		}
 				    .disterllery{
 				    	transform: translateY(-7%);
 				    	height: 570px;
 				    	opacity: 0;
+				    	transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    	-webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 				    	.map-disterllery{
 				    		background-image: url('../images/disterllery.png');
 							background-repeat: no-repeat;
@@ -241,12 +250,16 @@
 						    text-align: left;
 		    			    transform: translateY(40px);
 		    			    -webkit-transform: translateY(40px);
+		    			    transition: transform 2s $ease-out;
+				    	    -webkit-transition: transform 2s $ease-out;
 			    		}
 				    }
 				    .disterllery2{
 				    	transform: translateY(-7%);
 				    	height: 570px;
 				    	opacity: 0;
+				    	transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    	-webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 				    	.map-disterllery{
 				    		background-image: url('../images/disterllery.png');
 							background-repeat: no-repeat;
@@ -348,6 +361,8 @@
 				    	transform: translateY(-7%);
 				    	height: 570px;
 				    	opacity: 0;
+				    	transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    	-webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 			    		.map{
 							background-image: url('../images/scotland.png');
 							background-repeat: no-repeat;
@@ -421,6 +436,14 @@
 					}
 			    }
     			&.active{
+    				padding-top: 120px;
+		    		transition: padding-top 1s $ease-in-out;
+		    		-webkit-transition: padding-top 1s $ease-in-out;
+    				.shelf-block--picture{
+    					right: 0;
+    					transition: right 1s $ease-out;
+				        -webkit-transition: right 1s $ease-out;
+    				}
 					&.SWIPE_UP{
 						padding-top: 150px;
     		    		transition: padding-top 1s $ease-in-out;
@@ -523,6 +546,16 @@
 				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
 				    			    .bottle_story_details{
 				    			    	opacity: 1;
+				    			    }
+					    		}
+					    		&.hideBottleStory{
+					    			opacity: 0;
+					    			transform: translateY(-420%);
+				    			    -webkit-transform:translateY(-450%);
+				    			    transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    -webkit-transition: transform 2s $ease-out, opacity 2s $ease-out;
+				    			    .bottle_story_details{
+				    			    	opacity: 0;
 				    			    }
 					    		}
 				    		}
