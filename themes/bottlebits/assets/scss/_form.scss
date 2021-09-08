@@ -99,6 +99,7 @@
 		color: #000000;
 		box-shadow: none;
     	transition: none;
+    	border-radius: 0;
 		&:placeholder{
 			font-family: "AbhayaLibre-Regular";
 			font-style: normal;
@@ -113,6 +114,8 @@
 		}
 		&:focus{
 			outline: 0;
+			border: 1px solid #181A1E;
+			background-color: #FEF8EC;
 		}
 	}
 	button{
