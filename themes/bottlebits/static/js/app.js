@@ -646,3 +646,11 @@ function mouseMove(e){
 
   }
 }
+
+$(".cartWrap .primary-button").on('click', function(){
+	$(".vertical-slider-desktop").addClass("hide");
+	$(".congratulations-desktop").removeClass("hide");
+	$(".congratulations-desktop .congratulate_bg").addClass("animateBg");
+	$(".congratulations-desktop .congratulate_bg .shelf-block--picture").addClass("animatePicture");
+	$(".shelf-block-bg.show_bg").addClass("hide");
+});

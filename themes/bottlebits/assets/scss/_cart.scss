@@ -159,6 +159,11 @@
 			border-radius: 100%;
 			height: auto;	    
 		}
+		.contentWrapper{
+			display: block;
+    		margin-top: 130px;
+		    margin-right: 20%;
+		}
 		.congatulate-text{
 			text-align: center;
 			.drams{
@@ -175,6 +180,14 @@
 					font-weight: 800;
 					font-size: 18px;
 					line-height: 22px;
+					@media(min-width: 768px){
+						font-size: 30px;
+						line-height: 45px;
+					}
+				}
+				@media(min-width: 768px){
+					font-size: 30px;
+					line-height: 30px;
 				}
 			}
 		}
@@ -187,6 +200,10 @@
 			letter-spacing: -0.01em;
 			color: #E1B96B;
 			margin-bottom: 12px;
+			@media(min-width: 768px){
+				font-size: 68px;
+				line-height: 80px;
+			}
 		}
 		.shelf-block--picture{
 			height: 383px;
@@ -209,6 +226,9 @@
 		    left: 0;
 		    right: 0;
 		    z-index: -1;
+		    @media(min-width: 768px){
+		    	background-image: url(../images/congratulation-desktop.jpg);
+		    }
 		}
 		&.animateBg{
 			opacity: 1;
@@ -221,8 +241,34 @@
 					bottom: -5px;
 					transition: opacity 1s $ease-out, bottom 1s $ease-out;
 					-webkit-transition: opacity 1s $ease-out, bottom 1s $ease-out;
+					@media(min-width: 768px){
+						bottom: 275px;
+					    left: 300px;
+					    height: 350px;
+					}
+					@media(min-width: 1300px){
+						bottom: 330px;
+						left: 300px;
+						height: 385px;
+					}
 				}
 			}
+		}
+	}
+}
+.congratulations-desktop{
+	display: none !important;
+	@media(min-width: 768px){
+		display: block !important;
+		.contenWrapper{
+			text-align: center;
+		    margin-left: -15%;
+		    position: relative;
+	        margin-top: 140px;
+		}
+		.outline-button{
+		    width: 160px; 
+	        display: inline-block;
 		}
 	}
 }
