@@ -67,7 +67,12 @@ header{
 					display: flex;
 				    flex-direction: row-reverse;
 				    a{
-				    	margin: 0 25px;
+				    	margin: 0 12px;
+				    	.user_icon{
+				    		@media(max-width: 767px){
+				    			display: none;
+				    		}
+				    	}
 				    	@media(max-width: 767px){
 				    		margin: 0 2px;
 				    	}

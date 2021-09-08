@@ -7076,7 +7076,10 @@ header {
         display: flex;
         flex-direction: row-reverse; }
         header .header-wrapper .main-menu .navbar-right .icons a {
-          margin: 0 25px; }
+          margin: 0 12px; }
+          @media (max-width: 767px) {
+            header .header-wrapper .main-menu .navbar-right .icons a .user_icon {
+              display: none; } }
           @media (max-width: 767px) {
             header .header-wrapper .main-menu .navbar-right .icons a {
               margin: 0 2px; } }
