@@ -8715,7 +8715,7 @@ footer {
       margin: 0 20px; }
   @media (min-width: 768px) {
     footer {
-      display: block;
+      display: block !important;
       margin-left: 500px;
       position: absolute;
       bottom: 0;
