@@ -150,3 +150,25 @@
     	justify-content: flex-end;
     }
 }
+
+.button-wrapper{
+	position: absolute;
+    bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    .primary-button{
+    	width: 210px;
+    	a{
+    		color: #000;
+    		&:hover{
+    			text-decoration: none;
+    		}
+    	}
+    	&--dark{
+    		a{
+    			color: white;
+			}
+    	}
+    }
+}

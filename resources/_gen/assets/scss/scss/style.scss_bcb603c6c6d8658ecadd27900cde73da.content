@@ -8383,6 +8383,21 @@ body {
     .floating-btn {
       justify-content: flex-end; } }
 
+.button-wrapper {
+  position: absolute;
+  bottom: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px; }
+  .button-wrapper .primary-button {
+    width: 210px; }
+    .button-wrapper .primary-button a {
+      color: #000; }
+      .button-wrapper .primary-button a:hover {
+        text-decoration: none; }
+    .button-wrapper .primary-button--dark a {
+      color: white; }
+
 .comments {
   height: 500px; }
   .comments-block {
