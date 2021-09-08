@@ -8328,7 +8328,9 @@ body {
     font-size: 14px;
     line-height: 17px;
     letter-spacing: -0.01em;
-    color: #000000; }
+    color: #000000;
+    box-shadow: none;
+    transition: none; }
     .comment-box textarea:placeholder {
       font-family: "AbhayaLibre-Regular";
       font-style: normal;
