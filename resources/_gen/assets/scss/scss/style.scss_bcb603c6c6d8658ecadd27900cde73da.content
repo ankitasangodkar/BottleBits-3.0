@@ -8150,7 +8150,7 @@ body {
     -webkit-transition: opacity 1s cubic-bezier(0.48, 0.04, 0.25, 1), right 1s cubic-bezier(0.48, 0.04, 0.25, 1); }
   @media (min-width: 768px) {
     .slide-dots {
-      display: none; } }
+      display: none !important; } }
 
 .vertical-slider-desktop {
   display: block;
