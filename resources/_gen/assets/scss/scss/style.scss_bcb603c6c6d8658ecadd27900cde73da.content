@@ -8781,6 +8781,92 @@ body {
         width: 160px;
         display: inline-block; } }
 
+.my-collection {
+  padding-top: 80px; }
+  .my-collection .shelf .info-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background-image: url(../images/collection/title-bar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; }
+    .my-collection .shelf .info-tab .title h2 {
+      font-family: "AbhayaLibre-Bold";
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
+      text-shadow: 0px 1px 0px rgba(249, 213, 144, 0.4);
+      margin: 0; }
+    @media (min-width: 768px) {
+      .my-collection .shelf .info-tab {
+        padding: 8px 70px; } }
+  .my-collection .shelf-wrapper {
+    margin-bottom: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; }
+    .my-collection .shelf-wrapper .block {
+      background-image: url(../images/collection/shelf-texture.png);
+      background-repeat: round;
+      background-size: contain;
+      background-position-y: top;
+      height: 383px;
+      width: 50%;
+      position: relative;
+      margin-top: -3px; }
+      .my-collection .shelf-wrapper .block:nth-child(odd):before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/collection/side-support.jpg);
+        height: 384px;
+        width: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: -10px;
+        left: -8px;
+        z-index: -2; }
+      .my-collection .shelf-wrapper .block:nth-child(even):before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/collection/side-support.jpg);
+        height: 384px;
+        width: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: -10px;
+        right: 0px;
+        z-index: -2; }
+      @media (max-width: 375px) {
+        .my-collection .shelf-wrapper .block {
+          background-repeat: no-repeat;
+          height: 248px;
+          width: 50%;
+          position: relative;
+          margin-top: -4px; } }
+    .my-collection .shelf-wrapper:after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/collection/center-support.jpg);
+      background-repeat: repeat-y;
+      background-size: contain;
+      left: calc(50% - 11.2px);
+      top: -2px;
+      height: 100%;
+      width: 26px;
+      z-index: -1; }
+  .my-collection .shelf .fixed-image {
+    position: relative; }
+    .my-collection .shelf .fixed-image--block {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 262px; }
+
 footer {
   display: none !important;
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%); }
