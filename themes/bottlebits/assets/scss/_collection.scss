@@ -112,9 +112,12 @@
 							@media(max-width: 1450px){
 								bottom: 0;
 							}
+							@media(max-width: 375px){
+								bottom: 8px;
+							}
 						}
 						@media(max-width: 375px){
-							height: 44%;
+							height: 42.5%;
 							bottom: 0;
 						}
 						@media(min-width: 1200px){
@@ -145,7 +148,7 @@
 						background-repeat: round;
 					}
 					@media(max-width: 1200px){
-						height: 330px;
+						height: 365px;
 					}
 					
 					
@@ -213,12 +216,12 @@
 								height: 134px;
 								@media(max-width: 375px){
 								    height: 90px;
-								    bottom: 6px;
+								    bottom: -24px;
 								}
 							}
 							@media(max-width: 375px){
 								height: 65px;
-								bottom: 6px;
+								bottom: -24px;
 							}
 							@media(min-width: 768px){
 	    						bottom: 13px;

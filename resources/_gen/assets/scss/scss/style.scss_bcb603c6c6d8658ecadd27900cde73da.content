@@ -8880,9 +8880,12 @@ body {
             @media (max-width: 1450px) {
               .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
                 bottom: 0; } }
+            @media (max-width: 375px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
+                bottom: 8px; } }
           @media (max-width: 375px) {
             .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
-              height: 44%;
+              height: 42.5%;
               bottom: 0; } }
           @media (min-width: 1200px) {
             .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
@@ -8911,7 +8914,7 @@ body {
             background-repeat: round; } }
         @media (max-width: 1200px) {
           .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-            height: 330px; } }
+            height: 365px; } }
       .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square {
         background-image: url(../images/collection/border-sq.png);
         background-repeat: no-repeat;
@@ -8970,11 +8973,11 @@ body {
             @media (max-width: 375px) {
               .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
                 height: 90px;
-                bottom: 6px; } }
+                bottom: -24px; } }
           @media (max-width: 375px) {
             .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
               height: 65px;
-              bottom: 6px; } }
+              bottom: -24px; } }
           @media (min-width: 768px) {
             .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
               bottom: 13px; } }
