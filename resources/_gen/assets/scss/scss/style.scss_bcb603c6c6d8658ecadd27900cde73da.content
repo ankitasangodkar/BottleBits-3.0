@@ -8962,7 +8962,9 @@ body {
         z-index: -1; }
       @media (min-width: 768px) {
         .my-collection .shelf-wrapper {
-          margin-bottom: 0; } }
+          margin-bottom: 0;
+          margin-left: 70px;
+          margin-right: 70px; } }
     .my-collection .shelf-wrapper--expanded {
       margin-bottom: 0;
       flex-wrap: nowrap;
