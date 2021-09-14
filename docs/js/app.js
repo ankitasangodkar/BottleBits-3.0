@@ -664,6 +664,7 @@ $(".shelf-wrapper .block").on("click", function(){
 	$(".collection-blocks").fadeOut();
 
 	$(".shelf-wrapper--expanded").fadeIn(2000);
+	$(".my-collection").addClass("single-view");
 
 	if($(this).hasClass('block1')){
 		$(".shelf-wrapper--expanded .block").fadeOut();
