@@ -360,13 +360,15 @@
 				bottom: 0;
 				width: auto;
 				height: 262px;
-				.mobile-visible{
+				&.mobile-visible{
 					display: none;
 					@media(max-width: 767px){
 						display: block;
+					    width: 100%;
+    					height: auto;
 					}
 				}
-				.desktop-visible{
+				&.desktop-visible{
 					display: none;
 					@media(min-width: 768px){
 						display: block;
@@ -384,7 +386,7 @@
     			background-size: contain;
     			height: 200px;
     			margin: 0;
-    			@media(min-width: 768px){
+    			@media(max-width: 767px){
     				display: none;
     			}
 			}
