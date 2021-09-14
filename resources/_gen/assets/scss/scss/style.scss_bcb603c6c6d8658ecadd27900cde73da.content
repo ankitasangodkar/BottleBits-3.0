@@ -8880,6 +8880,9 @@ body {
             @media (max-width: 1450px) {
               .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
                 bottom: 0; } }
+            @media (max-width: 767px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
+                bottom: 10px; } }
             @media (max-width: 375px) {
               .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
                 bottom: 8px; } }
@@ -8987,6 +8990,9 @@ body {
         @media (max-width: 375px) {
           .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
             height: 115px; } }
+        @media (max-width: 767px) {
+          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
+            height: 154px; } }
         @media (min-width: 768px) {
           .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
             height: 235px; } }
