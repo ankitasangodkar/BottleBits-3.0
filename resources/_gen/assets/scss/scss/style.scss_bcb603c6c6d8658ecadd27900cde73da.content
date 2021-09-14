@@ -8811,7 +8811,6 @@ body {
       filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
       -webkit-filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4)); }
     .my-collection .shelf .collection-blocks .shelf-wrapper {
-      margin-bottom: 50px;
       display: flex;
       flex-wrap: wrap;
       position: relative; }
@@ -8869,7 +8868,7 @@ body {
             margin: auto; }
             .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture {
               height: 100px;
-              margin: 0 10px; }
+              margin: 0 5px; }
               .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture.large {
                 height: 134px; }
                 @media (max-width: 375px) {

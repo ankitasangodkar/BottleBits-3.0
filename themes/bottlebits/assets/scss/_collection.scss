@@ -34,7 +34,6 @@
 		}
 		.collection-blocks{
 			.shelf-wrapper{
-			    margin-bottom: 50px;
 			    display: flex;
 			    flex-wrap: wrap;
 			    position: relative;
@@ -99,7 +98,7 @@
 
 							.picture{
 								height: 100px;
-							    margin: 0 10px;
+							    margin: 0 5px;
 							    &.large{
 							    	height: 134px;
 							    	@media(max-width: 375px){

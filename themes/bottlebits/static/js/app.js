@@ -661,7 +661,7 @@ $(".shelf-wrapper--expanded").fadeOut();
 
 $(".shelf-wrapper .block").on("click", function(){
 	$(".fixed-image").fadeOut();
-	$(".shelf-wrapper").fadeOut();
+	$(".collection-blocks").fadeOut();
 
 	$(".shelf-wrapper--expanded").fadeIn(2000);
 
