@@ -8885,7 +8885,7 @@ body {
                 bottom: 10px; } }
             @media (max-width: 375px) {
               .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-                bottom: 8px; } }
+                bottom: -2px; } }
           @media (max-width: 375px) {
             .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
               height: 42.5%;
@@ -8919,37 +8919,80 @@ body {
           .my-collection .shelf .collection-blocks .shelf-wrapper .block {
             height: 365px; } }
       .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square {
-        background-image: url(../images/collection/border-sq.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+        position: relative; }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 62px; }
+          @media (max-width: 375px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
+              top: 75px;
+              left: 5px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
+          content: '';
+          border: 1px dashed #412303;
+          border-top: 0;
+          height: 125px;
+          width: calc(100% - 40px);
+          position: absolute;
+          left: 22px;
+          right: 0;
+          top: 17px;
+          bottom: 0; }
+          @media (max-width: 375px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
+              top: 23px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
+          content: '';
+          border: 1px dashed #B68149;
+          height: 132px;
+          width: calc(100% - 36px);
+          position: absolute;
+          left: 20px;
+          right: 0;
+          top: 12px;
+          bottom: 0; }
+          @media (max-width: 375px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
+              top: 18px; } }
+      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
         position: absolute;
-        bottom: -28px;
-        left: 0px;
+        left: 0;
         right: 0;
         margin: auto;
-        height: 166px;
-        width: 92px; }
+        top: 75px; }
         @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square {
-            bottom: -70px;
-            width: 62px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle {
-        background-image: url(../images/collection/border-rect.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
+            top: 80px; } }
+      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
+        content: '';
+        border: 1px dashed #412303;
+        border-top: 0;
+        height: 140.5px;
+        width: calc(100% - 40px);
         position: absolute;
-        bottom: -22px;
-        left: 0px;
+        left: 22px;
         right: 0;
-        margin: auto;
-        height: 100%;
-        width: calc(100% - 50px); }
+        top: 17px;
+        bottom: 0; }
         @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle {
-            bottom: -13px; } }
-        @media (min-width: 768px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle {
-            width: calc(100% - 90px); } }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
+            top: 20px; } }
+      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
+        content: '';
+        border: 1px dashed #B68149;
+        height: 148px;
+        width: calc(100% - 36px);
+        position: absolute;
+        left: 20px;
+        right: 0;
+        top: 12px;
+        bottom: 0; }
+        @media (max-width: 375px) {
+          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
+            top: 16px; } }
       .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child1 {
         height: 156px;
         width: 50%;
@@ -8976,11 +9019,11 @@ body {
             @media (max-width: 375px) {
               .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
                 height: 90px;
-                bottom: -24px; } }
+                bottom: -5px; } }
           @media (max-width: 375px) {
             .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
               height: 65px;
-              bottom: -24px; } }
+              bottom: -5px; } }
           @media (min-width: 768px) {
             .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
               bottom: 13px; } }
