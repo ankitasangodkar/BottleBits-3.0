@@ -111,14 +111,14 @@ $(document).ready(function(){
 });
 
 
-$(".carousel").swipe({
+$(".shelf-block-bg .carousel").swipe({
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
         if (direction == 'left') $(this).carousel('next');
         if (direction == 'right') $(this).carousel('prev');
     },
 });
 
-var $carousel = $('.carousel'),
+var $carousel = $('.shelf-block-bg .carousel'),
     $carouselItems = $('.carousel-item', $carousel);
 
 //This event is fired when the carousel has completed its slide transition.
@@ -671,18 +671,21 @@ $(".shelf-wrapper .block").on("click", function(){
 		$(".shelf-wrapper--expanded .block-expand1").addClass("active-block").fadeIn();
 	}
 
-
 	if($(this).hasClass('block2')){
 		$(".shelf-wrapper--expanded .block-expand2").addClass("active-block");
 	}
-
 
 	if($(this).hasClass('block3')){
 		$(".shelf-wrapper--expanded .block-expand3").addClass("active-block");
 	}
 
-
 	if($(this).hasClass('block4')){
 		$(".shelf-wrapper--expanded .block-expand4").addClass("active-block");
 	}
+});
+
+$(".shelf-wrapper--expanded .block .picture").on("click", function(){
+	$(".shelf-wrapper--expanded").fadeOut();
+	$(".shelf-bottle-details").removeClass("hide");
+	$("header").css({position: "fixed"});
 });

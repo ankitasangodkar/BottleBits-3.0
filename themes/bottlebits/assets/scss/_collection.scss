@@ -31,6 +31,7 @@
 		.picture{
 			filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
 			-webkit-filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
+			cursor: pointer;
 		}
 		.collection-blocks{
 			.shelf-wrapper{
@@ -471,7 +472,7 @@
 								    left: 40px;
 							    }
 							    @media(min-width: 768px){
-							    	height: 325px;
+							    	height: 285px;
 							    }
 							}
 							&:after{
@@ -490,7 +491,7 @@
     								left: 38px;
 							    }
 						     	@media(min-width: 768px){
-							    	height: 326px;
+							    	height: 286px;
 							    }
 							}
 						}
@@ -520,17 +521,21 @@
 					}
 					@media(min-width: 768px){
 					    width: 500px;
-    					height: 800px;
+    					height: 715px;
 					}
 					&:after{
 						content: '';
 						background-image: url(../images/collection/shelf-bottle.jpg);
 						width: 503px;
-						height: 92vh;
+						height: 100vh;
 						position: absolute;
 						z-index: -1;
-						top: -1px;
+					    bottom: -266px;
 						left: -3px;
+						@media(max-width: 767px){
+							bottom: 0;
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -573,6 +578,192 @@
     			@media(max-width: 767px){
     				display: none;
     			}
+			}
+		}
+		&-bottle-details{
+			.info-tab{
+				z-index: 1;
+				position: fixed;
+				.back-to-single-view{
+					a{
+						img{
+							padding-right: 10px;
+						    padding-bottom: 2px;
+						}
+						&:hover{
+						    text-decoration: none;
+						}
+					}
+				}
+			}
+			&--wrapper{
+				position: relative;
+				height: 290px;
+				.block-slider{
+					background-image: url(../images/collection/bottle-holder.jpg);
+					background-repeat: round;
+					background-size: cover;
+					height: 370px;
+					position: fixed;
+					left: -1px;
+					right: 0;
+					top: 0;
+					.item{
+						margin-top: 155px;
+    					height: 187px;
+    					opacity: 0;
+						.slide-image{
+							position: relative;
+						    height: 100%;
+					        margin: 0 0 0 30px;
+							img{
+								height: 175px;
+								position: absolute;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								margin: auto;
+								@media(min-width: 768px){
+									height: 350px;
+									left: -45px;
+								}
+							}
+						}
+						.slide-content{
+							padding-right: 18px;
+						    padding-top: 15px;
+							.shelf-block--label{
+								margin-bottom: 15px;
+								.tags{
+									font-family: 'Nunito Sans', sans-serif;
+									font-weight: 400;
+									font-size: 10px;
+									line-height: 14px;
+									text-align: center;
+									background: rgba(0, 0, 0, 0.5);
+									border-radius: 10px;
+									color: rgba(255,255,255,0.8);
+								    padding: 5px 10px;
+								}
+							}
+							.shelf-block--title{
+								font-family: 'AbhayaLibre-Bold';
+								font-weight: bold;
+								font-size: 24px;
+								line-height: 22px;
+								color: #000000;
+								text-shadow: 0px 1px 0px rgba(249, 213, 144, 0.4);
+							}
+							.order-placed{
+								font-family: 'AbhayaLibre-Bold';
+								font-weight: bold;
+								font-size: 12px;
+								line-height: 14px;
+								color: #000000;
+							}
+							.description{
+								display: flex;
+								flex-direction: row;
+								justify-content: flex-start;
+								align-items: center;
+								margin-top: 13px;
+								.price{
+									font-family: 'AbhayaLibre-Regular';
+									font-weight: 400;
+									font-size: 12px;
+									line-height: 15px;
+									letter-spacing: -0.011em;
+									color: #000000;
+									width: 86px;
+									span{
+										font-weight: 700;
+										font-size: 14px;
+										line-height: 17px;
+										letter-spacing: -0.01em;
+									}
+								}
+								@media(min-width: 768px){
+									justify-content: space-evenly;
+								}
+							}
+							@media(min-width: 768px){
+								text-align: center;
+							}
+						}
+						&.active{
+							opacity: 1;
+							transition: opacity 300ms $ease-out;
+						}
+						&:focus{
+							outline: 0;
+						}
+						@media(min-width: 768px){
+							height: 484px;
+						    margin-top: 70px;
+						}
+					}
+					&.carousel-inner>.active, &.carousel-inner>.next, &.carousel-inner>.prev {
+					    display: flex;
+					    justify-content: space-around;
+					    @media(min-width: 768px){
+					    	flex-direction: column-reverse;
+					    }
+					}
+					@media(min-width: 768px){
+					    width: 500px;
+					    height: 600px;
+					    position: relative !important;
+					}
+				}
+				.carousel-control{
+					opacity: 1;
+					top: 30%;
+					position: fixed;
+					background-image: none;
+					img{
+						width: 36px;
+					}
+					@media(min-width: 768px){
+						position: absolute !important;
+						top: 100%;
+					}
+				}
+				@media(min-width: 768px){
+					width: 500px;
+				}
+			}
+			.bottle-details{
+				padding-top: 30px;
+				height: 100%;
+				.comments {
+				    height: 470px;
+				}
+				.floating-btn{
+					.primary-button{
+						width: 100%;
+					}
+				}
+				&:after{
+					margin-top: 0;
+				}
+				@media(min-width: 768px){
+					display: none;
+				}
+			}
+			.vertical-slider-desktop{
+				.swiper-container {
+					.tab_option--block{
+						padding-top: 30px;
+					}
+					.bottle-details{
+						@media(min-width: 768px){
+							display: block;
+						}
+					}
+				}
+				@media(min-width: 768px){
+				    margin-top: -285px;
+				}
 			}
 		}
 	}
