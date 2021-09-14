@@ -84,9 +84,15 @@ body{
 		transition: height 1s $ease-in;
     }
 }
-.single-view{
-	display: none;
-	@media(max-width: 767px){
-		display: block;
+.my-collection{
+	&.single-view{
+		.shelf{
+			.info-tab{
+				display: none;
+				@media(max-width: 767px){
+					display: block;
+				}
+			}
+		}	
 	}
 }
