@@ -84,8 +84,8 @@ body{
 		transition: height 1s $ease-in;
     }
 }
-.my-collection{
-	&.single-view{
+.single-view{
+	.my-collection{
 		.shelf{
 			.info-tab{
 				display: none;
@@ -93,6 +93,12 @@ body{
 					display: block;
 				}
 			}
+			@media(min-width: 768px){
+				background:  #FEF8EC;
+			}
 		}	
+	}
+	@media(min-width: 768px){
+		background:  #FEF8EC !important;
 	}
 }
