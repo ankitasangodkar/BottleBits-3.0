@@ -8811,7 +8811,7 @@ body {
       filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
       -webkit-filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4)); }
     .my-collection .shelf-wrapper {
-      margin-bottom: 240px;
+      margin-bottom: 50px;
       display: flex;
       flex-wrap: wrap;
       position: relative; }
