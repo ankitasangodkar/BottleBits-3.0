@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 	$(".product-detailed").addClass('loading');
+	$(".my-collection").addClass('loading');
 
 	$(".vertical-slider .slide-item").fadeOut();
 
