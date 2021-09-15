@@ -34,6 +34,7 @@
 			cursor: pointer;
 		}
 		.collection-blocks{
+		    margin-bottom: 277px;
 			.shelf-wrapper{
 			    display: flex;
 			    flex-wrap: wrap;
@@ -368,6 +369,7 @@
 			    background-image: url(../images/collection/my-bar.jpg);
 			    width: 100%;
 		        padding: 0 70px 70px;
+	            margin-bottom: 0;
 
 			}
 		}
@@ -463,7 +465,7 @@
 									top: 190px;
 								}
 								@media(max-width: 767px){
-									top: 24vh;
+									top: 23vh;
 								}
 								@media(min-width: 768px){
 								    top: 200px;

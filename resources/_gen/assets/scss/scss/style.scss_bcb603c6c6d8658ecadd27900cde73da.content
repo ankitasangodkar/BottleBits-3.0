@@ -8830,134 +8830,197 @@ body {
       filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
       -webkit-filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
       cursor: pointer; }
-    .my-collection .shelf .collection-blocks .shelf-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      position: relative; }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-        background-image: url(../images/collection/shelf-texture.png);
-        background-repeat: round;
-        background-size: contain;
-        background-position-y: top;
-        height: 383px;
-        width: 50%;
-        position: relative;
-        margin-top: -3px;
+    .my-collection .shelf .collection-blocks {
+      margin-bottom: 277px; }
+      .my-collection .shelf .collection-blocks .shelf-wrapper {
         display: flex;
         flex-wrap: wrap;
-        cursor: pointer; }
-        .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(odd):before {
-          content: '';
-          position: absolute;
-          background-image: url(../images/collection/side-support.jpg);
-          height: 384px;
-          width: 30px;
-          background-size: cover;
-          background-repeat: no-repeat;
-          top: -10px;
-          left: -8px;
-          z-index: -2; }
-          @media (min-width: 768px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(odd):before {
-              height: 562px; } }
-        .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(even):before {
-          content: '';
-          position: absolute;
-          background-image: url(../images/collection/side-support.jpg);
-          height: 384px;
-          width: 30px;
-          background-size: cover;
-          background-repeat: no-repeat;
-          top: -10px;
-          right: 0px;
-          z-index: -2; }
-          @media (min-width: 768px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(even):before {
-              height: 562px; } }
-        .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
-          height: 47%;
-          display: block;
-          width: 100%;
-          position: relative; }
-          .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: flex-end;
-            position: relative;
-            bottom: 13px;
-            margin: auto; }
-            .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture {
-              height: 100px;
-              margin: 0 5px; }
-              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture.large {
-                height: 134px; }
-                @media (max-width: 375px) {
-                  .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture.large {
-                    height: 90px; } }
-              @media (max-width: 375px) {
-                .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture {
-                  height: 65px; } }
-            @media (max-width: 1450px) {
-              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-                bottom: 0; } }
-            @media (max-width: 767px) {
-              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-                bottom: 10px; } }
-            @media (max-width: 375px) {
-              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-                bottom: -2px; } }
-          @media (max-width: 375px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
-              height: 42.5%;
-              bottom: 0; } }
-          @media (min-width: 1200px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
-              height: 43%; } }
-          @media (min-width: 768px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
-              height: 45%; } }
-        @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-            background-repeat: no-repeat;
-            height: 248px;
-            width: 50%;
-            position: relative;
-            margin-top: -4px; } }
-        @media (max-width: 2400px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-            height: 618px;
-            background-repeat: no-repeat; } }
-        @media (max-width: 1806px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-            height: 530px;
-            background-repeat: no-repeat; } }
-        @media (max-width: 1706px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-            height: 495px;
-            background-repeat: round; } }
-        @media (max-width: 1200px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-            height: 365px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square {
         position: relative; }
-        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
+        .my-collection .shelf .collection-blocks .shelf-wrapper .block {
+          background-image: url(../images/collection/shelf-texture.png);
+          background-repeat: round;
+          background-size: contain;
+          background-position-y: top;
+          height: 383px;
+          width: 50%;
+          position: relative;
+          margin-top: -3px;
+          display: flex;
+          flex-wrap: wrap;
+          cursor: pointer; }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            background-image: url(../images/collection/side-support.jpg);
+            height: 384px;
+            width: 30px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: -10px;
+            left: -8px;
+            z-index: -2; }
+            @media (min-width: 768px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(odd):before {
+                height: 562px; } }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(even):before {
+            content: '';
+            position: absolute;
+            background-image: url(../images/collection/side-support.jpg);
+            height: 384px;
+            width: 30px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: -10px;
+            right: 0px;
+            z-index: -2; }
+            @media (min-width: 768px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(even):before {
+                height: 562px; } }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
+            height: 47%;
+            display: block;
+            width: 100%;
+            position: relative; }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
+              display: flex;
+              justify-content: space-evenly;
+              align-items: flex-end;
+              position: relative;
+              bottom: 13px;
+              margin: auto; }
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture {
+                height: 100px;
+                margin: 0 5px; }
+                .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture.large {
+                  height: 134px; }
+                  @media (max-width: 375px) {
+                    .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture.large {
+                      height: 90px; } }
+                @media (max-width: 375px) {
+                  .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images .picture {
+                    height: 65px; } }
+              @media (max-width: 1450px) {
+                .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
+                  bottom: 0; } }
+              @media (max-width: 767px) {
+                .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
+                  bottom: 10px; } }
+              @media (max-width: 375px) {
+                .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
+                  bottom: -2px; } }
+            @media (max-width: 375px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
+                height: 42.5%;
+                bottom: 0; } }
+            @media (min-width: 1200px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
+                height: 43%; } }
+            @media (min-width: 768px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
+                height: 45%; } }
+          @media (max-width: 375px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .block {
+              background-repeat: no-repeat;
+              height: 248px;
+              width: 50%;
+              position: relative;
+              margin-top: -4px; } }
+          @media (max-width: 2400px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .block {
+              height: 618px;
+              background-repeat: no-repeat; } }
+          @media (max-width: 1806px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .block {
+              height: 530px;
+              background-repeat: no-repeat; } }
+          @media (max-width: 1706px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .block {
+              height: 495px;
+              background-repeat: round; } }
+          @media (max-width: 1200px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .block {
+              height: 365px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square {
+          position: relative; }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 62px; }
+            @media (max-width: 375px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
+                top: 75px;
+                left: 5px; } }
+            @media (min-width: 768px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
+                top: 115px; } }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
+            content: '';
+            border: 1px dashed #412303;
+            border-top: 0;
+            height: 125px;
+            width: calc(100% - 40px);
+            position: absolute;
+            left: 22px;
+            right: 0;
+            top: 17px;
+            bottom: 0; }
+            @media (max-width: 375px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
+                top: 23px; } }
+            @media (min-width: 1080px) and (max-width: 1769px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
+                width: calc(100% - 50px);
+                height: 168px;
+                left: 28px;
+                top: 40px; } }
+            @media (min-width: 1770px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
+                width: calc(100% - 69px);
+                height: 218px;
+                left: 34px; } }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
+            content: '';
+            border: 1px dashed #B68149;
+            height: 132px;
+            width: calc(100% - 36px);
+            position: absolute;
+            left: 20px;
+            right: 0;
+            top: 12px;
+            bottom: 0; }
+            @media (max-width: 375px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
+                top: 18px; } }
+            @media (min-width: 1080px) and (max-width: 1769px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
+                width: calc(100% - 46px);
+                height: 169px;
+                left: 26px;
+                top: 40px; } }
+            @media (min-width: 1770px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
+                width: calc(100% - 66px);
+                height: 226px;
+                left: 33px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
           position: absolute;
           left: 0;
           right: 0;
           margin: auto;
-          top: 62px; }
+          top: 75px; }
           @media (max-width: 375px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
-              top: 75px;
-              left: 5px; } }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
+              top: 80px; } }
           @media (min-width: 768px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
-              top: 115px; } }
-        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
+              top: 135px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
           content: '';
           border: 1px dashed #412303;
           border-top: 0;
-          height: 125px;
+          height: 140.5px;
           width: calc(100% - 40px);
           position: absolute;
           left: 22px;
@@ -8965,23 +9028,23 @@ body {
           top: 17px;
           bottom: 0; }
           @media (max-width: 375px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
-              top: 23px; } }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
+              top: 20px; } }
           @media (min-width: 1080px) and (max-width: 1769px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
-              width: calc(100% - 50px);
-              height: 168px;
-              left: 28px;
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
+              width: calc(100% - 48px);
+              height: 169px;
+              left: 26px;
               top: 40px; } }
           @media (min-width: 1770px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
-              width: calc(100% - 69px);
-              height: 218px;
-              left: 34px; } }
-        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
+              width: calc(100% - 76px);
+              height: 253px;
+              left: 40px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
           content: '';
           border: 1px dashed #B68149;
-          height: 132px;
+          height: 148px;
           width: calc(100% - 36px);
           position: absolute;
           left: 20px;
@@ -8989,148 +9052,88 @@ body {
           top: 12px;
           bottom: 0; }
           @media (max-width: 375px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
-              top: 18px; } }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
+              top: 16px; } }
           @media (min-width: 1080px) and (max-width: 1769px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
-              width: calc(100% - 46px);
-              height: 169px;
-              left: 26px;
-              top: 40px; } }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
+              width: calc(100% - 43px);
+              height: 190px;
+              left: 23px;
+              top: 22px; } }
           @media (min-width: 1770px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
-              width: calc(100% - 66px);
-              height: 226px;
-              left: 33px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 75px; }
-        @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
-            top: 80px; } }
-        @media (min-width: 768px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
-            top: 135px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
-        content: '';
-        border: 1px dashed #412303;
-        border-top: 0;
-        height: 140.5px;
-        width: calc(100% - 40px);
-        position: absolute;
-        left: 22px;
-        right: 0;
-        top: 17px;
-        bottom: 0; }
-        @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
-            top: 20px; } }
-        @media (min-width: 1080px) and (max-width: 1769px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
-            width: calc(100% - 48px);
-            height: 169px;
-            left: 26px;
-            top: 40px; } }
-        @media (min-width: 1770px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
-            width: calc(100% - 76px);
-            height: 253px;
-            left: 40px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
-        content: '';
-        border: 1px dashed #B68149;
-        height: 148px;
-        width: calc(100% - 36px);
-        position: absolute;
-        left: 20px;
-        right: 0;
-        top: 12px;
-        bottom: 0; }
-        @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
-            top: 16px; } }
-        @media (min-width: 1080px) and (max-width: 1769px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
-            width: calc(100% - 43px);
-            height: 190px;
-            left: 23px;
-            top: 22px; } }
-        @media (min-width: 1770px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
-            width: calc(100% - 72px);
-            height: 260px;
-            left: 38px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child1 {
-        height: 156px;
-        width: 50%;
-        position: relative; }
-        @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child1 {
-            height: 115px; } }
-        @media (min-width: 768px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child1 {
-            height: 220px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
-        height: 156px;
-        width: 50%;
-        position: relative; }
-        .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
-          height: 100px;
-          position: absolute;
-          bottom: 0;
-          margin: auto;
-          left: 0;
-          right: 0; }
-          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
-            height: 134px; }
-            @media (max-width: 375px) {
-              .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
-                height: 90px;
-                bottom: -5px; } }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
+              width: calc(100% - 72px);
+              height: 260px;
+              left: 38px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child1 {
+          height: 156px;
+          width: 50%;
+          position: relative; }
           @media (max-width: 375px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
-              height: 65px;
-              bottom: -5px; } }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child1 {
+              height: 115px; } }
           @media (min-width: 768px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
-              bottom: 13px; } }
-          @media (min-width: 1500px) {
-            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
-              bottom: -13px; } }
-        @media (max-width: 375px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
-            height: 115px; } }
-        @media (max-width: 767px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
-            height: 154px; } }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child1 {
+              height: 220px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
+          height: 156px;
+          width: 50%;
+          position: relative; }
+          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0; }
+            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
+              height: 134px; }
+              @media (max-width: 375px) {
+                .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
+                  height: 90px;
+                  bottom: -5px; } }
+            @media (max-width: 375px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
+                height: 65px;
+                bottom: -5px; } }
+            @media (min-width: 768px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
+                bottom: 13px; } }
+            @media (min-width: 1500px) {
+              .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
+                bottom: -13px; } }
+          @media (max-width: 375px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
+              height: 115px; } }
+          @media (max-width: 767px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
+              height: 154px; } }
+          @media (min-width: 768px) {
+            .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
+              height: 235px; } }
+        .my-collection .shelf .collection-blocks .shelf-wrapper:after {
+          content: '';
+          position: absolute;
+          background-image: url(../images/collection/center-support.jpg);
+          background-repeat: repeat-y;
+          background-size: contain;
+          left: calc(50% - 15px);
+          top: -2px;
+          height: 100%;
+          width: 30px;
+          z-index: -1; }
         @media (min-width: 768px) {
-          .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
-            height: 235px; } }
-      .my-collection .shelf .collection-blocks .shelf-wrapper:after {
-        content: '';
-        position: absolute;
-        background-image: url(../images/collection/center-support.jpg);
-        background-repeat: repeat-y;
-        background-size: contain;
-        left: calc(50% - 15px);
-        top: -2px;
-        height: 100%;
-        width: 30px;
-        z-index: -1; }
+          .my-collection .shelf .collection-blocks .shelf-wrapper {
+            margin-bottom: 0;
+            width: 50%; } }
       @media (min-width: 768px) {
-        .my-collection .shelf .collection-blocks .shelf-wrapper {
-          margin-bottom: 0;
-          width: 50%; } }
-    @media (min-width: 768px) {
-      .my-collection .shelf .collection-blocks {
-        display: flex;
-        flex-wrap: wrap;
-        background-image: url(../images/collection/my-bar.jpg);
-        width: 100%;
-        padding: 0 70px 70px; } }
+        .my-collection .shelf .collection-blocks {
+          display: flex;
+          flex-wrap: wrap;
+          background-image: url(../images/collection/my-bar.jpg);
+          width: 100%;
+          padding: 0 70px 70px;
+          margin-bottom: 0; } }
     .my-collection .shelf-wrapper--expanded {
       margin-bottom: 0;
       flex-wrap: nowrap;
@@ -9208,7 +9211,7 @@ body {
                   top: 190px; } }
               @media (max-width: 767px) {
                 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square .icon {
-                  top: 24vh; } }
+                  top: 23vh; } }
               @media (min-width: 768px) {
                 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square .icon {
                   top: 200px; } }
