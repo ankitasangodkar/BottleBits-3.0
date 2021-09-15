@@ -34,6 +34,7 @@
 			cursor: pointer;
 		}
 		.collection-blocks{
+		    margin-bottom: 277px;
 			.shelf-wrapper{
 			    display: flex;
 			    flex-wrap: wrap;
@@ -154,8 +155,6 @@
 					@media(max-width: 1200px){
 						height: 365px;
 					}
-					
-					
 				}
 				.border-image{
 					&--square{
@@ -362,19 +361,33 @@
 				    width: 50%;
 				}
 			}
+			@media(max-width: 375px){
+				margin-bottom: 230px;
+			}
 			@media(min-width: 768px){
 				display: flex;
     			flex-wrap: wrap;
 			    background-image: url(../images/collection/my-bar.jpg);
 			    width: 100%;
 		        padding: 0 70px 70px;
-
+	            margin-bottom: 0;
 			}
 		}
 		&-wrapper--expanded{
 			margin-bottom: 0;
 		    flex-wrap: nowrap;
 			transition: margin-bottom 200ms $ease-out;
+			.info-tab{
+				a.back-to-main-shelf{
+					img{
+						padding-right: 10px;
+					    padding-bottom: 2px;
+					}
+					&:hover{
+					    text-decoration: none;
+					}
+				}
+			}
 			.block{
 				position: absolute;
 			    left: 0;
@@ -451,6 +464,9 @@
 								@media(max-width: 375px){
 									top: 190px;
 								}
+								@media(max-width: 767px){
+									top: 23vh;
+								}
 								@media(min-width: 768px){
 								    top: 200px;
 							    }
@@ -471,6 +487,7 @@
 								    width: calc(100% - 64px);
 								    left: 40px;
 							    }
+
 							    @media(min-width: 768px){
 							    	height: 285px;
 							    }
@@ -567,9 +584,12 @@
 			}
 		}
 		&-bottle-details{
+			opacity: 0;
+			transition: opacity 400ms $ease-out;
 			.info-tab{
 				z-index: 1;
 				position: fixed;
+				transition: z-index 300ms $ease-out;
 				a.back-to-single-view{
 					img{
 						padding-right: 10px;
@@ -582,6 +602,7 @@
 			}
 			&--slider{
 			    height: 100%;
+			    transition: height 400ms $ease-out;
 			    position: relative;
 				&:after{
 					content: '';
@@ -590,16 +611,20 @@
 				    height: 50vh;
 				    position: absolute;
 				    z-index: -1;
-				    bottom: 1px;
-				    left: -3px;
+				    bottom: 0px;
+				    left: -4px;
 					@media(max-width: 767px){
 						display: none;
 					}
+				}
+				@media(min-width: 768px){
+					height: 100%;
 				}
 			}
 			&--wrapper{
 				position: relative;
 				height: 290px;
+				transition: height 300ms $ease-out;
 				.block-slider{
 					background-image: url(../images/collection/bottle-holder.jpg);
 					background-repeat: round;
@@ -609,10 +634,13 @@
 					left: -1px;
 					right: 0;
 					top: 0;
+					transition: height 300ms $ease-out;
 					.item{
 						margin-top: 155px;
     					height: 187px;
     					opacity: 0;
+    					transform: translateX(-10px);
+    					transition: opacity 300ms $ease-out, transform 600ms $ease-out !important;
 						.slide-image{
 							position: relative;
 						    height: 100%;
@@ -695,7 +723,8 @@
 						}
 						&.active{
 							opacity: 1;
-							transition: opacity 300ms $ease-out;
+							transform: translateX(0px);
+							transition: opacity 300ms $ease-out, transform 600ms $ease-out !important;
 						}
 						&:focus{
 							outline: 0;
@@ -720,7 +749,7 @@
 				}
 				.carousel-control{
 					opacity: 1;
-					top: 30%;
+					top: 220px;
 				    height: 37px;
 					position: fixed;
 					background-image: none;
@@ -759,9 +788,8 @@
 			}
 			.bottle-details{
 				padding-top: 30px;
-				height: 100%;
 				.comments {
-				    height: 400px;
+				    height: 480px;
 				}
 				.floating-btn{
 					.primary-button{
@@ -789,6 +817,14 @@
 				@media(min-width: 768px){
 				    margin-top: -285px;
 				}
+			}
+			&.show-details{
+				opacity: 1;
+				transition: opacity 400ms $ease-out;
+				&--slider{
+			   	 	height: 300px;
+			   	 	transition: height 400ms $ease-out;
+	   	 		}
 			}
 		}
 	}
