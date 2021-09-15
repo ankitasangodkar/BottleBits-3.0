@@ -155,8 +155,6 @@
 					@media(max-width: 1200px){
 						height: 365px;
 					}
-					
-					
 				}
 				.border-image{
 					&--square{
@@ -373,7 +371,6 @@
 			    width: 100%;
 		        padding: 0 70px 70px;
 	            margin-bottom: 0;
-
 			}
 		}
 		&-wrapper--expanded{
@@ -602,7 +599,7 @@
 				}
 			}
 			&--slider{
-			    height: 100%;
+			    height: 300px;
 			    position: relative;
 				&:after{
 					content: '';
@@ -780,9 +777,8 @@
 			}
 			.bottle-details{
 				padding-top: 30px;
-				height: 100%;
 				.comments {
-				    height: 400px;
+				    height: 480px;
 				}
 				.floating-btn{
 					.primary-button{
