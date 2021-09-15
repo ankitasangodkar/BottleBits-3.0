@@ -669,6 +669,8 @@ $(".shelf-wrapper .block").on("click", function(){
 	if($(this).hasClass('block1')){
 		$(".shelf-wrapper--expanded .block").fadeOut();
 		$(".shelf-wrapper--expanded .block-expand1").addClass("active-block").fadeIn();
+		$("footer").removeClass("hide").fadeIn();
+
 	}
 
 	if($(this).hasClass('block2')){
@@ -686,6 +688,6 @@ $(".shelf-wrapper .block").on("click", function(){
 
 $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeOut();
-	$(".shelf-bottle-details").removeClass("hide");
+	$(".shelf-bottle-details").removeClass("hide").fadeIn();
 	$("header").css({position: "fixed"});
 });

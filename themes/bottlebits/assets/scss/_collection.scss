@@ -596,6 +596,24 @@
 					}
 				}
 			}
+			&--slider{
+			    height: 100%;
+			    position: relative;
+				&:after{
+					content: '';
+					background-image: url(../images/collection/shelf-bottle.jpg);
+				    width: 503px;
+				    height: 50vh;
+				    position: absolute;
+				    z-index: -1;
+				    bottom: 1px;
+				    left: -3px;
+					@media(max-width: 767px){
+						bottom: 0;
+						width: 100%;
+					}
+				}
+			}
 			&--wrapper{
 				position: relative;
 				height: 290px;
@@ -617,7 +635,7 @@
 						    height: 100%;
 					        margin: 0 0 0 30px;
 							img{
-								height: 175px;
+								height: 160px;
 								position: absolute;
 								left: 0;
 								right: 0;
@@ -630,8 +648,8 @@
 							}
 						}
 						.slide-content{
-							padding-right: 18px;
 						    padding-top: 15px;
+					        width: 166px;
 							.shelf-block--label{
 								margin-bottom: 15px;
 								.tags{
@@ -688,6 +706,7 @@
 							}
 							@media(min-width: 768px){
 								text-align: center;
+								width: 100%;
 							}
 						}
 						&.active{
@@ -711,13 +730,14 @@
 					}
 					@media(min-width: 768px){
 					    width: 500px;
-					    height: 600px;
+					    height: 610px;
 					    position: relative !important;
 					}
 				}
 				.carousel-control{
 					opacity: 1;
 					top: 30%;
+				    height: 37px;
 					position: fixed;
 					background-image: none;
 					img{
@@ -736,7 +756,7 @@
 				padding-top: 30px;
 				height: 100%;
 				.comments {
-				    height: 470px;
+				    height: 400px;
 				}
 				.floating-btn{
 					.primary-button{
