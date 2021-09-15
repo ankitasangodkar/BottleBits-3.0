@@ -363,6 +363,9 @@
 				    width: 50%;
 				}
 			}
+			@media(max-width: 375px){
+				margin-bottom: 230px;
+			}
 			@media(min-width: 768px){
 				display: flex;
     			flex-wrap: wrap;
@@ -608,8 +611,8 @@
 				    height: 50vh;
 				    position: absolute;
 				    z-index: -1;
-				    bottom: 1px;
-				    left: -3px;
+				    bottom: 0px;
+				    left: -4px;
 					@media(max-width: 767px){
 						display: none;
 					}
