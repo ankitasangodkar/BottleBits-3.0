@@ -9444,7 +9444,7 @@ body {
             position: relative !important; } }
       .my-collection .shelf-bottle-details--wrapper .carousel-control {
         opacity: 1;
-        top: 27%;
+        top: 220px;
         height: 37px;
         position: fixed;
         background-image: none; }
