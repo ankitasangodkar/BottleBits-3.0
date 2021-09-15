@@ -9351,7 +9351,9 @@ body {
         .my-collection .shelf-bottle-details--wrapper .block-slider .item {
           margin-top: 155px;
           height: 187px;
-          opacity: 0; }
+          opacity: 0;
+          transform: translateX(-10px);
+          transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93) !important; }
           .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-image {
             position: relative;
             height: 100%;
@@ -9424,7 +9426,8 @@ body {
                 width: 100%; } }
           .my-collection .shelf-bottle-details--wrapper .block-slider .item.active {
             opacity: 1;
-            transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+            transform: translateX(0px);
+            transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93) !important; }
           .my-collection .shelf-bottle-details--wrapper .block-slider .item:focus {
             outline: 0; }
           @media (min-width: 768px) {

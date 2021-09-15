@@ -631,6 +631,8 @@
 						margin-top: 155px;
     					height: 187px;
     					opacity: 0;
+    					transform: translateX(-10px);
+    					transition: opacity 300ms $ease-out, transform 600ms $ease-out !important;
 						.slide-image{
 							position: relative;
 						    height: 100%;
@@ -713,7 +715,8 @@
 						}
 						&.active{
 							opacity: 1;
-							transition: opacity 300ms $ease-out;
+							transform: translateX(0px);
+							transition: opacity 300ms $ease-out, transform 600ms $ease-out !important;
 						}
 						&:focus{
 							outline: 0;
