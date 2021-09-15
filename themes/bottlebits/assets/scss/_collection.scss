@@ -375,6 +375,17 @@
 			margin-bottom: 0;
 		    flex-wrap: nowrap;
 			transition: margin-bottom 200ms $ease-out;
+			.info-tab{
+				a.back-to-main-shelf{
+					img{
+						padding-right: 10px;
+					    padding-bottom: 2px;
+					}
+					&:hover{
+					    text-decoration: none;
+					}
+				}
+			}
 			.block{
 				position: absolute;
 			    left: 0;
@@ -451,6 +462,9 @@
 								@media(max-width: 375px){
 									top: 190px;
 								}
+								@media(max-width: 767px){
+									top: 24vh;
+								}
 								@media(min-width: 768px){
 								    top: 200px;
 							    }
@@ -471,6 +485,7 @@
 								    width: calc(100% - 64px);
 								    left: 40px;
 							    }
+
 							    @media(min-width: 768px){
 							    	height: 285px;
 							    }
@@ -570,6 +585,7 @@
 			.info-tab{
 				z-index: 1;
 				position: fixed;
+				transition: z-index 300ms $ease-out;
 				a.back-to-single-view{
 					img{
 						padding-right: 10px;
@@ -720,7 +736,7 @@
 				}
 				.carousel-control{
 					opacity: 1;
-					top: 30%;
+					top: 27%;
 				    height: 37px;
 					position: fixed;
 					background-image: none;
