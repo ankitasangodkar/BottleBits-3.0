@@ -9296,10 +9296,10 @@ body {
     .my-collection .shelf-bottle-details .info-tab {
       z-index: 1;
       position: fixed; }
-      .my-collection .shelf-bottle-details .info-tab .back-to-single-view a img {
+      .my-collection .shelf-bottle-details .info-tab a.back-to-single-view img {
         padding-right: 10px;
         padding-bottom: 2px; }
-      .my-collection .shelf-bottle-details .info-tab .back-to-single-view a:hover {
+      .my-collection .shelf-bottle-details .info-tab a.back-to-single-view:hover {
         text-decoration: none; }
     .my-collection .shelf-bottle-details--slider {
       height: 100%;
@@ -9434,6 +9434,22 @@ body {
           .my-collection .shelf-bottle-details--wrapper .carousel-control {
             position: absolute !important;
             top: 100%; } }
+      .my-collection .shelf-bottle-details--wrapper .filled-button {
+        width: 260px;
+        margin: auto; }
+        .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark {
+          padding: 20px 30px; }
+          .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark a {
+            font-family: "AbhayaLibre-Regular";
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: -0.01em;
+            color: #FFFFFF; }
+            .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark a:focus {
+              outline: 0; }
+            .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark a:hover {
+              text-decoration: none; }
       @media (min-width: 768px) {
         .my-collection .shelf-bottle-details--wrapper {
           width: 500px; } }

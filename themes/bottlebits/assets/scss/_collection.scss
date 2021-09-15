@@ -570,15 +570,13 @@
 			.info-tab{
 				z-index: 1;
 				position: fixed;
-				.back-to-single-view{
-					a{
-						img{
-							padding-right: 10px;
-						    padding-bottom: 2px;
-						}
-						&:hover{
-						    text-decoration: none;
-						}
+				a.back-to-single-view{
+					img{
+						padding-right: 10px;
+					    padding-bottom: 2px;
+					}
+					&:hover{
+					    text-decoration: none;
 					}
 				}
 			}
@@ -732,6 +730,27 @@
 					@media(min-width: 768px){
 						position: absolute !important;
 						top: 100%;
+					}
+				}
+				.filled-button{
+					width: 260px;
+					margin: auto;
+					.primary-button--dark{
+						padding: 20px 30px;
+						a{
+							font-family: "AbhayaLibre-Regular";
+							font-weight: 400;
+							font-size: 18px;
+							line-height: 21px;
+							letter-spacing: -0.01em;
+							color: #FFFFFF;
+							&:focus{
+								outline: 0;
+							}
+							&:hover{
+								text-decoration: none;
+							}
+						}
 					}
 				}
 				@media(min-width: 768px){
