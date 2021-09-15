@@ -523,20 +523,6 @@
 					    width: 500px;
     					height: 715px;
 					}
-					&:after{
-						content: '';
-						background-image: url(../images/collection/shelf-bottle.jpg);
-						width: 503px;
-						height: 100vh;
-						position: absolute;
-						z-index: -1;
-					    bottom: -266px;
-						left: -3px;
-						@media(max-width: 767px){
-							bottom: 0;
-							width: 100%;
-						}
-					}
 				}
 			}
 		}
@@ -642,7 +628,8 @@
 								margin: auto;
 								@media(min-width: 768px){
 									height: 350px;
-									left: -45px;
+									left: -22px;
+									bottom: -8px;
 								}
 							}
 						}
