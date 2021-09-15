@@ -9328,8 +9328,7 @@ body {
         left: -3px; }
         @media (max-width: 767px) {
           .my-collection .shelf-bottle-details--slider:after {
-            bottom: 0;
-            width: 100%; } }
+            display: none; } }
     .my-collection .shelf-bottle-details--wrapper {
       position: relative;
       height: 290px; }
