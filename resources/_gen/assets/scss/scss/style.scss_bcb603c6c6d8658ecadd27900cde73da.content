@@ -9480,19 +9480,27 @@ body {
           .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left {
             top: 30%;
             left: 0; }
+            @media (max-width: 767px) {
+              .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left {
+                top: 28%; } }
           .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.right {
             top: 30%;
             right: 0; }
+            @media (max-width: 767px) {
+              .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.right {
+                top: 28%; } }
           @media (min-width: 768px) {
             .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control {
-              position: absolute !important;
-              top: 40%; } }
+              position: absolute !important; } }
         @media (min-width: 768px) {
           .my-collection .shelf-bottle-details--wrapper .arrows {
             width: 500px;
             height: 40px;
             position: absolute;
             top: 30%; } }
+  @media (min-width: 768px) and (max-width: 767px) {
+    .my-collection .shelf-bottle-details--wrapper .arrows {
+      top: 28%; } }
         .my-collection .shelf-bottle-details--wrapper .filled-button {
           width: 500px;
           height: 300px; }

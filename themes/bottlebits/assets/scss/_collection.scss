@@ -783,14 +783,19 @@
 						&.left{
 						    top: 30%;
 						    left: 0;
+						    @media(max-width: 767px){
+						    	top: 28%;
+						    }
 						}
 						&.right{
 							top: 30%;
 							right: 0;
+						    @media(max-width: 767px){
+						    	top: 28%;
+						    }
 						}
 						@media(min-width: 768px){
 							position: absolute !important;
-							top: 40%;
 						}
 					}
 					@media(min-width: 768px){
@@ -798,6 +803,9 @@
 						height: 40px;
 						position: absolute;
 						top: 30%;
+					    @media(max-width: 767px){
+					    	top: 28%;
+					    }
 					}
 				}
 				.filled-button{
