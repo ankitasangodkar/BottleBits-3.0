@@ -140,22 +140,30 @@ header{
 				background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
 				position: absolute;
 				top: 0;
-				left: -100%;
+				left: 0;
 				right: 0;
 				bottom: 0;
 				width: 100%;
 				height: 100vh;
-				
-				transition: left 350ms $ease-in-out;
-				-webkit-transition: left 350ms $ease-in-out;
+				opacity: 0;
+				border-radius: 200px;
+				transform: scaleY(0.8);
+				-webkit-transform: scaleY(0.8);
+				transition: opacity 450ms $ease-in-out, transform 450ms $ease-in-out, border-radius 450ms $ease-in-out,;
+				-webkit-transition: opacity 450ms $ease-in-out, transform 450ms $ease-in-out, border-radius 450ms $ease-in-out,;
+
+
 				.menu_list--items{
 					display: none;
 				}
 				&.open{
-					left: 0;
+					opacity: 1;
 				    display: inline-table;
-				    transition: left 450ms $ease-in-out;
-				    -webkit-transition: left 450ms $ease-in-out;
+				    border-radius: 0;
+				    transform: scaleY(1);
+				    -webkit-transform: scaleY(1);
+				    transition: opacity 450ms $ease-in-out, border-radius 450ms $ease-in-out, transform 450ms $ease-in-out;
+				    -webkit-transition: opacity 450ms $ease-in-out, border-radius 450ms $ease-in-out, transform 450ms $ease-in-out;
     				.cross{
     					width: 20px;
     					height: 20px;

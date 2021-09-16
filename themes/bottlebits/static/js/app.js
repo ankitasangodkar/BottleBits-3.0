@@ -242,9 +242,11 @@ if ($(window).width() < 767) {
 
 $(".hamburger-wrap").on("click", function(){
 	$(".mobile-menu--overlay").addClass("open");
+	$("#content").fadeOut();
 });
 $(".cross").on("click", function(){
 	$(".mobile-menu--overlay").removeClass("open");
+	$("#content").fadeIn();
 });
 
 $('.menu_list--items li').on('click', function(){
@@ -713,6 +715,7 @@ $(".slide-image").on("click", function(){
 	$(".my-collection").fadeOut();
 	$(".sharing-view").fadeIn();
 	$(".image-rotation").removeClass("hide").addClass("show-screen-view");
+	$("footer").fadeOut();
 });
 
 $(document).ready(function(){
@@ -728,97 +731,14 @@ $(document).ready(function(){
     });
 });
 
-/* sharing end*/
-
-// $(document).ready(function($) { 
-//   $("#target .rollerblade").rollerblade({
-//     sensitivity : 10,
-//     imageArray:['../../images/bottles/image003-removebg-preview.png', 
-//     '../../images/bottles/image003-removebg-preview.png', 
-//     '../../images/bottles/image004-removebg-preview.png', 
-//     '../../images/bottles/image005-removebg-preview.png', 
-//     '../../images/bottles/image006-removebg-preview.png', 
-//     '../../images/bottles/image007-removebg-preview.png', 
-//     '../../images/bottles/image008-removebg-preview.png', 
-//     '../../images/bottles/image009-removebg-preview.png', 
-//     '../../images/bottles/image010-removebg-preview.png', 
-//     '../../images/bottles/image011-removebg-preview.png', 
-//     '../../images/bottles/image012-removebg-preview.png', 
-//     '../../images/bottles/image013-removebg-preview.png', 
-//     '../../images/bottles/image014-removebg-preview.png', 
-//     '../../images/bottles/image015-removebg-preview.png', 
-//     '../../images/bottles/image016-removebg-preview.png', 
-//     '../../images/bottles/image017-removebg-preview.png', 
-//     '../../images/bottles/image018-removebg-preview.png', 
-//     '../../images/bottles/image019-removebg-preview.png', 
-//     '../../images/bottles/image020-removebg-preview.png', 
-//     '../../images/bottles/image021-removebg-preview.png', 
-//     '../../images/bottles/image022-removebg-preview.png' ]}); 
-// });
-
-
 
 $(".image-rotation--header .cross").on("click", function(){
 	$(".sharing-view").fadeOut();
 	$(".my-collection").fadeIn();
 	$(".shelf").removeClass("hide-collection");
 	$("body").removeClass("rotation-sharing");
+	$("footer").fadeIn();
 });
-
-  // var dragItem = document.querySelector(".circle");
-  // var container = document.querySelector(".circle-wrapper");
-
-  //   var active = false;
-  //   var currentX;
-  //   var initialX;
-  //   var xOffset = 0;
-
-  //   container.addEventListener("touchstart", dragStart, false);
-  //   container.addEventListener("touchend", dragEnd, false);
-  //   container.addEventListener("touchmove", drag, false);
-
-  //   container.addEventListener("mousedown", dragStart, false);
-  //   container.addEventListener("mouseup", dragEnd, false);
-  //   container.addEventListener("mousemove", drag, false);
-
-  //   function dragStart(e) {
-  //     if (e.type === "touchstart") {
-  //       initialX = e.touches[0].clientX - xOffset;
-  //     } else {
-  //       initialX = e.clientX - xOffset;
-  //     }
-
-  //     if (e.target === dragItem) {
-  //       active = true;
-  //     }
-  //   }
-
-  //   function dragEnd(e) {
-  //     initialX = currentX;
-
-  //     active = false;
-  //   }
-
-  //   function drag(e) {
-  //     if (active) {
-      
-  //       e.preventDefault();
-      
-  //       if (e.type === "touchmove") {
-  //         currentX = e.touches[0].clientX - initialX;
-  //       } else {
-  //         currentX = e.clientX - initialX;
-  //       }
-
-  //       xOffset = currentX;
-
-  //       setTranslate(currentX + 10 , 0, dragItem);
-  //     }
-  //   }
-
-  //   function setTranslate(xPos, yPos, el) {
-  //     el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
-  //   }
 
 
   (function() {
