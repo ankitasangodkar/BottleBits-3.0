@@ -9617,15 +9617,57 @@ body {
         top: 8vh; }
     .sharing-view .image-rotation--image-block .icon-slider {
       width: 100%;
-      height: 100px; }
+      height: 100px;
+      display: flex;
+      flex-direction: column; }
       .sharing-view .image-rotation--image-block .icon-slider img {
         width: 45px;
         height: 35px;
-        bottom: 75px;
-        position: absolute;
-        left: 0;
-        right: 0;
         margin: auto; }
+      .sharing-view .image-rotation--image-block .icon-slider .horizontal-border {
+        width: calc(100% - 100px);
+        margin: auto;
+        border-bottom: 1px solid #E1B96B;
+        position: relative; }
+        .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle {
+          background: #E1B96B;
+          width: 20px;
+          height: 20px;
+          border-radius: 20px;
+          position: absolute;
+          left: 7px;
+          top: -10px; }
+          .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:before, .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:after {
+            border-radius: 50%;
+            position: absolute; }
+          .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:before {
+            content: '';
+            border: 3px solid #E1B96B;
+            bottom: 0;
+            content: "";
+            left: -7px;
+            right: 0;
+            top: -6px;
+            width: 33px;
+            height: 33px; }
+          .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:after {
+            content: ""; }
+        .sharing-view .image-rotation--image-block .icon-slider .horizontal-border:before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: 0;
+          background: #E1B96B;
+          height: 10px;
+          width: 2px; }
+        .sharing-view .image-rotation--image-block .icon-slider .horizontal-border:after {
+          content: '';
+          position: absolute;
+          top: -4px;
+          right: 0;
+          background: #E1B96B;
+          height: 10px;
+          width: 2px; }
 
 .single-sharing {
   display: none;
