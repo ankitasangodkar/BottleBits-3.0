@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 			newImg = $('<img/>');
 		this.loading('0.5');
 		//you need this to check if the image sprite has been loaded
-		newImg.attr('src', imageUrl).on("load",function() {
+		newImg.attr('src', imageUrl).load(function() {
 			$(this).remove();
   			self.loaded = true;
   		}).each(function(){
@@ -42,7 +42,7 @@ jQuery(document).ready(function($){
 				//sprite image has been loaded
 				self.element.addClass('loaded');
 				transformElement(self.handleFill, 'scaleX(1)');
-				self.dragImage();
+				
 				if(self.handle) self.dragHandle();
 			} else {
 				//sprite image has not been loaded - increase self.handleFill scale value
@@ -111,37 +111,7 @@ jQuery(document).ready(function($){
 	    self.animating = false;
 	}
 
-	productViewer.prototype.dragImage = function() {
-		//implement image draggability
-		var self = this;
-		self.slideShow.on('mousedown vmousedown', function (e) {
-	        self.slideShow.addClass('cd-draggable');
-	        var containerOffset = self.imageWrapper.offset().left,
-	            containerWidth = self.imageWrapper.outerWidth(),
-	            minFrame = 0,
-	            maxFrame = self.frames - 1;
 
-	        self.xPosition = e.pageX;
-
-	        self.element.on('mousemove vmousemove', function (e) {
-	        	if( !self.animating) {
-	        		self.animating =  true;
-		        	( !window.requestAnimationFrame )
-		        		? setTimeout(function(){self.animateDraggedImage(e, containerOffset, containerWidth);}, 100)
-		        		: requestAnimationFrame(function(){self.animateDraggedImage(e, containerOffset, containerWidth);});
-		        }
-	        }).one('mouseup vmouseup', function (e) {
-	            self.slideShow.removeClass('cd-draggable');
-	            self.element.off('mousemove vmousemove');
-	            self.updateHandle();
-	        });
-
-	        e.preventDefault();
-
-	    }).on('mouseup vmouseup', function (e) {
-	        self.slideShow.removeClass('cd-draggable');
-	    });
-	}
 
 	productViewer.prototype.animateDraggedImage = function(e, containerOffset, containerWidth) {
 		var self = this;
