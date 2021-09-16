@@ -8825,7 +8825,8 @@ body {
         margin: 0; }
       @media (min-width: 768px) {
         .my-collection .shelf .info-tab {
-          padding: 8px 70px; } }
+          padding: 8px 10px;
+          background-image: none; } }
     .my-collection .shelf .picture {
       filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
       -webkit-filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
@@ -9331,7 +9332,7 @@ body {
         .my-collection .shelf-bottle-details--slider:after {
           content: '';
           background-image: url(../images/collection/shelf-bottle.jpg);
-          width: 503px;
+          width: 504px;
           height: 50vh;
           position: absolute;
           z-index: -1;
@@ -9344,47 +9345,48 @@ body {
           .my-collection .shelf-bottle-details--slider {
             height: 100%; } }
       .my-collection .shelf-bottle-details--wrapper {
-        position: relative;
-        height: 290px;
-        transition: height 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-        .my-collection .shelf-bottle-details--wrapper .block-slider {
-          background-image: url(../images/collection/bottle-holder.jpg);
-          background-repeat: round;
-          background-size: cover;
-          height: 370px;
-          position: fixed;
-          left: -1px;
-          right: 0;
-          top: 0;
-          transition: height 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
-          .my-collection .shelf-bottle-details--wrapper .block-slider .item {
-            margin-top: 155px;
-            height: 187px;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93) !important; }
-            .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-image {
+        position: relative; }
+        .my-collection .shelf-bottle-details--wrapper .block-slider .item {
+          height: 100%;
+          transform: none; }
+          .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image {
+            background-image: url(../images/collection/bottle-holder.jpg);
+            background-repeat: round;
+            background-size: cover;
+            height: 300px;
+            position: fixed;
+            left: -1px;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            padding-bottom: 25px;
+            transition: height 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+            .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-image {
               position: relative;
-              height: 100%;
-              margin: 0 0 0 30px; }
-              .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-image img {
-                height: 160px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto; }
+              height: auto;
+              margin: 0 0 0 30px;
+              opacity: 0;
+              transform: translateX(-10px);
+              transition: opacity 200ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 500ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+              .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-image img {
+                height: 160px; }
                 @media (min-width: 768px) {
-                  .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-image img {
-                    height: 350px;
-                    left: -22px;
-                    bottom: -8px; } }
-            .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content {
-              padding-top: 15px;
-              width: 166px; }
-              .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .shelf-block--label {
+                  .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-image img {
+                    height: 354px; } }
+              @media (min-width: 768px) {
+                .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-image {
+                  margin: 0; } }
+            .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content {
+              padding: 15px 0 20px;
+              width: 166px;
+              opacity: 0;
+              transform: translateX(-10px);
+              transition: opacity 200ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 500ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+              .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .shelf-block--label {
                 margin-bottom: 15px; }
-                .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .shelf-block--label .tags {
+                .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .shelf-block--label .tags {
                   font-family: 'Nunito Sans', sans-serif;
                   font-weight: 400;
                   font-size: 10px;
@@ -9394,26 +9396,26 @@ body {
                   border-radius: 10px;
                   color: rgba(255, 255, 255, 0.8);
                   padding: 5px 10px; }
-              .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .shelf-block--title {
+              .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .shelf-block--title {
                 font-family: 'AbhayaLibre-Bold';
                 font-weight: bold;
                 font-size: 24px;
                 line-height: 22px;
                 color: #000000;
                 text-shadow: 0px 1px 0px rgba(249, 213, 144, 0.4); }
-              .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .order-placed {
+              .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .order-placed {
                 font-family: 'AbhayaLibre-Bold';
                 font-weight: bold;
                 font-size: 12px;
                 line-height: 14px;
                 color: #000000; }
-              .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .description {
+              .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .description {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
                 margin-top: 13px; }
-                .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .description .price {
+                .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .description .price {
                   font-family: 'AbhayaLibre-Regular';
                   font-weight: 400;
                   font-size: 12px;
@@ -9421,56 +9423,83 @@ body {
                   letter-spacing: -0.011em;
                   color: #000000;
                   width: 86px; }
-                  .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .description .price span {
+                  .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .description .price span {
                     font-weight: 700;
                     font-size: 14px;
                     line-height: 17px;
                     letter-spacing: -0.01em; }
                 @media (min-width: 768px) {
-                  .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content .description {
+                  .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content .description {
                     justify-content: space-evenly; } }
               @media (min-width: 768px) {
-                .my-collection .shelf-bottle-details--wrapper .block-slider .item .slide-content {
+                .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-content {
                   text-align: center;
                   width: 100%; } }
-            .my-collection .shelf-bottle-details--wrapper .block-slider .item.active {
-              opacity: 1;
-              transform: translateX(0px);
-              transition: opacity 300ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 600ms cubic-bezier(0.16, 0.32, 0.21, 0.93) !important; }
-            .my-collection .shelf-bottle-details--wrapper .block-slider .item:focus {
-              outline: 0; }
             @media (min-width: 768px) {
-              .my-collection .shelf-bottle-details--wrapper .block-slider .item {
-                height: 484px;
-                margin-top: 70px; } }
-          .my-collection .shelf-bottle-details--wrapper .block-slider.carousel-inner > .active, .my-collection .shelf-bottle-details--wrapper .block-slider.carousel-inner > .next, .my-collection .shelf-bottle-details--wrapper .block-slider.carousel-inner > .prev {
-            display: flex;
-            justify-content: space-around; }
-            @media (min-width: 768px) {
-              .my-collection .shelf-bottle-details--wrapper .block-slider.carousel-inner > .active, .my-collection .shelf-bottle-details--wrapper .block-slider.carousel-inner > .next, .my-collection .shelf-bottle-details--wrapper .block-slider.carousel-inner > .prev {
-                flex-direction: column-reverse; } }
+              .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image {
+                height: 100%;
+                width: 501px;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: flex-end;
+                padding-top: 48px; } }
+          .my-collection .shelf-bottle-details--wrapper .block-slider .item .vertical-slider-desktop {
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: opacity 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .my-collection .shelf-bottle-details--wrapper .block-slider .item:focus {
+            outline: 0; }
           @media (min-width: 768px) {
-            .my-collection .shelf-bottle-details--wrapper .block-slider {
-              width: 500px;
-              height: 610px;
-              position: relative !important; } }
-        .my-collection .shelf-bottle-details--wrapper .carousel-control {
+            .my-collection .shelf-bottle-details--wrapper .block-slider .item {
+              margin-top: 0px; } }
+          .my-collection .shelf-bottle-details--wrapper .block-slider .item.active .block-slider--image .slide-image {
+            opacity: 1;
+            transform: translateX(0px);
+            transition: opacity 200ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 500ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .my-collection .shelf-bottle-details--wrapper .block-slider .item.active .block-slider--image .slide-content {
+            opacity: 1;
+            transform: translateX(0px);
+            transition: opacity 200ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 500ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+          .my-collection .shelf-bottle-details--wrapper .block-slider .item.active .vertical-slider-desktop {
+            opacity: 1;
+            transform: translateX(0px);
+            transition: opacity 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93), transform 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+        @media (min-width: 768px) {
+          .my-collection .shelf-bottle-details--wrapper .block-slider {
+            width: 100%;
+            height: 610px;
+            position: relative !important; } }
+        .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control {
           opacity: 1;
           top: 220px;
           height: 37px;
           position: fixed;
           background-image: none; }
-          .my-collection .shelf-bottle-details--wrapper .carousel-control img {
+          .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control img {
             width: 36px; }
+          .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left {
+            top: 30%;
+            left: 0; }
+          .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.right {
+            top: 30%;
+            right: 0; }
           @media (min-width: 768px) {
-            .my-collection .shelf-bottle-details--wrapper .carousel-control {
+            .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control {
               position: absolute !important;
-              top: 100%; } }
+              top: 40%; } }
+        @media (min-width: 768px) {
+          .my-collection .shelf-bottle-details--wrapper .arrows {
+            width: 500px;
+            height: 40px;
+            position: absolute;
+            top: 30%; } }
         .my-collection .shelf-bottle-details--wrapper .filled-button {
-          width: 260px;
-          margin: auto; }
+          width: 500px;
+          height: 300px; }
           .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark {
-            padding: 20px 30px; }
+            padding: 20px 30px;
+            width: 250px;
+            margin: auto; }
             .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark a {
               font-family: "AbhayaLibre-Regular";
               font-weight: 400;
@@ -9482,17 +9511,23 @@ body {
                 outline: 0; }
               .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark a:hover {
                 text-decoration: none; }
+          @media (max-width: 767px) {
+            .my-collection .shelf-bottle-details--wrapper .filled-button {
+              display: none; } }
         @media (min-width: 768px) {
           .my-collection .shelf-bottle-details--wrapper {
-            width: 500px; } }
+            width: 100%; } }
       .my-collection .shelf-bottle-details .bottle-details {
-        padding-top: 30px; }
+        padding: 335px 30px 0;
+        height: calc(100vh - 80px); }
         .my-collection .shelf-bottle-details .bottle-details .comments {
           height: 480px; }
         .my-collection .shelf-bottle-details .bottle-details .floating-btn .primary-button {
           width: 100%; }
         .my-collection .shelf-bottle-details .bottle-details:after {
-          margin-top: 0; }
+          margin-top: 300px; }
+        .my-collection .shelf-bottle-details .bottle-details::-webkit-scrollbar {
+          display: none; }
         @media (min-width: 768px) {
           .my-collection .shelf-bottle-details .bottle-details {
             display: none; } }
@@ -9500,16 +9535,21 @@ body {
         padding-top: 30px; }
       @media (min-width: 768px) {
         .my-collection .shelf-bottle-details .vertical-slider-desktop .swiper-container .bottle-details {
-          display: block; } }
+          display: block;
+          padding: 0px; } }
       @media (min-width: 768px) {
         .my-collection .shelf-bottle-details .vertical-slider-desktop {
-          margin-top: -285px; } }
+          margin-top: 0; } }
       .my-collection .shelf-bottle-details.show-details {
         opacity: 1;
         transition: opacity 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
         .my-collection .shelf-bottle-details.show-details--slider {
           height: 300px;
           transition: height 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
+
+@media not all, (-webkit-transform-3d) {
+  .carousel-inner > .item {
+    transform: none !important; } }
 
 footer {
   display: none !important;

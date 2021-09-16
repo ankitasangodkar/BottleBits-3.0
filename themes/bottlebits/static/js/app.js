@@ -662,7 +662,7 @@ $(".shelf-wrapper--expanded").fadeOut();
 
 $(".shelf-wrapper .block").on("click", function(){
 	$(".fixed-image").fadeOut();
-	$(".collection-blocks").fadeOut();
+	$(".collection-blocks").fadeOut(1000);
 
 	$(".shelf-wrapper--expanded").fadeIn(2000);
 	$("body").addClass("single-view");
