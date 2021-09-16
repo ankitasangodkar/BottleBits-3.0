@@ -54,6 +54,13 @@ body{
 			transition: opacity 600ms $ease-in;
 		}
 	}
+	.sharing-view{
+		opacity: 0;
+		&.loading{
+			opacity: 1;
+			transition: opacity 600ms $ease-in;
+		}
+	}
 	&.pink_bg{
 		@media(min-width: 768px){
 			background-color: #E1B96B !important;

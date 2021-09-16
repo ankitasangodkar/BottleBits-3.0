@@ -885,6 +885,10 @@
 	   	 		}
 			}
 		}
+		&.hide-collection{
+			opacity: 0;
+			transition: opacity 400ms $ease-out;
+		}
 	}
 }
 @media not all, (-webkit-transform-3d){

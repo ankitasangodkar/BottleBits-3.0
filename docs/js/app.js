@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 	$(".product-detailed").addClass('loading');
 	$(".my-collection").addClass('loading');
+	$(".sharing-view").addClass('loading');
 
 	$(".vertical-slider .slide-item").fadeOut();
 
@@ -702,4 +703,62 @@ $(".back-to-main-shelf").on("click", function(){
 $(".back-to-single-view").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeIn();
 	$(".shelf-bottle-details").fadeOut().removeClass("show-details");;
+});
+
+/* sharing */
+
+$(".slide-image").on("click", function(){
+	$("body").addClass("rotation-sharing");
+	$(".shelf").addClass("hide-collection");
+	$(".my-collection").fadeOut();
+	$(".sharing-view").fadeIn();
+	$(".image-rotation").removeClass("hide").addClass("show-screen-view");
+});
+
+$(document).ready(function(){
+    $(".sharing").on("click", function(){
+        $(".shelf-bottle-details").fadeOut();
+        $(".single-sharing").fadeIn(2000);
+        $("body").addClass("sharing-screen");
+    });
+    $(".return-back").on("click", function(){
+        $(".single-sharing").fadeOut();
+        $(".shelf-bottle-details").fadeIn(1000);
+        $("body").removeClass("sharing-screen");
+    });
+});
+
+/* sharing end*/
+
+$(document).ready(function($) { 
+  $("#target .rollerblade").rollerblade({
+    sensitivity : 10,
+    imageArray:['../../images/bottles/image003-removebg-preview.png', 
+    '../../images/bottles/image003-removebg-preview.png', 
+    '../../images/bottles/image004-removebg-preview.png', 
+    '../../images/bottles/image005-removebg-preview.png', 
+    '../../images/bottles/image006-removebg-preview.png', 
+    '../../images/bottles/image007-removebg-preview.png', 
+    '../../images/bottles/image008-removebg-preview.png', 
+    '../../images/bottles/image009-removebg-preview.png', 
+    '../../images/bottles/image010-removebg-preview.png', 
+    '../../images/bottles/image011-removebg-preview.png', 
+    '../../images/bottles/image012-removebg-preview.png', 
+    '../../images/bottles/image013-removebg-preview.png', 
+    '../../images/bottles/image014-removebg-preview.png', 
+    '../../images/bottles/image015-removebg-preview.png', 
+    '../../images/bottles/image016-removebg-preview.png', 
+    '../../images/bottles/image017-removebg-preview.png', 
+    '../../images/bottles/image018-removebg-preview.png', 
+    '../../images/bottles/image019-removebg-preview.png', 
+    '../../images/bottles/image020-removebg-preview.png', 
+    '../../images/bottles/image021-removebg-preview.png', 
+    '../../images/bottles/image022-removebg-preview.png' ]}); 
+});
+
+$(".image-rotation--header .cross").on("click", function(){
+	$(".sharing-view").fadeOut();
+	$(".my-collection").fadeIn();
+	$(".shelf").removeClass("hide-collection");
+	$("body").removeClass("rotation-sharing");
 });
