@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 			newImg = $('<img/>');
 		this.loading('0.5');
 		//you need this to check if the image sprite has been loaded
-		newImg.attr('src', imageUrl).load(function() {
+		newImg.attr('src', imageUrl).on("load", function() {
 			$(this).remove();
   			self.loaded = true;
   		}).each(function(){
