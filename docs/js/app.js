@@ -822,7 +822,7 @@ $(".image-rotation--header .cross").on("click", function(){
 
 
   (function() {
-  var el = document.querySelector(".rollerblade");
+  var el = document.querySelector(".product-viewer");
   var mc = new Hammer(el, {
     domEvents: true
   });
@@ -868,3 +868,5 @@ $(".image-rotation--header .cross").on("click", function(){
   });
 
 })();
+
+$(".ui-loader").fadeOut();
