@@ -730,31 +730,33 @@ $(document).ready(function(){
 
 /* sharing end*/
 
-$(document).ready(function($) { 
-  $("#target .rollerblade").rollerblade({
-    sensitivity : 10,
-    imageArray:['../../images/bottles/image003-removebg-preview.png', 
-    '../../images/bottles/image003-removebg-preview.png', 
-    '../../images/bottles/image004-removebg-preview.png', 
-    '../../images/bottles/image005-removebg-preview.png', 
-    '../../images/bottles/image006-removebg-preview.png', 
-    '../../images/bottles/image007-removebg-preview.png', 
-    '../../images/bottles/image008-removebg-preview.png', 
-    '../../images/bottles/image009-removebg-preview.png', 
-    '../../images/bottles/image010-removebg-preview.png', 
-    '../../images/bottles/image011-removebg-preview.png', 
-    '../../images/bottles/image012-removebg-preview.png', 
-    '../../images/bottles/image013-removebg-preview.png', 
-    '../../images/bottles/image014-removebg-preview.png', 
-    '../../images/bottles/image015-removebg-preview.png', 
-    '../../images/bottles/image016-removebg-preview.png', 
-    '../../images/bottles/image017-removebg-preview.png', 
-    '../../images/bottles/image018-removebg-preview.png', 
-    '../../images/bottles/image019-removebg-preview.png', 
-    '../../images/bottles/image020-removebg-preview.png', 
-    '../../images/bottles/image021-removebg-preview.png', 
-    '../../images/bottles/image022-removebg-preview.png' ]}); 
-});
+// $(document).ready(function($) { 
+//   $("#target .rollerblade").rollerblade({
+//     sensitivity : 10,
+//     imageArray:['../../images/bottles/image003-removebg-preview.png', 
+//     '../../images/bottles/image003-removebg-preview.png', 
+//     '../../images/bottles/image004-removebg-preview.png', 
+//     '../../images/bottles/image005-removebg-preview.png', 
+//     '../../images/bottles/image006-removebg-preview.png', 
+//     '../../images/bottles/image007-removebg-preview.png', 
+//     '../../images/bottles/image008-removebg-preview.png', 
+//     '../../images/bottles/image009-removebg-preview.png', 
+//     '../../images/bottles/image010-removebg-preview.png', 
+//     '../../images/bottles/image011-removebg-preview.png', 
+//     '../../images/bottles/image012-removebg-preview.png', 
+//     '../../images/bottles/image013-removebg-preview.png', 
+//     '../../images/bottles/image014-removebg-preview.png', 
+//     '../../images/bottles/image015-removebg-preview.png', 
+//     '../../images/bottles/image016-removebg-preview.png', 
+//     '../../images/bottles/image017-removebg-preview.png', 
+//     '../../images/bottles/image018-removebg-preview.png', 
+//     '../../images/bottles/image019-removebg-preview.png', 
+//     '../../images/bottles/image020-removebg-preview.png', 
+//     '../../images/bottles/image021-removebg-preview.png', 
+//     '../../images/bottles/image022-removebg-preview.png' ]}); 
+// });
+
+
 
 $(".image-rotation--header .cross").on("click", function(){
 	$(".sharing-view").fadeOut();
@@ -762,3 +764,107 @@ $(".image-rotation--header .cross").on("click", function(){
 	$(".shelf").removeClass("hide-collection");
 	$("body").removeClass("rotation-sharing");
 });
+
+  // var dragItem = document.querySelector(".circle");
+  // var container = document.querySelector(".circle-wrapper");
+
+  //   var active = false;
+  //   var currentX;
+  //   var initialX;
+  //   var xOffset = 0;
+
+  //   container.addEventListener("touchstart", dragStart, false);
+  //   container.addEventListener("touchend", dragEnd, false);
+  //   container.addEventListener("touchmove", drag, false);
+
+  //   container.addEventListener("mousedown", dragStart, false);
+  //   container.addEventListener("mouseup", dragEnd, false);
+  //   container.addEventListener("mousemove", drag, false);
+
+  //   function dragStart(e) {
+  //     if (e.type === "touchstart") {
+  //       initialX = e.touches[0].clientX - xOffset;
+  //     } else {
+  //       initialX = e.clientX - xOffset;
+  //     }
+
+  //     if (e.target === dragItem) {
+  //       active = true;
+  //     }
+  //   }
+
+  //   function dragEnd(e) {
+  //     initialX = currentX;
+
+  //     active = false;
+  //   }
+
+  //   function drag(e) {
+  //     if (active) {
+      
+  //       e.preventDefault();
+      
+  //       if (e.type === "touchmove") {
+  //         currentX = e.touches[0].clientX - initialX;
+  //       } else {
+  //         currentX = e.clientX - initialX;
+  //       }
+
+  //       xOffset = currentX;
+
+  //       setTranslate(currentX + 10 , 0, dragItem);
+  //     }
+  //   }
+
+  //   function setTranslate(xPos, yPos, el) {
+  //     el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+  //   }
+
+
+  (function() {
+  var el = document.querySelector(".rollerblade");
+  var mc = new Hammer(el, {
+    domEvents: true
+  });
+
+  var currentScale = 1;
+  var currentLeft = 0;
+  var currentTop = 0;
+
+  // zoom
+  mc.get("pinch").set({ enable: true });
+  mc.on("pinchstart", function(ev) {
+    // on pinch zoom we eliminate the panning event listener
+    //so that we dont have that weird movement after we end pinching
+    mc.off("pan");
+  });
+  mc.on("pinch", function(ev) {
+    el.style.transform =
+      "scale(" +
+      currentScale * ev.scale +
+      ")";
+  });
+  mc.on("pinchend", function(ev) {
+    currentScale = currentScale * ev.scale;
+
+    // once we have ended pinch zooming we fire off the panning event once again
+    window.setTimeout(hammerPan, 50);
+  });
+
+  // panning function
+  function hammerPan() {
+    mc.on("pan", function(ev) {
+      el.style.transform =
+        "scale(" +
+        currentScale +
+        ")";
+    });
+  }
+
+  hammerPan();
+  mc.on("panend", function(ev) {
+    currentLeft = currentLeft + ev.deltaX / currentScale;
+    currentTop = currentTop + ev.deltaY / currentScale;
+  });
+
+})();

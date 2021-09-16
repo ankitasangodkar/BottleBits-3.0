@@ -9629,29 +9629,35 @@ body {
         margin: auto;
         border-bottom: 1px solid #E1B96B;
         position: relative; }
-        .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle {
-          background: #E1B96B;
-          width: 20px;
-          height: 20px;
-          border-radius: 20px;
+        .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle-wrapper {
           position: absolute;
-          left: 7px;
-          top: -10px; }
-          .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:before, .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:after {
-            border-radius: 50%;
-            position: absolute; }
-          .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:before {
-            content: '';
-            border: 3px solid #E1B96B;
-            bottom: 0;
-            content: "";
-            left: -7px;
-            right: 0;
-            top: -6px;
-            width: 33px;
-            height: 33px; }
-          .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle:after {
-            content: ""; }
+          top: -16px;
+          width: 34px;
+          height: 34px;
+          cursor: grabbing; }
+          .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle-wrapper .circle {
+            background: #E1B96B;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            position: absolute;
+            left: 7px;
+            top: 7px; }
+            .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle-wrapper .circle:before, .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle-wrapper .circle:after {
+              border-radius: 50%;
+              position: absolute; }
+            .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle-wrapper .circle:before {
+              content: '';
+              border: 3px solid #E1B96B;
+              bottom: 0;
+              content: "";
+              left: -7px;
+              right: 0;
+              top: -6px;
+              width: 33px;
+              height: 33px; }
+            .sharing-view .image-rotation--image-block .icon-slider .horizontal-border .circle-wrapper .circle:after {
+              content: ""; }
         .sharing-view .image-rotation--image-block .icon-slider .horizontal-border:before {
           content: '';
           position: absolute;

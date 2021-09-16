@@ -69,31 +69,38 @@
                     margin: auto;
                     border-bottom: 1px solid #E1B96B;
                     position: relative;
-                    .circle{
-                        background: #E1B96B;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 20px;
+                    .circle-wrapper{
                         position: absolute;
-                        left: 7px;
-                        top: -10px;
-                        &:before, &:after{
-                            border-radius: 50%;
+                        top: -16px;
+                        width: 34px;
+                        height: 34px;
+                        cursor: grabbing;
+                        .circle{
+                            background: #E1B96B;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 20px;
                             position: absolute;
-                        }
-                        &:before{
-                            content: '';
-                            border: 3px solid #E1B96B;
-                            bottom: 0;
-                            content: "";
-                            left: -7px;
-                            right: 0;
-                            top: -6px;
-                            width: 33px;
-                            height: 33px;
-                        }
-                        &:after{
-                            content: "";
+                            left: 7px;
+                            top: 7px;
+                            &:before, &:after{
+                                border-radius: 50%;
+                                position: absolute;
+                            }
+                            &:before{
+                                content: '';
+                                border: 3px solid #E1B96B;
+                                bottom: 0;
+                                content: "";
+                                left: -7px;
+                                right: 0;
+                                top: -6px;
+                                width: 33px;
+                                height: 33px;
+                            }
+                            &:after{
+                                content: "";
+                            }
                         }
                     }
                     &:before{
