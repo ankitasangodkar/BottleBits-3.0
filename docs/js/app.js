@@ -807,5 +807,6 @@ $(".tool-tip span").on("click", function(){
 });
 
 $(".themes-button .cross").on("click", function(){
+	$(".tool-tip").removeClass("show-customize");
 	$(".themes-button").removeClass("show-buttons");
 });
