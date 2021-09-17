@@ -832,6 +832,8 @@ jquerySwipeHandler.handleSwipe(".button.brown", [
 	$(".my-collection .shelf .info-tab").addClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
 });
 
 
@@ -850,6 +852,8 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 	$(".my-collection .shelf .info-tab").addClass("yellow").removeClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("yellow").removeClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("yellow").removeClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
 });
 
 
@@ -868,6 +872,8 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 	$(".my-collection .shelf .info-tab").removeClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
 });
 
 
@@ -886,4 +892,6 @@ jquerySwipeHandler.handleSwipe(".button.yellow", [
 	$(".my-collection .shelf .info-tab").removeClass("yellow").removeClass("yellow").addClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("yellow").addClass("green");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow").addClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
 });

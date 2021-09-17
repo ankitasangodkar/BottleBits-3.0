@@ -7333,7 +7333,7 @@ img {
   .tool-tip span {
     position: absolute;
     top: 11px;
-    right: 30px;
+    right: 12px;
     background: #FFDA94;
     padding: 15px 55px 15px 15px;
     border-radius: 2px;
