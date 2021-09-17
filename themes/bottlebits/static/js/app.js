@@ -667,7 +667,6 @@ $(".shelf-wrapper .block").on("click", function(){
 	$(".fixed-image").fadeOut();
 	$(".collection-blocks").fadeOut(1000);
 	$(".tool-tip").removeClass("show-customize");
-	$(".themes-button").removeClass("show-buttons");
 	$(".shelf-wrapper--expanded").fadeIn(2000);
 	$("body").addClass("single-view");
 
@@ -701,6 +700,7 @@ $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeOut();
 	$(".shelf-bottle-details").fadeIn().addClass("show-details");
 	$("header").css({position: "fixed"});
+	$(".themes-button").removeClass("show-buttons");
 });
 
 $(".back-to-main-shelf").on("click", function(){
@@ -817,54 +817,73 @@ jquerySwipeHandler.handleSwipe(".button", [
   	event.preventDefault();
 });
 
-jquerySwipeHandler.handleSwipe(".brown", [
+jquerySwipeHandler.handleSwipe(".button.brown", [
  jquerySwipeHandler.SWIPE_LEFT
 ], function (direction) {
 	$(".button").removeClass(direction);
 	$(".button").removeClass("active");
 	$(".button.green").addClass("active");
 	$(".button.active").addClass(direction).removeClass("CLICK");
-	$(".yellow").css({left: "150px", transition: "left 100ms ease-in"});
-	$(".green").css({left: "0px", transition: "left 100ms ease-in"});
-	$(".brown").css({left: "-150px", transition: "left 100ms ease-in"});
+	$(".button.yellow").css({left: "150px", transition: "left 100ms ease-in"});
+	$(".button.green").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "-150px", transition: "left 100ms ease-in"});
+
+	$(".my-collection .shelf-wrapper--expanded .block").addClass("green");
+	$(".my-collection .shelf .info-tab").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("green");
 });
 
 
-jquerySwipeHandler.handleSwipe(".green", [
+jquerySwipeHandler.handleSwipe(".button.green", [
  jquerySwipeHandler.SWIPE_LEFT
 ], function (direction) {
 	$(".button").removeClass(direction);
 	$(".button").removeClass("active");
 	$(".button.yellow").addClass("active");
 	$(".button.active").addClass(direction).removeClass("CLICK");
-	$(".yellow").css({left: "0px", transition: "left 100ms ease-in"});
-	$(".brown").css({left: "-300px", transition: "left 100ms ease-in"});
-	$(".green").css({left: "-150px", transition: "left 100ms ease-in"});
+	$(".button.yellow").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "-300px", transition: "left 100ms ease-in"});
+	$(".button.green").css({left: "-150px", transition: "left 100ms ease-in"});
+
+	$(".my-collection .shelf-wrapper--expanded .block").addClass("yellow").removeClass("green");
+	$(".my-collection .shelf .info-tab").addClass("yellow").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("yellow").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("yellow").removeClass("green");
 });
 
 
-jquerySwipeHandler.handleSwipe(".green", [
+jquerySwipeHandler.handleSwipe(".button.green", [
  jquerySwipeHandler.SWIPE_RIGHT
 ], function (direction) {
 	$(".button").removeClass(direction);
 	$(".button").removeClass("active");
 	$(".button.brown").addClass("active");
 	$(".button.active").addClass(direction).removeClass("CLICK");
-	$(".green").css({left: "150px", transition: "left 100ms ease-in"});
-	$(".brown").css({left: "0px", transition: "left 100ms ease-in"});
-	$(".yellow").css({left: "300px", transition: "left 100ms ease-in"});
+	$(".button.green").css({left: "150px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.yellow").css({left: "300px", transition: "left 100ms ease-in"});
 
+	$(".my-collection .shelf-wrapper--expanded .block").removeClass("green");
+	$(".my-collection .shelf .info-tab").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("green");
 });
 
 
-jquerySwipeHandler.handleSwipe(".yellow", [
+jquerySwipeHandler.handleSwipe(".button.yellow", [
  jquerySwipeHandler.SWIPE_RIGHT
 ], function (direction) {
 	$(".button").removeClass(direction);
 	$(".button").removeClass("active");
 	$(".button.green").addClass("active");
 	$(".button.active").addClass(direction).removeClass("CLICK");
-	$(".green").css({left: "0px", transition: "left 100ms ease-in"});
-	$(".brown").css({left: "-150px", transition: "left 100ms ease-in"});
-	$(".yellow").css({left: "150px", transition: "left 100ms ease-in"});
+	$(".button.green").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "-150px", transition: "left 100ms ease-in"});
+	$(".button.yellow").css({left: "150px", transition: "left 100ms ease-in"});
+
+	$(".my-collection .shelf-wrapper--expanded .block").removeClass("yellow").addClass("green");
+	$(".my-collection .shelf .info-tab").removeClass("yellow").removeClass("yellow").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("yellow").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow").addClass("green");
 });
