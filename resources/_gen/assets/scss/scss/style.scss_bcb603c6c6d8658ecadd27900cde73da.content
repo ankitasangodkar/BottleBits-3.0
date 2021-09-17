@@ -8865,8 +8865,7 @@ img {
   .my-collection .shelf {
     background-color: black;
     position: relative;
-    z-index: 9;
-    height: 100vh; }
+    z-index: 9; }
     .my-collection .shelf .info-tab {
       display: flex;
       align-items: center;
@@ -8880,9 +8879,15 @@ img {
       .my-collection .shelf .info-tab.green {
         background-image: url(../images/collection/title-bar-green.jpg);
         transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+        @media (min-width: 768px) {
+          .my-collection .shelf .info-tab.green {
+            background-image: none; } }
       .my-collection .shelf .info-tab.yellow {
         background-image: url(../images/collection/title-bar-yellow.jpg);
         transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+        @media (min-width: 768px) {
+          .my-collection .shelf .info-tab.yellow {
+            background-image: none; } }
       .my-collection .shelf .info-tab .title h2 {
         font-family: "AbhayaLibre-Bold";
         font-weight: bold;
@@ -8896,7 +8901,8 @@ img {
       @media (min-width: 768px) {
         .my-collection .shelf .info-tab {
           padding: 8px 10px;
-          background-image: none; } }
+          background-image: none;
+          margin-top: -15px; } }
     .my-collection .shelf .picture {
       filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
       -webkit-filter: drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.4));
@@ -9236,8 +9242,15 @@ img {
           flex-wrap: wrap;
           background-image: url(../images/collection/my-bar.jpg);
           width: 100%;
-          padding: 0 70px 70px;
-          margin-bottom: 0; } }
+          padding: 15px 70px 70px;
+          margin-bottom: 0;
+          transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+          .my-collection .shelf .collection-blocks.green {
+            background-image: url(../images/collection/my-bar-green.jpg);
+            transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+          .my-collection .shelf .collection-blocks.yellow {
+            background-image: url(../images/collection/my-bar-yellow.jpg);
+            transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1); } }
     .my-collection .shelf-wrapper--expanded {
       margin-bottom: 0;
       flex-wrap: nowrap;
@@ -9304,6 +9317,9 @@ img {
               text-transform: uppercase;
               color: #000000;
               text-shadow: 0px 1px 0px rgba(249, 213, 144, 0.4); }
+          .my-collection .shelf-wrapper--expanded .block.active-block .large-block {
+            width: 100%;
+            height: 368px; }
           .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square {
             position: relative; }
             .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square .icon {
@@ -9361,24 +9377,98 @@ img {
               @media (min-width: 768px) {
                 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square:after {
                   height: 286px; } }
+          .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle {
+            position: relative; }
+            .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle .icon {
+              position: absolute;
+              left: 25px;
+              right: 0;
+              margin: auto;
+              top: 160px;
+              opacity: 0.7; }
+              @media (max-width: 375px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle .icon {
+                  top: 190px; } }
+              @media (max-width: 767px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle .icon {
+                  top: 23vh; } }
+              @media (min-width: 768px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle .icon {
+                  top: 200px; } }
+            .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
+              content: '';
+              border: 1px dashed #412303;
+              border-top: 0;
+              height: 337px;
+              width: calc(100% - 98px);
+              position: absolute;
+              left: 50px;
+              right: 0;
+              top: 17px;
+              bottom: 0; }
+              @media (max-width: 375px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
+                  top: 20px; } }
+              @media (min-width: 1080px) and (max-width: 1769px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
+                  width: calc(100% - 48px);
+                  height: 169px;
+                  left: 26px;
+                  top: 40px; } }
+              @media (min-width: 1770px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
+                  width: calc(100% - 76px);
+                  height: 253px;
+                  left: 40px; } }
+            .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
+              content: '';
+              border: 1px dashed #B68149;
+              height: 344px;
+              width: calc(100% - 88px);
+              position: absolute;
+              left: 45px;
+              right: 0;
+              top: 12px;
+              bottom: 0; }
+              @media (max-width: 375px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
+                  top: 16px; } }
+              @media (min-width: 1080px) and (max-width: 1769px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
+                  width: calc(100% - 43px);
+                  height: 190px;
+                  left: 23px;
+                  top: 22px; } }
+              @media (min-width: 1770px) {
+                .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
+                  width: calc(100% - 72px);
+                  height: 260px;
+                  left: 38px; } }
           .my-collection .shelf-wrapper--expanded .block.active-block .small-block--child1 {
             width: 50%;
             height: 50%;
             display: block;
             margin: auto;
             position: relative; }
+            .my-collection .shelf-wrapper--expanded .block.active-block .small-block--child1.spacing {
+              left: -15px; }
           .my-collection .shelf-wrapper--expanded .block.active-block .small-block--child2 {
             width: 50%;
             height: 50%;
             display: block;
             text-align: center;
             position: relative; }
+            .my-collection .shelf-wrapper--expanded .block.active-block .small-block--child2.spacing {
+              left: 15px; }
             .my-collection .shelf-wrapper--expanded .block.active-block .small-block--child2 .picture {
               position: absolute;
               left: -15px;
               right: 0;
               margin: auto;
               bottom: 14px; }
+            .my-collection .shelf-wrapper--expanded .block.active-block .small-block--child2 .product-name {
+              padding-top: 35px;
+              margin-right: 12px; }
           @media (min-width: 768px) {
             .my-collection .shelf-wrapper--expanded .block.active-block {
               width: 500px;
@@ -9455,7 +9545,7 @@ img {
         position: relative; }
         .my-collection .shelf-bottle-details--slider:after {
           content: '';
-          background-image: url(../images/collection/shelf-bottle.jpg);
+          background-image: url(../images/collection/shelf-bottle-w.jpg);
           width: 504px;
           height: 50vh;
           position: absolute;
@@ -9603,7 +9693,12 @@ img {
             width: 36px; }
           .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left {
             top: 30%;
-            left: 0; }
+            left: 0;
+            opacity: 0.8;
+            pointer-events: none; }
+            .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left.left-active {
+              opacity: 1;
+              pointer-events: auto; }
             @media (max-width: 767px) {
               .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left {
                 top: 28%; } }

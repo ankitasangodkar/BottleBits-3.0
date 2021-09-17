@@ -803,6 +803,8 @@ jquerySwipeHandler.handleSwipe(".button.brown", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("brown").addClass("green");
+
+	$(".collection-blocks").addClass("green");
 });
 
 
@@ -824,6 +826,7 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("green").addClass("yellow");
+	$(".collection-blocks").removeClass("green").addClass("yellow");
 });
 
 
@@ -845,6 +848,7 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("green").addClass("brown");
+	$(".collection-blocks").removeClass("green");
 });
 
 
@@ -866,6 +870,9 @@ jquerySwipeHandler.handleSwipe(".button.yellow", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("yellow").addClass("green");
+
+	$(".collection-blocks").removeClass("yellow").addClass("green");
+
 });
 
 $( ".theme--yellow" ).on( "swipeleft", function(){
@@ -994,4 +1001,8 @@ $( ".theme--camera" ).on( "swipeleft", function(){
 
 $( ".theme--upload").on( "swipeleft", function(){
     $(this).css({transform: "translateX(-70px)"});
+});
+
+$(".carousel-control.right").on("click", function(){
+	$(".carousel-control.left").addClass("left-active");
 });

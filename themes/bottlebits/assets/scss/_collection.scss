@@ -4,7 +4,6 @@
 		background-color: black;
     	position: relative;
     	z-index: 9;
-	    height: 100vh;
 		.info-tab{
 		    display: flex;
 		    align-items: center;
@@ -18,10 +17,16 @@
 	        &.green{
 	        	background-image: url(../images/collection/title-bar-green.jpg);
 	        	transition: background-image 300ms $ease-in-out;
+	        	@media(min-width: 768px){
+	        		background-image: none;
+	        	}
 	        }
 	        &.yellow{
 	        	background-image: url(../images/collection/title-bar-yellow.jpg);
 	        	transition: background-image 300ms $ease-in-out;
+	        	@media(min-width: 768px){
+	        		background-image: none;
+	        	}
 	        }
 		    .title{
 		    	h2{
@@ -40,6 +45,7 @@
 		    @media(min-width: 768px){
 	            padding: 8px 10px;
     			background-image: none;
+    			margin-top: -15px;
 		    }
 		}
 		.picture{
@@ -434,8 +440,17 @@
     			flex-wrap: wrap;
 			    background-image: url(../images/collection/my-bar.jpg);
 			    width: 100%;
-		        padding: 0 70px 70px;
+		        padding: 15px 70px 70px;
 	            margin-bottom: 0;
+	            transition: background-image 300ms $ease-in-out;
+	            &.green{
+	            	background-image: url(../images/collection/my-bar-green.jpg);
+	            	transition: background-image 300ms $ease-in-out;
+	            }
+	            &.yellow{
+	            	background-image: url(../images/collection/my-bar-yellow.jpg);
+	            	transition: background-image 300ms $ease-in-out;
+	            }
 			}
 		}
 		&-wrapper--expanded{
@@ -517,6 +532,10 @@
 				    		}
 				    	}
 			    	}
+			    	.large-block{
+		    		    width: 100%;
+	    		        height: 368px;
+			    	}
 	    			.border-image{
 	    				&--square{
 							position: relative;
@@ -580,6 +599,77 @@
 							    }
 							}
 						}
+						&--rectangle{
+							position: relative;
+							.icon{
+								position: absolute;
+								left: 25px;
+								right: 0;
+								margin: auto;
+								top: 160px;
+							    opacity: 0.7;
+								@media(max-width: 375px){
+									top: 190px;
+								}
+								@media(max-width: 767px){
+									top: 23vh;
+								}
+								@media(min-width: 768px){
+								    top: 200px;
+							    }
+							}
+							&:before{
+								content: '';
+							    border: 1px dashed #412303;
+							    border-top: 0;
+							    height: 337px;
+							    width: calc(100% - 98px);
+							    position: absolute;
+							    left: 50px;
+							    right: 0;
+							    top: 17px;
+							    bottom: 0;
+							    @media(max-width: 375px){
+							    	top: 20px;
+							    }
+						     	@media(min-width: 1080px) and (max-width: 1769px){
+									width: calc(100% - 48px);
+									height: 169px;
+									left: 26px;
+									top: 40px;
+						    	}
+							    @media(min-width: 1770px){
+						    	    width: calc(100% - 76px);
+							    	height: 253px;
+							    	left: 40px;
+							    }
+							}
+							&:after{
+								content: '';
+								border: 1px dashed #B68149;
+							    height: 344px;
+							    width: calc(100% - 88px);
+								position: absolute;
+								left: 45px;
+								right: 0;
+								top: 12px;
+								bottom: 0;
+								@media(max-width: 375px){
+							    	top: 16px;
+							    }
+						     	@media(min-width: 1080px) and (max-width: 1769px){
+									width: calc(100% - 43px);
+									height: 190px;
+									left: 23px;
+									top: 22px
+						    	}
+							    @media(min-width: 1770px){
+						    	    width: calc(100% - 72px);
+							    	height: 260px;
+							    	left: 38px;
+							    }
+							}
+						}
 					}
 					.small-block{
 						&--child1{
@@ -588,6 +678,9 @@
 						    display: block;
 						    margin: auto;
 						    position: relative;
+						    &.spacing{
+					    	    left: -15px;
+						    }
 						}
 						&--child2{
 							width: 50%;
@@ -595,12 +688,19 @@
 							display: block;
 							text-align: center;
 							position: relative;
+						    &.spacing{
+					    	    left: 15px;
+						    }
 							.picture{
 								position: absolute;
 								left: -15px;
 								right: 0;
 								margin: auto;
 								bottom: 14px;
+							}
+							.product-name{
+							    padding-top: 35px;
+						        margin-right: 12px;
 							}
 						}
 					}
@@ -709,7 +809,7 @@
 			    position: relative;
 				&:after{
 					content: '';
-					background-image: url(../images/collection/shelf-bottle.jpg);
+					background-image: url(../images/collection/shelf-bottle-w.jpg);
 				    width: 504px;
 				    height: 50vh;
 				    position: absolute;
@@ -885,6 +985,12 @@
 						&.left{
 						    top: 30%;
 						    left: 0;
+					        opacity: 0.8;
+							pointer-events: none;
+							&.left-active{
+								opacity: 1;
+								pointer-events: auto;	
+							}
 						    @media(max-width: 767px){
 						    	top: 28%;
 						    }
