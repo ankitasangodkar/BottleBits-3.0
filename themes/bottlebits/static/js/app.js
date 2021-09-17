@@ -834,6 +834,7 @@ jquerySwipeHandler.handleSwipe(".button.brown", [
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("green");
 
 	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("brown").addClass("green");
 });
 
 
@@ -854,6 +855,7 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("yellow").removeClass("green");
 
 	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("green").addClass("yellow");
 });
 
 
@@ -874,6 +876,7 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("green");
 
 	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("green").addClass("brown");
 });
 
 
@@ -894,4 +897,5 @@ jquerySwipeHandler.handleSwipe(".button.yellow", [
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow").addClass("green");
 
 	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("yellow").addClass("green");
 });

@@ -9387,6 +9387,14 @@ img {
           transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1); }
     .my-collection .shelf .fixed-image {
       position: relative; }
+      .my-collection .shelf .fixed-image img {
+        opacity: 0; }
+      .my-collection .shelf .fixed-image.brown .img-brown {
+        opacity: 1; }
+      .my-collection .shelf .fixed-image.green .img-green {
+        opacity: 1; }
+      .my-collection .shelf .fixed-image.yellow .img-yellow {
+        opacity: 1; }
       .my-collection .shelf .fixed-image--block {
         position: fixed;
         left: 0;
@@ -10021,7 +10029,7 @@ img {
     transform: translateX(-50%) scale(1); } }
 
 .themes-button {
-  background: linear-gradient(180deg, transparent, #181a1e 100%);
+  background: linear-gradient(180deg, transparent, #000 50%);
   height: 150px;
   position: fixed;
   z-index: 99;

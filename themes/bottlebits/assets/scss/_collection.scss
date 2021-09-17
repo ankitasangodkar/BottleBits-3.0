@@ -625,6 +625,24 @@
 		}
 		.fixed-image{
 			position: relative;
+			img{
+				opacity: 0;
+			}
+			&.brown{
+				.img-brown{
+					opacity: 1;
+				}
+			}
+			&.green{
+				.img-green{
+					opacity: 1;
+				}
+			}
+			&.yellow{
+				.img-yellow{
+					opacity: 1;
+				}
+			}
 			&--block{
 				position: fixed;
 				left: 0;
