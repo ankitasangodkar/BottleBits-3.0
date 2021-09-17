@@ -667,7 +667,7 @@ $(".shelf-wrapper .block").on("click", function(){
 	$(".fixed-image").fadeOut();
 	$(".collection-blocks").fadeOut(1000);
 	$(".tool-tip").removeClass("show-customize");
-
+	$(".themes-button").removeClass("show-buttons");
 	$(".shelf-wrapper--expanded").fadeIn(2000);
 	$("body").addClass("single-view");
 
@@ -809,4 +809,62 @@ $(".tool-tip span").on("click", function(){
 $(".themes-button .cross").on("click", function(){
 	$(".tool-tip").removeClass("show-customize");
 	$(".themes-button").removeClass("show-buttons");
+});
+
+jquerySwipeHandler.handleSwipe(".button", [
+ jquerySwipeHandler.CLICK
+], function (event) {
+  	event.preventDefault();
+});
+
+jquerySwipeHandler.handleSwipe(".brown", [
+ jquerySwipeHandler.SWIPE_LEFT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.green").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".yellow").css({left: "150px", transition: "left 100ms ease-in"});
+	$(".green").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".brown").css({left: "-150px", transition: "left 100ms ease-in"});
+});
+
+
+jquerySwipeHandler.handleSwipe(".green", [
+ jquerySwipeHandler.SWIPE_LEFT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.yellow").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".yellow").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".brown").css({left: "-300px", transition: "left 100ms ease-in"});
+	$(".green").css({left: "-150px", transition: "left 100ms ease-in"});
+});
+
+
+jquerySwipeHandler.handleSwipe(".green", [
+ jquerySwipeHandler.SWIPE_RIGHT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.brown").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".green").css({left: "150px", transition: "left 100ms ease-in"});
+	$(".brown").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".yellow").css({left: "300px", transition: "left 100ms ease-in"});
+
+});
+
+
+jquerySwipeHandler.handleSwipe(".yellow", [
+ jquerySwipeHandler.SWIPE_RIGHT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.green").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".green").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".brown").css({left: "-150px", transition: "left 100ms ease-in"});
+	$(".yellow").css({left: "150px", transition: "left 100ms ease-in"});
 });
