@@ -9404,7 +9404,7 @@ img {
               position: absolute;
               left: 50px;
               right: 0;
-              top: 17px;
+              top: 26px;
               bottom: 0; }
               @media (max-width: 375px) {
                 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
