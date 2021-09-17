@@ -166,3 +166,7 @@ img{
     	transition: all 350ms $ease-in-out;
 	}
 }
+
+.ui-mobile .ui-page-active{
+	overflow-x: unset;
+}

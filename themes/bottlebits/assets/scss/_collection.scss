@@ -4,6 +4,7 @@
 		background-color: black;
     	position: relative;
     	z-index: 9;
+	    height: 100vh;
 		.info-tab{
 		    display: flex;
 		    align-items: center;
@@ -627,6 +628,9 @@
 			position: relative;
 			img{
 				opacity: 0;
+				@media(min-width: 768px){
+					opacity: 1;
+				}
 			}
 			&.brown{
 				.img-brown{

@@ -7361,6 +7361,9 @@ img {
     transform: translateY(0px);
     transition: all 350ms cubic-bezier(0.48, 0.04, 0.25, 1); }
 
+.ui-mobile .ui-page-active {
+  overflow-x: unset; }
+
 .product-detailed .shelf {
   display: flex;
   flex-wrap: wrap;
@@ -8862,7 +8865,8 @@ img {
   .my-collection .shelf {
     background-color: black;
     position: relative;
-    z-index: 9; }
+    z-index: 9;
+    height: 100vh; }
     .my-collection .shelf .info-tab {
       display: flex;
       align-items: center;
@@ -9389,6 +9393,9 @@ img {
       position: relative; }
       .my-collection .shelf .fixed-image img {
         opacity: 0; }
+        @media (min-width: 768px) {
+          .my-collection .shelf .fixed-image img {
+            opacity: 1; } }
       .my-collection .shelf .fixed-image.brown .img-brown {
         opacity: 1; }
       .my-collection .shelf .fixed-image.green .img-green {
@@ -9730,21 +9737,45 @@ img {
 .single-sharing {
   display: none;
   height: 100vh;
-  background-image: url(../images/collection/shelf-bottle.jpg); }
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  opacity: 0;
+  transition: top 300ms cubic-bezier(0.48, 0.04, 0.25, 1), background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1), opacity 30ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+  .single-sharing.yellow {
+    opacity: 1;
+    background-image: url(../images/collection/shelf-bottle-yellow.jpg);
+    transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1), opacity 30ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+  .single-sharing.green {
+    opacity: 1;
+    background-image: url(../images/collection/shelf-bottle-green.jpg);
+    transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1), opacity 30ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+  .single-sharing.brown {
+    opacity: 1;
+    background-image: url(../images/collection/shelf-bottle.jpg);
+    transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1), opacity 30ms cubic-bezier(0.48, 0.04, 0.25, 1); }
+  .single-sharing.black {
+    opacity: 1;
+    background-image: url(../images/collection/shelf-bottle-black.jpg);
+    transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1), opacity 30ms cubic-bezier(0.48, 0.04, 0.25, 1); }
   .single-sharing__header {
     height: 80px;
     padding-left: 25px;
     padding-right: 25px;
     display: flex;
     align-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%); }
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0); }
   .single-sharing__content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100% - 370px); }
     .single-sharing__content .wine-bottle {
-      width: 94px; }
+      width: 94px;
+      margin-top: 62px; }
   .single-sharing__footer {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     height: 290px;
@@ -9756,7 +9787,8 @@ img {
       align-items: center;
       justify-content: center; }
     .single-sharing__footer .theme-options {
-      height: 140px; }
+      height: 140px;
+      width: calc(100% + 70px); }
       .single-sharing__footer .theme-options .theme {
         height: 50px;
         width: 50px;
@@ -9764,7 +9796,9 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 100px; }
+        border-radius: 100px;
+        -ms-touch-action: none;
+        touch-action: none; }
         .single-sharing__footer .theme-options .theme .theme-thumbnail {
           height: 40px;
           width: 40px;
@@ -9785,8 +9819,6 @@ img {
           .single-sharing__footer .theme-options .theme--active-theme .theme-thumbnail {
             height: 64px;
             width: 64px; }
-        .single-sharing__footer .theme-options .theme--right-space {
-          margin-right: 20px; }
         .single-sharing__footer .theme-options .theme--camera .theme-thumbnail {
           background: #E1B96B;
           text-align: center; }
@@ -9800,9 +9832,8 @@ img {
             text-align: center; }
             .single-sharing__footer .theme-options .theme--upload .theme-thumbnail img {
               width: 15px; }
-
-.sharing-screen header {
-  display: none; }
+  .single-sharing .theme {
+    margin: 0 8px; }
 
 .sharing-screen .my-collection {
   padding: 0; }
