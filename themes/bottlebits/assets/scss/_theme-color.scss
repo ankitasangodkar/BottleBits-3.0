@@ -1,0 +1,88 @@
+.themes-button{
+    background: linear-gradient(180deg, transparent, #181a1e 100%);
+	height: 150px;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    transition: opacity 400ms $ease-in-out, transform 400ms $ease-in-out;
+    -webkit-transition: opacity 400ms $ease-in-out, transform 400ms $ease-in-out;
+    .cross{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0;
+		right: 0;
+        margin: 0px auto;
+        cursor: pointer;
+        &:after {
+            content: '';
+            height: 20px;
+            border-left: 1px solid #E1B96B;
+            position: absolute;
+            transform: rotate(45deg);
+            left: 9px;
+        }
+        &:before {
+            content: '';
+            height: 20px;
+            border-left: 1px solid #E1B96B;
+            position: absolute;
+            transform: rotate(-45deg);
+            left: 9px;
+        }
+    }
+    &--wrapper{
+        display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+    	.button{
+			background: rgba(255, 255, 255, 0.2);
+			border-radius: 50%;
+			padding: 6px;
+			margin: 0 10px;
+			width: 50px;
+			height: 50px;
+    		&.active{
+    		    width: 70px;
+    			height: 70px;
+    			position: relative;
+    			.image-button{
+    			    width: 60px;
+    			}
+    			&:after{
+    				opacity: 1;
+    				transition: opacity 400ms $ease-in-out;
+    			}
+    		}
+    		&:after{
+				content: '';
+				background: url("../images/tick_mark.svg");
+				width: 24px;
+				height: 100px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 25px;
+				margin: auto;
+				opacity: 0;
+			}
+    	}
+    }
+    &.show-buttons{
+	    opacity:1;
+	    transform: translateY(0px);
+	    -webkit-transform: translateY(0px);
+	    transition: opacity 400ms $ease-in-out, transform 400ms $ease-in-out;
+	    -webkit-transition: opacity 400ms $ease-in-out, transform 400ms $ease-in-out;
+    }
+}

@@ -3,7 +3,7 @@
 	.shelf{
 		background-color: black;
     	position: relative;
-    	z-index: 0;
+    	z-index: 9;
 		.info-tab{
 		    display: flex;
 		    align-items: center;
@@ -24,6 +24,9 @@
 					margin: 0;
 		    	}
 		    }
+		    img{
+		    	cursor: pointer;
+		    }
 		    @media(min-width: 768px){
 	            padding: 8px 10px;
     			background-image: none;
@@ -35,7 +38,7 @@
 			cursor: pointer;
 		}
 		.collection-blocks{
-		    margin-bottom: 277px;
+		    margin-bottom: 230px;
 			.shelf-wrapper{
 			    display: flex;
 			    flex-wrap: wrap;
@@ -380,6 +383,7 @@
 			transition: margin-bottom 200ms $ease-out;
 			.info-tab{
 				a.back-to-main-shelf{
+					display: block;
 					img{
 						padding-right: 10px;
 					    padding-bottom: 2px;
@@ -506,7 +510,9 @@
 								@media(max-width: 375px){
 							    	height: 328px;
 						    	    width: calc(100% - 60px);
-    								left: 38px;
+									left: 15px;
+									right: 0;
+									margin: 0 auto;
 							    }
 						     	@media(min-width: 768px){
 							    	height: 286px;
@@ -592,6 +598,7 @@
 				position: fixed;
 				transition: z-index 300ms $ease-out;
 				a.back-to-single-view{
+					display: block;
 					img{
 						padding-right: 10px;
 					    padding-bottom: 2px;

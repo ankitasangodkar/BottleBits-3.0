@@ -8,7 +8,7 @@
 	
 		
 			
-			<link rel="stylesheet" href="./../../css/style.min.825dcbc696cb506d368dd464a9483a032b34541eb2b8b1d42531ec4e6b357eb4.css">
+			<link rel="stylesheet" href="./../../css/style.min.80d24d8c7708f95008c4d4a3b07ab6664f3dfe4730b863410a8b453b7365c780.css">
 		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head><body><header>
@@ -20,9 +20,9 @@
 			<div class="navbar-right">
 				<div class="menu_list">
 					<ul class="menu_list--items">
-						<li class="item active"><a href="javascript:void(0)">Home</a></li>
+						<li class="item"><a href="javascript:void(0)">Home</a></li>
 						<li class="item"><a href="javascript:void(0)">Inventory</a></li>
-						<li class="item"><a href="javascript:void(0)">Collection</a></li>
+						<li class="item active"><a href="javascript:void(0)">Collection</a></li>
 						<li class="item"><a href="javascript:void(0)">About us</a></li>
 						<li class="item"><a href="javascript:void(0)">Contact us</a></li>
 					</ul>
@@ -47,11 +47,11 @@
 			<div class="mobile-menu--overlay">
 				<div class="cross"></div>
 				<ul class="menu_list--items">
-					<li class="item active"><a href="javascript:void(0)">Home</a></li>
+					<li class="item"><a href="javascript:void(0)">Home</a></li>
 					<li class="item"><a href="javascript:void(0)">About Us</a></li>
 					<li class="item"><a href="javascript:void(0)">Inventory</a></li>
 					<li class="item"><a href="javascript:void(0)">FAQ</a></li>
-					<li class="item"><a href="javascript:void(0)">Collection</a></li>
+					<li class="item active"><a href="javascript:void(0)">Collection</a></li>
 					<li class="item"><a href="javascript:void(0)">Contact Us</a></li>
 					<li class="item"><a href="javascript:void(0)">Code Of Conduct</a></li>
 					<li class="item"><a href="javascript:void(0)">Register/ Login</a></li>
@@ -71,6 +71,9 @@
 					<div class="icons">
 						<img src="./../../images/sharing.png" alt="sharing" class="sharing">
 						<img src="./../../images/customize.svg" alt="customize" class="customize">
+					</div>
+					<div class="tool-tip">
+						<span>Customize Bar</span>
 					</div>
 				</div>
 
@@ -203,7 +206,7 @@
 				<div class="info-tab">
 					<div class="title">
 						<a href="javascript:void(0)" class="back-to-main-shelf">
-							<h2><img src="./../../images/arrow-left.svg" alt="customize" class="customize">Back</h2>
+							<h2><img src="./../../images/arrow-left.svg" alt="back-arrow" class="back-arrw">Back</h2>
 						</a>
 					</div>
 					<div class="icons">
@@ -254,15 +257,41 @@
 
 				<div class="block block-expand2">
 					<div class="product-images large-block">
-						<img src="./../../images/cardhu.png" alt="cardhu" class="wine-bottle picture">
-						<img src="./../../images/dalmore.png" alt="dalmore" class="wine-bottle picture">
-						<img src="./../../images/arbelour.png" alt="arbelour" class="wine-bottle picture large">
+						<div class="product-image">
+							<div class="product-name">
+								<span>x1</span>
+								<h5>Cardhu</h5>
+							</div>
+							<img src="./../../images/cardhu.png" alt="cardhu" class="wine-bottle picture medium">
+						</div>
+						<div class="product-image">
+							<div class="product-name">
+								<span>x2</span>
+								<h5>Dalmore</h5>
+							</div>
+							<img src="./../../images/dalmore.png" alt="dalmore" class="wine-bottle picture">
+						</div>
+						<div class="product-image">
+							<div class="product-name">
+								<span>x3</span>
+								<h5>Arbelour</h5>
+							</div>
+							<img src="./../../images/arbelour.png" alt="arbelour" class="wine-bottle picture large">
+						</div>
 					</div>
 					<div class="small-block small-block--child2">
-						<img src="./../../images/dalmore.png" alt="dalmore" class="wine-bottle picture">
+						<div class="product-image">
+							<div class="product-name">
+								<span>x2</span>
+								<h5>The Dalmore 12</h5>
+							</div>
+							<img src="./../../images/dalmore.png" alt="dalmore" class="wine-bottle picture">
+						</div>
 					</div>
 					<div class="small-block small-block--child1">
-						<div class="border-image--square"></div>
+						<div class="border-image--square">
+							<img src="./../../images/plus.png" alt="plus" class="icon">
+						</div>
 					</div>
 				</div>
 
@@ -295,7 +324,7 @@
 				<div class="info-tab">
 					<div class="title">
 						<a href="javascript:void(0)" class="back-to-single-view">
-							<h2><img src="./../../images/arrow-left.svg" alt="customize" class="customize">Back</h2>
+							<h2><img src="./../../images/arrow-left.svg" alt="customize" class="back-arrw">Back</h2>
 						</a>
 					</div>
 					<div class="icons">
@@ -1730,7 +1759,6 @@
 
 				
 				</div>
-  
 			</div>
 
 			<div class="fixed-image">
@@ -1739,8 +1767,21 @@
 				<div class="table"></div>
 			</div>
 		</div>
+		<div class="themes-button">
+			<div class="cross"></div>
+			<div class="themes-button--wrapper">
+				<div class="button active">
+					<img src="./../../images/img-brown.svg" alt="brown" class="image-button">
+				</div>
+				<div class="button">
+					<img src="./../../images/img-green.svg" alt="green" class="image-button">
+				</div>
+				<div class="button">
+					<img src="./../../images/img-yellow.svg" alt="yellow" class="image-button">
+				</div>
+			</div>
+		</div>
 	</div>
-
 	<div class="sharing-view">
 		<div class="image-rotation hide">
 			<div class="image-rotation--header">
