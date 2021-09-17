@@ -9404,7 +9404,7 @@ img {
               position: absolute;
               left: 50px;
               right: 0;
-              top: 45px;
+              top: 33px;
               bottom: 0; }
               @media (max-width: 375px) {
                 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
@@ -9428,7 +9428,7 @@ img {
               position: absolute;
               left: 45px;
               right: 0;
-              top: 40px;
+              top: 28px;
               bottom: 0; }
               @media (max-width: 375px) {
                 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
