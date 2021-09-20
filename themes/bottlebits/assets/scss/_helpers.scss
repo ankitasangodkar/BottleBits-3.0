@@ -170,3 +170,11 @@ img{
 .ui-mobile .ui-page-active{
 	overflow-x: unset;
 }
+.uploaded-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+}

@@ -1066,7 +1066,7 @@ $(document).ready(function() {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('.single-sharing').attr('src', e.target.result);
+                $('.uploaded-image').attr('src', e.target.result);
             }
     
             reader.readAsDataURL(input.files[0]);
