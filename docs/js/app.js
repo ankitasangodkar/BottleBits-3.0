@@ -1117,4 +1117,8 @@ $(document).ready(function() {
         readURL1(this);
         $(".sharing-sharing").addClass("upload");
     });
+     
+    $(".theme--upload").on('click', function() {
+       $(".upload").click();
+    });
 });
