@@ -703,7 +703,7 @@ $(".slide-image").on("click", function(){
 $(document).ready(function(){
     $(".sharing-details").on("click", function(){
         $(".shelf-bottle-details").removeClass("show-details");
-        $(".single-sharing").addClass("yellow").fadeIn(2000);
+        $(".single-sharing").addClass("camera").fadeIn(2000);
         $(".themes-button").fadeOut();
         $("body").addClass("sharing-screen");
     });
@@ -933,6 +933,7 @@ $( ".theme--yellow" ).on( "swiperight", function(){
  	$(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
   
     $(".theme .active-mark").removeClass("active-mark--show");
+    $(".single-sharing").removeClass("yellow").addClass("camera");
 
 });
 
@@ -1010,7 +1011,7 @@ $( ".theme--camera" ).on( "swipeleft", function(){
 	$(".theme .active-mark").removeClass("active-mark--show");
  	$(".theme--yellow .active-mark").addClass("active-mark--show");
     
-    $(".single-sharing").addClass("yellow");
+    $(".single-sharing").removeClass("camera").addClass("yellow");
 
 });
 
