@@ -1110,14 +1110,14 @@ $(document).ready(function() {
                 $('.uploaded-bg').attr('src', e.target.result);
             }
     
-            reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files1[0]);
         }
     }
     $(".upload").on('change', function(){
         readURL1(this);
         $(".sharing-sharing").addClass("upload");
     });
-     
+
     $(".theme--upload").on('click', function() {
        $(".upload").click();
     });
