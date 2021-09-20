@@ -710,10 +710,19 @@ $(document).ready(function(){
         $("body").addClass("sharing-screen");
     });
     $(".return-back").on("click", function(){
-        $(".single-sharing").fadeOut();
+
+        $(".single-sharing").removeClass("green yellow brown black").fadeOut();
         $(".shelf-bottle-details").addClass("show-details");
+
         $("body").removeClass("sharing-screen");
         $(".themes-button").fadeIn();
+
+     	$(".theme").removeClass("theme--active-theme").removeAttr("style");
+		$(".theme.theme--camera").addClass("theme--active-theme");
+
+		$(".theme .active-mark").removeClass("active-mark--show");
+
+    	$(".theme .active-mark").removeClass("active-mark--show");
     });
 });
 
@@ -1086,42 +1095,42 @@ $(".button.yellow").on("click", function(){
 	$(".button").addClass("remove-buttons-group");
 });
 
-$(document).ready(function() {
-    // var readURL = function(input) {
-    //     if (input.files && input.files[0]) {
-    //         var reader = new FileReader();
+// $(document).ready(function() {
+//     // var readURL = function(input) {
+//     //     if (input.files && input.files[0]) {
+//     //         var reader = new FileReader();
 
-    //         reader.onload = function (e) {
-    //             $('.uploaded-image').attr('src', e.target.result);
-    //         }
+//     //         reader.onload = function (e) {
+//     //             $('.uploaded-image').attr('src', e.target.result);
+//     //         }
     
-    //         reader.readAsDataURL(input.files[0]);
-    //     }
-    // }
-    // $(".file-upload").on('change', function(){
-    //     readURL(this);
-    // });
+//     //         reader.readAsDataURL(input.files[0]);
+//     //     }
+//     // }
+//     // $(".file-upload").on('change', function(){
+//     //     readURL(this);
+//     // });
     
-    // var readURL1 = function(input) {
-    //     if (input.files1 && input.files1[0]) {
-    //         var reader1 = new FileReader();
+//     // var readURL1 = function(input) {
+//     //     if (input.files1 && input.files1[0]) {
+//     //         var reader1 = new FileReader();
 
-    //         reader1.onload = function (e) {
-    //             $('.uploaded-bg').attr('src', e.target.result);
-    //         }
+//     //         reader1.onload = function (e) {
+//     //             $('.uploaded-bg').attr('src', e.target.result);
+//     //         }
     
-    //         reader.readAsDataURL(input.files1[0]);
-    //     }
-    // }
-    // $(".upload").on('change', function(){
-    //     readURL1(this);
-    //     $(".sharing-sharing").addClass("upload");
-    // });
+//     //         reader.readAsDataURL(input.files1[0]);
+//     //     }
+//     // }
+//     // $(".upload").on('change', function(){
+//     //     readURL1(this);
+//     //     $(".sharing-sharing").addClass("upload");
+//     // });
 
-    // $(".theme--upload").on('click', function() {
-    //    $(".upload").click();
-    // });
-});
+//     // $(".theme--upload").on('click', function() {
+//     //    $(".upload").click();
+//     // });
+// });
 
 
 $(document).ready(function() {
