@@ -67,21 +67,29 @@
     &.yellow{
         opacity: 1;
         background-image: url(../images/collection/shelf-bottle-yellow.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         transition: background-image 300ms $ease-in-out, opacity 30ms $ease-in-out;
     }
     &.green{
         opacity: 1;
         background-image: url(../images/collection/shelf-bottle-green.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         transition: background-image 300ms $ease-in-out, opacity 30ms $ease-in-out;
     }
     &.brown{
         opacity: 1;
         background-image: url(../images/collection/shelf-bottle.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         transition: background-image 300ms $ease-in-out, opacity 30ms $ease-in-out;
     }
     &.black{
         opacity: 1;
         background-image: url(../images/collection/shelf-bottle-black.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         transition: background-image 300ms $ease-in-out, opacity 30ms $ease-in-out;
     }
     &.camera{
@@ -173,7 +181,6 @@
         .rotation, .theme-options{
             display: flex;
             align-items: center;
-            justify-content: flex-start;
         }
 
         .rotation{
@@ -208,12 +215,11 @@
                         border-radius: 100%;
                         overflow: hidden;
                         position: relative;
-                        /*transition: width 300ms $ease-in-out;*/
+                        display: flex;
+                        justify-content: center;
+                            /*transition: width 300ms $ease-in-out;*/
                         input[type=file]{
-                            font-size: 0;
-                            margin: 0 -16px;
-                            background-color: transparent;
-                            box-shadow: none;
+                            display: none;
                         }
                         img{
                             height: 100%;
@@ -247,16 +253,14 @@
 
                             img{
                                 width: 15px;
-                                height: 25px;
-                                transition: width 300ms $ease-in-out, height 300ms $ease-in-out;
+                                transition: width 300ms $ease-in-out;
                             }
                         }
                         &.theme--active-theme{
                             .theme-thumbnail{
                                 img{
                                     width: 25px;
-                                    height: 50px;
-                                    transition: width 300ms $ease-in-out, height 300ms $ease-in-out;
+                                    transition: width 300ms $ease-in-out;
                                 }
                             }
                         }
@@ -272,7 +276,6 @@
 
                             img{
                                 width: 15px;
-                                height: 36px;
                             }
                         }
                     }
