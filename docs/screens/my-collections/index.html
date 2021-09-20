@@ -12,7 +12,7 @@
 	
 		
 			
-			<link rel="stylesheet" href="./../../css/style.min.e337606da1c76a8466edca773310c486a5e58192fd45de5e0b2120f74a8a4fbc.css">
+			<link rel="stylesheet" href="./../../css/style.min.cfbf76152361dec72734b40f2b1a8f38997eec41100663d80dab9917062f20a0.css">
 		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head><body><header>
@@ -26,7 +26,7 @@
 					<ul class="menu_list--items">
 						<li class="item"><a href="javascript:void(0)">Home</a></li>
 						<li class="item"><a href="javascript:void(0)">Inventory</a></li>
-						<li class="item active"><a href="javascript:void(0)">Collection</a></li>
+						<li class="item"><a href="javascript:void(0)">Collection</a></li>
 						<li class="item"><a href="javascript:void(0)">About us</a></li>
 						<li class="item"><a href="javascript:void(0)">Contact us</a></li>
 					</ul>
@@ -55,7 +55,7 @@
 					<li class="item"><a href="javascript:void(0)">About Us</a></li>
 					<li class="item"><a href="javascript:void(0)">Inventory</a></li>
 					<li class="item"><a href="javascript:void(0)">FAQ</a></li>
-					<li class="item active"><a href="javascript:void(0)">Collection</a></li>
+					<li class="item"><a href="javascript:void(0)">Collection</a></li>
 					<li class="item"><a href="javascript:void(0)">Contact Us</a></li>
 					<li class="item"><a href="javascript:void(0)">Code Of Conduct</a></li>
 					<li class="item"><a href="javascript:void(0)">Register/ Login</a></li>
@@ -1864,24 +1864,19 @@
 				<div class="theme-options">
 					<div class="theme theme--upload">
 						<div class="theme-thumbnail">
-							
-							<div class="row">
-						   <div class="small-12 medium-2 large-2 columns">
-						     <div class="circle">
-						       <img class="profile-pic" src="./../../images/img-loading.png">
-						     </div>
-						     <div class="p-image">
-						        <input class="file-upload" type="file" accept="image/*" style="display: block;" />
-						        <label for="photo1">
+					        <input class="upload" type="file" accept="image/*" id="photo1" />
+					        <label for="photo1">
 								<img src="./../../images/upload.svg" alt="macallan">
 							</label>
-						     </div>
-						  </div>
-						</div>
 						</div>
 					</div>
 					<div class="theme theme--camera theme--active-theme">
-						
+						<div class="theme-thumbnail">
+							<input type="file" accept="image/x-png,image/jpeg" capture="camera" id="photo" class="file-upload" value="">
+							<label for="photo">
+							 <img src="./../../images/icn-camera.svg" alt="macallan">
+							</label>
+						</div>
 					</div>
 					<div class="theme theme--yellow">
 						<div class="theme-thumbnail">

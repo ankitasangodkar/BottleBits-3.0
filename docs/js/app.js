@@ -1095,65 +1095,65 @@ $(".button.yellow").on("click", function(){
 	$(".button").addClass("remove-buttons-group");
 });
 
-// $(document).ready(function() {
-//     // var readURL = function(input) {
-//     //     if (input.files && input.files[0]) {
-//     //         var reader = new FileReader();
-
-//     //         reader.onload = function (e) {
-//     //             $('.uploaded-image').attr('src', e.target.result);
-//     //         }
-    
-//     //         reader.readAsDataURL(input.files[0]);
-//     //     }
-//     // }
-//     // $(".file-upload").on('change', function(){
-//     //     readURL(this);
-//     // });
-    
-//     // var readURL1 = function(input) {
-//     //     if (input.files1 && input.files1[0]) {
-//     //         var reader1 = new FileReader();
-
-//     //         reader1.onload = function (e) {
-//     //             $('.uploaded-bg').attr('src', e.target.result);
-//     //         }
-    
-//     //         reader.readAsDataURL(input.files1[0]);
-//     //     }
-//     // }
-//     // $(".upload").on('change', function(){
-//     //     readURL1(this);
-//     //     $(".sharing-sharing").addClass("upload");
-//     // });
-
-//     // $(".theme--upload").on('click', function() {
-//     //    $(".upload").click();
-//     // });
-// });
-
-
 $(document).ready(function() {
-
-    
     var readURL = function(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('.profile-pic').attr('src', e.target.result);
+                $('.uploaded-image').attr('src', e.target.result);
             }
     
             reader.readAsDataURL(input.files[0]);
         }
     }
-    
-
     $(".file-upload").on('change', function(){
         readURL(this);
     });
     
+    var readURL1 = function(input) {
+        if (input.files1 && input.files1[0]) {
+            var reader1 = new FileReader();
+
+            reader1.onload = function (e) {
+                $('.uploaded-bg').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files1[0]);
+        }
+    }
+    $(".upload").on('change', function(){
+        readURL1(this);
+        $(".single-sharing").addClass("upload");
+    });
+
     $(".upload-button").on('click', function() {
-       $(".file-upload").click();
+       $(".upload").click();
     });
 });
+
+
+// $(document).ready(function() {
+
+    
+//     var readURL = function(input) {
+//         if (input.files && input.files[0]) {
+//             var reader = new FileReader();
+
+//             reader.onload = function (e) {
+//                 $('.profile-pic').attr('src', e.target.result);
+//             }
+    
+//             reader.readAsDataURL(input.files[0]);
+//         }
+//     }
+    
+
+//     $(".file-upload").on('change', function(){
+//         readURL(this);
+//     });
+    
+//     $(".upload-button").on('click', function() {
+//        $(".file-upload").click();
+//     });
+// });

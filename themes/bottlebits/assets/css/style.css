@@ -13734,7 +13734,7 @@ img {
 }
 
 .single-sharing__footer--block .theme-options .theme .theme-thumbnail input[type=file] {
-  display: none;
+  opacity: 0;
 }
 
 .single-sharing__footer--block .theme-options .theme .theme-thumbnail img {
@@ -13768,6 +13768,10 @@ img {
 
 .single-sharing__footer--block .theme-options .theme--camera .theme-thumbnail img {
   width: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
   transition: width 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
 
@@ -13788,6 +13792,16 @@ img {
 
 .single-sharing__footer--block .theme-options .theme--upload .theme-thumbnail img {
   width: 15px;
+  transition: width 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}
+
+.single-sharing__footer--block .theme-options .theme--upload.theme--active-theme .theme-thumbnail img {
+  width: 25px;
 }
 
 @media (max-width: 375px) {
