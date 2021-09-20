@@ -785,9 +785,9 @@ $(".button.brown").on( "swipeleft", function(){
 	$(".button").removeClass("active");
 	$(".button.green").addClass("active");
 
-	$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 400ms ease-in"});
-	$(".button.green").css({transform: "translateX(0px)", transition: "transform 400ms ease-in"});
-	$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 400ms ease-in"});
+	$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
+	$(".button.green").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
 
 	$(".my-collection .shelf-wrapper--expanded .block").addClass("green");
 	$(".my-collection .shelf .info-tab").addClass("green");
@@ -805,9 +805,9 @@ $(".button.green").on( "swipeleft", function(){
 	$(".button").removeClass("active");
 	$(".button.yellow").addClass("active");
 
-	$(".button.yellow").css({transform: "translateX(0px)", transition: "transform 400ms ease-in"});
-	$(".button.brown").css({transform: "translateX(-150px)", transition: "transform 400ms ease-in"});
-	$(".button.green").css({transform: "translateX(-80px)", transition: "transform 400ms ease-in"});
+	$(".button.yellow").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	$(".button.brown").css({transform: "translateX(-150px)", transition: "transform 300ms ease-in"});
+	$(".button.green").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
 
 	$(".my-collection .shelf-wrapper--expanded .block").addClass("yellow").removeClass("green");
 	$(".my-collection .shelf .info-tab").addClass("yellow").removeClass("green");
@@ -824,9 +824,9 @@ $(".button.green").on( "swiperight", function(){
 	$(".button").removeClass("active");
 	$(".button.brown").addClass("active");
 
-	$(".button.green").css({transform: "translateX(80px)", transition: "transform 400ms ease-in"});
-	$(".button.brown").css({transform: "translateX(0px)", transition: "transform 400ms ease-in"});
-	$(".button.yellow").css({transform: "translateX(150px)", transition: "transform 400ms ease-in"});
+	$(".button.green").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
+	$(".button.brown").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	$(".button.yellow").css({transform: "translateX(150px)", transition: "transform 300ms ease-in"});
 
 	$(".my-collection .shelf-wrapper--expanded .block").removeClass("green");
 	$(".my-collection .shelf .info-tab").removeClass("green");
@@ -843,9 +843,9 @@ $(".button.yellow").on( "swiperight", function(){
 	$(".button").removeClass("active");
 	$(".button.green").addClass("active");
 
-	$(".button.green").css({transform: "translateX(0px)", transition: "transform 400ms ease-in"});
-	$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 400ms ease-in"});
-	$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 400ms ease-in"});
+	$(".button.green").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
+	$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
 
 	$(".my-collection .shelf-wrapper--expanded .block").removeClass("yellow").addClass("green");
 	$(".my-collection .shelf .info-tab").removeClass("yellow").removeClass("yellow").addClass("green");
