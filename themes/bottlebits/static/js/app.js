@@ -1004,7 +1004,6 @@ $( ".theme--camera" ).on( "swipeleft", function(){
     $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
     $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
 
-
     $(".theme").removeClass("theme--active-theme");
     $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
 
@@ -1012,17 +1011,44 @@ $( ".theme--camera" ).on( "swipeleft", function(){
  	$(".theme--yellow .active-mark").addClass("active-mark--show");
     
     $(".single-sharing").removeClass("camera").addClass("yellow");
+});
+
+$( ".theme--camera" ).on( "swiperight", function(){
+    $(this).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+
+    $( ".theme--yellow").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+
+    $(".theme").removeClass("theme--active-theme");
+    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+    
+    $(".single-sharing").addClass("camera");
 
 });
+
+
+$( ".theme--upload" ).on( "swipeleft", function(){
+    $(this).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+
+    $( ".theme--yellow" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+
+    $(".theme").removeClass("theme--active-theme");
+    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+    
+    $(".single-sharing").addClass("camera");
+
+});
+
 
 $(".single-sharing").fadeOut();
 $(".popup").fadeOut();
 
-
-
-$( ".theme--upload").on( "swipeleft", function(){
-    $(this).css({transform: "translateX(-70px)"});
-});
 
 $(".carousel-control.right").on("click", function(){
 	$(".carousel-control.left").addClass("left-active");
@@ -1073,13 +1099,23 @@ $(document).ready(function() {
             reader.readAsDataURL(input.files[0]);
         }
     }
-    
-
     $(".file-upload").on('change', function(){
         readURL(this);
     });
     
-    $(".theme--camera").on('click', function() {
-       $(".file-upload").click();
+    var readURL1 = function(input) {
+        if (input.files1 && input.files1[0]) {
+            var reader1 = new FileReader();
+
+            reader1.onload = function (e) {
+                $('.uploaded-bg').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $(".upload").on('change', function(){
+        readURL1(this);
+        $(".sharing-sharing").addClass("upload");
     });
 });

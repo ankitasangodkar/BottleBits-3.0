@@ -1799,7 +1799,10 @@
 				<div class="theme-options">
 					<div class="theme theme--upload">
 						<div class="theme-thumbnail">
-							<img src="{{"images/upload.svg" | relURL }}" alt="macallan">
+							<input class="upload" type="file" accept="image/*"/>
+							<label for="photo">
+								<img src="{{"images/upload.svg" | relURL }}" alt="macallan">
+							</label>
 						</div>
 					</div>
 					<div class="theme theme--camera theme--active-theme">
@@ -1837,7 +1840,8 @@
 				</div>
 			</div>
 		</div>
-		<img class="uploaded-image" src="{{"images/collection/img-loading.png" | relURL }}">
+		<img class="uploaded-image" src="{{"images/img-loading.png" | relURL }}">
+		<img class="uploaded-bg" src="{{"images/img-loading.png" | relURL }}">
 	</div>
 	<!-- sharing page code end--> 
 
