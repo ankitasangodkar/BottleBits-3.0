@@ -667,6 +667,7 @@ $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".themes-button").removeClass("show-buttons");
 	$(".shelf").css({position: "fixed"});
 	$("header").css({position: "fixed"});
+	$(".my-collection .shelf .info-tab").removeClass("yellow green");
 });
 
 $(".back-to-main-shelf").on("click", function(){
@@ -680,6 +681,12 @@ $(".back-to-single-view").on("click", function(){
 	$(".shelf-bottle-details").fadeOut().removeClass("show-details");
 	$(".shelf").css({position: "relative"});
 	$("header").css({position: "absolute"});
+	if($(".block").hasClass("green")){
+		$(".my-collection .shelf .info-tab").addClass("green");
+	}
+	if($(".block").hasClass("yellow")){
+		$(".my-collection .shelf .info-tab").addClass("yellow");
+	}
 });
 
 /* sharing */
@@ -922,7 +929,9 @@ $( ".theme--yellow" ).on( "swiperight", function(){
     $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
     $( ".theme--upload").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
 
- 	$(".theme").removeClass("theme--active-theme");    
+ 	$(".theme").removeClass("theme--active-theme");  
+ 	$(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+  
     $(".theme .active-mark").removeClass("active-mark--show");
 
 });
@@ -985,12 +994,30 @@ $( ".theme--black" ).on( "swiperight", function(){
 
 });
 
+$( ".theme--camera" ).on( "swipeleft", function(){
+    $(this).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+
+    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+
+
+    $(".theme").removeClass("theme--active-theme");
+    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+
+	$(".theme .active-mark").removeClass("active-mark--show");
+ 	$(".theme--yellow .active-mark").addClass("active-mark--show");
+    
+    $(".single-sharing").addClass("yellow");
+
+});
+
 $(".single-sharing").fadeOut();
 $(".popup").fadeOut();
 
-$( ".theme--camera" ).on( "swipeleft", function(){
-    $(this).css({transform: "translateX(-70px)"});
-});
+
 
 $( ".theme--upload").on( "swipeleft", function(){
     $(this).css({transform: "translateX(-70px)"});
@@ -1033,10 +1060,25 @@ $(".button.yellow").on("click", function(){
 	$(".button").addClass("remove-buttons-group");
 });
 
-function shareit(){
-var img="https://ankitasangodkar.github.io/BottleBits-3.0/docs/images/macallan.png"; 
-var totalurl=encodeURIComponent('?img='+img);
+$(document).ready(function() {
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-window.open ('http://www.facebook.com/sharer.php?u='+totalurl,'','width=500, height=500, scrollbars=yes, resizable=no');
+            reader.onload = function (e) {
+                $('.single-sharing').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
 
-}
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+    
+    $(".theme--camera").on('click', function() {
+       $(".file-upload").click();
+    });
+});
