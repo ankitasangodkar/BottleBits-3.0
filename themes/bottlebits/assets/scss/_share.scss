@@ -134,13 +134,16 @@
                 left: 0;
                 right: 0;
                 margin: auto;
-                bottom: -170px;
+                bottom: -134px;
                  .icon-3d-wrap{
                     height: 45px;
                     img{
                         height: 38px;
                         width: 85px;
                     }
+                }
+                @media(max-width: 375px){
+                    bottom: -170px;       
                 }
             }
         }

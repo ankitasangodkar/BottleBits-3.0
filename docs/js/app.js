@@ -9,7 +9,6 @@ $(document).ready(function(){
 
 	$(".vertical-slider .slide-item").fadeOut();
 
-
 	$('.shelf .shelf-block').on('click', function(e){
 		$(".shelf-block-bg").addClass('show_bg');
 		$(".shelf").addClass('hidden');
@@ -628,6 +627,9 @@ $(".cartWrap .primary-button").on('click', function(){
 /* My Collection */
 
 $(".shelf-wrapper--expanded").fadeOut();
+$(".single-sharing").fadeOut();
+$(".popup").fadeOut();
+
 
 $(".shelf-wrapper .block").on("click", function(){
 	$(".fixed-image").fadeOut();
@@ -1045,9 +1047,6 @@ $( ".theme--upload" ).on( "swipeleft", function(){
 
 });
 
-
-$(".single-sharing").fadeOut();
-$(".popup").fadeOut();
 
 
 $(".carousel-control.right").on("click", function(){

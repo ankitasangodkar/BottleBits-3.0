@@ -13633,7 +13633,7 @@ img {
   left: 0;
   right: 0;
   margin: auto;
-  bottom: -170px;
+  bottom: -134px;
 }
 
 .single-sharing__content .cd-product-viewer-wrapper .icon-3d-wrap-box .icon-3d-wrap {
@@ -13643,6 +13643,12 @@ img {
 .single-sharing__content .cd-product-viewer-wrapper .icon-3d-wrap-box .icon-3d-wrap img {
   height: 38px;
   width: 85px;
+}
+
+@media (max-width: 375px) {
+  .single-sharing__content .cd-product-viewer-wrapper .icon-3d-wrap-box {
+    bottom: -170px;
+  }
 }
 
 .single-sharing__content .cd-product-viewer-handle {
