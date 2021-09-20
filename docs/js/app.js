@@ -986,6 +986,7 @@ $( ".theme--black" ).on( "swiperight", function(){
 });
 
 $(".single-sharing").fadeOut();
+$(".popup").fadeOut();
 
 $( ".theme--camera" ).on( "swipeleft", function(){
     $(this).css({transform: "translateX(-70px)"});
@@ -1006,7 +1007,7 @@ $(".icon-3d-wrap img").on("click", function(){
 });
 
 $(".theme--black").on("click", function(){
-	$(".popup").css({opacity: "1", transition: "opacity 400ms ease-in-out"});
+	$(".popup").css({opacity: "1", transition: "opacity 400ms ease-in-out"}).fadeIn();
 });
 
 $(".share-popup--close .cross").on("click", function(){
