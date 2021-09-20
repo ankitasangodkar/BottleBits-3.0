@@ -1032,3 +1032,11 @@ $(".button.yellow").on("click", function(){
 	$(".themes-button--wrapper").addClass("remove-buttons");
 	$(".button").addClass("remove-buttons-group");
 });
+
+function shareit(){
+var img="https://ankitasangodkar.github.io/BottleBits-3.0/docs/images/macallan.png"; 
+var totalurl=encodeURIComponent('?img='+img);
+
+window.open ('http://www.facebook.com/sharer.php?u='+totalurl,'','width=500, height=500, scrollbars=yes, resizable=no');
+
+}
