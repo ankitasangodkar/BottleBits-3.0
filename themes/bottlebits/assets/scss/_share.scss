@@ -187,6 +187,12 @@
                         overflow: hidden;
                         position: relative;
                         /*transition: width 300ms $ease-in-out;*/
+                        input[type=file]{
+                            font-size: 0;
+                            margin: 0 -16px;
+                            background-color: transparent;
+                            box-shadow: none;
+                        }
                         img{
                             height: 100%;
                             width: 100%;
@@ -219,6 +225,17 @@
 
                             img{
                                 width: 15px;
+                                height: 25px;
+                                transition: width 300ms $ease-in-out, height 300ms $ease-in-out;
+                            }
+                        }
+                        &.theme--active-theme{
+                            .theme-thumbnail{
+                                img{
+                                    width: 25px;
+                                    height: 50px;
+                                    transition: width 300ms $ease-in-out, height 300ms $ease-in-out;
+                                }
                             }
                         }
                     }

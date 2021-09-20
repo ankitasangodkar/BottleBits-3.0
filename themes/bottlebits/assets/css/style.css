@@ -13665,6 +13665,13 @@ img {
   /*transition: width 300ms $ease-in-out;*/
 }
 
+.single-sharing__footer--block .theme-options .theme .theme-thumbnail input[type=file] {
+  font-size: 0;
+  margin: 0 -16px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .single-sharing__footer--block .theme-options .theme .theme-thumbnail img {
   height: 100%;
   width: 100%;
@@ -13696,6 +13703,14 @@ img {
 
 .single-sharing__footer--block .theme-options .theme--camera .theme-thumbnail img {
   width: 15px;
+  height: 25px;
+  transition: width 300ms cubic-bezier(0.48, 0.04, 0.25, 1), height 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
+}
+
+.single-sharing__footer--block .theme-options .theme--camera.theme--active-theme .theme-thumbnail img {
+  width: 25px;
+  height: 50px;
+  transition: width 300ms cubic-bezier(0.48, 0.04, 0.25, 1), height 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
 
 .single-sharing__footer--block .theme-options .theme--upload {
