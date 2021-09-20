@@ -1767,57 +1767,98 @@
 	</div>
 
 	<!-- sharing page code -->
-	<div class="single-sharing yellow">
+	<div class="single-sharing">
 		<div class="single-sharing__header">
 			<div class="icons">
 				<img src="{{"images/arrow-left-1.svg" | relURL }}" alt="back" class="return-back">
 			</div>
 		</div>
 		<div class="single-sharing__content">
-			<img src="{{"images/macallan.png" | relURL }}" alt="macallan" class="wine-bottle">
+			<div class="cd-product-viewer-wrapper" data-frame="25" data-friction="0.45">
+				<div>
+					<figure class="product-viewer">
+						<img src="{{"images/img-loading.png" | relURL }}" alt="Product Preview">
+						<div class="product-sprite" data-image="/BottleBits-3.0/images/img-sprite.png"></div>
+					</figure> <!-- .product-viewer -->
+					<div class="icon-3d-wrap-box">
+						<div class="icon-3d-wrap">
+							<img src="{{"images/icn-3d.svg" | relURL }}" alt="icon-3d">
+						</div>
+						<div class="cd-product-viewer-handle">
+							<span class="fill"></span>
+							<span class="handle"></span>
+							<span class="outer-handle"></span>
+						</div>
+					</div>
+				</div> <!-- .cd-product-viewer-handle -->
+			</div> <!-- .cd-product-viewer-wrapper -->
 		</div>
 		<div class="single-sharing__footer">
-			<div class="rotation">
-				<img src="{{"images/icn-3d.svg" | relURL }}" alt="back" class="return-back">
-			</div>
-			<div class="theme-options">
-				<div class="theme theme--upload">
-					<div class="theme-thumbnail">
-						<img src="{{"images/upload.svg" | relURL }}" alt="macallan">
+			<div class="single-sharing__footer--block">
+				<div class="theme-options">
+					<div class="theme theme--upload">
+						<div class="theme-thumbnail">
+							<img src="{{"images/upload.svg" | relURL }}" alt="macallan">
+						</div>
 					</div>
-				</div>
-				<div class="theme theme--camera">
-					<div class="theme-thumbnail">
-						<img src="{{"images/icn-camera.svg" | relURL }}" alt="macallan">
+					<div class="theme theme--camera">
+						<div class="theme-thumbnail">
+							<img src="{{"images/icn-camera.svg" | relURL }}" alt="macallan">
+						</div>
 					</div>
-				</div>
-				<div class="theme theme--yellow  theme--active-theme">
-					<div class="theme-thumbnail">
-						<img src="{{"images/collection/shelf-bottle-yellow.jpg" | relURL }}" alt="macallan">
+					<div class="theme theme--yellow  theme--active-theme">
+						<div class="theme-thumbnail">
+							<img src="{{"images/collection/shelf-bottle-yellow.jpg" | relURL }}" alt="macallan">
+						</div>
+						<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark active-mark--show">
 					</div>
-					<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark active-mark--show">
-				</div>
-				<div class="theme theme--green">
-					<div class="theme-thumbnail">
-						<img src="{{"images/collection/shelf-bottle-green.jpg" | relURL }}" alt="macallan">
+					<div class="theme theme--green">
+						<div class="theme-thumbnail">
+							<img src="{{"images/collection/shelf-bottle-green.jpg" | relURL }}" alt="macallan">
+						</div>
+						<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark">
 					</div>
-					<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark">
-				</div>
-				<div class="theme theme--brown">
-					<div class="theme-thumbnail">
-						<img src="{{"images/collection/shelf-bottle.jpg" | relURL }}" alt="macallan">
+					<div class="theme theme--brown">
+						<div class="theme-thumbnail">
+							<img src="{{"images/collection/shelf-bottle.jpg" | relURL }}" alt="macallan">
+						</div>
+						<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark">
 					</div>
-					<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark">
-				</div>
-				<div class="theme theme--black">
-					<div class="theme-thumbnail">
-						<img src="{{"images/collection/shelf-bottle-black.jpg" | relURL }}" alt="macallan">
+					<div class="theme theme--black">
+						<div class="theme-thumbnail">
+							<img src="{{"images/collection/shelf-bottle-black.jpg" | relURL }}" alt="macallan">
+						</div>
+						<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark">
 					</div>
-					<img src="{{"images/check-1.svg" | relURL }}" alt="back" class="active-mark">
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- sharing page code end--> 
+
+	<div class="popup">
+		<div class="share-popup">
+			<div class="share-popup--close">
+				<div class="cross"></div>
+			</div>
+			<h2 class="share-popup--title">Share Jacob’s shelf on</h2>
+			<div class="share-popup--social-icons">
+				<img src="{{"images/icn-facebook.svg" | relURL }}" alt="facebook" class="social-icon">
+				<img src="{{"images/icn-insta.svg" | relURL }}" alt="Instagram" class="social-icon">
+				<img src="{{"images/icn-twitter.svg" | relURL }}" alt="Twitter" class="social-icon">
+				<img src="{{"images/icn-link.svg" | relURL }}" alt="Linkedin" class="social-icon">
+			</div>
+			<div class="share-popup--seperator">
+				<div class="line">OR</div>
+			</div>
+			<div class="share-popup--download">
+				<div class="share-popup--download__button">
+					<img src="{{"images/icn-download.svg" | relURL }}" alt="download">
+					<p class="download-text">Download</p>
+				</div>
+			</div>
+		</div>
+		<div class="overlay"></div>
+	</div>
 
 {{ end }}

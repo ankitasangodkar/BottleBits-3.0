@@ -603,7 +603,7 @@
 							position: relative;
 							.icon{
 								position: absolute;
-								left: 25px;
+								left: 8px;
 								right: 0;
 								margin: auto;
 								top: 160px;
@@ -633,9 +633,9 @@
 							    	top: 20px;
 							    }
 						     	@media(min-width: 1080px) and (max-width: 1769px){
-									width: calc(100% - 48px);
-									height: 169px;
-									left: 26px;
+									width: calc(100% - 112px);
+									height: 268px;
+									left: 56px;
 									top: 40px;
 						    	}
 							    @media(min-width: 1770px){
@@ -658,10 +658,10 @@
 							    	top: 16px;
 							    }
 						     	@media(min-width: 1080px) and (max-width: 1769px){
-									width: calc(100% - 43px);
-									height: 190px;
-									left: 23px;
-									top: 22px
+									width: calc(100% - 100px);
+									height: 290px;
+									left: 50px;
+									top: 22px;
 						    	}
 							    @media(min-width: 1770px){
 						    	    width: calc(100% - 72px);
@@ -790,7 +790,8 @@
 			transition: opacity 400ms $ease-out;
 			.info-tab{
 				z-index: 1;
-				position: fixed;
+				position: absolute;
+				top: -1px;
 				transition: z-index 300ms $ease-out;
 				a.back-to-single-view{
 					display: block;
@@ -1096,6 +1097,9 @@
 		&.hide-collection{
 			opacity: 0;
 			transition: opacity 400ms $ease-out;
+		}
+		@media(max-width: 767px){
+			height: 100vh;
 		}
 	}
 }

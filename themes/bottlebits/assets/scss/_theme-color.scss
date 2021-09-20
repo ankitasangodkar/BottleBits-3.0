@@ -36,6 +36,11 @@
             transform: rotate(-45deg);
             left: 9px;
         }
+        &.remove-cross{
+			opacity: 0;
+			transform: translatey(20px);
+			transition: opacity 300ms #ease-in-out, transform 300ms 400ms $ease-in-out;
+        }
     }
     &--wrapper{
         display: flex;
@@ -54,6 +59,11 @@
 			left: 0;
 			right: 0;
 			margin: auto;
+			transform: translateX(0);
+			-webkit-transform: translateX(0);
+			transition: transform 400ms $ease-in-out;
+			-webkit-transition: transform 400ms $ease-in-out;
+		    touch-action: none;
     		&.active{
     		    width: 70px;
     			height: 70px;
@@ -67,28 +77,58 @@
     			}
     		}
     		&.brown{
-    			left: -150px;
-    			transition: left 100ms $ease-in-out;
+				transform: translateX(0);
+				-webkit-transform: translateX(0);
+				transition: transform 400ms $ease-in-out;
+				-webkit-transition: transform 400ms $ease-in-out;
     			&.active{
-    				left: 0;
-    				transition: left 100ms $ease-in-out;
+					transform: translateX(0);
+					-webkit-transform: translateX(0);
+					transition: transform 400ms $ease-in-out;
+					-webkit-transition: transform 400ms $ease-in-out;
     			}
+				&.remove-buttons-group{
+					opacity: 0;
+					transform: translateX(250%) !important;
+	                -webkit-transform: translateX(250%)  !important;
+	                transition: opacity 300ms 750ms ease-in-out, transform 400ms 600ms ease-in-out !important;
+				}
     		}
     		&.green{
-			    left: 150px;
-			    transition: left 100ms $ease-in-out;
+				transform: translateX(80px);
+				-webkit-transform: translateX(80px);
+				transition: transform 400ms $ease-in-out;
+				-webkit-transition: transform 400ms $ease-in-out;			    
     			&.active{
-    				left: 0;
-    				transition: left 100ms $ease-in-out;
+					transform: translateX(0);
+					-webkit-transform: translateX(0);
+					transition: transform 400ms $ease-in-out;
+					-webkit-transition: transform 400ms $ease-in-out;    				
     			}
+				&.remove-buttons-group{
+					opacity: 0;
+					transform: translateX(250%) !important;
+	                -webkit-transform: translateX(250%)  !important;
+	                transition: opacity 300ms 500ms ease-in-out, transform 400ms 300ms ease-in-out !important;
+				}
     		}
     		&.yellow{
-    			left: 300px;
-    			transition: left 100ms $ease-in-out;
+				transform: translateX(150px);
+				-webkit-transform: translateX(150px);
+				transition: transform 400ms $ease-in-out;
+				-webkit-transition: transform 400ms $ease-in-out;    			
     			&.active{
-    				left: 0;
-    				transition: left 100ms $ease-in-out;
+					transform: translateX(0);
+					-webkit-transform: translateX(0);
+					transition: transform 400ms $ease-in-out;
+					-webkit-transition: transform 400ms $ease-in-out;    				
     			}
+				&.remove-buttons-group{
+					opacity: 0;
+					transform: translateX(180%) !important;
+	                -webkit-transform: translateX(180%)  !important;
+	                transition: opacity 300ms 300ms ease-in-out, transform 400ms 100ms ease-in-out !important;
+				}
     		}
     		&:after{
 				content: '';
