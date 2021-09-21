@@ -1065,12 +1065,14 @@ $(".carousel-control.right").on("click", function(){
 
 $(".icon-3d-wrap img").on("click", function(){
 	if($(".theme.theme--black").hasClass("theme--active-theme")){
-		$(".cd-product-viewer-handle").toggleClass("show-handle");
+		$(".cd-product-viewer-handle").addClass("show-handle");
 	}
 });
 
 $(".theme--black").on("click", function(){
 	$(".popup").css({opacity: "1", transition: "opacity 400ms ease-in-out"}).fadeIn();
+	$(".cd-product-viewer-handle").addClass("show-handle");
+	$(".handle").css({left: "96.8%", transition: "left 50ms ease-in-out"});
 });
 
 $(".share-popup--close .cross").on("click", function(){

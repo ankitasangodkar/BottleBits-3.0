@@ -13201,6 +13201,7 @@ img {
   font-size: 24px;
   line-height: 22px;
   color: #000000;
+  padding: 0 15px 0 0;
   text-shadow: 0px 1px 0px rgba(249, 213, 144, 0.4);
 }
 
@@ -13674,7 +13675,7 @@ img {
 .single-sharing__content .cd-product-viewer-handle.show-handle {
   opacity: 1;
   width: 100%;
-  margin: 0 20px;
+  margin: 0 12px;
   transition: opacity 400ms cubic-bezier(0.48, 0.04, 0.25, 1), width 400ms cubic-bezier(0.48, 0.04, 0.25, 1);
   -webkit-transition: opacity 400ms cubic-bezier(0.48, 0.04, 0.25, 1), width 400ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
