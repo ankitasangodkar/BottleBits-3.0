@@ -4,6 +4,10 @@
         transition: opacity 400ms $ease-out;
         &.show-screen-view{
             opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
             transition: opacity 400ms $ease-out;
         }
         &--header{
@@ -57,7 +61,7 @@
 
 .single-sharing{
     height: 100vh;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;

@@ -13483,6 +13483,10 @@ img {
 
 .sharing-view .image-rotation.show-screen-view {
   opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   transition: opacity 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
 }
 
@@ -13543,7 +13547,7 @@ img {
 
 .single-sharing {
   height: 100vh;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;

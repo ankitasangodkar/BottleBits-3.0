@@ -9818,6 +9818,10 @@ img {
   transition: opacity 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .sharing-view .image-rotation.show-screen-view {
     opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     transition: opacity 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93); }
   .sharing-view .image-rotation--header {
     background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
@@ -9863,7 +9867,7 @@ img {
 
 .single-sharing {
   height: 100vh;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
