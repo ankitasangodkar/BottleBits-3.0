@@ -7310,7 +7310,8 @@ body {
 
 @media (min-width: 768px) {
   .single-view .my-collection .shelf {
-    background: #FEF8EC; } }
+    background: #FEF8EC;
+    position: relative !important; } }
 
 @media (min-width: 768px) {
   .single-view {
@@ -9617,7 +9618,7 @@ img {
                 height: 160px; }
                 @media (min-width: 768px) {
                   .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-image img {
-                    height: 354px; } }
+                    height: 350px; } }
               @media (min-width: 768px) {
                 .my-collection .shelf-bottle-details--wrapper .block-slider .item .block-slider--image .slide-image {
                   margin: 0; } }
