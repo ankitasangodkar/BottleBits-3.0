@@ -793,11 +793,13 @@ $(".customize").on("click", function(){
 
 $(".tool-tip span, .sharing").on("click", function(){
 	$(".themes-button").addClass("show-buttons");
+	$(".my-collection").css('pointer-events','none');
 });
 
 $(".themes-button .cross").on("click", function(){
 	$(".tool-tip").removeClass("show-customize");
 	$(".themes-button").removeClass("show-buttons");
+	$(".my-collection").css('pointer-events','auto');
 });
 
 $(".button").on( "swipeleft", function(){
@@ -1083,6 +1085,7 @@ $(".share-popup--close .cross").on("click", function(){
 	$(".button").removeClass("remove-buttons-group , active").removeAttr("style");
 	$(".button.brown").addClass("active");
 	$(".themes-button").removeClass("show-buttons");
+	$(".my-collection").css('pointer-events','auto');
 });
 
 $(".button.yellow").on("click", function(){
