@@ -98,12 +98,16 @@
     }
     &.camera{
         opacity: 1;
+        background-repeat: no-repeat;
+        background-size: cover;
         background-image: url(../images/collection/base-image.jpg);
         transition: background-image 300ms $ease-in-out, opacity 30ms $ease-in-out;
     }
     &.upload{
         opacity: 1;
-        background-image: url(../images/collection/shelf-bottle-yellow.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../images/collection/base-image.jpg);
         transition: background-image 300ms $ease-in-out, opacity 30ms $ease-in-out;
     }
 
@@ -343,7 +347,7 @@
 }
 .cd-product-viewer-wrapper .product-viewer {
     position: relative;
-    left: 20px;
+    left: 10px;
     z-index: 1;
     display: inline-block;
     overflow: hidden;
@@ -355,7 +359,7 @@
     left: 6px;
     z-index: 1;
     width: 200px;
-    height: 565px;
+    height: 470px;
     @media(min-width: 768px){
         width: 170px;
         height: 400px;

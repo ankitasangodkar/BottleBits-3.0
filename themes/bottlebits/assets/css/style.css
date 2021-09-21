@@ -9986,7 +9986,7 @@ img {
   transition: opacity 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
 
-.upload .uploaded-image {
+.upload .uploaded-bg {
   opacity: 1;
   transition: opacity 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
@@ -13592,13 +13592,17 @@ img {
 
 .single-sharing.camera {
   opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url(../images/collection/base-image.jpg);
   transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1), opacity 30ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
 
 .single-sharing.upload {
   opacity: 1;
-  background-image: url(../images/collection/shelf-bottle-yellow.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/collection/base-image.jpg);
   transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1), opacity 30ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
 
@@ -13853,7 +13857,7 @@ img {
 
 .cd-product-viewer-wrapper .product-viewer {
   position: relative;
-  left: 20px;
+  left: 10px;
   z-index: 1;
   display: inline-block;
   overflow: hidden;
@@ -13866,7 +13870,7 @@ img {
   left: 6px;
   z-index: 1;
   width: 200px;
-  height: 565px;
+  height: 470px;
 }
 
 @media (min-width: 768px) {
