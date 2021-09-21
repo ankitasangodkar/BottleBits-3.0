@@ -571,7 +571,7 @@
 
 /* Popup */
 .popup{
-    height: 100vh;
+    height: 0;
     opacity: 0;
     transition: opacity 400ms $ease-in-out;
     .share-popup{
