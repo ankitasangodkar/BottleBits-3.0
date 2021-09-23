@@ -147,8 +147,8 @@ header{
 				height: 100vh;
 				opacity: 0;
 				border-radius: 200px;
-				transform: scaleY(0.8);
-				-webkit-transform: scaleY(0.8);
+				transform: scaleY(0);
+				-webkit-transform: scaleY(0);
 				transition: opacity 450ms $ease-in-out, transform 450ms $ease-in-out, border-radius 450ms $ease-in-out,;
 				-webkit-transition: opacity 450ms $ease-in-out, transform 450ms $ease-in-out, border-radius 450ms $ease-in-out,;
 

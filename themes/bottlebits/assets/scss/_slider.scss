@@ -4,20 +4,21 @@
 	right: 0;
 	top: 0;
     display: block;
-    height: 100vh;
+    height: 814px;
     background: #E1B96B;
 
 	.shelf-block{
 	    position: absolute;
-        height: calc(100vh - 80px);
+        height: 814px;
 	    left: 0;
 	    top: 0;
 	    padding-top: 30px;
-		transition: opacity 1s $ease-out, height 1s $ease-out;
+		transition: opacity 1s $ease-out;
 		width: 100%;
 		z-index: 0;
-		-webkit-transition: opacity 1s $ease-out, height 1s $ease-out;
+		-webkit-transition: opacity 1s $ease-out, height 100ms $ease-out;
 		pointer-events: none;
+		background-image: url(../images/shelf_bg.jpg);
 		.shelf-block--wrap{
 			position: absolute;
 			top: 0;
@@ -25,6 +26,7 @@
 			right: 0;
 			bottom: 0;
 			padding-top: 108px;
+		    perspective: none;
 		    width: auto !important;
 			margin-right: 0 !important;
 			pointer-events: none;
@@ -83,8 +85,9 @@
 			    right: 0;
 				left: 0;
 			    z-index: 1;
-				bottom: 80px;
+				bottom: 150px;
 				width: auto;
+				touch-action: none;
 				transition: right 1s $ease-out;
 				-webkit-transition: right 1s $ease-out;
     			filter: drop-shadow(30px 0px 30px rgba(0, 0, 0, 0.4));
@@ -92,7 +95,7 @@
 		    }
 	    	&.prev{
 	    		.shelf-block--picture {
-	    			height: 420px;
+	    			height: 350px;
 					transform: translateX(-140%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
 				}
@@ -117,9 +120,9 @@
 		        }
 		        .shelf-block--picture {
 					opacity: 1;
-					bottom: 35px;
+					bottom: 110px;
 					right: 0;
-					height: 420px;
+					height: 350px;
 					transform: translateX(0%);
 				    pointer-events: auto;
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out, height 2s $ease-in-out, right 2s $ease-in-out;
@@ -128,7 +131,7 @@
 	    	}
     		&.next{
 	    		.shelf-block--picture {
-	    			height: 420px;
+	    			height: 350px;
 					transform: translateX(140%);
 					transition: transform 2s $ease-in-out, opacity 2s $ease-in-out, bottom 2s $ease-in-out;
 				}
@@ -138,6 +141,7 @@
 	    	width: 500px;
     	    height: 650px;
     	    opacity: 0;
+    	    background-image: url(../images/shelf.jpg);
     	    .shelf-block--wrap{
 				position: absolute;
 				top: 0;
@@ -170,7 +174,7 @@
 		.shelf-block{
 			.slide-item{
 			    .shelf-block--region{
-			    	height: 400px;
+			    	height: 300px;
 			    	pointer-events: auto; 
 			    	opacity: 0;
 			    	.region{
@@ -206,7 +210,7 @@
 		    		.region_details{
 					    position: absolute;
 					    right: 60px;
-					    top: 45%;
+					    top: 37%;
 					    width: 120px;
 					    font-family: 'AbhayaLibre-SemiBold';
 					    font-weight: 600;
@@ -271,7 +275,7 @@
 					        left: 75px;
     						height: 295px;
 						    position: absolute;
-						    top: 4%;
+						    top: -3%;
 				    	}
 				    	.disterllery_details{
 						    right: 60px;
@@ -283,8 +287,8 @@
 						    letter-spacing: 0.01em;
 						    color: #000000;
 						    text-align: left;
-		    			    transform: translateY(232px);
-		    			    -webkit-transform: translateY(232px);
+		    			    transform: translateY(194px);
+		    			    -webkit-transform: translateY(194px);
 						    .rightbox {
 								padding: 0;
 								height: 100%;
@@ -380,7 +384,7 @@
 			    		.bottle_story_details{
 						    position: absolute;
 						    right: 60px;
-						    top: 34%;
+						    top: 26%;
 						    width: 120px;
 						    font-family: 'AbhayaLibre-SemiBold';
 						    font-weight: 600;
@@ -464,7 +468,9 @@
 			    		.shelf-block--picture{
 							right: 40%;
 							width: 135px;
-							bottom: -40px;
+							bottom: 0px;
+							height: 270px;
+						    margin-bottom: 111px;
 			    			transition: right 1s $ease-out;
 				            -webkit-transition: right 1s $ease-out;
 			                pointer-events: none;
@@ -490,6 +496,7 @@
 			    			}
 			    		}
 			    		.shelf-block--region{
+		    			    touch-action: none;
 			    			opacity: 1;
 			    			transition: opacity 1s $ease-out;
 				            -webkit-transition: opacity 1s $ease-out;
@@ -562,20 +569,6 @@
 					    		}
 				    		}
 			    		}
-			    		&.wrap3{
-			    			.shelf-block--picture{
-			    			    bottom: -27px;
-		    			    }
-			    		}
-			    		&.wrap4{
-			    			.shelf-block--picture{
-								right: 44%;
-								width: 100px;
-								bottom: 18px;
-				    			transition: right 1s $ease-out;
-					            -webkit-transition: right 1s $ease-out;
-				    		}
-			    		}
 			    	}
 				}
 		    }
@@ -583,9 +576,10 @@
 	}
 	&.small_block{
 		position: relative !important;
-	    height: 360px;
+	    height: 300px;
     	.shelf-block{
     		position: fixed;
+    		background-image: url(../images/shelf.jpg);
 			height: 360px;
 			transition: height 600ms $ease-out;
 			-webkit-transition: height 600ms $ease-out;
@@ -617,9 +611,10 @@
 								font-size: 36px;
 								line-height: 42px;
 								text-align: left;
+							    padding-left: 0;
 							}
 							.shelf-block--info{
-								padding-top: 15px;
+								padding-top: 5px;
 								text-align: left;
 								display: none;
 							}
@@ -635,7 +630,7 @@
 								height: 175px !important;
 								padding-right: 48px;
 								width: 140px !important;
-								bottom: 7px !important;
+								bottom: -103px !important;
 								@media(min-width: 768px){
 									right: 0 !important;
 									height: 60%;
@@ -652,9 +647,7 @@
 									}
 								}
 							}
-							&.wrap4{
-						    	bottom: 24px !important;
-							}
+							
 							&.cart{
 								background-color: black;
 								height: 400px;
@@ -698,27 +691,13 @@
 						&.SWIPE_UP {
 							.content {
 								.shelf-block--picture {
-								    height: 200px !important;
-								    padding-right: 50px;
-								    width: 140px !important;
-								    bottom: -16px !important;
+								    height: 160px !important;
+									padding-right: 60px;
+								    bottom: -120px !important;
+									width: 140px!important;
 								    transition: bottom 1s $ease-in-out, height 1s $ease-in-out;
 								    -webkit-transition: bottom 1s $ease-in-out, height 1s $ease-in-out;
 							    }
-						    }
-						    &.wrap3{
-						    	.content {
-									.shelf-block--picture {
-						    			bottom: -8px !important;
-					    			}
-				    			}
-						    }
-					     	&.wrap4{
-						    	.content {
-									.shelf-block--picture {
-						    			bottom: -5px !important;
-					    			}
-				    			}
 						    }
 					    }
 				    }
@@ -728,7 +707,7 @@
 	}
 	.cartWrap{
 		position: absolute;
-		bottom: 160px;
+		bottom: 200px;
 		@media(max-width: 767px){
 			display: none;
 		}
@@ -736,7 +715,7 @@
 	@media(min-width: 768px){
 		&.show_bg{
 		    width: 500px;
-	        height: 960px;
+	        height: 100%;
 		    background: #E1B96B;
 			.shelf-block{
 		    	opacity: 1;
@@ -763,8 +742,8 @@
 	}
 }
 .bottle-details{
-    padding: 380px 30px 0;
-	height: 100vh;
+    padding: 325px 30px 0;
+	height: auto;
 	z-index: -1;
 	background: #FEF8EC;
 	overflow: auto;
@@ -881,7 +860,7 @@
 	    position: absolute;
 	    top: 0;
 	    left: 0;
-	    margin-top: 340px;
+	    margin-top: 300px;
 	    @media(min-width: 768px){
 	    	display: none;
 	    }
@@ -1040,7 +1019,7 @@
 			&--block{
 				display: flex;
 				align-items: center;
-    		    padding: 120px 0 40px;
+    		    padding: 40px 0 40px;
 	    		position: relative;
 	    		.item{
 					font-family: "AbhayaLibre-Regular";

@@ -214,3 +214,8 @@ img{
 		outline: none;
 	}
 }
+.blureffect{
+	filter: blur(20px);
+	backdrop-filter: blur(20px);
+	transition: filter 300ms $ease-in-out;
+}

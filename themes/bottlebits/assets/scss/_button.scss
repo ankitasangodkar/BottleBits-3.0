@@ -1,5 +1,5 @@
 .podium{
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -169,4 +169,19 @@
 			}
     	}
     }
+}
+.floating-download-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+	font-family: "AbhayaLibre-SemiBold";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: -0.01em;
 }

@@ -31,8 +31,8 @@
   float: left;
   width: 100%;
   backface-visibility: hidden;
-  @include transition($carousel-transition);
-}
+/*  @include transition($carousel-transition);
+*/}
 
 .carousel-item.active,
 .carousel-item-next,
@@ -55,7 +55,7 @@
 // Alternate transitions
 //
 
-.carousel-fade {
+/*.carousel-fade {
   .carousel-item {
     opacity: 0;
     transition-property: opacity;
@@ -76,7 +76,7 @@
     @include transition(0s $carousel-transition-duration opacity);
   }
 }
-
+*/
 
 //
 // Left/right controls for nav
@@ -96,7 +96,6 @@
   color: $carousel-control-color;
   text-align: center;
   opacity: $carousel-control-opacity;
-  @include transition($carousel-control-transition);
 
   // Hover/focus state
   @include hover-focus {

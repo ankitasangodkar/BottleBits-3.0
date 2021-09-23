@@ -1,0 +1,99 @@
+.popover{
+	height: 0;
+	width: 100%;
+	max-width: 100% !important;
+	background-color: transparent !important;
+	&-block{
+		background: #FFDA94;
+	    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+	    padding: 20px;
+	    position: relative;
+	    opacity: 0;
+        width: 270px;
+	    &.share-block{
+	    	position: absolute;
+		    right: 115px;
+		    top: 54px;
+	    	opacity: 1;
+	    	transition: opacity 300ms $ease-in;
+	    	@media(max-width: 767px){
+	    		right: 52px;
+	    	}
+	    }
+	    &.zoom-block{
+	    	opacity: 1;
+	    	transition: opacity 300ms $ease-in;
+	    }
+		&.detail-block{
+	    	opacity: 1;
+	    	transition: opacity 300ms $ease-in;
+	    }
+	    &.add-block{
+	    	opacity: 1;
+	    	transition: opacity 300ms $ease-in;
+	    }
+	    .title{
+			font-family: "AbhayaLibre-ExtraBold";
+			font-style: normal;
+			font-weight: 800;
+			font-size: 18px;
+			line-height: 20px;
+			letter-spacing: 0.01em;
+			color: #000000;
+			margin-bottom: 10px;
+	    }
+	    .info{
+			font-family: 'Nunito Sans', sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 18px;
+			letter-spacing: 0.01em;
+			color: #000000;
+		    min-height: 55px;
+	    }
+	    .button-group{
+	    	margin-top: 20px;
+	    	.next{
+				font-family: "AbhayaLibre-ExtraBold";
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 17px;
+				letter-spacing: -0.01em;
+				color: #FFFFFF;
+			    padding: 4px 10px;
+			    margin-right: 10px;
+			    cursor: pointer;
+			    &:hover{
+			    	color: white;
+			    }
+	    	}
+	    	.skip{
+	    		font-family: "AbhayaLibre-ExtraBold";
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 17px;
+				letter-spacing: -0.01em;
+				color: #000000;
+				cursor: pointer;
+			    &:hover{
+			    	color: #000;
+			    }
+	    	}
+	    }
+		&:before {
+			content: "";
+			display: block;
+			width: 12px;
+			height: 12px;
+			position: absolute;
+			background: #FFDA94;
+			box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+			right: 12px;
+		    z-index: -1;
+			top: 0;
+			transform: translatey(-50%) rotate(45deg);
+			border-radius: 3px;
+		}
+	}
+}

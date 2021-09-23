@@ -316,6 +316,10 @@
         transform: translateX(70px);
         transition: transform 300ms ease-in 0s;
     }
+    .floating-download-btn{
+        top: 20px;
+        bottom: auto;
+    }
 }
 .sharing-screen{
     .my-collection{
@@ -375,6 +379,7 @@
     width: 1300%;
     background: url(../images/img-sprite.png) no-repeat center center;
     background-size: 100%;
+    touch-action: none;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
     -moz-transition: opacity 0.3s;
