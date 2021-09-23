@@ -74,6 +74,9 @@
 				    background-color: #E1B96B;
 				    width: 22px;
 				    height: 100%;
+				    @media(min-width: 768px){
+				    	left: 0px;
+				    }
 				}
 			}
 			&:nth-child(even){
@@ -88,6 +91,12 @@
 				    height: 100%;
 				}
 			}
+			&:focus{
+				outline: none;
+			}
+		}	
+		&:focus{
+			outline: none;
 		}
 	}
 	@media(min-width: 768px){
@@ -141,5 +150,8 @@
 			    z-index: -1;
 			}
 		}
+	}
+	&:focus{
+		outline: none;
 	}
 }

@@ -209,3 +209,8 @@ img{
 	    transition: opacity 300ms $ease-in-out;		
 	}
 }
+#content, .ui-page{
+	&:focus{
+		outline: none;
+	}
+}
