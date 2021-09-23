@@ -686,6 +686,10 @@
                 }
             }
         }
+        @media(min-width: 768px){
+            top: 18%;
+            width: 300px;
+        }
     }
     .overlay{
         background: #000000;
@@ -698,5 +702,8 @@
         width: 100%;
         z-index: 9;
         transition: height 400ms $ease-in-out;
+    }
+    @media(min-width: 768px){
+        height: auto;
     }
 }

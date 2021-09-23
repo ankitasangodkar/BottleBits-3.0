@@ -160,6 +160,9 @@ img{
 			transform: translatey(-50%) rotate(45deg);
 			border-radius: 3px;
 		}
+		@media(min-width: 768px){
+	    	right: 77px;
+		}
 	}
 	&.show-customize{
 		opacity: 1;

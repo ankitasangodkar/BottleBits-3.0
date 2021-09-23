@@ -16,5 +16,4 @@
 			{{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
 			<link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
 		{{ end }}
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>

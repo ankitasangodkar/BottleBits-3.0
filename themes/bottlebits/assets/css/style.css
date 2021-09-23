@@ -9949,6 +9949,12 @@ img {
   border-radius: 3px;
 }
 
+@media (min-width: 768px) {
+  .tool-tip span {
+    right: 77px;
+  }
+}
+
 .tool-tip.show-customize {
   opacity: 1;
   transform: translateY(0px);
@@ -12718,7 +12724,7 @@ img {
 
 .my-collection .shelf-wrapper--expanded .block.active-block .product-image {
   margin: 0 10px;
-  display: inline;
+  display: inline-block;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .product-image .product-name span {
@@ -13009,12 +13015,24 @@ img {
   opacity: 1;
 }
 
+.my-collection .shelf .fixed-image.brown .table {
+  background-image: url(../images/collection/table.png);
+}
+
 .my-collection .shelf .fixed-image.green .img-green {
   opacity: 1;
 }
 
+.my-collection .shelf .fixed-image.green .table {
+  background-image: url(../images/collection/table-green.png);
+}
+
 .my-collection .shelf .fixed-image.yellow .img-yellow {
   opacity: 1;
+}
+
+.my-collection .shelf .fixed-image.yellow .table {
+  background-image: url(../images/collection/table-yellow.png);
 }
 
 .my-collection .shelf .fixed-image--block {
@@ -13105,11 +13123,14 @@ img {
   content: '';
   background-image: url(../images/collection/shelf-bottle-w.jpg);
   width: 504px;
-  height: 50vh;
+  height: 100%;
   position: absolute;
   z-index: -1;
-  bottom: 0px;
-  left: -4px;
+  bottom: 0;
+  left: -3px;
+  right: 0;
+  background-size: contain;
+  background-repeat: round;
 }
 
 @media (max-width: 767px) {
@@ -13261,7 +13282,7 @@ img {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 48px;
+    padding-top: 56px;
   }
 }
 
@@ -13322,13 +13343,6 @@ img {
 .my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left {
   top: 30%;
   left: 0;
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.my-collection .shelf-bottle-details--wrapper .arrows .carousel-control.left.left-active {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 @media (max-width: 767px) {
@@ -14230,6 +14244,13 @@ img {
   border-radius: 6px;
 }
 
+@media (min-width: 768px) {
+  .popup .share-popup {
+    top: 18%;
+    width: 300px;
+  }
+}
+
 .popup .overlay {
   background: #000000;
   opacity: 0.7;
@@ -14243,6 +14264,12 @@ img {
   transition: height 400ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
 
+@media (min-width: 768px) {
+  .popup {
+    height: auto;
+  }
+}
+
 .themes-button {
   background: linear-gradient(180deg, transparent, #000 50%);
   height: 150px;
@@ -14252,8 +14279,8 @@ img {
   width: 100%;
   opacity: 0;
   pointer-events: auto;
-  transform: translateY(20px);
-  -webkit-transform: translateY(20px);
+  transform: translateY(125px);
+  -webkit-transform: translateY(125px);
   transition: opacity 400ms cubic-bezier(0.48, 0.04, 0.25, 1), transform 400ms cubic-bezier(0.48, 0.04, 0.25, 1);
   -webkit-transition: opacity 400ms cubic-bezier(0.48, 0.04, 0.25, 1), transform 400ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
@@ -14414,18 +14441,22 @@ img {
   opacity: 0;
 }
 
+@media (min-width: 768px) {
+  .themes-button--wrapper .button {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+}
+
 .themes-button.show-buttons {
   opacity: 1;
   transform: translateY(0px);
   -webkit-transform: translateY(0px);
   transition: opacity 400ms cubic-bezier(0.48, 0.04, 0.25, 1), transform 400ms cubic-bezier(0.48, 0.04, 0.25, 1);
   -webkit-transition: opacity 400ms cubic-bezier(0.48, 0.04, 0.25, 1), transform 400ms cubic-bezier(0.48, 0.04, 0.25, 1);
-}
-
-@media (min-width: 768px) {
-  .themes-button {
-    display: none;
-  }
 }
 
 footer {

@@ -507,7 +507,7 @@
 				    }
 				    .product-image{
 			    		margin: 0 10px;
-			    		display: inline;
+			    		display: inline-block;
 				    	.product-name{
 				    		span{
 								font-family: "AbhayaLibre-Bold";
@@ -736,15 +736,24 @@
 				.img-brown{
 					opacity: 1;
 				}
+				.table{
+					background-image: url(../images/collection/table.png);
+				}
 			}
 			&.green{
 				.img-green{
 					opacity: 1;
 				}
+				.table{
+					background-image: url(../images/collection/table-green.png);
+				}
 			}
 			&.yellow{
 				.img-yellow{
 					opacity: 1;
+				}
+				.table{
+					background-image: url(../images/collection/table-yellow.png);
 				}
 			}
 			&--block{
@@ -811,12 +820,15 @@
 				&:after{
 					content: '';
 					background-image: url(../images/collection/shelf-bottle-w.jpg);
-				    width: 504px;
-				    height: 50vh;
-				    position: absolute;
-				    z-index: -1;
-				    bottom: 0px;
-				    left: -4px;
+					width: 504px;
+					height: 100%;
+					position: absolute;
+					z-index: -1;
+					bottom: 0;
+					left: -3px;
+					right: 0;
+					background-size: contain;
+					background-repeat: round;
 					@media(max-width: 767px){
 						display: none;
 					}
@@ -934,7 +946,7 @@
 								flex-direction: column-reverse;
 								align-items: center;
 								justify-content: flex-end;
-								padding-top: 48px;
+								padding-top: 56px;
 							}
 						}
 						.vertical-slider-desktop{
@@ -987,12 +999,6 @@
 						&.left{
 						    top: 30%;
 						    left: 0;
-					        opacity: 0.8;
-							pointer-events: none;
-							&.left-active{
-								opacity: 1;
-								pointer-events: auto;	
-							}
 						    @media(max-width: 767px){
 						    	top: 215px;
 						    }
